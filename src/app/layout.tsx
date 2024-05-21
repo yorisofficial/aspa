@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Navigation from "./Components/Navigation";
 
 import { Inter } from "next/font/google";
+import FooterPage from "./Components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
 			<body className={"font-satoshi text-base"}>
 				<Navigation />
 				{children}
+				<FooterPage />
 			</body>
 		</html>
 	);

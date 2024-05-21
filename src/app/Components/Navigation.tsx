@@ -31,13 +31,15 @@ const Navigation = () => {
 			<nav className="max-w-5xl mx-auto">
 				<div className="items-center justify-between hidden w-full px-8 py-4 bg-white drop-shadow-xl rounded-xl xl:flex">
 					<div className="brand">
-						<Image
-							src={"/brand/ASPA-dark.svg"}
-							alt="logo"
-							width={100}
-							height={100}
-							className="object-cover w-32"
-						/>
+						<Link href={"/"}>
+							<Image
+								src={"/brand/ASPA-dark.svg"}
+								alt="logo"
+								width={100}
+								height={100}
+								className="object-cover w-32"
+							/>
+						</Link>
 					</div>
 					<div className="flex items-center gap-4 menu-nav">
 						{menuNav.map((item, index) => (
