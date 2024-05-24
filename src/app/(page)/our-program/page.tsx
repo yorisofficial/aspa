@@ -1,7 +1,7 @@
 import React from "react";
 
 const OurProgramPage = () => {
-	return <div>OurProgramPage</div>;
+	return <div className="w-full min-h-screen">OurProgramPage</div>;
 };
 
 export default OurProgramPage;

@@ -28,7 +28,9 @@ const HeroSection = () => {
 					Asian Surf Profesional Academy
 				</h1>
 			</div>
-			<MouseAnimate />
+			<div className="absolute z-10 left-0 bottom-12 flex justify-center items-center w-full">
+				<MouseAnimate />
+			</div>
 		</div>
 	);
 };

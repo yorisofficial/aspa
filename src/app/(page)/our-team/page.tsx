@@ -3,7 +3,7 @@ import ContainerContent from "@/app/Components/Container";
 
 const OurTeamPage = () => {
 	return (
-		<ContainerContent url="/our-team" className="border border-solid">
+		<ContainerContent url="/our-team" className="border border-solid min-h-screen">
 			OurTeamPage
 		</ContainerContent>
 	);

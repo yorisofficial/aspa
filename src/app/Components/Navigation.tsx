@@ -34,7 +34,7 @@ const Navigation = () => {
 	return (
 		<header className="fixed text-black top-0 left-0 z-40 w-full xl:py-8 ">
 			<nav className="max-w-5xl mx-auto">
-				<div className="items-center justify-between w-full px-8 py-4 bg-white xl:flex">
+				<div className="items-center justify-between w-full px-8 py-4 bg-white xl:flex drop-shadow-xl">
 					<div className="brand flex justify-between items-center">
 						<Link href={"/"}>
 							<Image
