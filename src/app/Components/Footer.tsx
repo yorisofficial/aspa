@@ -6,12 +6,13 @@ import React from "react";
 
 const FooterPage = () => {
 	return (
-		<div className="w-full gap-4 py-8 h-full bg-[#0F172A] text-white flex flex-col justify-center items-center">
+		<div className="w-full gap-4 mt-8 py-8 h-full bg-[#0F172A] text-white flex flex-col justify-center items-center">
 			<Image
 				src={"/brand/ASPA-white.svg"}
 				alt="ASPA Logo"
-				width={200}
-				height={200}
+				width={500}
+				height={500}
+				priority={false}
 				className="w-[200px] h-full object-cover"
 			/>
 			<div className="xl:max-w-[368px] text-center">

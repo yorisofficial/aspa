@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const Navigation = () => {
+	const [isShow, setShow] = useState(false);
+
 	const menuNav = [
 		{
 			title: "Home",
@@ -15,7 +17,7 @@ const Navigation = () => {
 		},
 		{
 			title: "Program",
-			link: "/program",
+			link: "/our-program",
 		},
 		{
 			title: "Couching",
@@ -23,30 +25,67 @@ const Navigation = () => {
 		},
 		{
 			title: "Team",
-			link: "/team",
+			link: "/our-team",
 		},
 	];
+	const handleShow = () => {
+		setShow(!isShow);
+	};
 	return (
-		<header className="fixed top-0 left-0 z-40 w-full py-8 ">
+		<header className="fixed text-black top-0 left-0 z-40 w-full xl:py-8 ">
 			<nav className="max-w-5xl mx-auto">
-				<div className="items-center justify-between hidden w-full px-8 py-4 bg-white drop-shadow-xl rounded-xl xl:flex">
-					<div className="brand">
+				<div className="items-center justify-between w-full px-8 py-4 bg-white xl:flex">
+					<div className="brand flex justify-between items-center">
 						<Link href={"/"}>
 							<Image
 								src={"/brand/ASPA-dark.svg"}
 								alt="logo"
 								width={100}
 								height={100}
-								className="object-cover w-32"
+								priority={false}
+								className="object-cover w-32 h-full"
 							/>
 						</Link>
+						<div className="cta-button xl:hidden">
+							<button
+								onClick={handleShow}
+								aria-label="toggle-menus"
+								className="p-4 rounded bg-primary"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									fill="#ffffff"
+									viewBox="0 0 256 256"
+								>
+									<path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+								</svg>
+							</button>
+						</div>
 					</div>
-					<div className="flex items-center gap-4 menu-nav">
+					{isShow && (
+						<div className="mobile-nav w-full px-4 pt-8 h-screen bg-white text-black absolute top-20 left-0 xl:hidden">
+							<ul className="h-full w-full flex flex-col gap-4">
+								{menuNav.map((item, index) => (
+									<Link
+										onClick={handleShow}
+										key={index}
+										href={item.link}
+										className={`py-4 px-6 rounded-xl`}
+									>
+										{item.title}
+									</Link>
+								))}
+							</ul>
+						</div>
+					)}
+					<div className="menu-nav hidden xl:flex items-center gap-4">
 						{menuNav.map((item, index) => (
 							<Link
 								key={index}
 								href={item.link}
-								className="text-xl duration-500 hover:font-medium hover:underline underline-offset-4 hover:text-blue-700"
+								className="text-lg duration-500 hover:font-medium hover:underline underline-offset-4 hover:text-blue-700"
 							>
 								{item.title}
 							</Link>

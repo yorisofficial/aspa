@@ -1,40 +1,38 @@
 "use client";
-//data hero
-import { HERO } from "../lib/Hero";
-
-// import required modules
+import Image from "next/image";
+import React from "react";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { HERO } from "../lib/Hero";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import Image from "next/image";
+const Carousel = () => {
+	const dataSlide = HERO;
 
-const CarouselPage = () => {
-	const data = HERO;
 	return (
-		<div className="w-full h-screen border bg-red-50">
+		<div className="w-full h-screen">
 			<Swiper
-				modules={[Autoplay]}
-				centeredSlides={true}
+				slidesPerView={1}
+				spaceBetween={30}
+				loop={true}
 				autoplay={{
-					delay: 4500,
-					disableOnInteraction: false,
+					delay: 2500,
 				}}
+				modules={[Autoplay]}
 				className="mySwiper"
 			>
-				{data.map((item) => (
-					<SwiperSlide key={item.id} className="">
+				{dataSlide.map((item, index) => (
+					<SwiperSlide key={index}>
 						<Image
 							src={item.url}
-							height={2000}
-							width={2000}
+							height={1400}
+							width={1400}
 							alt={item.title}
-							priority={true}
-							className="object-cover h-screen w-96"
+							className="w-full h-full"
 						/>
 					</SwiperSlide>
 				))}
@@ -43,4 +41,4 @@ const CarouselPage = () => {
 	);
 };
 
-export default CarouselPage;
+export default Carousel;

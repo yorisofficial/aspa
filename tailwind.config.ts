@@ -8,14 +8,18 @@ const config: Config = {
 	],
 	theme: {
 		extend: {
-			backgroundImage: {
-				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-				"gradient-conic":
-					"conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+			backgroundImage: {},
+			fontFamily: {
+				satoshi: "kucing",
 			},
-		},
-		fontFamily: {
-			satoshi: ["satoshi"],
+			colors: {
+				primary: "#18181B",
+				white: "#ffffff",
+				black: "#000000",
+				brand: "#07529E",
+				bordersolid: "#f4f4f4",
+				red: "#FF0000",
+			},
 		},
 	},
 	plugins: [],
