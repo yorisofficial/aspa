@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import ContainerContent from "../Container";
 import Image from "next/image";
@@ -5,11 +6,15 @@ import Description from "../Description";
 import HeadingText from "../HeadingText";
 import Button from "../Button";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const AboutUs = () => {
+	const pathName = usePathname();
+	const homePageView = pathName === "/" ? "hidden" : "";
+
 	return (
 		<ContainerContent url="/about-us" className="space-y-8">
-			<div className="profile-about space-y-4 flex justify-center items-center flex-col">
+			<div className="profile-about space-y-4 flex justify-center items-start flex-col">
 				<Image
 					src={"/brand/ASPA-dark.svg"}
 					width={1500}
@@ -17,16 +22,18 @@ const AboutUs = () => {
 					alt="ASPA Logo"
 					className="w-[300px] h-full"
 				/>
+				<h1 className={`text-xl font-black text-brand`}>About us</h1>
 				<Description
-					text="ASPA is the Asian Surf Performance Academy; ASPA it&#39;s
-					about reaching your highest potential as an athlete, in and
-					out of the water. Our goal is to empower and support
-					excellent surfers to break through their limits and become
-					the best surfer they can be."
+					text="The Asian Surf Performance Academy (ASPA) is where surfers reach their highest potential. Located in Bali, we focus on supporting and empowering surfers to become their best. We enhance your surfing skills and help you develop professional qualities like motivation, teamwork, and responsibility."
 					className="Aspa-Description"
 				/>
+				<Link href={"/about-us"} className={`${!homePageView}`}>
+					<Button label="About us" variant="primary">
+						About us
+					</Button>
+				</Link>
 			</div>
-			<div className="moto-about space-y-8">
+			<div className={`moto-about space-y-8 ${homePageView}`}>
 				<div className="vision text-center space-y-4 flex flex-col justify-center items-center">
 					<HeadingText title="Our vision" />
 					<Description

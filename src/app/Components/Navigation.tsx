@@ -20,11 +20,7 @@ const Navigation = () => {
 			link: "/our-program",
 		},
 		{
-			title: "Couching",
-			link: "/couch",
-		},
-		{
-			title: "Team",
+			title: "Our Team",
 			link: "/our-team",
 		},
 	];

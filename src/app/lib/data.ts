@@ -1,3 +1,38 @@
+export const CoreTeam = [
+	{
+		id: 1,
+		full_name: "Tipi Jabrik",
+		nickname: "tipi",
+		Age: 1985,
+		title: "ASPA Director",
+		experient: "+10 years coach",
+		location: "Badung",
+		profile: "",
+		img: "",
+	},
+	{
+		id: 2,
+		full_name: "Juan Gorostidi",
+		nickname: "Juan",
+		Age: 1998,
+		title: "ASPA Manager",
+		experient: "+5 years coach",
+		location: "Bali",
+		profile: "",
+		img: "",
+	},
+	{
+		id: 3,
+		full_name: "Dylan Amar",
+		nickname: "Dylan",
+		Age: 1995,
+		title: "ASPA Head coach",
+		experient: "+5 years coach",
+		location: "Bali",
+		profile: "",
+		img: "",
+	},
+];
 export const ExpertTeam = [
 	{
 		id: 1,
@@ -5,8 +40,8 @@ export const ExpertTeam = [
 		title: "Fitness Coach",
 		level: "Expert",
 		location: "Trained Kelly Slater",
-		profile: "-",
-		img: "-",
+		profile: "",
+		img: "",
 	},
 	{
 		id: 2,
@@ -14,8 +49,8 @@ export const ExpertTeam = [
 		title: "Nutrition",
 		level: "Profile",
 		location: "",
-		profile: "-",
-		img: "-",
+		profile: "",
+		img: "",
 	},
 ];
 
@@ -25,32 +60,32 @@ export const VideographerTeam = [
 		full_name: "Harry Bali surf vision",
 		title: "surf videographer",
 		location: "uluwatu",
-		profile: "-",
-		img: "-",
+		profile: "",
+		img: "",
 	},
 	{
 		id: 2,
 		full_name: "Made Ropik",
 		title: "surf videographer",
 		location: "uluwatu",
-		profile: "-",
-		img: "-",
+		profile: "",
+		img: "",
 	},
 	{
 		id: 3,
 		full_name: "Vito",
 		title: "all around",
-		location: "-",
-		profile: "-",
-		img: "-",
+		location: "",
+		profile: "",
+		img: "",
 	},
 	{
 		id: 4,
 		full_name: "Juni Setiawan",
 		title: "all around",
-		location: "-",
-		profile: "-",
-		img: "-",
+		location: "",
+		profile: "",
+		img: "",
 	},
 ];
 
@@ -63,7 +98,7 @@ export const SurfTeam = [
 		level: "ISA Level 1",
 		location: "Medewi",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 2,
@@ -73,7 +108,7 @@ export const SurfTeam = [
 		level: "ISA Level 1",
 		location: "Hallway",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 3,
@@ -83,7 +118,7 @@ export const SurfTeam = [
 		level: "ISA Level 1",
 		location: "Uluwatu",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 4,
@@ -93,7 +128,7 @@ export const SurfTeam = [
 		level: "Pro Surfer",
 		location: "Kuta",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 5,
@@ -103,7 +138,7 @@ export const SurfTeam = [
 		level: "Pro Surfer",
 		location: "Canggu",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 6,
@@ -113,7 +148,7 @@ export const SurfTeam = [
 		level: "Pro Surfer",
 		location: "Legian",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 7,
@@ -123,7 +158,7 @@ export const SurfTeam = [
 		level: "Pro Surfer",
 		location: "Lembongan",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 8,
@@ -133,7 +168,7 @@ export const SurfTeam = [
 		level: "Pro Surfer",
 		location: "Cimaja",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 9,
@@ -143,7 +178,7 @@ export const SurfTeam = [
 		level: "Pro Surfer",
 		location: "Kuta Reef",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 10,
@@ -153,7 +188,7 @@ export const SurfTeam = [
 		level: "Pro Surfer",
 		location: "Legian",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 11,
@@ -163,7 +198,7 @@ export const SurfTeam = [
 		level: "Free Surfer",
 		location: "Kuta / Canggu",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 12,
@@ -173,7 +208,7 @@ export const SurfTeam = [
 		level: "Free Surfer",
 		location: "Hallway",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 	{
 		id: 13,
@@ -183,6 +218,6 @@ export const SurfTeam = [
 		level: "Free Surfer",
 		location: "Legian",
 		profile: "",
-		img: "-",
+		img: "",
 	},
 ];

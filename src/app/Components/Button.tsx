@@ -13,7 +13,7 @@ interface Props {
 const Button: React.FC<Props> = ({ className, label, children, onClick, variant }) => {
 	const buttonStyle = {
 		primary: "px-6 py-3 border-2 border-primary bg-primary text-white capitalize",
-		invert: "px-6 py-3 border-2 border-white bg-white text-brand capitalize",
+		invert: "px-6 py-3 border-2 border-white bg-white text-primary capitalize",
 		border: "px-6 py-3 border-2 border-primary bg-primary text-primary capitalize",
 		link: "text-base underlined capitalize",
 		iconPrimary:

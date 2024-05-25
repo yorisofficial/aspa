@@ -1,14 +1,18 @@
 "use client";
-import { MagnifyingGlassPlus } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { SurfTeam } from "../lib/data";
+import { CoreTeam } from "../lib/data";
 
 const SliderCoach = () => {
-	const data = SurfTeam;
+	const data = CoreTeam;
+	const calculateAge = (birthYear: number) => {
+		const age = new Date().getFullYear() - birthYear;
+		return age;
+	};
+
 	return (
 		<div className="list-coach">
 			<Swiper
@@ -43,20 +47,39 @@ const SliderCoach = () => {
 								className="w-full duration-500 h-[400px] object-cover"
 							/>
 
-							<Link
-								href={"/"}
-								className="profile-coach duration-500 w-full flex flex-col justify-end items-start p-5 text-white absolute bottom-0 left-0 group-hover:bg-gradient-to-t from-black to-transparent h-full"
-							>
-								<h1 className="coach-name text-start text-2xl font-bold ">
-									{item.full_name}
-								</h1>
-								<span>{item.title}</span>
-								<div className="group-hover:inline-block rounded-xl absolute hidden top-1/2 left-1/2">
-									<div className="p-4 rounded-xl text-white bg-[#07529E] absolute flex justify-center items-center z-10">
-										<MagnifyingGlassPlus />{" "}
+							<div className="profile-coach absolute bottom-4 left-4 text-white">
+								<div className="flex flex-col justify-start items-start gap-8">
+									<div className="text-start">
+										<div className="flex gap-2 items-center">
+											<h1 className="coach-name text-start text-2xl font-black ">
+												{
+													item.full_name
+												}
+											</h1>
+											<span className="text-base font-light">
+												|{" "}
+												{calculateAge(
+													item.Age
+												)}{" "}
+												y.o
+											</span>
+										</div>
+										<span>
+											+10 Year
+											coach
+											experienced
+										</span>
+									</div>
+									<div className="">
+										<Link
+											href={"/"}
+											className="underline underline-offset-4"
+										>
+											See profile
+										</Link>
 									</div>
 								</div>
-							</Link>
+							</div>
 						</div>
 					</SwiperSlide>
 				))}

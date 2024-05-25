@@ -4,7 +4,7 @@ const Description = ({ text, className }: { text: string; className?: string }) 
 	return (
 		<>
 			<p
-				className={`${className} text-center font-light text-base w-full xl:w-3/4`}
+				className={`${className} text-start font-light text-base w-full xl:w-3/4`}
 			>
 				{text}
 			</p>
