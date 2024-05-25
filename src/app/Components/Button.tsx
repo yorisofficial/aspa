@@ -12,17 +12,15 @@ interface Props {
 
 const Button: React.FC<Props> = ({ className, label, children, onClick, variant }) => {
 	const buttonStyle = {
-		primary: "px-6 py-3 border-2 border-primary bg-primary text-white capitalize",
-		invert: "px-6 py-3 border-2 border-white bg-white text-primary capitalize",
-		border: "px-6 py-3 border-2 border-primary bg-primary text-primary capitalize",
-		link: "text-base underlined capitalize",
+		primary: "px-6 py-3 border-2 hover:scale-105 duration-300 border-primary bg-primary text-white",
+		invert: "px-6 py-3 border-2 hover:scale-105 duration-300 border-white bg-white text-primary",
+		border: "px-6 py-3 border-2 hover:scale-105 duration-300 border-primary bg-primary text-primary",
+		link: "text-base underlined",
 		iconPrimary:
-			"flex justify-center items-center gap-3 pl-3 pr-6 py-3 bg-primary text-white capitalize",
+			"flex justify-center items-center gap-3 pl-3 pr-6 py-3 bg-primary text-white",
 	};
 
 	const buttonClass = `${buttonStyle[variant]} ${className}`;
-
-	const router = useRouter();
 
 	return (
 		<>

@@ -51,22 +51,22 @@ const OurService = () => {
 				{Service.map((item) => (
 					<div
 						key={item.id}
-						className="item-service border-2 p-4 bg-white drop-shadow-lg border-bordersolid flex flex-col gap-2 w-full"
+						className="item-service border-2 group hover:bg-black cursor-pointer transition-colors ease-out duration-500 p-4 bg-white border-bordersolid flex flex-col gap-2 w-full"
 					>
-						<div className="icon-service p-2 bg-primary w-fit text-white">
+						<div className="icon-service p-2 group-hover:rotate-12 bg-primary group-hover:invert w-fit text-white">
 							<Image
 								src={item.pathImage}
 								alt={item.title}
 								width={500}
 								height={500}
-								className="w-6 h-6"
+								className="w-6 h-6 group-hover:-rotate-12"
 							/>
 						</div>
-						<div className="title-service w-full min-h-[100px]">
-							<span className="text-sm sm:text-base text-brand font-semibold">
+						<div className="title-service min-h-[100px] space-y-2 xl:space-y-4 group-hover:invert">
+							<h1 className="text-sm md:text-base font-black">
 								{item.title}
-							</span>
-							<p className="text-xs sm:text-sm font-light">
+							</h1>
+							<p className="text-xs sm:text-sm font-normal">
 								{item.desc}
 							</p>
 						</div>

@@ -6,7 +6,7 @@ import React from "react";
 
 const FooterPage = () => {
 	return (
-		<div className="w-full gap-4 mt-8 py-8 h-full bg-[#0F172A] text-white flex flex-col justify-center items-center">
+		<div className="w-full gap-4 mt-8 py-8 h-full bg-primary text-white flex flex-col justify-center items-center">
 			<Image
 				src={"/brand/ASPA-white.svg"}
 				alt="ASPA Logo"
@@ -24,7 +24,7 @@ const FooterPage = () => {
 			</div>
 			<div className="cta-whatsapp">
 				<Link
-					href={"/"}
+					href={"wa.me/6285156242689"}
 					className="flex gap-2 items-center p-2 rounded bg-white text-black"
 				>
 					<WhatsappLogo size={24} />
@@ -33,13 +33,22 @@ const FooterPage = () => {
 			</div>
 			<div className="list-social">
 				<div className="flex gap-8 items-center">
-					<Link href={"/"}>
+					<Link
+						href={"https://www.instagram.com/asiansurfacademy/"}
+						aria-label="Connect on Instagram"
+					>
 						<InstagramLogo size={32} />
 					</Link>
-					<Link href={"/"}>
+					<Link
+						href={"https://x.com/asiansurfacademy"}
+						aria-label="Connect on Twitter"
+					>
 						<XLogo size={32} />
 					</Link>
-					<Link href={"/"}>
+					<Link
+						href={"https://www.youtube.com/@asiansurfacademy"}
+						aria-label="Subscribe ASPA on Youtube"
+					>
 						<YoutubeLogo size={32} />
 					</Link>
 				</div>

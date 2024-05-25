@@ -12,12 +12,6 @@ export const HERO = [
 		url: "/assets/hero-img-2.png",
 	},
 	{
-		id: 3,
-		title: "Hero 3",
-		description: "Hero 3 description",
-		url: "/assets/hero-img-3.png",
-	},
-	{
 		id: 4,
 		title: "Hero 4",
 		description: "Hero 4 description",

@@ -48,7 +48,7 @@ const SliderCoach = () => {
 							/>
 
 							<div className="profile-coach absolute bottom-4 left-4 text-white">
-								<div className="flex flex-col justify-start items-start gap-8">
+								<div className="flex flex-col justify-start items-start gap-4">
 									<div className="text-start">
 										<div className="flex gap-2 items-center">
 											<h1 className="coach-name text-start text-2xl font-black ">
@@ -64,7 +64,7 @@ const SliderCoach = () => {
 												y.o
 											</span>
 										</div>
-										<span>
+										<span className="text-sm">
 											+10 Year
 											coach
 											experienced
@@ -72,8 +72,10 @@ const SliderCoach = () => {
 									</div>
 									<div className="">
 										<Link
-											href={"/"}
-											className="underline underline-offset-4"
+											href={
+												item.full_name
+											}
+											className="underline text-sm underline-offset-4"
 										>
 											See profile
 										</Link>

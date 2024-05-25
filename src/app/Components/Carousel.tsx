@@ -17,10 +17,10 @@ const Carousel = () => {
 		<div className="w-full h-screen">
 			<Swiper
 				slidesPerView={1}
-				spaceBetween={30}
+				spaceBetween={20}
 				loop={true}
 				autoplay={{
-					delay: 2500,
+					delay: 6000,
 				}}
 				modules={[Autoplay]}
 				className="mySwiper"
@@ -29,10 +29,11 @@ const Carousel = () => {
 					<SwiperSlide key={index}>
 						<Image
 							src={item.url}
-							height={1400}
-							width={1400}
+							height={1000}
+							width={1000}
 							alt={item.title}
-							className="w-full h-full"
+							priority={false}
+							className="w-full h-full object-cover"
 						/>
 					</SwiperSlide>
 				))}

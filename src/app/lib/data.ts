@@ -2,7 +2,7 @@ export const CoreTeam = [
 	{
 		id: 1,
 		full_name: "Tipi Jabrik",
-		nickname: "tipi",
+		nickname: "Tipi",
 		Age: 1985,
 		title: "ASPA Director",
 		experient: "+10 years coach",

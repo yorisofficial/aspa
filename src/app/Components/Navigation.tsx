@@ -16,12 +16,12 @@ const Navigation = () => {
 			link: "/academy",
 		},
 		{
-			title: "Program",
-			link: "/our-program",
+			title: "Our Program",
+			link: "/program",
 		},
 		{
 			title: "Our Team",
-			link: "/our-team",
+			link: "/team",
 		},
 	];
 	const handleShow = () => {
@@ -36,10 +36,10 @@ const Navigation = () => {
 							<Image
 								src={"/brand/ASPA-dark.svg"}
 								alt="logo"
-								width={100}
-								height={100}
+								width={500}
+								height={500}
 								priority={false}
-								className="object-cover w-32 h-full"
+								className="brand w-1/2 xl:w-full h-full"
 							/>
 						</Link>
 						<div className="cta-button xl:hidden">

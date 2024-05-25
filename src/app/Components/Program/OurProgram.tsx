@@ -23,18 +23,29 @@ const OurProgram = () => {
 						height={1500}
 						priority={false}
 						alt="ASPA Logo"
-						className="hidden h-[442px] md:inline-block object-cover"
+						className="hidden w-full h-[442px] md:inline-block object-cover"
 					/>
-					<div className="program-card space-y-4 md:absolute z-10 md:left-[2%] md:top-1/2 md:-translate-y-1/2 bg-primary md:w-[450px] text-white p-8">
+					<div className="program-card relative space-y-4 md:absolute z-10 md:left-[2%] md:top-1/2 md:-translate-y-1/2 bg-primary md:w-[450px] text-white p-8">
+						<div className="absolute left-0 top-0">
+							<Image
+								src={
+									"/assets/acc/title-cover-simple.svg"
+								}
+								alt="acc-line"
+								width={500}
+								height={500}
+								className="w-[200px] h-[200px]"
+							/>
+						</div>
 						<div className="header">
 							<h1 className="text-xl font-bold uppercase">
-								ASPA x Grom Patrol
+								ASPA x Grom Patrol 2024
 							</h1>
 						</div>
-						<p className="text-sm font-light">
+						<p className="text-sm font-light w-full">
 							ASPA has launched the inaugural program for
-							Tipi Jabrik&39;s Grom Patrol 2024. The ASPA
-							Grom Patrol Camp will provide a 5-day
+							Tipi Jabrik&apos;s Grom Patrol 2024. The
+							ASPA Grom Patrol Camp will provide a 5-day
 							training session before the competition.
 							Located at Mamaka Hotel, Kuta Beach, right
 							in front of the competition area, this
@@ -46,20 +57,20 @@ const OurProgram = () => {
 							teamwork, commitment, and responsibility.
 						</p>
 						<div className="w-full flex items-center gap-4">
-							<Link href={""}>
+							<Link href={"/program"}>
 								<Button
-									label="Go to about us"
+									label="Book the program"
 									variant="invert"
 									className=""
 								>
-									Read more
+									Book now
 								</Button>
 							</Link>
 							<Link
 								href={"/about-us"}
-								className="underline underline-offset-4"
+								className="underline text-sm underline-offset-4"
 							>
-								learn more
+								Learn more the program
 							</Link>
 						</div>
 					</div>

@@ -25,7 +25,7 @@ const AboutUs = () => {
 				<h1 className={`text-xl font-black text-brand`}>About us</h1>
 				<Description
 					text="The Asian Surf Performance Academy (ASPA) is where surfers reach their highest potential. Located in Bali, we focus on supporting and empowering surfers to become their best. We enhance your surfing skills and help you develop professional qualities like motivation, teamwork, and responsibility."
-					className="Aspa-Description"
+					className="Aspa-Description w-full"
 				/>
 				<Link href={"/about-us"} className={`${!homePageView}`}>
 					<Button label="About us" variant="primary">
@@ -53,9 +53,9 @@ const AboutUs = () => {
 					/>
 				</div>
 				<div className="w-full flex justify-center items-center">
-					<Link href={"/about-us"}>
+					<Link href={"/about"}>
 						<Button label="learn more" variant="primary">
-							About us
+							About ASPA
 						</Button>
 					</Link>
 				</div>

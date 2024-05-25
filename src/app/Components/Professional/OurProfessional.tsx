@@ -13,7 +13,7 @@ const OurProfessional = () => {
 						<h1 className="text-start text-brand text-xl font-black">
 							Our team
 						</h1>
-						<p className="font-light text-sm">
+						<p className="font-light text-sm xl:w-1/2">
 							We are a passionate and experienced team in
 							the world of surfing. With deep knowledge
 							and high dedication, we are ready to help
@@ -23,20 +23,13 @@ const OurProfessional = () => {
 							success in the water.
 						</p>
 					</div>
-					<Link href={"/our-team"} className="">
+					<Link href={"/team"} className="">
 						<Button label="see more" variant="primary">
-							see more
+							See all teams
 						</Button>
 					</Link>
 				</div>
 				<SliderCoach />
-				<div className="w-full flex justify-center items-center">
-					<Link href={"/our-team"} className="hidden xl:inline-block">
-						<Button label="see more" variant="primary">
-							see more
-						</Button>
-					</Link>
-				</div>
 			</div>
 		</ContainerContent>
 	);

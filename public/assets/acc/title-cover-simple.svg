@@ -1,32 +1,61 @@
-<svg width="236" height="233" viewBox="0 0 236 233" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_89_4374" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="3" width="200" height="200">
-<rect x="6" y="3" width="200" height="200" rx="100" fill="black"/>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_104_4972)">
+<mask id="mask0_104_4972" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="401" height="401">
+<line x1="-4.37114e-08" y1="19.5" x2="400" y2="19.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="39.5" x2="400" y2="39.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="59.5" x2="400" y2="59.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="79.5" x2="400" y2="79.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="99.5" x2="400" y2="99.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="119.5" x2="400" y2="119.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="139.5" x2="400" y2="139.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="159.5" x2="400" y2="159.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="179.5" x2="400" y2="179.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="199.5" x2="400" y2="199.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="219.5" x2="400" y2="219.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="239.5" x2="400" y2="239.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="259.5" x2="400" y2="259.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="279.5" x2="400" y2="279.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="299.5" x2="400" y2="299.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="319.5" x2="400" y2="319.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="339.5" x2="400" y2="339.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="359.5" x2="400" y2="359.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="379.5" x2="400" y2="379.5" stroke="white"/>
+<line x1="-4.37114e-08" y1="399.5" x2="400" y2="399.5" stroke="white"/>
+<line x1="0.5" y1="2.19649e-08" x2="0.499982" y2="400" stroke="white"/>
+<line x1="20.5" y1="2.19649e-08" x2="20.5" y2="400" stroke="white"/>
+<line x1="40.5" y1="2.19649e-08" x2="40.5" y2="400" stroke="white"/>
+<line x1="60.5" y1="2.19649e-08" x2="60.5" y2="400" stroke="white"/>
+<line x1="80.5" y1="2.19649e-08" x2="80.5" y2="400" stroke="white"/>
+<line x1="100.5" y1="2.19649e-08" x2="100.5" y2="400" stroke="white"/>
+<line x1="120.5" y1="2.19649e-08" x2="120.5" y2="400" stroke="white"/>
+<line x1="140.5" y1="2.19649e-08" x2="140.5" y2="400" stroke="white"/>
+<line x1="160.5" y1="2.19649e-08" x2="160.5" y2="400" stroke="white"/>
+<line x1="180.5" y1="2.19649e-08" x2="180.5" y2="400" stroke="white"/>
+<line x1="200.5" y1="2.19649e-08" x2="200.5" y2="400" stroke="white"/>
+<line x1="220.5" y1="2.19649e-08" x2="220.5" y2="400" stroke="white"/>
+<line x1="240.5" y1="2.19649e-08" x2="240.5" y2="400" stroke="white"/>
+<line x1="260.5" y1="2.19649e-08" x2="260.5" y2="400" stroke="white"/>
+<line x1="280.5" y1="2.19649e-08" x2="280.5" y2="400" stroke="white"/>
+<line x1="300.5" y1="2.19649e-08" x2="300.5" y2="400" stroke="white"/>
+<line x1="320.5" y1="2.19649e-08" x2="320.5" y2="400" stroke="white"/>
+<line x1="340.5" y1="2.19649e-08" x2="340.5" y2="400" stroke="white"/>
+<line x1="360.5" y1="2.19649e-08" x2="360.5" y2="400" stroke="white"/>
+<line x1="380.5" y1="2.19649e-08" x2="380.5" y2="400" stroke="white"/>
 </mask>
-<g mask="url(#mask0_89_4374)">
-<line x1="90.3457" y1="0.0478516" x2="90.3457" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="74.3457" y1="0.0478516" x2="74.3457" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="58.3457" y1="0.0478516" x2="58.3457" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="42.3457" y1="0.0478516" x2="42.3457" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="26.3457" y1="0.0478516" x2="26.3457" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="10.3457" y1="0.0478516" x2="10.3457" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 187.048)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="106.346" y1="0.0478516" x2="106.346" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 171.048)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="122.346" y1="0.0478516" x2="122.346" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 155.048)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="138.346" y1="0.0478516" x2="138.346" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 139.048)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="154.346" y1="0.0478516" x2="154.346" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 123.048)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="170.346" y1="0.0478516" x2="170.346" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 107.048)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="186.346" y1="0.0478516" x2="186.346" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 91.0479)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line x1="202.346" y1="0.0478516" x2="202.346" y2="279.048" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 75.0479)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 59.0479)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 43.0479)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 27.0479)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
-<line y1="-0.25" x2="279" y2="-0.25" transform="matrix(-1 8.74228e-08 8.74228e-08 1 279.096 11.0479)" stroke="white" stroke-opacity="0.2" stroke-width="0.5"/>
+<g mask="url(#mask0_104_4972)">
+<g filter="url(#filter0_f_104_4972)">
+<rect x="50" y="50" width="300" height="300" fill="white" fill-opacity="0.25"/>
 </g>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_104_4972" x="-32.2" y="-32.2" width="464.4" height="464.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="41.1" result="effect1_foregroundBlur_104_4972"/>
+</filter>
+<clipPath id="clip0_104_4972">
+<rect width="400" height="400" fill="white"/>
+</clipPath>
+</defs>
 </svg>

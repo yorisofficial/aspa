@@ -9,11 +9,12 @@ const HeroSection = () => {
 			<Carousel />
 			<div className="absolute flex justify-center items-center flex-col top-1/2 z-10 left-1/2 -translate-y-1/2 -translate-x-1/2">
 				<Image
-					src={"/assets/acc/title-cover.png"}
-					height={1400}
-					width={1400}
+					src={"/assets/acc/title-cover.svg"}
+					height={500}
+					width={500}
 					alt=".."
-					className="w-full h-full object-cover opacity-30"
+					priority={false}
+					className="w-3/4 h-3/4 object-cover"
 				/>
 			</div>
 			<div className="absolute flex justify-center items-center flex-col top-1/2 z-10 left-1/2 -translate-y-1/2 -translate-x-1/2">
@@ -22,7 +23,8 @@ const HeroSection = () => {
 					height={500}
 					width={500}
 					alt="ASPA Logo"
-					className="xl:w-[300px] h-full object-cover"
+					priority={false}
+					className="w-3/4 xl:w-full h-full object-cover"
 				/>
 				<h1 className="text-xl text-white whitespace-nowrap">
 					Asian Surf Profesional Academy
