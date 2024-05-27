@@ -5,13 +5,14 @@ import React from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { CoreTeam } from "../lib/data";
+export const calculateAge = (birthYear: number) => {
+	const age = new Date().getFullYear() - birthYear;
+	return age;
+};
 
 const SliderCoach = () => {
 	const data = CoreTeam;
-	const calculateAge = (birthYear: number) => {
-		const age = new Date().getFullYear() - birthYear;
-		return age;
-	};
+
 
 	return (
 		<div className="list-coach">
@@ -58,9 +59,7 @@ const SliderCoach = () => {
 											</h1>
 											<span className="text-base font-light">
 												|{" "}
-												{calculateAge(
-													item.Age
-												)}{" "}
+												{calculateAge(item?.age)}
 												y.o
 											</span>
 										</div>

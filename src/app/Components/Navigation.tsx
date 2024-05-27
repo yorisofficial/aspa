@@ -39,7 +39,7 @@ const Navigation = () => {
 								width={500}
 								height={500}
 								priority={false}
-								className="brand w-1/2 xl:w-full h-full"
+								className="brand w-1/2 xl:w-32 h-full"
 							/>
 						</Link>
 						<div className="cta-button xl:hidden">

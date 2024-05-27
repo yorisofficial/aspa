@@ -15,7 +15,9 @@ const ContainerContent = ({
 	const pathUse = `${pathName.includes(url) ? "xl:pt-[150px]" : ""}`;
 
 	return (
-		<div className={`max-w-5xl py-8 mx-auto container h-full ${pathUse} ${className}`}>
+		<div
+			className={`max-w-5xl pt-32 pb-8 px-4 xl:px-0 xl:pt-8 xl:pb-8 mx-auto container h-full ${pathUse} ${className}`}
+		>
 			{children}
 		</div>
 	);

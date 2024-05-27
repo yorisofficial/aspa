@@ -34,7 +34,7 @@ const FooterPage = () => {
 			<div className="list-social">
 				<div className="flex gap-8 items-center">
 					<Link
-						href={"https://www.instagram.com/asiansurfacademy/"}
+						href={"https://www.instagram.com/aspa_surfacademy/"}
 						aria-label="Connect on Instagram"
 					>
 						<InstagramLogo size={32} />
