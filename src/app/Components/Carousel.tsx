@@ -17,10 +17,10 @@ const Carousel = () => {
 		<div className="w-full h-screen">
 			<Swiper
 				slidesPerView={1}
-				spaceBetween={20}
+				spaceBetween={0}
 				loop={true}
 				autoplay={{
-					delay: 6000,
+					delay: 5000,
 				}}
 				modules={[Autoplay]}
 				className="mySwiper"

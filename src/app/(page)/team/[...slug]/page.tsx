@@ -7,12 +7,9 @@ import { InstagramLogo } from "@phosphor-icons/react";
 import Image from "next/image";
 
 const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
-	const calculateAge = (birthYear: number) => {
-		const age = new Date().getFullYear() - birthYear;
-		return age;
-	};
 
-	const getTeam = params.slug[1]
+
+	const getTeam = params?.slug[1]
 		.replaceAll("%20", " ")
 		.replaceAll("-", " ")
 		.split(" ")
@@ -62,10 +59,10 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
 
 									{item?.experience && (
 										<p className="text-base font-light">
-											{`+${item?.experience}`}
+											{item?.experience}
 										</p>
 									)}
-									<span className="capitalize">ASPA {getTitle}</span>
+									<span className="capitalize">{getTitle.replaceAll("aspa", "ASPA")}</span>
 								</div>
 							</div>
 							<div className="intro py-8 border-b border-black space-y-8">

@@ -54,7 +54,7 @@ const FooterPage = () => {
 				</div>
 			</div>
 			<div className="copyright-section">
-				<span>&copy;2024 ASPA All rights reserved</span>
+				<span className="text-xs font-light">&copy;2024 ASPA All rights reserved</span>
 			</div>
 		</div>
 	);

@@ -14,7 +14,7 @@ const HeroSection = () => {
 					width={500}
 					alt=".."
 					priority={false}
-					className="w-3/4 h-3/4 object-cover"
+					className="w-3/4 h-3/4 object-cover opacity-50"
 				/>
 			</div>
 			<div className="absolute flex justify-center items-center flex-col top-1/2 z-10 left-1/2 -translate-y-1/2 -translate-x-1/2">

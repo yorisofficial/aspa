@@ -7,13 +7,14 @@ import HeadingText from "../HeadingText";
 import Button from "../Button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Home } from "@/app/lib/Home";
 
 const AboutUs = () => {
 	const pathName = usePathname();
 	const homePageView = pathName === "/" ? "hidden" : "";
 
 	return (
-		<ContainerContent url="/about-us" className="space-y-8 py-8 border-b border-primary">
+		<ContainerContent url="/about-us" className="space-y-8 py-8 border-buttom">
 			<div className="profile-about space-y-4 flex justify-center items-start flex-col">
 				<Image
 					src={"/brand/ASPA-dark.svg"}
@@ -22,9 +23,9 @@ const AboutUs = () => {
 					alt="ASPA Logo"
 					className="w-[300px] h-full"
 				/>
-				<h1 className={`text-xl font-black text-brand`}>About us</h1>
+				<h1 className={`text-xl font-black text-brand`}>{Home[0].title}</h1>
 				<Description
-					text="The Asian Surf Performance Academy (ASPA) is where surfers reach their highest potential. Located in Bali, we focus on supporting and empowering surfers to become their best. We enhance your surfing skills and help you develop professional qualities like motivation, teamwork, and responsibility."
+					text={Home[0].description}
 					className="Aspa-Description w-full"
 				/>
 				<Link href={"/about-us"} className={`${!homePageView}`}>

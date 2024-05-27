@@ -7,23 +7,23 @@ import ListCoreTeam from "@/app/Components/Professional/ListCoreTeam";
 
 const TeamPage = () => {
 	return (
-		<ContainerContent url="/team" className="our-team border-b border-primary">
+		<ContainerContent url="/team" className="our-team border-buttom">
 			<BackButton url="/">Back to main</BackButton>
 			<ListCoreTeam categories="ASPA" title="ASPA" teamData={CoreTeam} />
 			<PrimaryView
 				title="ASPA Coaches"
 				teamData={SurfTeam}
-				categories="Coach"
+				categories="ASPA Coach"
 			/>
 			<PrimaryView
 				title="ASPA Expert"
 				teamData={ExpertTeam}
-				categories="Expert"
+				categories="ASPA Expert"
 			/>
 			<PrimaryView
 				title="ASPA Videographer"
 				teamData={VideographerTeam}
-				categories="Videographer"
+				categories="ASPA Videographer"
 			/>
 		</ContainerContent>
 	);

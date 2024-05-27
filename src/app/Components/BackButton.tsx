@@ -6,10 +6,10 @@ import { ArrowLeft } from "@phosphor-icons/react";
 
 const BackButton = ({ url, children }: { url: string; children: React.ReactNode }) => {
 	return (
-		<div className="pb-8 w-full border-b border-primary">
-			<Link href={url} className="">
+		<div className="pb-8 w-full border-buttom">
+			<Link href={url} className="group w-fit">
 				<Button label="Back" variant="iconPrimary">
-					<ArrowLeft />{children}
+					<ArrowLeft className="group-hover:-translate-x-1 duration-300" />{children}
 				</Button>
 			</Link>
 		</div>

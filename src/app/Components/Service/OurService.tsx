@@ -43,7 +43,7 @@ const Service = [
 
 const OurService = () => {
 	return (
-		<ContainerContent url="our-service" className="flex w-full h-full flex-col gap-8 py-8 border-b border-primary">
+		<ContainerContent url="our-service" className="flex w-full h-full flex-col gap-8 py-8 border-buttom">
 			<div className="w-full">
 				<h1 className="text-brand text-xl font-black">Our service</h1>
 			</div>
@@ -51,9 +51,9 @@ const OurService = () => {
 				{Service.map((item) => (
 					<div
 						key={item.id}
-						className="item-service border-2 group hover:bg-black cursor-pointer transition-colors ease-out duration-500 p-4 bg-white border-bordersolid flex flex-col gap-2 w-full"
+						className="item-service border-2 group hover:bg-primary cursor-pointer transition-colors ease-out duration-500 p-2 md:p-4 bg-white border-bordersolid flex flex-col gap-2 w-full"
 					>
-						<div className="icon-service p-2 group-hover:rotate-12 bg-primary group-hover:invert w-fit text-white">
+						<div className="icon-service p-2 duration-500 bg-primary group-hover:invert group-hover:text-black w-fit">
 							<Image
 								src={item.pathImage}
 								alt={item.title}

@@ -3,27 +3,31 @@
 @tailwind utilities;
 
 .swiper {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.border-buttom {
+  @apply border-b border-primary;
 }
 
 .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .bored {
-	@apply border-2 border-red;
+  @apply border-2 border-red;
 }

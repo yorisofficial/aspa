@@ -13,7 +13,6 @@ export const calculateAge = (birthYear: number) => {
 const SliderCoach = () => {
 	const data = CoreTeam;
 
-
 	return (
 		<div className="list-coach">
 			<Swiper
@@ -71,11 +70,8 @@ const SliderCoach = () => {
 									</div>
 									<div className="">
 										<Link
-											href={
-												item.full_name
-											}
-											className="underline text-sm underline-offset-4"
-										>
+											href={`/team/team/${item.full_name.replaceAll(" ", "-").toLocaleLowerCase()}`}
+											className="underline text-sm underline-offset-4">
 											See profile
 										</Link>
 									</div>
@@ -85,7 +81,7 @@ const SliderCoach = () => {
 					</SwiperSlide>
 				))}
 			</Swiper>
-		</div>
+		</div >
 	);
 };
 
