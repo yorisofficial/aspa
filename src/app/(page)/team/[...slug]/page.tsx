@@ -7,34 +7,35 @@ import { InstagramLogo } from "@phosphor-icons/react";
 import Image from "next/image";
 
 const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
+	const calculateAge = (birthYear: number) => {
+		const age = new Date().getFullYear() - birthYear;
+		return age;
+	};
+
 	const getTeam = params.slug[1]
 		.replaceAll("%20", " ")
 		.replaceAll("-", " ")
 		.split(" ")
 		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
 		.join(" ");
-	const calculateAge = (birthYear: number) => {
-		const age = new Date().getFullYear() - birthYear;
-		return age;
-	};
 
 	// const getTeam = params.slug[1];
-	const getTitle = params.slug[0].replaceAll("%20", " ");
+	const getTitle = params.slug[0].replaceAll("-", " ");
 
 	const teamCore = CoreTeam.find((item) =>
-		item?.full_name.includes(getTeam.replace("-", " "))
+		item?.full_name.includes(getTeam.replaceAll("-", " "))
 	);
 	const teamSurf = SurfTeam.find((item) =>
-		item?.full_name.includes(getTeam.replace("-", " "))
+		item?.full_name.includes(getTeam.replaceAll("-", " "))
 	);
 	const teamExpert = ExpertTeam.find((item) =>
-		item?.full_name.includes(getTeam.replace("-", " "))
+		item?.full_name.includes(getTeam.replaceAll("-", " "))
 	);
 	const teamVideo = VideographerTeam.find((item) =>
-		item?.full_name.includes(getTeam.replace("-", " "))
+		item?.full_name.includes(getTeam.replaceAll("-", " "))
 	);
 
-	const detailsData = [teamCore, teamSurf, teamExpert, teamVideo];
+	const detailsData = [teamCore || teamSurf || teamExpert || teamVideo];
 	console.log();
 
 	return (
@@ -56,7 +57,7 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
 								/>
 								<div className="">
 									<h1 className="text-xl font-black">
-										{item?.full_name}
+										{item?.full_name} {item?.nickname && (<span className="text-sm font-light">({item?.nickname})</span>)}
 									</h1>
 
 									{item?.experience && (
@@ -64,6 +65,7 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
 											{`+${item?.experience}`}
 										</p>
 									)}
+									<span className="capitalize">ASPA {getTitle}</span>
 								</div>
 							</div>
 							<div className="intro py-8 border-b border-black space-y-8">
@@ -80,10 +82,11 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
 											</span>
 											<h1 className="text-xl font-semibold">
 												{item?.nickname === ""
-													? item?.full_name.split(" ")[0]
+													? item?.full_name.split(" ")[1] || item?.full_name.split(" ")[2]
 													: item?.nickname
 												}
 											</h1>
+
 										</div>
 
 										<div className="">

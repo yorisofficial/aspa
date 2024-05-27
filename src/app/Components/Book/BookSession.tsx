@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const BookSession = () => {
 	return (
-		<ContainerContent url="book-session" className="relative">
+		<ContainerContent url="book-session" className="relative py-8 border-b border-primary">
 			<div className="absolute top-0 left-1/2 -translate-x-1/2">
 				<Image
 					src={"/assets/acc/title-cover-simple.svg"}

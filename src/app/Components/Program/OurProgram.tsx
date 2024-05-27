@@ -6,7 +6,7 @@ import Link from "next/link";
 const OurProgram = () => {
 	return (
 		<>
-			<div className="our-program py-8 flex justify-center relative items-center">
+			<div className="our-program py-8 border-b border-primary flex justify-center relative items-center">
 				<div className="absolute top-0 left-0 z-10">
 					<Image
 						src={"/assets/acc/title-cover-simple.svg"}
@@ -38,11 +38,11 @@ const OurProgram = () => {
 							/>
 						</div>
 						<div className="header">
-							<h1 className="text-xl font-bold uppercase">
+							<h1 className="text-base xl:text-xl font-bold uppercase">
 								ASPA x Grom Patrol 2024
 							</h1>
 						</div>
-						<p className="text-sm font-light w-full">
+						<p className="text-sm font-light w-full text-justify">
 							ASPA has launched the inaugural program for
 							Tipi Jabrik&apos;s Grom Patrol 2024. The
 							ASPA Grom Patrol Camp will provide a 5-day
@@ -56,21 +56,15 @@ const OurProgram = () => {
 							professional qualities such as motivation,
 							teamwork, commitment, and responsibility.
 						</p>
-						<div className="w-full flex items-center gap-4">
-							<Link href={"/program"}>
-								<Button
-									label="Book the program"
-									variant="invert"
-									className=""
-								>
-									Book now
-								</Button>
+						<div className="w-full flex items-center gap-4 flex-shrink-0">
+							<Link href={"/program"} className="bg-white text-black text-sm px-5 py-3">
+								Book now
 							</Link>
 							<Link
 								href={"/about-us"}
 								className="underline text-sm underline-offset-4"
 							>
-								Learn more the program
+								About the program
 							</Link>
 						</div>
 					</div>

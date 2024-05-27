@@ -12,11 +12,11 @@ const ContainerContent = ({
 	url: string;
 }) => {
 	const pathName = usePathname();
-	const pathUse = `${pathName.includes(url) ? "xl:pt-[150px]" : ""}`;
+	const pathUse = `${pathName.includes(url) ? "pt-32 px-4 md:px-10 xl:px-0 xl:pt-[150px]" : ""}`;
 
 	return (
 		<div
-			className={`max-w-5xl pt-32 pb-8 px-4 xl:px-0 xl:pt-8 xl:pb-8 mx-auto container h-full ${pathUse} ${className}`}
+			className={`container mx-auto max-w-5xl ${pathUse} ${className}`}
 		>
 			{children}
 		</div>

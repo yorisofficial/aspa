@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
 const Navigation = () => {
@@ -27,6 +28,10 @@ const Navigation = () => {
 	const handleShow = () => {
 		setShow(!isShow);
 	};
+
+	// check pathName
+	const pathName = usePathname()
+
 	return (
 		<header className="fixed text-black top-0 left-0 z-40 w-full xl:py-8 ">
 			<nav className="max-w-5xl mx-auto">
@@ -68,7 +73,7 @@ const Navigation = () => {
 										onClick={handleShow}
 										key={index}
 										href={item.link}
-										className={`py-4 px-6 rounded-xl`}
+										className={`${pathName === item.link ? 'bg-black text-white' : ''} py-4 px-6 rounded-xl hover:bg-black hover:text-white`}
 									>
 										{item.title}
 									</Link>
@@ -81,7 +86,7 @@ const Navigation = () => {
 							<Link
 								key={index}
 								href={item.link}
-								className="text-lg duration-500 hover:font-medium hover:underline underline-offset-4 hover:text-blue-700"
+								className={`${pathName === item.link ? 'text-brand underline' : ''} text-lg duration-500 hover:font-medium hover:underline underline-offset-4 hover:text-brand`}
 							>
 								{item.title}
 							</Link>

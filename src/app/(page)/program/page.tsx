@@ -4,7 +4,7 @@ import React from "react";
 
 const ProgramPage = () => {
 	return (
-		<ContainerContent url="/program" className="w-full min-h-screen">
+		<ContainerContent url="/program" className="w-full min-h-screen px-4 xl:px-0">
 			<BackButton url="/">Back to main</BackButton>
 		</ContainerContent>
 	);

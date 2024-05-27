@@ -13,7 +13,7 @@ const AboutUs = () => {
 	const homePageView = pathName === "/" ? "hidden" : "";
 
 	return (
-		<ContainerContent url="/about-us" className="space-y-8">
+		<ContainerContent url="/about-us" className="space-y-8 py-8 border-b border-primary">
 			<div className="profile-about space-y-4 flex justify-center items-start flex-col">
 				<Image
 					src={"/brand/ASPA-dark.svg"}

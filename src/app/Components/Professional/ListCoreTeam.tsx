@@ -34,11 +34,11 @@ const ListCoreTeam = ({
 	return (
 		<div className="simple-container flex flex-col gap-8 justify-start items-start py-8 border-b border-primary">
 			<h1 className="text-3xl font-black">{title}</h1>
-			<div className="flex flex-col gap-4">
+			<div className="flex flex-col gap-4 w-full">
 				{data.map((item) => (
 					<div
 						key={item.id}
-						className="item-core flex gap-5 p-4 rounded-xl border border-bordersolid bg-white w-[330px] drop-shadow-xl items-start justify-start"
+						className="item-core w-full flex gap-5 p-4 rounded-xl border border-bordersolid bg-white md:w-[330px] drop-shadow-xl items-start justify-start"
 					>
 						<div className="rounded-full ring-4 ring-brand w-fit">
 							<Image
@@ -86,8 +86,8 @@ const ListCoreTeam = ({
 								More details of{" "}
 								{item.nickname
 									? item.full_name.split(
-											" "
-									  )[0]
+										" "
+									)[0]
 									: item.nickname}
 							</button>
 						</div>

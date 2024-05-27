@@ -6,7 +6,7 @@ import Button from "../Button";
 
 const OurProfessional = () => {
 	return (
-		<ContainerContent url="/our-team" className="py-8 border-b-2 border-primary">
+		<ContainerContent url="/our-team" className="py-8 border-b border-primary">
 			<div className="our-professional-teams space-y-8">
 				<div className="our-team header w-full flex flex-col gap-8 justify-between items-start">
 					<div className="space-y-2">

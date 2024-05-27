@@ -43,7 +43,7 @@ const Service = [
 
 const OurService = () => {
 	return (
-		<ContainerContent url="our-service" className="flex w-full h-full flex-col gap-8">
+		<ContainerContent url="our-service" className="flex w-full h-full flex-col gap-8 py-8 border-b border-primary">
 			<div className="w-full">
 				<h1 className="text-brand text-xl font-black">Our service</h1>
 			</div>
