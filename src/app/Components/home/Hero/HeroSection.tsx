@@ -4,37 +4,37 @@ import Image from "next/image";
 import MouseAnimate from "./MouseAnimate";
 
 const HeroSection = () => {
-	return (
-		<div className="w-full relative h-screen">
-			<Carousel />
-			<div className="absolute flex justify-center items-center flex-col top-1/2 z-10 left-1/2 -translate-y-1/2 -translate-x-1/2">
-				<Image
-					src={"/assets/acc/title-cover.svg"}
-					height={500}
-					width={500}
-					alt=".."
-					priority={false}
-					className="w-3/4 h-3/4 object-cover opacity-50"
-				/>
-			</div>
-			<div className="absolute flex justify-center items-center flex-col top-1/2 z-10 left-1/2 -translate-y-1/2 -translate-x-1/2">
-				<Image
-					src={"/brand/ASPA-white.svg"}
-					height={500}
-					width={500}
-					alt="ASPA Logo"
-					priority={false}
-					className="w-3/4 xl:w-full h-full object-cover"
-				/>
-				<h1 className="text-xl text-white whitespace-nowrap">
-					Asian Surf Profesional Academy
-				</h1>
-			</div>
-			<div className="absolute z-10 left-0 bottom-12 flex justify-center items-center w-full">
-				<MouseAnimate />
-			</div>
-		</div>
-	);
+  return (
+    <div className="relative h-screen w-full">
+      <Carousel />
+      <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center">
+        <Image
+          src={"/assets/acc/title-cover.svg"}
+          height={500}
+          width={500}
+          alt=".."
+          priority={false}
+          className="h-3/4 w-3/4 object-cover opacity-50"
+        />
+      </div>
+      <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center">
+        <Image
+          src={"/brand/ASPA-white.svg"}
+          height={500}
+          width={500}
+          alt="ASPA Logo"
+          priority={false}
+          className="h-full w-3/4 object-cover xl:w-full"
+        />
+        <h1 className="whitespace-nowrap text-xl text-white">
+          Asian Surf Profesional Academy
+        </h1>
+      </div>
+      <div className="absolute bottom-12 left-0 z-10 flex w-full items-center justify-center">
+        <MouseAnimate />
+      </div>
+    </div>
+  );
 };
 
 export default HeroSection;

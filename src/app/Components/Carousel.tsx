@@ -11,35 +11,35 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const Carousel = () => {
-	const dataSlide = HERO;
+  const dataSlide = HERO;
 
-	return (
-		<div className="w-full h-screen">
-			<Swiper
-				slidesPerView={1}
-				spaceBetween={0}
-				loop={true}
-				autoplay={{
-					delay: 5000,
-				}}
-				modules={[Autoplay]}
-				className="mySwiper"
-			>
-				{dataSlide.map((item, index) => (
-					<SwiperSlide key={index}>
-						<Image
-							src={item.url}
-							height={1000}
-							width={1000}
-							alt={item.title}
-							priority={false}
-							className="w-full h-full object-cover"
-						/>
-					</SwiperSlide>
-				))}
-			</Swiper>
-		</div>
-	);
+  return (
+    <div className="h-screen w-full">
+      <Swiper
+        slidesPerView={1}
+        spaceBetween={0}
+        loop={true}
+        autoplay={{
+          delay: 5000,
+        }}
+        modules={[Autoplay]}
+        className="mySwiper"
+      >
+        {dataSlide.map((item, index) => (
+          <SwiperSlide key={index}>
+            <Image
+              src={item.url}
+              height={1000}
+              width={1000}
+              alt={item.title}
+              priority={false}
+              className="h-full w-full object-left md:object-cover"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
 };
 
 export default Carousel;
