@@ -6,8 +6,10 @@ export const CoreTeam = [
     title: "ASPA Director",
     level: "ISA Lv1",
     location: "Badung",
-    age: 1998,
-    profile: "",
+    age: 1982,
+    profile: "/assets/team/tipi-jabrik.png",
+    user_instagram: "https://www.instagram.com/tipijabrik",
+    user_soorfinc: "Tipi Jabrik",
     experience: "+10 years coach",
     archievement: [
       {
@@ -20,7 +22,6 @@ export const CoreTeam = [
         title: "item 3",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 2,
@@ -30,7 +31,9 @@ export const CoreTeam = [
     level: "ISA Lv1",
     title: "ASPA Manager1998",
     location: "Bali",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/juan_gorostidi",
+    user_soorfinc: "",
     experience: "+5 years coach",
     archievement: [
       {
@@ -46,7 +49,6 @@ export const CoreTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 3,
@@ -56,7 +58,9 @@ export const CoreTeam = [
     level: "ISA Lv1",
     location: "Bali",
     age: 1998,
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/dylan_amartha",
+    user_soorfinc: "",
     experience: "+5 years coach",
     archievement: [
       {
@@ -72,7 +76,6 @@ export const CoreTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
 ];
 export const ExpertTeam = [
@@ -84,7 +87,9 @@ export const ExpertTeam = [
     level: "Expert",
     location: "Trained Kelly Slater",
     age: 1998,
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "",
+    user_soorfinc: "",
     experience: "",
     archievement: [
       {
@@ -100,7 +105,6 @@ export const ExpertTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 2,
@@ -110,7 +114,9 @@ export const ExpertTeam = [
     level: "Profile",
     location: "",
     age: 1998,
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "",
+    user_soorfinc: "",
     experience: "",
     archievement: [
       {
@@ -126,7 +132,6 @@ export const ExpertTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
 ];
 
@@ -139,7 +144,9 @@ export const VideographerTeam = [
     level: "ISA Lv1",
     location: "uluwatu",
     age: 1998,
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "",
+    user_soorfinc: "",
     experience: "",
     archievement: [
       {
@@ -155,7 +162,6 @@ export const VideographerTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 2,
@@ -165,7 +171,9 @@ export const VideographerTeam = [
     level: "ISA Lv1",
     location: "uluwatu",
     age: 1998,
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "",
+    user_soorfinc: "",
     experience: "",
     archievement: [
       {
@@ -181,7 +189,6 @@ export const VideographerTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 3,
@@ -191,7 +198,9 @@ export const VideographerTeam = [
     level: "ISA Lv1",
     location: "",
     age: 1998,
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "",
+    user_soorfinc: "",
     experience: "",
     archievement: [
       {
@@ -207,7 +216,6 @@ export const VideographerTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 4,
@@ -217,7 +225,9 @@ export const VideographerTeam = [
     level: "ISA Lv1",
     location: "",
     age: 1998,
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "",
+    user_soorfinc: "",
     experience: "",
     archievement: [
       {
@@ -233,7 +243,6 @@ export const VideographerTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
 ];
 
@@ -249,7 +258,9 @@ export const SurfTeam = [
     level: "ISA Level 1",
     experience: "",
     location: "Medewi",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/muklis_.anwar",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -264,7 +275,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 2,
@@ -277,7 +287,9 @@ export const SurfTeam = [
     level: "ISA Level 1",
     experience: "",
     location: "Hallway",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/musjeksen",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -292,7 +304,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 3,
@@ -305,7 +316,9 @@ export const SurfTeam = [
     level: "ISA Level 1",
     experience: "",
     location: "Uluwatu",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/gus_bentir",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -320,7 +333,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 4,
@@ -333,7 +345,9 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "7 years to be coach",
     location: "Kuta",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/radityarondi",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -348,7 +362,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 5,
@@ -361,7 +374,9 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Canggu",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/oneyanwar",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -376,7 +391,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 6,
@@ -389,7 +403,9 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Legian",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/darmaputratonjo",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -404,7 +420,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 7,
@@ -417,7 +432,9 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Lembongan",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/putrapulu",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -432,7 +449,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 8,
@@ -445,7 +461,9 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Cimaja",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/mankdede",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -460,7 +478,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 9,
@@ -473,7 +490,9 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Kuta Reef",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/gogosujaya",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -488,7 +507,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 10,
@@ -501,7 +519,9 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Legian",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/darmayasablerok",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -516,7 +536,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 11,
@@ -529,7 +548,9 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Kuta / Canggu",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/dedisantosa_",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -544,7 +565,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 12,
@@ -557,7 +577,9 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Hallway",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/sudenasurfcoach",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -572,7 +594,6 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
   },
   {
     id: 13,
@@ -585,7 +606,9 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Legian",
-    profile: "",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/danyel_amar",
+    user_soorfinc: "",
     archievement: [
       {
         title: "item 1",
@@ -600,6 +623,63 @@ export const SurfTeam = [
         title: "item 4",
       },
     ],
-    img: "https://via.placeholder.com/500x500",
+  },
+  {
+    id: 14,
+    full_name: "Mega Artana",
+    nickname: "",
+    title: "surf coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 1998,
+    level: "Free Surfer",
+    experience: "",
+    location: "Legian",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/mega_artana",
+    user_soorfinc: "",
+    archievement: [
+      {
+        title: "item 1",
+      },
+      {
+        title: "item 2",
+      },
+      {
+        title: "item 3",
+      },
+      {
+        title: "item 4",
+      },
+    ],
+  },
+  {
+    id: 15,
+    full_name: "Garut Widiarta",
+    nickname: "",
+    title: "surf coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 1998,
+    level: "Free Surfer",
+    experience: "",
+    location: "Legian",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/garut_widiarta",
+    user_soorfinc: "",
+    archievement: [
+      {
+        title: "item 1",
+      },
+      {
+        title: "item 2",
+      },
+      {
+        title: "item 3",
+      },
+      {
+        title: "item 4",
+      },
+    ],
   },
 ];

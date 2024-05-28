@@ -1,31 +1,57 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import LocalFont from "next/font/local";
 import Navigation from "./Components/Navigation";
 import FooterPage from "./Components/Footer";
+import localFont from "next/font/local";
 
 const inter = Inter({
-	subsets: ["latin"],
+  subsets: ["latin"],
+});
+
+const satoshi = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Satoshi-Light.woff2",
+      weight: "300",
+      style: "light",
+    },
+    {
+      path: "../../public/fonts/Satoshi-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Satoshi-Medium.woff2",
+      weight: "500",
+      style: "semibold",
+    },
+    {
+      path: "../../public/fonts/Satoshi-Black.woff2",
+      weight: "900",
+      style: "black",
+    },
+  ],
+  variable: "--font-satoshi",
 });
 
 export const metadata: Metadata = {
-	title: "ASPA",
-	description: "Asian Surf Profesional Academy",
+  title: "ASPA",
+  description: "Asian Surf Profesional Academy",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<body className={inter.className}>
-				<Navigation />
-				{children}
-				<FooterPage />
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <body className={satoshi.className}>
+        <Navigation />
+        {children}
+        <FooterPage />
+      </body>
+    </html>
+  );
 }
