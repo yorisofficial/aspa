@@ -263,16 +263,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "ISA Surf Judge",
       },
     ],
   },
@@ -292,16 +283,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "Pro Surfer",
       },
     ],
   },
@@ -321,16 +303,14 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
+        title:
+          "Pro Surfer: Open Men's Champion ASC (Winner Mens Open Rip Curl Surf and Music Festival (2009)",
       },
       {
-        title: "item 2",
+        title: "Coca-cola Indonesian Surf Championship Winner (2012)",
       },
       {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "Monsoon Mayhem International Surf Challenge winner (2012)",
       },
     ],
   },
@@ -350,16 +330,14 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
+        title:
+          "Pro Surfer: Open Men's Champion ASC (Winner Mens Open Rip Curl Surf and Music Festival (2009)",
       },
       {
-        title: "item 2",
+        title: "Coca-cola Indonesian Surf Championship Winner (2012)",
       },
       {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "Monsoon Mayhem International Surf Challenge winner (2012)",
       },
     ],
   },
@@ -379,16 +357,8 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title:
+          "Pro Surfer: First Indonesian surfer to qualify for the World Surf League (WSL)",
       },
     ],
   },
@@ -408,16 +378,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "Pro Surfer",
       },
     ],
   },
@@ -437,16 +398,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "Pro Surfer: 2010 Indonesian Surf Champion",
       },
     ],
   },
@@ -466,7 +418,8 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
+        title:
+          "Pro Surfer: 2008 ISC Winner, 2008 Asian Beach Games: Gold-Air, Gold-Team, Youth Achievement award",
       },
       {
         title: "item 2",
@@ -524,16 +477,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "Pro Surfer",
       },
     ],
   },
@@ -553,16 +497,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "Pro Surfer",
       },
     ],
   },
@@ -640,16 +575,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "Pro Surfer",
       },
     ],
   },
@@ -669,16 +595,27 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
+        title: "Pro Surfer",
       },
+    ],
+  },
+  {
+    id: 16,
+    full_name: "Kadek Murtika",
+    nickname: "",
+    title: "surf coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 1998,
+    level: "Free Surfer",
+    experience: "",
+    location: "Pererenan",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/clepuk_balibagus",
+    user_soorfinc: "",
+    archievement: [
       {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
