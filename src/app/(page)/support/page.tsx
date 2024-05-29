@@ -3,7 +3,7 @@ import BackButton from "@/app/Components/BackButton";
 import ContainerContent from "@/app/Components/Container";
 import { usePathname } from "next/navigation";
 import { EnvelopeSimple, Headset, WhatsappLogo } from "@phosphor-icons/react";
-import ItemFaq from "./components/itemfaq";
+import ItemFaq from "./components/ItemFaq";
 
 const SupportPage = () => {
   const pathName = usePathname();

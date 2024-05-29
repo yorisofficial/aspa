@@ -23,7 +23,11 @@ const ItemFaq = ({ title, desc }: { title: string; desc: string }) => {
           />
         </button>
         {isShow && (
-          <motion.div initial={{ height: 0 }} animate={{ height: "auto" }}>
+          <motion.div
+            initial={{ height: 0 }}
+            animate={{ height: "auto" }}
+            exit={{ height: 0 }}
+          >
             <p className="desc border-buttom w-full bg-[#EBEBEB] p-4 font-light">
               {desc}
             </p>
