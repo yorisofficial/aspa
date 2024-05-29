@@ -1,59 +1,19 @@
 "use client";
 import BackButton from "@/app/Components/BackButton";
 import ContainerContent from "@/app/Components/Container";
-import { usePathname } from "next/navigation";
 import { EnvelopeSimple, Headset, WhatsappLogo } from "@phosphor-icons/react";
 import ItemFaq from "./components/ItemFaq";
-
+import { Faq } from "@/app/lib/Faq";
 const SupportPage = () => {
-  const pathName = usePathname();
-
-  const isPathProgram = pathName === "/program" ? "hidden" : "";
-
-  const Faq = [
-    {
-      title: "What is ISA?",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione non praesentium facilis, quos odio autem cumque aperiam omnis aliquid voluptatibus. Obcaecati doloribus quae expedita! Dignissimos repellat impedit porro ipsam, magni non officia.",
-    },
-    {
-      title: "How to payment?",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione non praesentium facilis, quos odio autem cumque aperiam omnis aliquid voluptatibus. Obcaecati doloribus quae expedita! Dignissimos repellat impedit porro ipsam, magni non officia.",
-    },
-    {
-      title: "How to payment?",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione non praesentium facilis, quos odio autem cumque aperiam omnis aliquid voluptatibus. Obcaecati doloribus quae expedita! Dignissimos repellat impedit porro ipsam, magni non officia.",
-    },
-    {
-      title: "How to payment?",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione non praesentium facilis, quos odio autem cumque aperiam omnis aliquid voluptatibus. Obcaecati doloribus quae expedita! Dignissimos repellat impedit porro ipsam, magni non officia.",
-    },
-    {
-      title: "How to payment?",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione non praesentium facilis, quos odio autem cumque aperiam omnis aliquid voluptatibus. Obcaecati doloribus quae expedita! Dignissimos repellat impedit porro ipsam, magni non officia.",
-    },
-    {
-      title: "How to payment?",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione non praesentium facilis, quos odio autem cumque aperiam omnis aliquid voluptatibus. Obcaecati doloribus quae expedita! Dignissimos repellat impedit porro ipsam, magni non officia.",
-    },
-  ];
-
   return (
     <ContainerContent url="/support">
-      <BackButton url="/" className={isPathProgram}>
-        Back to main
-      </BackButton>
+      <BackButton url="/">Back to main</BackButton>
       <div className="support-page flex flex-col">
         <div className="header-page border-buttom h-full w-full py-8">
           <h1 className="text-4xl font-black">FAQ</h1>
           <p className="text-base font-light">Find your question bellow</p>
         </div>
-        <div className="faq-list border-buttom grid h-full w-full grid-cols-2 gap-8 py-8">
+        <div className="faq-list border-buttom grid h-full w-full grid-cols-1 py-8 md:grid-cols-2 md:gap-8">
           {Faq.map((item, index) => (
             <ItemFaq key={index} title={item.title} desc={item.description} />
           ))}
