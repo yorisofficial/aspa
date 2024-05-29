@@ -41,7 +41,7 @@ const ListTeam = ({
             <div className="flex flex-col items-start gap-4 md:flex-row">
               <div className="header-list relative h-fit w-fit rounded-full ring-4 ring-brand">
                 <Image
-                  src={"https://via.placeholder.com/500x500"}
+                  src={item.profile}
                   alt="prifile-picture"
                   width={500}
                   height={500}

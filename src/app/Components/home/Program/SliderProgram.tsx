@@ -10,19 +10,15 @@ import "swiper/css/effect-cards";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import required modules
-import { EffectCards } from "swiper/modules";
-
 const SliderProgram = ({ data }: { data: { src: string; alt: string }[] }) => {
   return (
     <div className="list-image h-[200px] md:h-[300px] xl:order-last xl:h-[400px] ">
       <Swiper
-        modules={[Autoplay, EffectCards]}
+        modules={[Autoplay]}
         spaceBetween={32}
         loop={true}
         autoplay={{ delay: 2500 }}
         grabCursor={true}
-        effect={"cards"}
         slidesPerView={"auto"}
         className="list-coach mySwiper h-full"
       >

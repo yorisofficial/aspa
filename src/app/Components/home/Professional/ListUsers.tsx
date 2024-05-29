@@ -8,6 +8,7 @@ interface Props {
   nickname: string;
   title: string;
   location: string;
+  profile: string;
 }
 
 const ListUsers = ({
@@ -28,7 +29,7 @@ const ListUsers = ({
             <div className="item-core flex w-full items-start justify-start gap-5 rounded-xl border border-bordersolid bg-white p-4 drop-shadow-xl md:w-[330px]">
               <div className="w-fit rounded-full ring-4 ring-brand">
                 <Image
-                  src={"https://via.placeholder.com/500x500"}
+                  src={item.profile}
                   alt="prifile-picture"
                   width={500}
                   height={500}
