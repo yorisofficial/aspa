@@ -33,7 +33,7 @@ const Carousel = () => {
               width={1000}
               alt={item.title}
               priority={false}
-              className="h-full w-full object-left md:object-cover"
+              className="h-full w-full object-left grayscale md:object-cover"
             />
           </SwiperSlide>
         ))}
