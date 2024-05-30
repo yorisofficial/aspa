@@ -1,14 +1,9 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import Navigation from "./Components/Navigation";
 import FooterPage from "./Components/Footer";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
-
-const inter = Inter({
-  subsets: ["latin"],
-});
 
 const satoshi = localFont({
   src: [
@@ -38,7 +33,10 @@ const satoshi = localFont({
 
 export const metadata: Metadata = {
   title: "Asian Surf Performance Academy",
-  description: "Asian Surf Profesional Academy",
+  description: "Asian Surf Profesional Academy (ASPA)",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -48,6 +46,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={satoshi.className}>
         <Navigation />
         {children}
