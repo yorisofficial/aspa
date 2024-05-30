@@ -6,6 +6,7 @@ import OurService from "@/app/Components/home/Service/OurService";
 import Link from "next/link";
 import React from "react";
 import { Booking } from "@/app/lib/Booking";
+import SupportPage from "../support/page";
 
 const ProgramPage = () => {
   const img = [
@@ -58,6 +59,7 @@ const ProgramPage = () => {
         </div>
       </div>
       <OurService title="GET MORE BENEFIT" />
+      <SupportPage />
     </ContainerContent>
   );
 };

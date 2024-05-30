@@ -20,10 +20,14 @@ const ItemFaq = ({ title, desc }: Props) => {
         className={`border-buttom flex w-full items-start justify-between p-4 text-start ${isShow ? "h-fit bg-primary text-white" : "h-full "}`}
       >
         {title}
-        {isShow ? <CaretDown size={24} /> : <CaretRight size={24} />}
+        {isShow ? (
+          <CaretDown size={24} className="ml-4 flex-shrink-0" />
+        ) : (
+          <CaretRight size={24} className="ml-4 flex-shrink-0" />
+        )}
       </button>
       {isShow && (
-        <div className="w-full bg-zinc-50 p-4">
+        <div className={`w-full bg-zinc-50 p-4`}>
           <p className="text-base font-light">{desc}</p>
         </div>
       )}
