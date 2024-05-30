@@ -2,9 +2,9 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Asiansurface Academy",
-    short_name: "Asiansurface Academy",
-    description: "Asiansurface Academy",
+    name: "Asian Surf Performance Academy",
+    short_name: "Asian Surf Performance Academy",
+    description: "Asian Surf Performance Academy",
     start_url: "/",
     display: "standalone",
     background_color: "#FAFAFA",

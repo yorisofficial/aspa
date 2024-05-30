@@ -1,8 +1,7 @@
 import ContainerContent from "@/app/Components/Container";
 import React from "react";
-import { FAQ } from "@/app/lib/FAQ";
-import ItemFaq from "./components/Itemfaq";
 import ContactComponent from "./components/ContactComponent";
+import ListFaq from "./components/ListFaq";
 
 const SupportPage = () => {
   return (
@@ -12,11 +11,7 @@ const SupportPage = () => {
           <h1 className="text-4xl font-black">FAQ</h1>
           <p className="text-base font-light">Find your question bellow</p>
         </div>
-        <div className="faq-list border-buttom grid h-full w-full grid-cols-1 gap-4 py-8 md:grid-cols-2">
-          {FAQ.map((item, index) => (
-            <ItemFaq key={index} title={item.title} desc={item.description} />
-          ))}
-        </div>
+        <ListFaq />
         <div className="h-full w-full space-y-8 py-8">
           <div className="header-content space-y-8">
             <h1 className="text-base font-black">Customer support</h1>
