@@ -37,7 +37,7 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ASPA",
+  title: "Asian Surf Profesional Academy",
   description: "Asian Surf Profesional Academy",
 };
 
