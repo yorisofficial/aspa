@@ -17,7 +17,7 @@ const ItemFaq = ({ title, desc }: Props) => {
     <div className="relative w-full">
       <button
         onClick={handleShow}
-        className={`border-buttom flex w-full items-start justify-between p-4 text-start ${isShow ? "h-fit bg-primary text-white" : "h-full "}`}
+        className={`flex w-full items-start justify-between py-4 text-start ${isShow ? "h-fit bg-primary px-4 text-white" : "h-full "}`}
       >
         {title}
         {isShow ? (

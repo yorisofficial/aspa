@@ -7,7 +7,7 @@ const SupportPage = () => {
   return (
     <ContainerContent url="/support">
       <div className="content-support">
-        <div className="header-page border-buttom h-full w-full py-8">
+        <div className="header-page h-full w-full py-8">
           <h1 className="text-4xl font-black">FAQ</h1>
           <p className="text-base font-light">Find your question bellow</p>
         </div>
