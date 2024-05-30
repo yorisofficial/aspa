@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Asian Surf Performance Academy",
-    short_name: "Asian Surf Performance Academy",
+    short_name: "ASPA",
     description: "Asian Surf Performance Academy",
     start_url: "/",
     display: "standalone",
