@@ -4,6 +4,7 @@ import Navigation from "./Components/Navigation";
 import FooterPage from "./Components/Footer";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
+import ButtonUp from "./Components/ButtonUp";
 
 const satoshi = localFont({
   src: [
@@ -54,6 +55,7 @@ export default function RootLayout({
         {children}
         <FooterPage />
         <Analytics />
+        <ButtonUp />
       </body>
     </html>
   );

@@ -33,7 +33,7 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
     item?.full_name.includes(getTeam.replaceAll("-", " ")),
   );
   const teamVideo = VideographerTeam.find((item) =>
-    item?.full_name.includes(getTeam.replaceAll("-", " ")),
+    item?.full_name.includes(getTeam.replaceAll("-", " ").split(" ")[0]),
   );
 
   const detailsData = [teamCore || teamSurf || teamExpert || teamVideo];
@@ -111,26 +111,28 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
                     <div className="">
                       <span className="text-xs font-light">Age</span>
                       <h1 className="text-xl font-semibold">
-                        {item?.age ? calculateAge(item?.age) : "-"}y.o
+                        {item?.age ? calculateAge(item?.age) : "-"} y.o
                       </h1>
                     </div>
                     <div className="">
                       <span className="text-xs font-light">Location near</span>
-                      <h1 className="text-xl font-semibold">
+                      <h1 className="text-xl font-semibold capitalize">
                         {item?.location}
                       </h1>
                     </div>
                   </div>
-                  <div className="archievement space-y-8">
-                    <div className="header">
-                      <h1 className="text-base font-black">Archievement</h1>
+                  {item?.archievement[0].title !== "" ? (
+                    <div className="archievement space-y-8">
+                      <div className="header">
+                        <h1 className="text-base font-black">Archievement</h1>
+                      </div>
+                      <ul className="w-full list-inside list-disc text-xl font-normal">
+                        {item?.archievement.map((item, index) => (
+                          <li key={index}>{item.title}</li>
+                        ))}
+                      </ul>
                     </div>
-                    <ul className="w-full list-inside list-disc text-xl font-normal">
-                      {item?.archievement.map((item, index) => (
-                        <li key={index}>{item.title}</li>
-                      ))}
-                    </ul>
-                  </div>
+                  ) : null}
                 </div>
               </div>
               <div className="social-media space-y-8 border-b border-black py-8">
@@ -140,6 +142,7 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
                   <div className="flex items-center gap-4">
                     <InstagramLogo size={24} />
                     <span>
+                      @
                       {item?.user_instagram.split(
                         "https://www.instagram.com/",
                       )[1] || "Instagram"}

@@ -13,7 +13,7 @@ export const CoreTeam = [
     experience: "+10 years coach",
     archievement: [
       {
-        title: "item 1",
+        title: "",
       },
       {
         title: "item 2",
@@ -37,16 +37,7 @@ export const CoreTeam = [
     experience: "+5 years coach",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -64,16 +55,7 @@ export const CoreTeam = [
     experience: "+5 years coach",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -93,16 +75,7 @@ export const ExpertTeam = [
     experience: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -120,16 +93,7 @@ export const ExpertTeam = [
     experience: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -139,7 +103,7 @@ export const VideographerTeam = [
   {
     id: 1,
     full_name: "Harry Bali surf vision",
-    nickname: "Harry",
+    nickname: "",
     title: "surf videographer",
     level: "ISA Lv1",
     location: "uluwatu",
@@ -150,16 +114,7 @@ export const VideographerTeam = [
     experience: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -177,16 +132,7 @@ export const VideographerTeam = [
     experience: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -204,16 +150,7 @@ export const VideographerTeam = [
     experience: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -231,16 +168,7 @@ export const VideographerTeam = [
     experience: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -421,15 +349,6 @@ export const SurfTeam = [
         title:
           "Pro Surfer: 2008 ISC Winner, 2008 Asian Beach Games: Gold-Air, Gold-Team, Youth Achievement award",
       },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
-      },
     ],
   },
   {
@@ -448,16 +367,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -517,16 +427,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
@@ -546,16 +447,7 @@ export const SurfTeam = [
     user_soorfinc: "",
     archievement: [
       {
-        title: "item 1",
-      },
-      {
-        title: "item 2",
-      },
-      {
-        title: "item 3",
-      },
-      {
-        title: "item 4",
+        title: "",
       },
     ],
   },
