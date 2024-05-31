@@ -8,8 +8,15 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Support } from "../lib/Support";
 
 const FooterPage = () => {
+  const phone = Support[0].title;
+  const phoneMassage = Support[0].message?.replaceAll(" ", "%20");
+  const postCode = Support[1].title;
+  const address = Support[2].title;
+  const copyright = Support[3].title;
+
   return (
     <div className="mt-8 flex h-full w-full flex-col items-center justify-center gap-4 bg-primary py-8 text-white">
       <Image
@@ -22,14 +29,14 @@ const FooterPage = () => {
       />
       <div className="text-center xl:max-w-[368px]">
         <address>
-          Jl Subak Sari Barat, Gg. Sri Kahyangan No.77, Tibubeneng, Kec. Kuta
-          Utara, Kabupaten Badung, Bali 80361
+          {address} {postCode}
         </address>
-        <span>Tel : +62 811562426666</span>
+        <span>Tel : {phone}</span>
       </div>
       <div className="cta-whatsapp">
         <Link
-          href={"wa.me/6285156242689"}
+          href={`https://api.whatsapp.com/send/?phone=${phone}&text=${phoneMassage}`}
+          target="_blank"
           className="flex items-center gap-2 rounded bg-white p-2 text-black"
         >
           <WhatsappLogo size={24} />
@@ -59,9 +66,7 @@ const FooterPage = () => {
         </div>
       </div>
       <div className="copyright-section">
-        <span className="text-xs font-light">
-          &copy;2024 ASPA All rights reserved
-        </span>
+        <span className="text-xs font-light">&copy;{copyright}</span>
       </div>
     </div>
   );
