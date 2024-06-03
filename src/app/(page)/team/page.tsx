@@ -1,46 +1,42 @@
-import BackButton from "@/app/Components/BackButton";
-import ContainerContent from "@/app/Components/Container";
-import React from "react";
-import {
-  CoreTeam,
-  SurfTeam,
-  ExpertTeam,
-  VideographerTeam,
-} from "@/app/lib/data";
-import AspaTeam from "@/app/Components/home/Professional/AspaTeam";
-import AspaCoreTeam from "@/app/Components/home/Professional/AspaCoreTeam";
+import BackButton from '@/app/Components/BackButton'
+import ContainerContent from '@/app/Components/Container'
+import React from 'react'
+import {CoreTeam, ExpertTeam, VideographerTeam} from '@/app/lib/data'
+import {SurfTeam} from '@/app/lib/data_coach'
+import AspaTeam from '@/app/Components/home/Professional/AspaTeam'
+import AspaCoreTeam from '@/app/Components/home/Professional/AspaCoreTeam'
 
 const TeamPage = () => {
-  const totalCoach = SurfTeam.length;
-  const totalExpert = ExpertTeam.length;
-  const totalVideographer = VideographerTeam.length;
+  const totalCoach = SurfTeam.length
+  const totalExpert = ExpertTeam.length
+  const totalVideographer = VideographerTeam.length
 
-  console.log();
+  console.log()
 
   return (
-    <ContainerContent url="/team" className="our-team border-buttom">
-      <BackButton url="/">Back to main</BackButton>
-      <AspaCoreTeam categories="ASPA" title="ASPA" teamData={CoreTeam} />
-      <AspaTeam
+    <ContainerContent url='/team' className='our-team border-buttom'>
+      <BackButton url='/'>Back to main</BackButton>
+      <AspaCoreTeam categories='ASPA' title='ASPA' teamData={CoreTeam} />
+      {/* <AspaTeam
         total={totalCoach}
-        title="ASPA Coaches"
+        title='ASPA Coaches'
         teamData={SurfTeam}
-        categories="ASPA Coach"
-      />
+        categories='ASPA Coach'
+      /> */}
       <AspaTeam
         total={totalExpert}
-        title="ASPA Expert"
+        title='ASPA Expert'
         teamData={ExpertTeam}
-        categories="ASPA Expert"
+        categories='ASPA Expert'
       />
       <AspaTeam
         total={totalVideographer}
-        title="ASPA Videographer"
+        title='ASPA Videographer'
         teamData={VideographerTeam}
-        categories="ASPA Videographer"
+        categories='ASPA Videographer'
       />
     </ContainerContent>
-  );
-};
+  )
+}
 
-export default TeamPage;
+export default TeamPage

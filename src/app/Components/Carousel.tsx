@@ -1,20 +1,20 @@
-"use client";
-import Image from "next/image";
-import React from "react";
-import { Autoplay } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { HERO } from "../lib/Hero";
+'use client'
+import Image from 'next/image'
+import React from 'react'
+import {Autoplay} from 'swiper/modules'
+import {Swiper, SwiperSlide} from 'swiper/react'
+import {HERO} from '../lib/Hero'
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
 const Carousel = () => {
-  const dataSlide = HERO;
+  const dataSlide = HERO
 
   return (
-    <div className="h-screen w-full">
+    <div className='h-screen w-full'>
       <Swiper
         slidesPerView={1}
         spaceBetween={0}
@@ -23,7 +23,7 @@ const Carousel = () => {
           delay: 5000,
         }}
         modules={[Autoplay]}
-        className="mySwiper"
+        className='mySwiper'
       >
         {dataSlide.map((item, index) => (
           <SwiperSlide key={index}>
@@ -33,13 +33,13 @@ const Carousel = () => {
               width={1000}
               alt={item.title}
               priority={false}
-              className="h-full w-full object-left grayscale md:object-cover"
+              className='h-full w-full object-left grayscale md:object-cover'
             />
           </SwiperSlide>
         ))}
       </Swiper>
     </div>
-  );
-};
+  )
+}
 
-export default Carousel;
+export default Carousel
