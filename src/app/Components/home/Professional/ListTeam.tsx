@@ -1,9 +1,9 @@
 "use client"
-import {ArrowUpRight, Certificate} from "@phosphor-icons/react"
+import {Certificate} from "@phosphor-icons/react"
 import Image from "next/image"
 import Link from "next/link"
-import {useRouter} from "next/navigation"
 import React, {Suspense} from "react"
+
 interface Props {
   id: number
   full_name: string
@@ -12,6 +12,7 @@ interface Props {
   title: string
   certificated: boolean
   experience: string
+  quotes: string
   isa: boolean
   location: string
   profile: string
@@ -20,11 +21,6 @@ interface Props {
 
 const ListTeam = ({data, categories}: {data: Props[]; categories: string}) => {
   const dataProps = data
-  const router = useRouter()
-
-  const handleDetails = (url: string) => {
-    router.push(`/team/${categories.replaceAll(" ", "-").toLocaleLowerCase()}/${url}`)
-  }
 
   return (
     <div className="grid h-full w-full grid-cols-2 gap-4 xl:grid-cols-3">
@@ -32,8 +28,9 @@ const ListTeam = ({data, categories}: {data: Props[]; categories: string}) => {
         <Suspense key={item.id} fallback={"...loading"}>
           <Link
             href={`/team/${categories.replaceAll(" ", "-").toLocaleLowerCase()}/${item.full_name.replaceAll(" ", "-").toLocaleLowerCase()}`}
+            className="h-full w-full"
           >
-            <div className="item-core flex max-w-[330px] flex-col items-start justify-start gap-5 rounded-xl border border-bordersolid bg-white p-4 drop-shadow-xl">
+            <div className="item-core flex max-w-[330px] h-full flex-col items-start justify-start gap-5 rounded-xl border border-bordersolid bg-white p-4 drop-shadow-xl">
               <div className="flex flex-col items-start gap-4 md:flex-row">
                 <div className="header-list relative h-fit w-fit rounded-full ring-4 ring-brand">
                   <Image
@@ -58,13 +55,15 @@ const ListTeam = ({data, categories}: {data: Props[]; categories: string}) => {
                     {item.nickname === "" ? item.full_name : item.nickname}
                   </h1>
                   <h1 className="flex flex-col items-start justify-start text-base font-semibold capitalize">
-                    <span className="text-xs font-light">title</span>
+                    <span className="text-xs font-light">Title</span>
                     {item.title}
                   </h1>
-                  <h1 className="flex flex-col items-start justify-start text-base font-semibold capitalize">
-                    <span className="text-xs font-light">location</span>
-                    {item.location === "" ? "ASPA" : item.location}
-                  </h1>
+                  {categories === "ASPA Coach" ? (
+                    <h1 className="flex flex-col items-start justify-start text-base font-semibold capitalize">
+                      <span className="text-xs font-light">location</span>
+                      {item.location === "" ? "ASPA" : item.location}
+                    </h1>
+                  ) : null}
                 </div>
               </div>
             </div>

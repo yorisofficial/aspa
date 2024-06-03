@@ -19,8 +19,9 @@ const ListUsers = ({data, categories}: {data: Props[]; categories: string}) => {
           <Link
             key={item.id}
             href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
+            className="xl:w-fit w-full"
           >
-            <div className="item-core flex items-start justify-start w-fit gap-5 rounded-xl border border-bordersolid bg-white p-4 drop-shadow-xl md:w-[330px] xl:max-w-[400px]">
+            <div className="item-core flex items-start justify-start gap-5 rounded-xl border border-bordersolid bg-white py-6 px-4 drop-shadow-xl md:w-[330px] w-full xl:max-w-[400px]">
               <div className="w-fit rounded-full ring-4 ring-brand">
                 <Image
                   src={item.profile}
@@ -32,11 +33,11 @@ const ListUsers = ({data, categories}: {data: Props[]; categories: string}) => {
               </div>
               <div className="">
                 <h1 className="flex flex-col items-start justify-start text-base font-semibold">
-                  <span className="text-xs font-light">full name</span>
+                  <span className="text-xs font-light">Full name</span>
                   {item.full_name}
                 </h1>
                 <h1 className="flex flex-col items-start justify-start text-base font-semibold">
-                  <span className="text-xs font-light">title</span>
+                  <span className="text-xs font-light">Title</span>
                   {item.title}
                 </h1>
               </div>

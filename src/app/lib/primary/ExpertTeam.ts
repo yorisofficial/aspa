@@ -7,6 +7,7 @@ export const ExpertTeam = [
     level: "Expert",
     age: 1998,
     profile: "/assets/team/ASPA.png",
+    quotes: "",
     user_instagram: "",
     user_soorfinc: "",
     experience: "",

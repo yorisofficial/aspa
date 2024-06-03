@@ -40,7 +40,7 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
 
   // find location
   const locationCoach = teamSurf?.location
-  console.log(locationCoach)
+  console.log(detailsData)
 
   return (
     <ContainerContent url="team" className="">
@@ -110,28 +110,40 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
                       )}
                     </div>
                   </div>
-                  {item?.archievement[0].title !== "" ? (
-                    <div className="archievement space-y-8">
-                      <div className="header">
-                        <h1 className="text-base font-black">Archievement</h1>
+                  <div className="promote flex flex-col gap-4">
+                    {item?.quotes && (
+                      <div className="item-promote space-y-4">
+                        <div className="header">
+                          <h1 className="text-base font-black">Information</h1>
+                        </div>
+                        <p className="description">{item?.quotes}</p>
                       </div>
-                      <ul className="w-full list-inside list-disc text-xl font-normal">
-                        {item?.archievement.map((item, index) => <li key={index}>{item.title}</li>)}
-                      </ul>
-                    </div>
-                  ) : null}
+                    )}
+                    {item?.archievement[0].title !== "" ? (
+                      <div className="item-promote space-y-4">
+                        <div className="header">
+                          <h1 className="text-base font-black">Archievement</h1>
+                        </div>
+                        <ul className="w-full list-inside list-disc text-xl font-normal">
+                          {item?.archievement.map((item, index) => (
+                            <li key={index}>{item.title}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ) : null}
+                  </div>
                 </div>
               </div>
               <div className="social-media space-y-8 border-b border-black py-8">
                 <h1 className="text-base font-black">Get in touch</h1>
 
                 <div className="space-y-2">
-                  <div className="flex items-center gap-4">
-                    <InstagramLogo size={24} />
-                    <span>
-                      @{item?.user_instagram.split("https://www.instagram.com/")[1] || "Instagram"}
-                    </span>
-                  </div>
+                  {item?.user_instagram && (
+                    <div className="flex items-center gap-4">
+                      <InstagramLogo size={24} />
+                      <span>@{item?.user_instagram.split("https://www.instagram.com/")[1]}</span>
+                    </div>
+                  )}
                   <div className="flex items-center gap-4">
                     <Image
                       src={"/assets/icon/Soorfinc App 1.svg"}

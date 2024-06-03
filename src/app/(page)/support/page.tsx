@@ -1,7 +1,7 @@
-import ContainerContent from "@/app/Components/Container";
-import React from "react";
-import ContactComponent from "./components/ContactComponent";
-import ListFaq from "./components/ListFaq";
+import ContainerContent from "@/app/Components/Container"
+import React from "react"
+import ContactComponent from "./components/ContactComponent"
+import ListFaq from "./components/ListFaq"
 
 const SupportPage = () => {
   return (
@@ -16,16 +16,15 @@ const SupportPage = () => {
           <div className="header-content space-y-8">
             <h1 className="text-base font-black">Customer support</h1>
             <p className="w-full xl:w-1/2">
-              Lorem ipsum dolor sit amet consectetur. Nisl turpis mollis integer
-              id morbi tincidunt quis sapien. Sed quis turpis viverra mi velit
-              aliquam. Nisl interdum et sed in ornare lorem morbi.
+              We are here to help you with any support issues you may have. Feel free to reach out
+              and we&39;ll be happy to assist you.
             </p>
           </div>
           <ContactComponent />
         </div>
       </div>
     </ContainerContent>
-  );
-};
+  )
+}
 
-export default SupportPage;
+export default SupportPage
