@@ -30,7 +30,7 @@ const SliderProgram = ({data}: {data: {src: string; alt: string}[]}) => {
               width={1000}
               priority={false}
               alt='ASPA Image'
-              className={`h-[400px] w-[400px] rounded-xl object-cover grayscale duration-500 hover:grayscale-0`}
+              className={`h-[400px] md:w-[400px] rounded-xl object-center duration-500`}
             />
           </SwiperSlide>
         ))}

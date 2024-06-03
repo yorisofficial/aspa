@@ -1,6 +1,7 @@
 export const SurfTeam = [
   {
     id: 1,
+    confirm: false,
     full_name: 'Muklis Anwar',
     nickname: '',
     title: 'surf coach',
@@ -21,6 +22,7 @@ export const SurfTeam = [
   },
   {
     id: 2,
+    confirm: false,
     full_name: 'Muz Jeksen',
     nickname: '',
     title: 'surf coach',
@@ -41,6 +43,7 @@ export const SurfTeam = [
   },
   {
     id: 3,
+    confirm: false,
     full_name: 'I Made Agus Setyawan',
     nickname: '',
     title: 'surf coach',
@@ -68,6 +71,7 @@ export const SurfTeam = [
   },
   {
     id: 4,
+    confirm: false,
     full_name: 'Raditya Rondi',
     nickname: '',
     title: 'surf coach',
@@ -95,6 +99,7 @@ export const SurfTeam = [
   },
   {
     id: 5,
+    confirm: false,
     full_name: 'Oney Anwar',
     nickname: '',
     title: 'surf coach',
@@ -115,6 +120,7 @@ export const SurfTeam = [
   },
   {
     id: 6,
+    confirm: false,
     full_name: 'Dharma Putra Tonjo',
     nickname: '',
     title: 'surf coach',
@@ -135,6 +141,7 @@ export const SurfTeam = [
   },
   {
     id: 7,
+    confirm: false,
     full_name: 'Putra Pulu',
     nickname: '',
     title: 'surf coach',
@@ -155,6 +162,7 @@ export const SurfTeam = [
   },
   {
     id: 8,
+    confirm: false,
     full_name: 'Dede Suryana',
     nickname: '',
     title: 'surf coach',
@@ -176,6 +184,7 @@ export const SurfTeam = [
   },
   {
     id: 9,
+    confirm: false,
     full_name: 'Gogo Sujaya',
     nickname: '',
     title: 'surf coach',
@@ -196,6 +205,7 @@ export const SurfTeam = [
   },
   {
     id: 10,
+    confirm: false,
     full_name: 'Dharma Yasa',
     nickname: 'Blerong',
     title: 'surf coach',
@@ -216,6 +226,7 @@ export const SurfTeam = [
   },
   {
     id: 11,
+    confirm: false,
     full_name: 'Dedi Santosa',
     nickname: '',
     title: 'surf coach',
@@ -236,6 +247,7 @@ export const SurfTeam = [
   },
   {
     id: 12,
+    confirm: false,
     full_name: 'Mickey Sudena',
     nickname: '',
     title: 'surf coach',
@@ -256,6 +268,7 @@ export const SurfTeam = [
   },
   {
     id: 13,
+    confirm: false,
     full_name: 'Danyel Amar',
     nickname: '',
     title: 'surf coach',
@@ -276,6 +289,7 @@ export const SurfTeam = [
   },
   {
     id: 14,
+    confirm: false,
     full_name: 'Mega Artana',
     nickname: '',
     title: 'surf coach',
@@ -296,6 +310,7 @@ export const SurfTeam = [
   },
   {
     id: 15,
+    confirm: false,
     full_name: 'Garut Widiarta',
     nickname: '',
     title: 'surf coach',
@@ -316,6 +331,7 @@ export const SurfTeam = [
   },
   {
     id: 16,
+    confirm: false,
     full_name: 'Kadek Murtika',
     nickname: '',
     title: 'surf coach',

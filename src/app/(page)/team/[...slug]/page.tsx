@@ -2,11 +2,15 @@
 import Button from '@/app/Components/Button'
 import ContainerContent from '@/app/Components/Container'
 import {calculateAge} from '@/app/Components/SlideTeam'
-import {CoreTeam, ExpertTeam, VideographerTeam} from '@/app/lib/data'
-import {SurfTeam} from '@/app/lib/data_coach'
 import {ArrowLeft, InstagramLogo} from '@phosphor-icons/react'
 import Image from 'next/image'
 import {useRouter} from 'next/navigation'
+
+// Data base
+import {CoreTeam} from '@/app/lib/primary/CoreTeam'
+import {ExpertTeam} from '@/app/lib/primary/ExpertTeam'
+import {VideographerTeam} from '@/app/lib/primary/VideographerTeam'
+import {SurfTeam} from '@/app/lib/primary/CoachTeam'
 
 const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
   const getTeam = params?.slug[1]
