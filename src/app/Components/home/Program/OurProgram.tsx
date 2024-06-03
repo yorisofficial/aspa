@@ -2,6 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
 import {Home} from '@/app/lib/Home'
+import Button from '../../Button'
+import ButtonBooking from '../../ButtonBooking'
 
 const OurProgram = () => {
   return (
@@ -31,12 +33,8 @@ const OurProgram = () => {
             </div>
             <p className='w-full text-justify text-sm font-light'>{Home[1].description}</p>
             <div className='flex w-full flex-shrink-0 items-center gap-4'>
-              <Link
-                href={'/'}
-                className='w-fit bg-white px-5 py-3 text-sm font-semibold text-black'
-              >
-                {Home[1].url}
-              </Link>
+              <ButtonBooking title='Book now' variant={true} />
+
               <Link href={'/program'} className='w-fit text-sm underline underline-offset-4'>
                 {Home[1].url2}
               </Link>

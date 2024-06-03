@@ -18,7 +18,11 @@ export const Support = [
     description: 'Copyright',
   },
   {
-    title: 'aspa@asiansurf.co',
-    description: 'Email',
+    title: 'info@asiansurf.co',
+    description: 'Email-info',
+  },
+  {
+    title: 'support@asiansurf.co',
+    description: 'Email-support',
   },
 ]
