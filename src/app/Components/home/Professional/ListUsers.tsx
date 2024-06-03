@@ -1,23 +1,17 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import Image from "next/image"
+import Link from "next/link"
+import React from "react"
 
 interface Props {
-  id: number;
-  full_name: string;
-  nickname: string;
-  title: string;
-  location: string;
-  profile: string;
+  id: number
+  full_name: string
+  nickname: string
+  title: string
+  location?: string
+  profile: string
 }
 
-const ListUsers = ({
-  data,
-  categories,
-}: {
-  data: Props[];
-  categories: string;
-}) => {
+const ListUsers = ({data, categories}: {data: Props[]; categories: string}) => {
   return (
     <>
       <div className="flex w-full flex-col gap-4">
@@ -26,7 +20,7 @@ const ListUsers = ({
             key={item.id}
             href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
           >
-            <div className="item-core flex w-full items-start justify-start gap-5 rounded-xl border border-bordersolid bg-white p-4 drop-shadow-xl md:w-[330px]">
+            <div className="item-core flex items-start justify-start w-fit gap-5 rounded-xl border border-bordersolid bg-white p-4 drop-shadow-xl md:w-[330px] xl:max-w-[400px]">
               <div className="w-fit rounded-full ring-4 ring-brand">
                 <Image
                   src={item.profile}
@@ -45,17 +39,13 @@ const ListUsers = ({
                   <span className="text-xs font-light">title</span>
                   {item.title}
                 </h1>
-                <h1 className="flex flex-col items-start justify-start text-base font-semibold">
-                  <span className="text-xs font-light">location near</span>
-                  {item.location}
-                </h1>
               </div>
             </div>
           </Link>
         ))}
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ListUsers;
+export default ListUsers
