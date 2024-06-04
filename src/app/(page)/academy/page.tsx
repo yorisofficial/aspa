@@ -20,7 +20,7 @@ const AcademyPage = () => {
       <div className="image-group flex flex-col xl:h-[400px] xl:flex-row w-full gap-4 my-8">
         <div className="w-full h-full">
           <Image
-            src={"/assets/hero-img-1.png"}
+            src={"/public/assets/hero-img-1.png"}
             alt="image-asset-academy"
             width={500}
             height={500}
@@ -30,7 +30,7 @@ const AcademyPage = () => {
         </div>
         <div className="small-img gap-4 grid grid-cols-2 xl:grid-cols-1 h-full">
           <Image
-            src={"/assets/hero-img-2.png"}
+            src={"/public/assets/hero-img-2.png"}
             alt="image-asset-academy"
             width={500}
             height={500}
@@ -38,7 +38,7 @@ const AcademyPage = () => {
             className="xl:w-[250px] h-full object-cover"
           />
           <Image
-            src={"/assets/hero-img-3.png"}
+            src={"/public/assets/hero-img-3.png"}
             alt="image-asset-academy"
             width={500}
             height={500}
@@ -50,7 +50,7 @@ const AcademyPage = () => {
       <div className="content-about-us">
         <div className="border-buttom profile-about container space-y-4 py-8">
           <Image
-            src={"/brand/ASPA-dark.svg"}
+            src={"/public/brand/ASPA-dark.svg"}
             width={1500}
             height={1500}
             alt="ASPA Logo"

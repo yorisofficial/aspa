@@ -1,21 +1,21 @@
-"use client";
-import React from "react";
-import ContainerContent from "../../Container";
-import Image from "next/image";
-import Button from "../../Button";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { Home } from "@/app/lib/Home";
+"use client"
+import React from "react"
+import ContainerContent from "../../Container"
+import Image from "next/image"
+import Button from "../../Button"
+import Link from "next/link"
+import {usePathname} from "next/navigation"
+import {Home} from "@/app/lib/Home"
 
 const AboutUs = () => {
-  const pathName = usePathname();
-  const homePageView = pathName === "/" ? "hidden" : "";
+  const pathName = usePathname()
+  const homePageView = pathName === "/" ? "hidden" : ""
 
   return (
     <ContainerContent url="/academy" className="border-buttom space-y-8 py-8">
       <div className="profile-about flex flex-col items-start justify-center space-y-4">
         <Image
-          src={"/brand/ASPA-dark.svg"}
+          src={"/public/brand/ASPA-dark.svg"}
           width={1500}
           height={1500}
           alt="ASPA Logo"
@@ -30,7 +30,7 @@ const AboutUs = () => {
         </Link>
       </div>
     </ContainerContent>
-  );
-};
+  )
+}
 
-export default AboutUs;
+export default AboutUs
