@@ -13,19 +13,19 @@ import ButtonBooking from "@/app/Components/ButtonBooking"
 const ProgramPage = () => {
   const SliderImg = [
     {
-      src: "/public/assets/program/grompatrol/img-1.png",
+      src: "/assets/program/grompatrol/img-1.png",
       alt: "image-asset-program",
     },
     {
-      src: "/public/assets/program/grompatrol/img-2.png",
+      src: "/assets/program/grompatrol/img-2.png",
       alt: "image-asset-program",
     },
     {
-      src: "/public/assets/program/grompatrol/img-3.png",
+      src: "/assets/program/grompatrol/img-3.png",
       alt: "image-asset-program",
     },
     {
-      src: "/public/assets/program/grompatrol/img-4.png",
+      src: "/assets/program/grompatrol/img-4.png",
       alt: "image-asset-program",
     },
   ]

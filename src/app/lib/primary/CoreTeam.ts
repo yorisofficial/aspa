@@ -62,7 +62,7 @@ export const CoreTeam = [
     level: "ISA Lv1",
     quotes: "",
     age: 1998,
-    profile: "/public/assets/team/dylan.png",
+    profile: "/assets/team/dylan.png",
     user_instagram: "https://www.instagram.com/dylan_amartha",
     user_soorfinc: "",
     experience: "+5 years coach",

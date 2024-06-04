@@ -39,7 +39,7 @@ const Navigation = () => {
           <div className="brand flex items-center justify-between">
             <Link href={"/"}>
               <Image
-                src={"/public/brand/ASPA-dark.svg"}
+                src={"/brand/ASPA-dark.svg"}
                 alt="logo"
                 width={500}
                 height={500}

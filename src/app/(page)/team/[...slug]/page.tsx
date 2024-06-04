@@ -146,7 +146,7 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
                   )}
                   <div className="flex items-center gap-4">
                     <Image
-                      src={"/public/assets/icon/Soorfinc App 1.svg"}
+                      src={"/assets/icon/Soorfinc App 1.svg"}
                       alt="profile-image"
                       width={24}
                       height={24}

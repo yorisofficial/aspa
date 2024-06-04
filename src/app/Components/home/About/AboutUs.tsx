@@ -15,7 +15,7 @@ const AboutUs = () => {
     <ContainerContent url="/academy" className="border-buttom space-y-8 py-8">
       <div className="profile-about flex flex-col items-start justify-center space-y-4">
         <Image
-          src={"/public/brand/ASPA-dark.svg"}
+          src={"/brand/ASPA-dark.svg"}
           width={1500}
           height={1500}
           alt="ASPA Logo"
