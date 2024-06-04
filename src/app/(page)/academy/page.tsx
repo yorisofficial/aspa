@@ -48,7 +48,7 @@ const AcademyPage = () => {
       <div className="content-about-us">
         <div className="border-buttom profile-about container space-y-4 py-8">
           <Image
-            src={"/public/brand/ASPA-dark.svg"}
+            src={"/brand/ASPA-dark.svg"}
             width={1500}
             height={1500}
             alt="ASPA Logo"
