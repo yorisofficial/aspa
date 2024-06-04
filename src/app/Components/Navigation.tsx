@@ -1,11 +1,11 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+"use client"
+import Image from "next/image"
+import Link from "next/link"
+import {usePathname} from "next/navigation"
+import React, {useState} from "react"
 
 const Navigation = () => {
-  const [isShow, setShow] = useState(false);
+  const [isShow, setShow] = useState(false)
 
   const menuNav = [
     {
@@ -24,13 +24,13 @@ const Navigation = () => {
       title: "Our Team",
       link: "/team",
     },
-  ];
+  ]
   const handleShow = () => {
-    setShow(!isShow);
-  };
+    setShow(!isShow)
+  }
 
   // check pathName
-  const pathName = usePathname();
+  const pathName = usePathname()
 
   return (
     <header className="fixed left-0 top-0 z-40 w-full text-black xl:py-8 ">
@@ -39,7 +39,7 @@ const Navigation = () => {
           <div className="brand flex items-center justify-between">
             <Link href={"/"}>
               <Image
-                src={"/brand/ASPA-dark.svg"}
+                src={"/public/brand/ASPA-dark.svg"}
                 alt="logo"
                 width={500}
                 height={500}
@@ -98,7 +98,7 @@ const Navigation = () => {
         </div>
       </nav>
     </header>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation

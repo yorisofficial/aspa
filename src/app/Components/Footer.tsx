@@ -1,26 +1,21 @@
-"use client";
-import {
-  InstagramLogo,
-  WhatsappLogo,
-  XLogo,
-  YoutubeLogo,
-} from "@phosphor-icons/react";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import { Support } from "../lib/Support";
+"use client"
+import {InstagramLogo, WhatsappLogo, XLogo, YoutubeLogo} from "@phosphor-icons/react"
+import Image from "next/image"
+import Link from "next/link"
+import React from "react"
+import {Support} from "../lib/Support"
 
 const FooterPage = () => {
-  const phone = Support[0].title;
-  const phoneMassage = Support[0].message?.replaceAll(" ", "%20");
-  const postCode = Support[1].title;
-  const address = Support[2].title;
-  const copyright = Support[3].title;
+  const phone = Support[0].title
+  const phoneMassage = Support[0].message?.replaceAll(" ", "%20")
+  const postCode = Support[1].title
+  const address = Support[2].title
+  const copyright = Support[3].title
 
   return (
     <div className="mt-8 flex h-full w-full flex-col items-center justify-center gap-4 bg-primary py-8 text-white">
       <Image
-        src={"/brand/ASPA-white.svg"}
+        src={"/public/brand/ASPA-white.svg"}
         alt="ASPA Logo"
         width={500}
         height={500}
@@ -51,10 +46,7 @@ const FooterPage = () => {
           >
             <InstagramLogo size={32} />
           </Link>
-          <Link
-            href={"https://x.com/asiansurfacademy"}
-            aria-label="Connect on Twitter"
-          >
+          <Link href={"https://x.com/asiansurfacademy"} aria-label="Connect on Twitter">
             <XLogo size={32} />
           </Link>
           <Link
@@ -69,7 +61,7 @@ const FooterPage = () => {
         <span className="text-xs font-light">&copy;{copyright}</span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default FooterPage;
+export default FooterPage

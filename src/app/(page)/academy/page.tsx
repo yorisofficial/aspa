@@ -3,8 +3,6 @@ import ContainerContent from "@/app/Components/Container"
 import Image from "next/image"
 import React from "react"
 import HeadingText from "@/app/Components/HeadingText"
-import Button from "@/app/Components/Button"
-import Link from "next/link"
 import {Home} from "@/app/lib/Home"
 
 const AcademyPage = () => {
@@ -20,7 +18,7 @@ const AcademyPage = () => {
       <div className="image-group flex flex-col xl:h-[400px] xl:flex-row w-full gap-4 my-8">
         <div className="w-full h-full">
           <Image
-            src={"/public/assets/hero-img-1.png"}
+            src={image.srcImage1}
             alt="image-asset-academy"
             width={500}
             height={500}
@@ -30,7 +28,7 @@ const AcademyPage = () => {
         </div>
         <div className="small-img gap-4 grid grid-cols-2 xl:grid-cols-1 h-full">
           <Image
-            src={"/public/assets/hero-img-2.png"}
+            src={image.srcImage2}
             alt="image-asset-academy"
             width={500}
             height={500}
@@ -38,7 +36,7 @@ const AcademyPage = () => {
             className="xl:w-[250px] h-full object-cover"
           />
           <Image
-            src={"/public/assets/hero-img-3.png"}
+            src={image.srcImage3}
             alt="image-asset-academy"
             width={500}
             height={500}
