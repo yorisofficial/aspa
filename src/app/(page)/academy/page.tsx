@@ -7,9 +7,9 @@ import {Home} from "@/app/lib/Home"
 
 const AcademyPage = () => {
   const image = {
-    srcImage1: "/assets/hero-img-1.png",
-    srcImage2: "/assets/hero-img-2.png",
-    srcImage3: "/assets/hero-img-3.png",
+    srcImage1: "/public/assets/hero-img-1.png",
+    srcImage2: "/public/assets/hero-img-2.png",
+    srcImage3: "/public/assets/hero-img-3.png",
   }
 
   return (
