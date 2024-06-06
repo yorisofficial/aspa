@@ -1,8 +1,6 @@
 import Image from "next/image"
 import React from "react"
 import Link from "next/link"
-import {Home} from "@/app/lib/Home"
-import Button from "../../Button"
 import ButtonBooking from "../../ButtonBooking"
 
 const OurProgram = () => {
@@ -29,10 +27,10 @@ const OurProgram = () => {
               />
             </div>
             <div className="header">
-              <h1 className="text-base font-bold uppercase xl:text-xl">{[Home[1].title]}</h1>
+              <h1 className="text-base font-bold uppercase xl:text-xl">ASPA x GROM PATROL 2024</h1>
             </div>
             <p className="w-full text-justify text-sm font-light">
-              ASPA has launched the inaugural program for Tipi Jabrik&#39;s Grom Patrol 2024. The
+              ASPA has launched the inaugural program for Tipi Jabrik&apos;s Grom Patrol 2024. The
               ASPA Grom Patrol Camp will provide a 5-day training session before the competition.
               Located at Mamaka Hotel, Kuta Beach, right in front of the competition area, this
               program aims to promote, support, and mentor the best young surfers. It offers
@@ -43,7 +41,7 @@ const OurProgram = () => {
               <ButtonBooking title="Book now" variant={true} />
 
               <Link href={"/program"} className="w-fit text-sm underline underline-offset-4">
-                {Home[1].url2}
+                About the program
               </Link>
             </div>
           </div>

@@ -21,8 +21,13 @@ const AboutUs = () => {
           alt="ASPA Logo"
           className="h-full w-[300px]"
         />
-        <h1 className={`text-xl font-black text-brand`}>{Home[0].title}</h1>
-        <p>{Home[0].description}</p>
+        <h1 className={`text-xl font-black text-brand`}>About us</h1>
+        <p>
+          The Asian Surf Performance Academy (ASPA) is where surfers reach their highest potential.
+          Located in Bali, we focus on supporting and empowering surfers to become their best. We
+          enhance your surfing skills and help you develop professional qualities like motivation,
+          teamwork, and responsibility.
+        </p>
         <Link href={"/academy"} className={`${!homePageView}`}>
           <Button label="About us" variant="primary">
             About us

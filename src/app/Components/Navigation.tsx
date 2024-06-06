@@ -2,10 +2,11 @@
 import Image from "next/image"
 import Link from "next/link"
 import {usePathname} from "next/navigation"
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 
 const Navigation = () => {
   const [isShow, setShow] = useState(false)
+  const [isDesktop, setDesktop] = useState(false)
 
   const menuNav = [
     {
@@ -29,13 +30,35 @@ const Navigation = () => {
     setShow(!isShow)
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setDesktop(true)
+      } else {
+        setDesktop(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   // check pathName
   const pathName = usePathname()
 
   return (
-    <header className="fixed left-0 top-0 z-40 w-full text-black xl:py-8 ">
-      <nav className="mx-auto max-w-5xl">
-        <div className="w-full items-center justify-between bg-white px-4 py-4 drop-shadow-xl xl:flex">
+    <header
+      className={`fixed left-0 top-0 z-40 w-full text-black xl:py-8 ${isDesktop ? "xl:py-0" : ""}`}
+    >
+      <nav
+        className={`mx-auto container transition-all duration-500 ease-in-out ${isDesktop ? "w-full" : "max-w-5xl"}`}
+      >
+        <div
+          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2" : "xl:py-4"} drop-shadow-xl xl:flex`}
+        >
           <div className="brand flex items-center justify-between">
             <Link href={"/"}>
               <Image
@@ -44,7 +67,7 @@ const Navigation = () => {
                 width={500}
                 height={500}
                 priority={false}
-                className="brand h-full w-1/2 invert-0 xl:w-32"
+                className={`brand h-full ${isDesktop ? "w-32" : "w-24"} invert-0 xl:w-32`}
               />
             </Link>
             <div className="cta-button xl:hidden">
@@ -81,7 +104,7 @@ const Navigation = () => {
               </ul>
             </div>
           )}
-          <div className="menu-nav hidden items-center gap-4 xl:flex">
+          <div className={`menu-nav hidden items-center gap-4 xl:flex`}>
             {menuNav.map((item, index) => (
               <Link
                 key={index}

@@ -41,18 +41,28 @@ export const CoreTeam = [
     id: 2,
     full_name: "Juan Gorostidi",
     nickname: "Juan",
-    age: 1998,
+    age: 1999,
     level: "ISA Lv1",
     profile: "/assets/team/juan.png",
     location: "Bali",
-    quotes: "",
+    quotes:
+      "Surfing has always been a significant part of my life. I started surfing as a child when my father taught me how to ride the waves. Since then, I have been traveling and surfing all over the world. In 2015, I began competing and training in the Basque Country, Spain, and across Europe. After several years of competition, I decided to focus on my studies and pursue a professional career while working as a surf instructor. Upon completing my studies, I decided to travel to Indonesia and Australia to surf, work, and gain experience. I am now part of the Asian Surf Cooperative and serve as the Manager of ASPA, a surf performance academy that provides support and guidance to international athletes in the surfing world, helping them improve and achieve their goals.",
     title: "ASPA Manager",
     user_instagram: "https://www.instagram.com/juan_gorostidi",
     user_soorfinc: "Juan",
     experience: "+5 years coach",
     archievement: [
       {
-        title: "",
+        title: "2022 Master's Degree in Digital Marketing",
+      },
+      {
+        title: "2021 Bachelor in Business Administration & Management + Digital Business Skills",
+      },
+      {
+        title: "2018 Surf Instructor, 2017 Junior Professional Surfer",
+      },
+      {
+        title: "Ranked 29th in Europe & 2nd in Spain",
       },
     ],
   },

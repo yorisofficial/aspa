@@ -17,7 +17,7 @@ const SupportPage = () => {
             <h1 className="text-base font-black">Customer support</h1>
             <p className="w-full xl:w-1/2">
               We are here to help you with any support issues you may have. Feel free to reach out
-              and we&39;ll be happy to assist you.
+              and we&apos;ll be happy to assist you.
             </p>
           </div>
           <ContactComponent />
