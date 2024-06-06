@@ -51,7 +51,7 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-40 w-full text-black xl:py-8 ${isDesktop ? "xl:py-0" : ""}`}
+      className={`fixed left-0 top-0 bored z-40 w-full text-black ${isDesktop ? "xl:py-0" : "xl:py-8"}`}
     >
       <nav
         className={`mx-auto container transition-all duration-500 ease-in-out ${isDesktop ? "w-full" : "max-w-5xl"}`}
