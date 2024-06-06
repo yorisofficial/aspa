@@ -28,9 +28,9 @@ const ListTeam = ({data, categories}: {data: Props[]; categories: string}) => {
         <Suspense key={item.id} fallback={"...loading"}>
           <Link
             href={`/team/${categories.replaceAll(" ", "-").toLocaleLowerCase()}/${item.full_name.replaceAll(" ", "-").toLocaleLowerCase()}`}
-            className="h-full w-full"
+            className="h-full w-full bored"
           >
-            <div className="item-core flex max-w-[330px] h-full flex-col items-start justify-start gap-5 rounded-xl border border-bordersolid bg-white p-4 drop-shadow-xl">
+            <div className="item-core flex max-w-[330px] h-full flex-col items-start justify-start gap-5 p-4">
               <div className="flex flex-col items-start gap-4 md:flex-row">
                 <div className="header-list relative h-fit w-fit rounded-full ring-4 ring-brand">
                   <Image
