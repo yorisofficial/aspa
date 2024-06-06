@@ -40,7 +40,7 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
 
   // find location
   const locationCoach = teamSurf?.location
-  console.log(detailsData)
+  console.log()
 
   return (
     <ContainerContent url="team" className="">

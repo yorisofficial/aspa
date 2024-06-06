@@ -39,7 +39,7 @@ const ListUsers = ({data, categories}: {data: Props[]; categories: string}) => {
                   <span className="text-xs font-light">Full name</span>
                   {item.full_name}
                 </h1>
-                <h1 className="flex flex-col items-start justify-start text-base font-semibold">
+                <h1 className="flex flex-col items-start capitalize justify-start text-base font-semibold">
                   <span className="text-xs font-light">Title</span>
                   {item.title}
                 </h1>

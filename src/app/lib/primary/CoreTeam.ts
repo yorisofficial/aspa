@@ -15,16 +15,19 @@ export const CoreTeam = [
     experience: "+15 years coach",
     archievement: [
       {
-        title: "2024 Junior National Coach, El Salvador",
+        title: "2024 Junior National Coach, ISA World Championship Junior El Salvador",
       },
       {
         title: "2021 National Coach, Olympic Tokyo",
       },
       {
+        title: "2021 National Coach, Olympic Qualification ISA World Championship ElSalvador",
+      },
+      {
         title: "2017 National Coach, Sea Games Manila",
       },
       {
-        title: "2010 Junior National Coach, New Zealand",
+        title: "2010 Junior National Coach, ISA World Junior Championship New Zealand",
       },
       {
         title: "2018 Quiksilver Uluwatu Challenge Champion",

@@ -1,5 +1,4 @@
 import React, {Suspense} from "react"
-import ListTeam from "./ListTeam"
 import Loading from "@/app/loading"
 
 const ListAspaTeam = ({
