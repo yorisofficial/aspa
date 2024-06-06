@@ -3,6 +3,7 @@ import {Certificate} from "@phosphor-icons/react"
 import Image from "next/image"
 import Link from "next/link"
 import React, {Suspense} from "react"
+import IconArrowDetails from "../../IconArrowDetails"
 
 interface Props {
   id: number
@@ -28,8 +29,9 @@ const ListTeam = ({data, categories}: {data: Props[]; categories: string}) => {
         <Suspense key={item.id} fallback={"...loading"}>
           <Link
             href={`/team/${categories.replaceAll(" ", "-").toLocaleLowerCase()}/${item.full_name.replaceAll(" ", "-").toLocaleLowerCase()}`}
-            className="h-full w-full bored"
+            className="h-full relative w-full border rounded-xl"
           >
+            <IconArrowDetails />
             <div className="item-core flex max-w-[330px] h-full flex-col items-start justify-start gap-5 p-4">
               <div className="flex flex-col items-start gap-4 md:flex-row">
                 <div className="header-list relative h-fit w-fit rounded-full ring-4 ring-brand">
