@@ -4,7 +4,7 @@ export const ExpertTeam = [
     full_name: "Gabriela Mackanicova",
     nickname: "",
     title: "Fitness Coach",
-    level: "Expert",
+    level: "",
     age: 1998,
     profile: "/assets/team/ASPA.png",
     quotes: "",

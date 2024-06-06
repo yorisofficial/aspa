@@ -45,7 +45,7 @@ export const CoreTeam = [
     full_name: "Juan Gorostidi",
     nickname: "Juan",
     age: 1999,
-    level: "ISA Lv1",
+    level: "",
     profile: "/assets/team/juan.png",
     location: "Bali",
     quotes:
@@ -74,7 +74,7 @@ export const CoreTeam = [
     full_name: "Dylan Amar",
     nickname: "Dylan",
     title: "ASPA Head coach",
-    level: "ISA Lv1",
+    level: "",
     profile: "/assets/team/dylan.png",
     location: "Bali",
     quotes: "",

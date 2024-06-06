@@ -42,7 +42,7 @@ export const VideographerTeam = [
     full_name: "Vito",
     nickname: "Vito",
     title: "surf videographer",
-    level: "ISA Lv1",
+    level: "",
     location: "All arround",
     quotes: "",
     age: 1998,

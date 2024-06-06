@@ -6,6 +6,7 @@ import Image from "next/image"
 
 const ItemTeam = ({data, categories}: {data: any; categories: string}) => {
   const item = data
+
   return (
     <>
       <Link
@@ -33,6 +34,12 @@ const ItemTeam = ({data, categories}: {data: any; categories: string}) => {
               <span className="text-xs font-light">Title</span>
               {item.title}
             </h1>
+            {categories.includes("coach") ? (
+              <h1 className="flex flex-col items-start capitalize justify-start text-base font-semibold">
+                <span className="text-xs font-light">Location</span>
+                {item?.location}
+              </h1>
+            ) : null}
           </div>
         </div>
       </Link>

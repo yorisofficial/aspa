@@ -90,11 +90,12 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
                           : item?.nickname}
                       </h1>
                     </div>
-
-                    <div className="">
-                      <span className="text-xs font-light">Level</span>
-                      <h1 className="text-xl font-semibold">{item?.level}</h1>
-                    </div>
+                    {item?.level === "" ? (
+                      <div className="">
+                        <span className="text-xs font-light">Level</span>
+                        <h1 className="text-xl font-semibold">{item?.level}</h1>
+                      </div>
+                    ) : null}
                     <div className="">
                       <span className="text-xs font-light">Age</span>
                       <h1 className="text-xl font-semibold">

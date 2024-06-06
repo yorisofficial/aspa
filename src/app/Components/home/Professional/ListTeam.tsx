@@ -16,7 +16,7 @@ interface Props {
 const ListTeam = ({data, categories}: {data: Props[]; categories: string}) => {
   return (
     <>
-      <div className="grid grid-cols-1 gap-4 xl:grid-cols-3">
+      <div className="grid grid-cols-1 w-full md:grid-cols-2 gap-4 xl:grid-cols-3">
         {data.map((item) => (
           <ItemTeam key={item.id} data={item} categories={categories} />
         ))}
