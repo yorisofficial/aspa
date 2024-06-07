@@ -10,7 +10,7 @@ interface Props {
   experience: string
   level: string
   profile: string
-  archievement: any
+  achievement: any
 }
 
 const AspaCoreTeam = ({

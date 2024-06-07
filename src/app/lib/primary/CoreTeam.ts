@@ -13,7 +13,7 @@ export const CoreTeam = [
     user_instagram: "https://www.instagram.com/tipijabrik",
     user_soorfinc: "Tipi Jabrik",
     experience: "+15 years coach",
-    archievement: [
+    achievement: [
       {
         title: "2024 Junior National Coach, ISA World Championship Junior El Salvador",
       },
@@ -54,7 +54,7 @@ export const CoreTeam = [
     user_instagram: "https://www.instagram.com/juan_gorostidi",
     user_soorfinc: "Juan",
     experience: "+5 years coach",
-    archievement: [
+    achievement: [
       {
         title: "2022 Master's Degree in Digital Marketing",
       },
@@ -82,7 +82,7 @@ export const CoreTeam = [
     user_instagram: "https://www.instagram.com/dylan_amartha",
     user_soorfinc: "",
     experience: "+5 years coach",
-    archievement: [
+    achievement: [
       {
         title: "",
       },

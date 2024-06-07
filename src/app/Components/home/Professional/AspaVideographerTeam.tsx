@@ -1,7 +1,7 @@
 import Loading from "@/app/loading"
 import React, {Suspense} from "react"
-import ListUsers from "./ListUsers"
 import ListTeam from "./ListTeam"
+
 interface Props {
   id: number
   full_name: string
@@ -11,7 +11,7 @@ interface Props {
   experience: string
   level: string
   profile: string
-  archievement: any
+  achievement: any
 }
 
 const AspaVideographerTeam = ({

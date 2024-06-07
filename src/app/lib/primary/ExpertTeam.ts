@@ -11,7 +11,7 @@ export const ExpertTeam = [
     user_instagram: "",
     user_soorfinc: "",
     experience: "",
-    archievement: [
+    achievement: [
       {
         title: "Trained Pro Athletes",
       },

@@ -12,7 +12,7 @@ export const VideographerTeam = [
     user_instagram: "",
     user_soorfinc: "",
     experience: "",
-    archievement: [
+    achievement: [
       {
         title: "",
       },
@@ -31,7 +31,7 @@ export const VideographerTeam = [
     user_instagram: "",
     user_soorfinc: "",
     experience: "",
-    archievement: [
+    achievement: [
       {
         title: "",
       },
@@ -50,7 +50,7 @@ export const VideographerTeam = [
     user_instagram: "",
     user_soorfinc: "",
     experience: "",
-    archievement: [
+    achievement: [
       {
         title: "",
       },
@@ -69,7 +69,7 @@ export const VideographerTeam = [
     user_instagram: "",
     user_soorfinc: "",
     experience: "",
-    archievement: [
+    achievement: [
       {
         title: "",
       },
