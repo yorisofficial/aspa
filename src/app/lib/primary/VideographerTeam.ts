@@ -1,63 +1,6 @@
 export const VideographerTeam = [
   {
     id: 1,
-    full_name: "Harry Bali surf vision",
-    nickname: "",
-    title: "surf videographer",
-    level: "",
-    location: "uluwatu",
-    quotes: "",
-    age: 1998,
-    profile: "/assets/team/ASPA.png",
-    user_instagram: "",
-    user_soorfinc: "",
-    experience: "",
-    achievement: [
-      {
-        title: "",
-      },
-    ],
-  },
-  {
-    id: 2,
-    full_name: "Made Ropik",
-    nickname: "Ropik",
-    title: "surf videographer",
-    level: "",
-    location: "uluwatu",
-    quotes: "",
-    age: 1998,
-    profile: "/assets/team/ASPA.png",
-    user_instagram: "",
-    user_soorfinc: "",
-    experience: "",
-    achievement: [
-      {
-        title: "",
-      },
-    ],
-  },
-  {
-    id: 3,
-    full_name: "Vito",
-    nickname: "Vito",
-    title: "surf videographer",
-    level: "",
-    location: "All arround",
-    quotes: "",
-    age: 1998,
-    profile: "/assets/team/ASPA.png",
-    user_instagram: "",
-    user_soorfinc: "",
-    experience: "",
-    achievement: [
-      {
-        title: "",
-      },
-    ],
-  },
-  {
-    id: 4,
     full_name: "Juni Setiawan",
     nickname: "Juni",
     title: "surf videographer",

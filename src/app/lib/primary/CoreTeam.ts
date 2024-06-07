@@ -62,7 +62,10 @@ export const CoreTeam = [
         title: "2021 Bachelor in Business Administration & Management + Digital Business Skills",
       },
       {
-        title: "2018 Surf Instructor, 2017 Junior Professional Surfer",
+        title: "2018 Surf Instructor",
+      },
+      {
+        title: "2017 Junior Professional Surfer",
       },
       {
         title: "Ranked 29th in Europe & 2nd in Spain",
