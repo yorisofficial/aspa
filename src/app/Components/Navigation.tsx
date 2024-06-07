@@ -49,6 +49,10 @@ const Navigation = () => {
   // check pathName
   const pathName = usePathname()
 
+  // get menu active
+  const dataPath = pathName.split("/")[1] === "" ? "Home" : pathName.split("/")[1]
+  console.log()
+
   return (
     <header
       className={`fixed left-0 top-0 z-40 w-full text-black ${isDesktop ? "xl:py-0" : "xl:py-8"}`}
@@ -76,15 +80,27 @@ const Navigation = () => {
                 aria-label="toggle-menus"
                 className="rounded bg-primary p-4"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="#ffffff"
-                  viewBox="0 0 256 256"
-                >
-                  <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
-                </svg>
+                {isShow ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="#ffffff"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="#ffffff"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+                  </svg>
+                )}
               </button>
             </div>
           </div>
@@ -96,7 +112,7 @@ const Navigation = () => {
                     onClick={handleShow}
                     key={index}
                     href={item.link}
-                    className={`${pathName === item.link ? "bg-black text-white" : ""} rounded-xl px-6 py-4 hover:bg-black hover:text-white`}
+                    className={`${item.link.includes(dataPath) ? "bg-black text-white" : ""} rounded-xl px-6 py-4 hover:bg-black hover:text-white`}
                   >
                     {item.title}
                   </Link>
@@ -109,7 +125,7 @@ const Navigation = () => {
               <Link
                 key={index}
                 href={item.link}
-                className={`${pathName === item.link ? "scale-110 font-black text-brand underline underline-offset-4" : ""} group text-base font-medium duration-500 hover:scale-110 hover:text-brand`}
+                className={`${item.link.includes(dataPath) ? "scale-110 font-black text-brand underline underline-offset-4" : ""} group text-base font-medium duration-500 hover:scale-110 hover:text-brand`}
               >
                 {item.title}
                 <div
