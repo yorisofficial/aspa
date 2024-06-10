@@ -8,8 +8,8 @@ import {Home} from "@/app/lib/Home"
 const AcademyPage = () => {
   const image = {
     srcImage1: "/assets/hero-img-1.png",
-    srcImage2: "/assets/hero-img-2.png",
-    srcImage3: "/assets/hero-img-3.png",
+    srcImage2: "/assets/program/grompatrol/img-3.png",
+    srcImage3: "/assets/program/grompatrol/img-4.png",
   }
 
   return (
@@ -54,8 +54,17 @@ const AcademyPage = () => {
             alt="ASPA Logo"
             className="h-full w-[300px]"
           />
-          <h1 className={`text-xl font-black text-brand`}>{Home[0].title}</h1>
-          <p className="text-justify">{Home[0].description}</p>
+          <h1 className={`text-xl font-black text-brand`}>About us</h1>
+          <p className="text-justify">
+            ASPA is the Asian Surf Performance Academy; ASPA it&apos;s about reaching your highest
+            potential as an athlete, in and out of the water. Our goal is to empower and support
+            excellent surfers to break through their limits and become the best surfer they can be.
+            The Asian Surf Performance Academy is located in Bali and aims to promote, support and
+            accompany the best sportsmen and athletes in the world of surfing. Offering athletes a
+            personalized attention where we not only seek to improve their surfing level but also to
+            acquire new professional attributes such as; achievement motivation, team work, sense of
+            commitment, responsibility, etc.
+          </p>
         </div>
         <div className="border-buttom moto-about border-buttom container space-y-8 py-8">
           <div className="space-y-4">

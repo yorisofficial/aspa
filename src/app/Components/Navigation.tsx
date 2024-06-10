@@ -11,18 +11,22 @@ const Navigation = () => {
   const menuNav = [
     {
       title: "Home",
+      base: "",
       link: "/",
     },
     {
       title: "Academy",
+      base: "academy",
       link: "/academy",
     },
     {
       title: "Our Program",
+      base: "program",
       link: "/program",
     },
     {
       title: "Our Team",
+      base: "team",
       link: "/team",
     },
   ]
@@ -50,7 +54,7 @@ const Navigation = () => {
   const pathName = usePathname()
 
   // get menu active
-  const dataPath = pathName.split("/")[1] === "" ? "Home" : pathName.split("/")[1]
+  const dataPath = pathName.slice(1) === "" ? "Home" : pathName.slice(1)
   console.log()
 
   return (
@@ -61,7 +65,7 @@ const Navigation = () => {
         className={`mx-auto container transition-all duration-500 ease-in-out ${isDesktop ? "w-full" : "max-w-5xl"}`}
       >
         <div
-          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 backdrop-blur-lg opacity-90" : "xl:py-4"} drop-shadow-xl xl:flex`}
+          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 opacity-95" : "xl:py-4"} drop-shadow-xl xl:flex`}
         >
           <div className="brand flex items-center justify-between">
             <Link href={"/"}>
@@ -112,7 +116,7 @@ const Navigation = () => {
                     onClick={handleShow}
                     key={index}
                     href={item.link}
-                    className={`${item.link.includes(dataPath) ? "bg-black text-white" : ""} rounded-xl px-6 py-4 hover:bg-black hover:text-white`}
+                    className={`${item.base === pathName.slice(1) ? "bg-black text-white" : ""} rounded-xl px-6 py-4 hover:bg-black hover:text-white`}
                   >
                     {item.title}
                   </Link>
@@ -125,7 +129,7 @@ const Navigation = () => {
               <Link
                 key={index}
                 href={item.link}
-                className={`${item.link.includes(dataPath) ? "scale-110 font-black text-brand underline underline-offset-4" : ""} group text-base font-medium duration-500 hover:scale-110 hover:text-brand`}
+                className={`${item.base === pathName.slice(1) ? "scale-110 font-black text-brand underline underline-offset-4" : ""} group text-base font-medium duration-500 hover:scale-110 hover:text-brand`}
               >
                 {item.title}
                 <div
