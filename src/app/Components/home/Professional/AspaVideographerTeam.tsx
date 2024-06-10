@@ -1,6 +1,7 @@
 import Loading from "@/app/loading"
 import React, {Suspense} from "react"
-import ListUsers from "./ListUsers"
+import ListTeam from "./ListTeam"
+
 interface Props {
   id: number
   full_name: string
@@ -13,7 +14,7 @@ interface Props {
   achievement: any
 }
 
-const AspaCoreTeam = ({
+const AspaVideographerTeam = ({
   title,
   teamData,
   categories,
@@ -23,15 +24,14 @@ const AspaCoreTeam = ({
   categories: string
 }) => {
   const data = teamData
-
   return (
     <div className="simple-container border-buttom flex flex-col items-start justify-start gap-8 py-8">
       <h1 className="text-3xl font-black">{title}</h1>
       <Suspense fallback={<Loading />}>
-        <ListUsers data={data} categories={categories} />
+        <ListTeam data={data} categories={categories} />
       </Suspense>
     </div>
   )
 }
 
-export default AspaCoreTeam
+export default AspaVideographerTeam

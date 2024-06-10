@@ -9,7 +9,7 @@ const HeroSection = () => {
       <Carousel />
       <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center">
         <Image
-          src={"/public/assets/acc/title-cover.svg"}
+          src={"/assets/acc/title-cover.svg"}
           height={500}
           width={500}
           alt=".."
@@ -19,7 +19,7 @@ const HeroSection = () => {
       </div>
       <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center">
         <Image
-          src={"/public/brand/ASPA-white.svg"}
+          src={"/brand/ASPA-white.svg"}
           height={500}
           width={500}
           alt="ASPA Logo"

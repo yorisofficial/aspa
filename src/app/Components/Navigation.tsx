@@ -2,26 +2,31 @@
 import Image from "next/image"
 import Link from "next/link"
 import {usePathname} from "next/navigation"
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 
 const Navigation = () => {
   const [isShow, setShow] = useState(false)
+  const [isDesktop, setDesktop] = useState(false)
 
   const menuNav = [
     {
       title: "Home",
+      base: "",
       link: "/",
     },
     {
       title: "Academy",
+      base: "academy",
       link: "/academy",
     },
     {
       title: "Our Program",
+      base: "program",
       link: "/program",
     },
     {
       title: "Our Team",
+      base: "team",
       link: "/team",
     },
   ]
@@ -29,22 +34,48 @@ const Navigation = () => {
     setShow(!isShow)
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setDesktop(true)
+      } else {
+        setDesktop(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
+
   // check pathName
   const pathName = usePathname()
 
+  // get menu active
+  const dataPath = pathName.slice(1) === "" ? "Home" : pathName.slice(1)
+  console.log()
+
   return (
-    <header className="fixed left-0 top-0 z-40 w-full text-black xl:py-8 ">
-      <nav className="mx-auto max-w-5xl">
-        <div className="w-full items-center justify-between bg-white px-4 py-4 drop-shadow-xl xl:flex">
+    <header
+      className={`fixed left-0 top-0 z-40 w-full text-black ${isDesktop ? "xl:py-0" : "xl:py-8"}`}
+    >
+      <nav
+        className={`mx-auto container transition-all duration-500 ease-in-out ${isDesktop ? "w-full" : "max-w-5xl"}`}
+      >
+        <div
+          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 opacity-95" : "xl:py-4"} drop-shadow-xl xl:flex`}
+        >
           <div className="brand flex items-center justify-between">
             <Link href={"/"}>
               <Image
-                src={"/public/brand/ASPA-dark.svg"}
+                src={"/brand/ASPA-dark.svg"}
                 alt="logo"
                 width={500}
                 height={500}
                 priority={false}
-                className="brand h-full w-1/2 invert-0 xl:w-32"
+                className={`brand h-full ${isDesktop ? "w-32" : "w-24"} invert-0 xl:w-32`}
               />
             </Link>
             <div className="cta-button xl:hidden">
@@ -53,15 +84,27 @@ const Navigation = () => {
                 aria-label="toggle-menus"
                 className="rounded bg-primary p-4"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="#ffffff"
-                  viewBox="0 0 256 256"
-                >
-                  <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
-                </svg>
+                {isShow ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="#ffffff"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="#ffffff"
+                    viewBox="0 0 256 256"
+                  >
+                    <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
+                  </svg>
+                )}
               </button>
             </div>
           </div>
@@ -73,7 +116,7 @@ const Navigation = () => {
                     onClick={handleShow}
                     key={index}
                     href={item.link}
-                    className={`${pathName === item.link ? "bg-black text-white" : ""} rounded-xl px-6 py-4 hover:bg-black hover:text-white`}
+                    className={`${item.base === pathName.slice(1) ? "bg-black text-white" : ""} rounded-xl px-6 py-4 hover:bg-black hover:text-white`}
                   >
                     {item.title}
                   </Link>
@@ -81,12 +124,12 @@ const Navigation = () => {
               </ul>
             </div>
           )}
-          <div className="menu-nav hidden items-center gap-4 xl:flex">
+          <div className={`menu-nav hidden items-center gap-4 xl:flex`}>
             {menuNav.map((item, index) => (
               <Link
                 key={index}
                 href={item.link}
-                className={`${pathName === item.link ? "scale-110 font-black text-brand underline underline-offset-4" : ""} group text-base font-medium duration-500 hover:scale-110 hover:text-brand`}
+                className={`${item.base === pathName.slice(1) ? "scale-110 font-black text-brand underline underline-offset-4" : ""} group text-base font-medium duration-500 hover:scale-110 hover:text-brand`}
               >
                 {item.title}
                 <div

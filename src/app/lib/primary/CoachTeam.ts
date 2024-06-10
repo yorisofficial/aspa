@@ -12,10 +12,10 @@ export const SurfTeam = [
     level: "ISA Level 1",
     experience: "",
     location: "Medewi",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/muklis_.anwar",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "ISA Surf Judge",
       },
@@ -34,10 +34,10 @@ export const SurfTeam = [
     level: "ISA Level 1",
     experience: "",
     location: "Hallway",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/musjeksen",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "Pro Surfer",
       },
@@ -56,10 +56,10 @@ export const SurfTeam = [
     level: "ISA Level 1",
     experience: "",
     location: "Uluwatu",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/gus_bentir",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title:
           "Pro Surfer: Open Men's Champion ASC (Winner Mens Open Rip Curl Surf and Music Festival (2009)",
@@ -85,10 +85,10 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "7 years to be coach",
     location: "Kuta",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/radityarondi",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title:
           "Pro Surfer: Open Men's Champion ASC (Winner Mens Open Rip Curl Surf and Music Festival (2009)",
@@ -114,10 +114,10 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Canggu",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/oneyanwar",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "Pro Surfer: First Indonesian surfer to qualify for the World Surf League (WSL)",
       },
@@ -136,10 +136,10 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Legian",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/darmaputratonjo",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "Pro Surfer",
       },
@@ -158,10 +158,10 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Lembongan",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/putrapulu",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "Pro Surfer: 2010 Indonesian Surf Champion",
       },
@@ -180,10 +180,10 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Cimaja",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/mankdede",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title:
           "Pro Surfer: 2008 ISC Winner, 2008 Asian Beach Games: Gold-Air, Gold-Team, Youth Achievement award",
@@ -203,10 +203,10 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Kuta Reef",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/gogosujaya",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "",
       },
@@ -225,10 +225,10 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Legian",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/darmayasablerok",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "Pro Surfer",
       },
@@ -248,10 +248,10 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Kuta / Canggu",
-    profile: "/public/assets/team/Dedi Santosa.png",
+    profile: "/assets/team/Dedi Santosa.png",
     user_instagram: "https://www.instagram.com/dedisantosa_",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "Pro Surfer",
       },
@@ -270,10 +270,10 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Hallway",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/sudenasurfcoach",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "",
       },
@@ -292,10 +292,10 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Legian",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/danyel_amar",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "",
       },
@@ -314,10 +314,10 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Legian",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/mega_artana",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "Pro Surfer",
       },
@@ -336,10 +336,10 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Legian",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/garut_widiarta",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "Pro Surfer",
       },
@@ -358,10 +358,10 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Pererenan",
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/clepuk_balibagus",
     user_soorfinc: "",
-    archievement: [
+    achievement: [
       {
         title: "",
       },

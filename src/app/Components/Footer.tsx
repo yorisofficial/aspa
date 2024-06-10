@@ -15,7 +15,7 @@ const FooterPage = () => {
   return (
     <div className="mt-8 flex h-full w-full flex-col items-center justify-center gap-4 bg-primary py-8 text-white">
       <Image
-        src={"/public/brand/ASPA-white.svg"}
+        src={"/brand/ASPA-white.svg"}
         alt="ASPA Logo"
         width={500}
         height={500}

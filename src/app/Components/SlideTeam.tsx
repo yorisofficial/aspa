@@ -56,7 +56,7 @@ const SlideTeam = () => {
                         y.o
                       </span>
                     </div>
-                    <span className="text-sm">+10 Year coach experienced</span>
+                    <span className="text-sm">{item.experience}</span>
                   </div>
                   <div className="">
                     <Link

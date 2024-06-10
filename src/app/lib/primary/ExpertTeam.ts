@@ -4,14 +4,14 @@ export const ExpertTeam = [
     full_name: "Gabriela Mackanicova",
     nickname: "",
     title: "Fitness Coach",
-    level: "Expert",
+    level: "",
     age: 1998,
-    profile: "/public/assets/team/ASPA.png",
+    profile: "/assets/team/ASPA.png",
     quotes: "",
     user_instagram: "",
     user_soorfinc: "",
     experience: "",
-    archievement: [
+    achievement: [
       {
         title: "Trained Pro Athletes",
       },
