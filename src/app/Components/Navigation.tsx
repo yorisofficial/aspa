@@ -61,7 +61,7 @@ const Navigation = () => {
         className={`mx-auto container transition-all duration-500 ease-in-out ${isDesktop ? "w-full" : "max-w-5xl"}`}
       >
         <div
-          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2" : "xl:py-4"} drop-shadow-xl xl:flex`}
+          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 backdrop-blur-lg opacity-90" : "xl:py-4"} drop-shadow-xl xl:flex`}
         >
           <div className="brand flex items-center justify-between">
             <Link href={"/"}>

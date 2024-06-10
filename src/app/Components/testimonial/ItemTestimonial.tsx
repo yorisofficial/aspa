@@ -15,7 +15,7 @@ const ItemTestimonial = ({data}: {data: Props}) => {
 
   return (
     <div>
-      <div className="item-slider p-8 space-y-4 drop-shadow-md bg-white rounded-xl border border-solid relative">
+      <div className="item-slider p-8 space-y-4 drop-shadow-lg bg-white rounded-xl border border-solid relative">
         <div className="quotes absolute top-3 text-primary right-3">
           <Quotes size={32} weight="fill" />
         </div>
@@ -29,10 +29,10 @@ const ItemTestimonial = ({data}: {data: Props}) => {
           />
         </div>
         <div className="">
-          <p className={`text-base font-light text-start line-clamp-4`}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, ab dolorum
-            deleniti provident esse labore est expedita rem modi eum perferendis aliquam fugit eaque
-            optio nulla cupiditate nihil a non asperiores ratione.
+          <p className={`text-base font-light text-start`}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, exercitationem labore?
+            Porro laborum doloremque in unde harum impedit nihil deleniti possimus laboriosam velit,
+            est illo enim facilis iusto cum error ullam hic?
           </p>
         </div>
         <div className="profile-details flex w-full gap-2 items-start justify-start">
@@ -47,7 +47,7 @@ const ItemTestimonial = ({data}: {data: Props}) => {
           </div>
           <div className="text-start">
             <p className="text-base font-light">Andi</p>
-            <p className="font-black">#1 WSL Asia Ranking 2021</p>
+            <p className="font-black text-sm">#1 WSL Asia Ranking 2021</p>
           </div>
         </div>
       </div>
