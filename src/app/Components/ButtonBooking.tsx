@@ -1,19 +1,33 @@
-'use client'
-import React from 'react'
-import Button from './Button'
-import {usePathname} from 'next/navigation'
+"use client"
+import React from "react"
+import Button from "./Button"
+import Link from "next/link"
+import {useRouter} from "next/navigation"
 
-const ButtonBooking = ({title, variant}: {title: string; variant: boolean}) => {
-  const pathName = usePathname()
-
+const ButtonBooking = ({
+  title,
+  disable,
+  variant,
+  url,
+}: {
+  title: string
+  disable: boolean
+  variant: any
+  url: string
+}) => {
+  const router = useRouter()
+  const handleBooking = () => {
+    router.push(url)
+  }
   return (
     <>
-      {variant ? (
-        <Button label='Book now' variant='invert' className=''>
-          {title}
-        </Button>
-      ) : (
-        <Button label='Book now' variant='primary' className=''>
+      {url && (
+        <Button
+          onClick={handleBooking}
+          label="Book now"
+          variant={variant}
+          className={disable ? "cursor-not-allowed" : ""}
+        >
           {title}
         </Button>
       )}

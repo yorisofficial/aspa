@@ -1,11 +1,9 @@
 import BackButton from "@/app/Components/BackButton"
-import Button from "@/app/Components/Button"
 import ContainerContent from "@/app/Components/Container"
 import SliderProgram from "@/app/Components/home/Program/SliderProgram"
 import OurService from "@/app/Components/home/Service/OurService"
-import Link from "next/link"
 import React from "react"
-import {Booking} from "@/app/lib/Booking"
+import {Booking, urlBooking} from "@/app/lib/Booking"
 import SupportPage from "../support/page"
 import UpcamingContainer from "@/app/Components/UpcamingContainer"
 import ButtonBooking from "@/app/Components/ButtonBooking"
@@ -49,7 +47,12 @@ const ProgramPage = () => {
                 <h1 className="text-3xl font-black text-brand">{Booking.price}</h1>
               </div>
               <div className="w-full">
-                <ButtonBooking title="Book now" variant={false} />
+                <ButtonBooking
+                  disable={true}
+                  url={urlBooking.url}
+                  title="Book now"
+                  variant="primary"
+                />
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@ import Image from "next/image"
 import React from "react"
 import Link from "next/link"
 import ButtonBooking from "../../ButtonBooking"
+import {urlBooking} from "@/app/lib/Booking"
 
 const OurProgram = () => {
   return (
@@ -38,8 +39,12 @@ const OurProgram = () => {
               professional qualities such as motivation, teamwork, commitment, and responsibility.
             </p>
             <div className="flex w-full flex-shrink-0 items-center gap-4">
-              <ButtonBooking title="Book now" variant={true} />
-
+              <ButtonBooking
+                disable={true}
+                url={urlBooking.url}
+                title="Book now"
+                variant="invert"
+              />
               <Link href={"/program"} className="w-fit text-sm underline underline-offset-4">
                 About the program
               </Link>
