@@ -11,6 +11,27 @@ import {CoreTeam} from "@/app/lib/primary/CoreTeam"
 import {ExpertTeam} from "@/app/lib/primary/ExpertTeam"
 import {VideographerTeam} from "@/app/lib/primary/VideographerTeam"
 import {SurfTeam} from "@/app/lib/primary/CoachTeam"
+import SliderProgram from "@/app/Components/home/Program/SliderProgram"
+
+//dummy images
+export const SliderImg = [
+  {
+    src: "https://via.placeholder.com/1500x400",
+    alt: "image-asset-program",
+  },
+  {
+    src: "https://via.placeholder.com/1500x400",
+    alt: "image-asset-program",
+  },
+  {
+    src: "https://via.placeholder.com/1500x400",
+    alt: "image-asset-program",
+  },
+  {
+    src: "https://via.placeholder.com/1500x400",
+    alt: "image-asset-program",
+  },
+]
 
 const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
   const getTeam = params?.slug[1]
@@ -24,7 +45,7 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
   const getTitle = params.slug[0].replaceAll("-", " ")
 
   // Get coach title
-  const getCoach = params.slug[0].replaceAll("-", " ").includes("Coach")
+  const getCoach = params.slug[0].replaceAll("-", " ").includes("coach")
 
   const teamCore = CoreTeam.find((item) => item?.full_name.includes(getTeam.replaceAll("-", " ")))
   const teamSurf = SurfTeam.find((item) => item?.full_name.includes(getTeam.replaceAll("-", " ")))
@@ -56,7 +77,8 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
       <div className="details-team py-8">
         {filteredDetails.map((item) => (
           <div key={item?.id} className="">
-            <div className="quick-intro w-full space-y-4 border-b border-black pb-8">
+            {getCoach && <SliderProgram data={SliderImg} />}
+            <div className="quick-intro w-full mt-8 space-y-4 flex gap-8 border-b border-black pb-8">
               <Image
                 src={item?.profile || "https://via.placeholder.com/500x500"}
                 alt="profile-image"
