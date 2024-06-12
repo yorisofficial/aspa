@@ -1,5 +1,4 @@
 import {Support} from "@/app/lib/Support"
-import {WhatsappLogo} from "@phosphor-icons/react"
 import Link from "next/link"
 import React from "react"
 
@@ -7,6 +6,7 @@ const ContactComponent = () => {
   const phone = Support[0].title
   const emailInfo = Support[4].title
   const emailSupport = Support[5].title
+  const phoneMassage = Support[0].message?.replaceAll(" ", "%20")
 
   return (
     <div className="body-content space-y-2">
