@@ -5,7 +5,6 @@ const ContactComponent = () => {
   const phone = Support[0].title
   const emailInfo = Support[4].title
   const emailSupport = Support[5].title
-  console.log()
 
   return (
     <div className="body-content space-y-2">

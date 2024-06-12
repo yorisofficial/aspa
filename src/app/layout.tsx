@@ -1,10 +1,11 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import Navigation from "./Components/Navigation";
-import FooterPage from "./Components/Footer";
-import localFont from "next/font/local";
-import { Analytics } from "@vercel/analytics/react";
-import ButtonUp from "./Components/ButtonUp";
+import "./globals.css"
+import type {Metadata} from "next"
+import Navigation from "./Components/Navigation"
+import FooterPage from "./Components/Footer"
+import localFont from "next/font/local"
+import {Analytics} from "@vercel/analytics/react"
+import ButtonUp from "./Components/ButtonUp"
+import UpcamingContainer from "./Components/UpcamingContainer"
 
 const satoshi = localFont({
   src: [
@@ -30,7 +31,7 @@ const satoshi = localFont({
     },
   ],
   variable: "--font-satoshi",
-});
+})
 
 export const metadata: Metadata = {
   title: "Asian Surf Performance Academy",
@@ -38,25 +39,24 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
       <body className={satoshi.className}>
-        <Navigation />
-        {children}
-        <FooterPage />
-        <Analytics />
-        <ButtonUp />
+        <UpcamingContainer content={true}>
+          <Navigation />
+          {children}
+          <FooterPage />
+          <Analytics />
+          <ButtonUp />
+        </UpcamingContainer>
       </body>
     </html>
-  );
+  )
 }
