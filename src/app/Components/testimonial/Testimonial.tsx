@@ -36,7 +36,7 @@ const Testimonial = () => {
           </p>
         </div>
       </div>
-      <ListTestimonials data={OurTestimonial} />
+      <h1 className="text-base font-black">Coming Soon</h1>
     </ContainerContent>
   )
 }

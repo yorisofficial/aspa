@@ -11,8 +11,6 @@ interface Props {
 }
 
 const ItemTestimonial = ({data}: {data: Props}) => {
-  console.log()
-
   return (
     <div>
       <div className="item-slider p-8 space-y-4 drop-shadow-lg bg-white rounded-xl border border-solid relative">

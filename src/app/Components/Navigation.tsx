@@ -55,7 +55,6 @@ const Navigation = () => {
 
   // get menu active
   const dataPath = pathName.slice(1) === "" ? "Home" : pathName.slice(1)
-  console.log()
 
   return (
     <header
