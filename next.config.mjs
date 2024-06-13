@@ -1,24 +1,24 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/academy",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/program",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/team",
-        destination: "/",
-        permanent: true,
-      },
-    ]
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: "/academy",
+  //       destination: "/",
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: "/program",
+  //       destination: "/",
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: "/team",
+  //       destination: "/",
+  //       permanent: true,
+  //     },
+  //   ]
+  // },
   images: {
     remotePatterns: [
       {

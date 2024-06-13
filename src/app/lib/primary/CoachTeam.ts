@@ -15,6 +15,28 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/muklis_.anwar",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/300x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/520x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/550x500",
+      },
+    ],
     achievement: [
       {
         title: "ISA Surf Judge",
@@ -37,6 +59,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/musjeksen",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "Pro Surfer",
@@ -59,6 +95,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/gus_bentir",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title:
@@ -88,6 +138,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/radityarondi",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title:
@@ -117,6 +181,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/oneyanwar",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "Pro Surfer: First Indonesian surfer to qualify for the World Surf League (WSL)",
@@ -139,6 +217,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/darmaputratonjo",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "Pro Surfer",
@@ -161,6 +253,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/putrapulu",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "Pro Surfer: 2010 Indonesian Surf Champion",
@@ -183,6 +289,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/mankdede",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title:
@@ -206,6 +326,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/gogosujaya",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "",
@@ -228,6 +362,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/darmayasablerok",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "Pro Surfer",
@@ -251,6 +399,20 @@ export const SurfTeam = [
     profile: "/assets/team/Dedi Santosa.png",
     user_instagram: "https://www.instagram.com/dedisantosa_",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "Pro Surfer",
@@ -273,6 +435,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/sudenasurfcoach",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "",
@@ -295,6 +471,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/danyel_amar",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "",
@@ -317,6 +507,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/mega_artana",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "Pro Surfer",
@@ -339,6 +543,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/garut_widiarta",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "Pro Surfer",
@@ -361,6 +579,20 @@ export const SurfTeam = [
     profile: "/assets/team/ASPA.png",
     user_instagram: "https://www.instagram.com/clepuk_balibagus",
     user_soorfinc: "",
+    preview_img: [
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "dummy-image",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
     achievement: [
       {
         title: "",

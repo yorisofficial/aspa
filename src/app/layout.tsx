@@ -3,7 +3,6 @@ import type {Metadata} from "next"
 import Navigation from "./Components/Navigation"
 import FooterPage from "./Components/Footer"
 import localFont from "next/font/local"
-import {Analytics} from "@vercel/analytics/react"
 import ButtonUp from "./Components/ButtonUp"
 import UpcamingContainer from "./Components/UpcamingContainer"
 
@@ -49,11 +48,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={satoshi.className}>
-        <UpcamingContainer content={true}>
+        <UpcamingContainer content={false}>
           <Navigation />
           {children}
           <FooterPage />
-          <Analytics />
           <ButtonUp />
         </UpcamingContainer>
       </body>
