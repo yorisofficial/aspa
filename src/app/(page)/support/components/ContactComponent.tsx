@@ -1,4 +1,5 @@
 import {Support} from "@/app/lib/Support"
+
 const ContactComponent = () => {
   const phone = Support[0].title
   const emailInfo = Support[4].title

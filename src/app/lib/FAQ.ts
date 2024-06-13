@@ -30,6 +30,6 @@ export const FAQ = [
   {
     title: "How can I contact ASPA?",
     description:
-      "You can reach us via email support@asiansurfacademy.com. We also have a contact form on our website for any inquiries or support needs.",
+       "You can reach us via email (support@asiansurfacademy.com). We also have a contact form on our website for any inquiries or support needs",
   },
 ]
