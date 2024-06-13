@@ -2,7 +2,7 @@ export const Support = [
   {
     title: "+34 662495482",
     description: "Phone",
-    message: "Hallo support saya membutuhkan bantuan",
+    message: "Hallo",
   },
   {
     title: 80361,

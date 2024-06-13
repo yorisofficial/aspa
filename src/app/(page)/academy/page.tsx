@@ -7,9 +7,9 @@ import {Home} from "@/app/lib/Home"
 
 const AcademyPage = () => {
   const image = {
-    srcImage1: "/assets/hero-img-1.png",
-    srcImage2: "/assets/program/grompatrol/img-3.png",
-    srcImage3: "/assets/program/grompatrol/img-4.png",
+    srcImage_1: "/assets/academy/aspa-academy-1.png",
+    srcImage_2: "/assets/academy/aspa-academy-2.png",
+    srcImage_3: "/assets/academy/aspa-academy-3.png",
   }
 
   return (
@@ -18,28 +18,28 @@ const AcademyPage = () => {
       <div className="image-group flex flex-col xl:h-[400px] xl:flex-row w-full gap-4 my-8">
         <div className="w-full h-full">
           <Image
-            src={image.srcImage1}
+            src={image.srcImage_1}
             alt="image-asset-academy"
-            width={500}
-            height={500}
+            width={1500}
+            height={1500}
             priority={false}
             className="w-full xl:min-w-3/4 h-[300px] xl:h-[400px] object-cover"
           />
         </div>
         <div className="small-img gap-4 grid grid-cols-2 xl:grid-cols-1 h-full">
           <Image
-            src={image.srcImage2}
+            src={image.srcImage_2}
             alt="image-asset-academy"
-            width={500}
-            height={500}
+            width={1500}
+            height={1500}
             priority={false}
             className="xl:w-[250px] h-full object-cover"
           />
           <Image
-            src={image.srcImage3}
+            src={image.srcImage_3}
             alt="image-asset-academy"
-            width={500}
-            height={500}
+            width={1500}
+            height={1500}
             priority={false}
             className="xl:w-[250px] h-full object-cover"
           />

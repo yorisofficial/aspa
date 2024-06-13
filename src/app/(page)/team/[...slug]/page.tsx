@@ -5,11 +5,13 @@ import {calculateAge} from "@/app/Components/SlideTeam"
 import {ArrowLeft} from "@phosphor-icons/react"
 import Image from "next/image"
 import {useRouter} from "next/navigation"
+import CoachSliderImg from "@/app/Components/CoachSliderImg"
 
 // Data base
 import {CoreTeam} from "@/app/lib/primary/CoreTeam"
 import {ExpertTeam} from "@/app/lib/primary/ExpertTeam"
 import {VideographerTeam} from "@/app/lib/primary/VideographerTeam"
+// import {SurfTeam} from "@/app/lib/primary/CoachTeam"
 import {SurfTeam} from "@/app/lib/primary/CoachTeam"
 
 const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
@@ -20,11 +22,9 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ")
 
-  // Get title
   const getTitle = params.slug[0].replaceAll("-", " ")
 
-  // Get coach title
-  const getCoach = params.slug[0].replaceAll("-", " ").includes("Coach")
+  const getCoach = params.slug[0].replaceAll("-", " ").includes("coach")
 
   const teamCore = CoreTeam.find((item) => item?.full_name.includes(getTeam.replaceAll("-", " ")))
   const teamSurf = SurfTeam.find((item) => item?.full_name.includes(getTeam.replaceAll("-", " ")))
@@ -45,6 +45,9 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
   // find location
   const locationCoach = teamSurf?.location
 
+  // Check if coach has images
+  const getCoachImage = teamSurf?.preview_img
+
   return (
     <ContainerContent url="team" className="">
       <div className="border-buttom w-full pb-8">
@@ -56,7 +59,8 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
       <div className="details-team py-8">
         {filteredDetails.map((item) => (
           <div key={item?.id} className="">
-            <div className="quick-intro w-full space-y-4 border-b border-black pb-8">
+            {getCoachImage && <CoachSliderImg data={getCoachImage} />}
+            <div className="quick-intro w-full mt-8 space-y-4 flex gap-8 border-b border-black pb-8">
               <Image
                 src={item?.profile || "https://via.placeholder.com/500x500"}
                 alt="profile-image"
