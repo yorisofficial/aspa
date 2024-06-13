@@ -53,8 +53,8 @@ const Navigation = () => {
   // check pathName
   const pathName = usePathname()
 
-  // get menu active
-  const dataPath = pathName.slice(1) === "" ? "Home" : pathName.slice(1)
+  // get active pathName
+  const activePath = pathName.split("/").slice(1, 2)
 
   return (
     <header
@@ -74,7 +74,7 @@ const Navigation = () => {
                 width={500}
                 height={500}
                 priority={false}
-                className={`brand h-full ${isDesktop ? "w-32" : "w-24"} invert-0 xl:w-32`}
+                className={`brand h-full w-24 ${isDesktop ? "xl:w-32" : "xl:w-24"} invert-0`}
               />
             </Link>
             <div className="cta-button xl:hidden">
@@ -123,12 +123,12 @@ const Navigation = () => {
               </ul>
             </div>
           )}
-          <div className={`menu-nav hidden items-center gap-4 xl:flex`}>
+          <div className={`desktop-nav hidden items-center gap-4 xl:flex`}>
             {menuNav.map((item, index) => (
               <Link
                 key={index}
                 href={item.link}
-                className={`${item.base === pathName.slice(1) ? "scale-110 font-black text-brand underline underline-offset-4" : ""} group text-base font-medium duration-500 hover:scale-110 hover:text-brand`}
+                className={`${activePath.includes(item.base) ? "scale-110 font-black text-brand underline underline-offset-4" : ""} group text-base font-medium duration-500 hover:scale-110 hover:text-brand`}
               >
                 {item.title}
                 <div

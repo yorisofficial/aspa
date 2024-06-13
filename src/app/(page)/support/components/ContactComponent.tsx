@@ -1,4 +1,5 @@
 import {Support} from "@/app/lib/Support"
+import {Phone} from "@phosphor-icons/react"
 import Link from "next/link"
 import React from "react"
 
@@ -23,7 +24,7 @@ const ContactComponent = () => {
         Customer support
       </h1>
       <div className="flex flex-col gap-2">
-        {!emailSupport && (
+        {emailSupport && (
           <p className="flex items-center justify-start gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +38,7 @@ const ContactComponent = () => {
             {emailSupport}
           </p>
         )}
-        {!emailInfo && (
+        {emailInfo && (
           <p className="flex items-center justify-start gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +53,10 @@ const ContactComponent = () => {
           </p>
         )}
         <div className="w-fit">
+          <div className="">
+            {/* <Phone size={24} /> */}
+            <h1>Contact on WhatsApp</h1>
+          </div>
           <Link
             href={`https://api.whatsapp.com/send/?phone=${phone}&text=${phoneMassage}`}
             target="_blank"
