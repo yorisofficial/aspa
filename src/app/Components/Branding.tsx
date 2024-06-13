@@ -11,9 +11,10 @@ const Branding = () => {
         width={300}
         height={180}
         quality={75}
-        className={`brand min-w-32 h-14 object-fill`}
+        className={`brand hidden xl:inline-block max-w-32 h-fit object-fill`}
         priority={false}
       />
+      <h1 className="text-4xl font-satoshi font-black xl:hidden">ASPA</h1>
     </Link>
   )
 }

@@ -68,9 +68,7 @@ const Navigation = () => {
           className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 opacity-95" : "xl:py-4"} drop-shadow-xl xl:flex`}
         >
           <div className="brand flex items-center justify-between">
-            <Suspense fallback={<h1 className="font-black text-xl">ASPA</h1>}>
-              <Branding />
-            </Suspense>
+            <Image src='/brand/ASPA-dark.svg' alt="ASPA Brand" height={500} width={500} className="w-40 h-fit object-contain" />
             <div className="cta-button xl:hidden">
               <button
                 onClick={handleShow}

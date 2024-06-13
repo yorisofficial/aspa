@@ -5,7 +5,6 @@ import FooterPage from "./Components/Footer"
 import localFont from "next/font/local"
 import ButtonUp from "./Components/ButtonUp"
 import UpcamingContainer from "./Components/UpcamingContainer"
-// import {Analytics} from "@vercel/analytics/react"
 
 const satoshi = localFont({
   src: [
