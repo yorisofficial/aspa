@@ -2,7 +2,7 @@ export const FAQ = [
   {
     title: "What is ASPA?",
     description:
-      "ASPA stands for the Asian Surf Performance Academy. The Academy aims to help athletes reach their highest potential, both in and out of the water. Its goal is to empower and support excellent surfers to break through their limits and become the best they can be.",
+      "ASPA stands for the Asian Surf Performance Academy. The Academy aims to help athletes reach their highest potential, both in and out of the water. Its goal is to empower and support excellent surfers to break through their limits and become the best they can be",
   },
   {
     title: "Where is ASPA?",
@@ -28,13 +28,8 @@ export const FAQ = [
     description: "Support Surf Athletes to become the worlds best surfers and people.",
   },
   {
-    title: "What payment methods do you accept?",
-    description:
-      "We accept all major credit cards, PayPal, and bank transfers through our secure online payment system.",
-  },
-  {
     title: "How can I contact ASPA?",
     description:
-      "You can reach us via email (support@asiansurfacademy.com). We also have a contact form on our website for any inquiries or support needs.",
+      "You can reach us via email support@asiansurfacademy.com. We also have a contact form on our website for any inquiries or support needs.",
   },
 ]
