@@ -2,7 +2,8 @@
 import Image from "next/image"
 import Link from "next/link"
 import {usePathname} from "next/navigation"
-import React, {useEffect, useState} from "react"
+import React, {Suspense, useEffect, useState} from "react"
+import Branding from "./Branding"
 
 const Navigation = () => {
   const [isShow, setShow] = useState(false)
@@ -67,16 +68,9 @@ const Navigation = () => {
           className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 opacity-95" : "xl:py-4"} drop-shadow-xl xl:flex`}
         >
           <div className="brand flex items-center justify-between">
-            <Link href={"/"}>
-              <Image
-                src={"/brand/ASPA-dark.svg"}
-                alt="logo"
-                width={500}
-                height={500}
-                priority={false}
-                className={`brand h-full w-24 ${isDesktop ? "xl:w-32" : "xl:w-24"} invert-0`}
-              />
-            </Link>
+            <Suspense fallback={<h1 className="font-black text-xl">ASPA</h1>}>
+              <Branding />
+            </Suspense>
             <div className="cta-button xl:hidden">
               <button
                 onClick={handleShow}

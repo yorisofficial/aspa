@@ -3,9 +3,9 @@ import type {Metadata} from "next"
 import Navigation from "./Components/Navigation"
 import FooterPage from "./Components/Footer"
 import localFont from "next/font/local"
-import {Analytics} from "@vercel/analytics/react"
 import ButtonUp from "./Components/ButtonUp"
 import UpcamingContainer from "./Components/UpcamingContainer"
+// import {Analytics} from "@vercel/analytics/react"
 
 const satoshi = localFont({
   src: [
@@ -53,7 +53,6 @@ export default function RootLayout({
           <Navigation />
           {children}
           <FooterPage />
-          <Analytics />
           <ButtonUp />
         </UpcamingContainer>
       </body>

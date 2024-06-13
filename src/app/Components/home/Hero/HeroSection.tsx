@@ -21,8 +21,9 @@ const HeroSection = () => {
         <Image
           src={"/brand/ASPA-white.svg"}
           height={500}
-          width={500}
+          width={300}
           alt="ASPA Logo"
+          quality={100}
           priority={false}
           className="h-full w-3/4 object-cover xl:w-full"
         />
