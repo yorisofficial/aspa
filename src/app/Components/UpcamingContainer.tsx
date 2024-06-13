@@ -1,8 +1,6 @@
 "use client"
-import Link from "next/link"
 import React, {useState} from "react"
-import Button from "./Button"
-import {EnvelopeSimple, Info} from "@phosphor-icons/react"
+import {EnvelopeSimple} from "@phosphor-icons/react"
 import Image from "next/image"
 
 const UpcamingContainer = ({

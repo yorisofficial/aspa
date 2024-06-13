@@ -1,5 +1,4 @@
 import React from "react"
-import ListTestimonials from "./ListTestimonials"
 import ContainerContent from "../Container"
 
 export const OurTestimonial = [
