@@ -16,7 +16,7 @@ interface Props {
 
 const CoachSliderImg = ({data}: {data: Props[]}) => {
   return (
-    <div className="list-image h-[200px] md:h-[300px] xl:order-last xl:h-[400px] ">
+    <div className="list-image h-[250px] md:h-[300px] xl:order-last xl:h-[400px] ">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={32}
@@ -33,8 +33,9 @@ const CoachSliderImg = ({data}: {data: Props[]}) => {
               height={1000}
               width={1000}
               priority={false}
+              quality={100}
               alt={item.title}
-              className={`h-[400px] md:w-[400px] rounded-xl object-center duration-500`}
+              className={`h-[400px] md:w-[400px] w-full rounded-xl object-center duration-500`}
             />
           </SwiperSlide>
         ))}

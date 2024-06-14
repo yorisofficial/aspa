@@ -12,7 +12,7 @@ export const SurfTeam = [
     level: "ISA Level 1",
     experience: "",
     location: "Medewi",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-1.png",
     user_instagram: "https://www.instagram.com/muklis_.anwar",
     user_soorfinc: "",
     preview_img: [
@@ -45,7 +45,7 @@ export const SurfTeam = [
   },
   {
     id: 2,
-    confirm: false,
+    confirm: true,
     full_name: "Muz Jeksen",
     nickname: "",
     quotes: "",
@@ -56,21 +56,21 @@ export const SurfTeam = [
     level: "ISA Level 1",
     experience: "",
     location: "Hallway",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-2.png",
     user_instagram: "https://www.instagram.com/musjeksen",
     user_soorfinc: "",
     preview_img: [
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Muz Jeksen/image-slider-1.png",
       },
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Muz Jeksen/image-slider-2.png",
       },
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Muz Jeksen/image-slider.png",
       },
     ],
     achievement: [
@@ -92,7 +92,7 @@ export const SurfTeam = [
     level: "ISA Level 1",
     experience: "",
     location: "Uluwatu",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-3.png",
     user_instagram: "https://www.instagram.com/gus_bentir",
     user_soorfinc: "",
     preview_img: [
@@ -135,7 +135,7 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "7 years to be coach",
     location: "Kuta",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-4.png",
     user_instagram: "https://www.instagram.com/radityarondi",
     user_soorfinc: "",
     preview_img: [
@@ -178,7 +178,7 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Canggu",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-5.png",
     user_instagram: "https://www.instagram.com/oneyanwar",
     user_soorfinc: "",
     preview_img: [
@@ -214,7 +214,7 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Legian",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-6.png",
     user_instagram: "https://www.instagram.com/darmaputratonjo",
     user_soorfinc: "",
     preview_img: [
@@ -250,7 +250,7 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Lembongan",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-7.png",
     user_instagram: "https://www.instagram.com/putrapulu",
     user_soorfinc: "",
     preview_img: [
@@ -286,7 +286,7 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Cimaja",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-8.png",
     user_instagram: "https://www.instagram.com/mankdede",
     user_soorfinc: "",
     preview_img: [
@@ -312,7 +312,7 @@ export const SurfTeam = [
   },
   {
     id: 9,
-    confirm: false,
+    confirm: true,
     full_name: "Gogo Sujaya",
     nickname: "",
     quotes: "",
@@ -323,26 +323,26 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Kuta Reef",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-9.png",
     user_instagram: "https://www.instagram.com/gogosujaya",
     user_soorfinc: "",
     preview_img: [
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Gogo Sujaya/image-slider.png",
       },
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Gogo Sujaya/image-slider-1.png",
       },
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Gogo Sujaya/image-slider-2.png",
       },
     ],
     achievement: [
       {
-        title: "",
+        title: "Wildcard Uluwatu CT + judge",
       },
     ],
   },
@@ -359,7 +359,7 @@ export const SurfTeam = [
     level: "Pro Surfer",
     experience: "",
     location: "Legian",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-10.png",
     user_instagram: "https://www.instagram.com/darmayasablerok",
     user_soorfinc: "",
     preview_img: [
@@ -402,15 +402,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Dedi Santosa/image-slider-2.png",
       },
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Dedi Santosa/image-slider.png",
       },
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Dedi Santosa/image-slider-1.png",
       },
     ],
     achievement: [
@@ -432,7 +432,7 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Hallway",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-11.png",
     user_instagram: "https://www.instagram.com/sudenasurfcoach",
     user_soorfinc: "",
     preview_img: [
@@ -468,7 +468,7 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Legian",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-12.png",
     user_instagram: "https://www.instagram.com/danyel_amar",
     user_soorfinc: "",
     preview_img: [
@@ -493,7 +493,7 @@ export const SurfTeam = [
   },
   {
     id: 14,
-    confirm: false,
+    confirm: true,
     full_name: "Mega Artana",
     nickname: "",
     quotes: "",
@@ -503,22 +503,22 @@ export const SurfTeam = [
     age: 1998,
     level: "Free Surfer",
     experience: "",
-    location: "Legian",
-    profile: "/assets/team/ASPA.png",
+    location: "Kuta",
+    profile: "/assets/team/aspa-coach-13.png",
     user_instagram: "https://www.instagram.com/mega_artana",
     user_soorfinc: "",
     preview_img: [
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Mega Artana/image-slider.png",
       },
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Mega Artana/image-slider-1.png",
       },
       {
         title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Mega Artana/image-slider-2.png",
       },
     ],
     achievement: [
@@ -540,7 +540,7 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Legian",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-14.png",
     user_instagram: "https://www.instagram.com/garut_widiarta",
     user_soorfinc: "",
     preview_img: [
@@ -576,7 +576,7 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Pererenan",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-15.png",
     user_instagram: "https://www.instagram.com/clepuk_balibagus",
     user_soorfinc: "",
     preview_img: [
