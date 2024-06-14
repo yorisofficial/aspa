@@ -12,10 +12,10 @@ const ItemTeam = ({data, categories}: {data: any; categories: string}) => {
       <Link
         key={item.id}
         href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
-        className="xl:w-fit w-full relative"
+        className="xl:w-fit w-full relative border-2 hover:drop-shadow-xl bg-white duration-500 transition-all ease-in-out border-bordersolid hover:rounded-xl"
       >
         <IconArrowDetails />
-        <div className="item-core flex items-start justify-start gap-5 rounded-xl border py-6 px-4 md:w-[330px] w-full xl:max-w-[400px]">
+        <div className="item-core flex items-start peer justify-start gap-5 rounded-xl py-6 px-4 md:w-[330px] w-full xl:max-w-[400px]">
           <div className="w-fit rounded-full ring-4 ring-brand">
             <Image
               src={item.profile}
