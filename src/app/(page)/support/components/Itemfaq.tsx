@@ -14,10 +14,10 @@ const ItemFaq = ({title, desc}: Props) => {
   }
 
   return (
-    <div className="relative w-full h-fit border-buttom">
+    <div className={`relative w-full h-fit duration-300 ease-in-out bg-gray-200 border-buttom`}>
       <button
         onClick={handleShow}
-        className={`flex w-full items-start justify-between py-4 text-start ${isShow ? "h-fit" : "h-full"}`}
+        className={`flex w-full font-black items-start justify-between py-4 text-start ${isShow ? "h-fit text-brand" : "h-full"}`}
       >
         {title}
         {isShow ? (
@@ -26,11 +26,9 @@ const ItemFaq = ({title, desc}: Props) => {
           <CaretRight size={24} className="ml-4 flex-shrink-0" />
         )}
       </button>
-      {isShow && (
-        <div className={`w-full h-full pb-2`}>
-          <p className="text-base font-light">{desc}</p>
-        </div>
-      )}
+      <div className={`pb-2 ${isShow ? "scale-y-100" : "scale-y-0 hidden"}`}>
+        <p className={`text-base font-light`}>{desc}</p>
+      </div>
     </div>
   )
 }

@@ -22,7 +22,7 @@ const SliderProgram = ({data}: {data: Props[]}) => {
         modules={[Autoplay]}
         spaceBetween={32}
         loop={true}
-        autoplay={{delay: 2500}}
+        autoplay={{delay: 4000}}
         grabCursor={true}
         slidesPerView={"auto"}
         className="list-coach mySwiper h-full"
@@ -34,6 +34,7 @@ const SliderProgram = ({data}: {data: Props[]}) => {
               height={1000}
               width={1000}
               priority={false}
+              quality={100}
               alt="ASPA Image"
               className={`h-[400px] md:w-[400px] rounded-xl object-center duration-500`}
             />
