@@ -25,7 +25,7 @@ const ASPAxGP = () => {
     },
   ]
   return (
-    <div>
+    <>
       <div className="content-section grid h-full w-full grid-cols-1 gap-8 border-b border-black py-8 pb-8 xl:grid-cols-2">
         <SliderProgram data={SliderImg} />
         <div className="details flex h-full w-full flex-col gap-8">
@@ -54,7 +54,7 @@ const ASPAxGP = () => {
         </div>
       </div>
       <OurService title="GET MORE BENEFIT" />
-    </div>
+    </>
   )
 }
 

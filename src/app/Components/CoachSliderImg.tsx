@@ -16,7 +16,7 @@ interface Props {
 
 const CoachSliderImg = ({data}: {data: Props[]}) => {
   return (
-    <div className="list-image h-[250px] md:h-[300px] xl:order-last xl:h-[400px] ">
+    <div className="list-image h-[250px] md:h-[300px] xl:order-last xl:h-[400px] w-full">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={32}
@@ -24,10 +24,10 @@ const CoachSliderImg = ({data}: {data: Props[]}) => {
         autoplay={{delay: 2500}}
         grabCursor={true}
         slidesPerView={"auto"}
-        className="list-coach mySwiper h-full"
+        className="list-coach mySwiper h-full w-full"
       >
         {data.map((item, index) => (
-          <SwiperSlide key={index} className="item-coach h-[400px] w-[400px]">
+          <SwiperSlide key={index} className="item-coach h-[400px] w-[400px] xl:w-full">
             <Image
               src={item.src}
               height={1000}
@@ -35,7 +35,7 @@ const CoachSliderImg = ({data}: {data: Props[]}) => {
               priority={false}
               quality={100}
               alt={item.title}
-              className={`h-[400px] md:w-[400px] w-full rounded-xl object-center duration-500`}
+              className={`h-full w-full rounded-xl object-cover duration-500`}
             />
           </SwiperSlide>
         ))}
