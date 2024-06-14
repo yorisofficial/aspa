@@ -396,7 +396,7 @@ export const SurfTeam = [
     level: "Free Surfer",
     experience: "",
     location: "Kuta / Canggu",
-    profile: "/public/assets/team/aspa-coach-11.png",
+    profile: "/assets/team/aspa-coach-11.png",
     user_instagram: "https://www.instagram.com/dedisantosa_",
     user_soorfinc: "",
     preview_img: [
