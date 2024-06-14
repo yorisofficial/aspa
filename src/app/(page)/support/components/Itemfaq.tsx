@@ -14,7 +14,7 @@ const ItemFaq = ({title, desc}: Props) => {
   }
 
   return (
-    <div className="relative w-full border-buttom">
+    <div className="relative w-full h-fit border-buttom">
       <button
         onClick={handleShow}
         className={`flex w-full items-start justify-between py-4 text-start ${isShow ? "h-fit" : "h-full"}`}
