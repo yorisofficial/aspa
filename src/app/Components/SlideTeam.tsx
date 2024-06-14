@@ -14,7 +14,7 @@ const SlideTeam = () => {
   const data = CoreTeam
 
   return (
-    <div className="list-coach">
+    <div className="list-coach w-full h-full">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={32}
@@ -31,17 +31,17 @@ const SlideTeam = () => {
             slidesPerView: 3,
           },
         }}
-        className="list-coach mySwiper"
+        className="list-coach mySwiper w-full h-full"
       >
         {data.map((item) => (
-          <SwiperSlide key={item.id} className="item-coach h-full">
-            <div className="item-coach group h-full min-h-[400px] w-full cursor-pointer rounded-xl duration-500">
+          <SwiperSlide key={item.id} className="item-coach h-full w-full md:w-fit">
+            <div className="item-coach group bored h-full min-h-[400px] w-full cursor-pointer rounded-xl duration-500">
               <Image
                 src={item.profile}
-                width={500}
-                height={500}
+                width={1000}
+                height={1000}
                 alt=".."
-                className="h-full min-h-[400px] w-[300px] rounded-xl object-cover duration-500"
+                className="h-full min-h-[400px] w-full rounded-xl object-cover duration-500"
               />
 
               <div className="profile-coach absolute bottom-4 left-4 text-white">
