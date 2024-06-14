@@ -7,6 +7,7 @@ import {Booking, urlBooking} from "@/app/lib/Booking"
 import SupportPage from "../support/page"
 import UpcamingContainer from "@/app/Components/UpcamingContainer"
 import ButtonBooking from "@/app/Components/ButtonBooking"
+import DownloadDocument from "@/app/Components/DownloadDocument"
 
 const ProgramPage = () => {
   const SliderImg = [
@@ -46,13 +47,14 @@ const ProgramPage = () => {
                 <span className="font-light">Price</span>
                 <h1 className="text-3xl font-black text-brand">{Booking.price}</h1>
               </div>
-              <div className="w-full">
+              <div className="w-full flex gap-2 xl:gap-4 items-center">
                 <ButtonBooking
                   disable={true}
                   url={urlBooking.url}
                   title="Book now"
                   variant="primary"
                 />
+                <DownloadDocument />
               </div>
             </div>
           </div>
