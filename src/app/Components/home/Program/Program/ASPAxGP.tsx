@@ -41,7 +41,7 @@ const ASPAxGP = () => {
               <span className="font-light">Price</span>
               <h1 className="text-3xl font-black text-brand">{Booking.price}</h1>
             </div>
-            <div className="w-full flex gap-4 items-center">
+            <div className="w-full flex gap-6 items-center">
               <ButtonBooking
                 disable={true}
                 url={urlBooking.url}

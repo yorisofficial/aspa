@@ -17,23 +17,23 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/300x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/520x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/550x500",
       },
     ],
@@ -61,16 +61,16 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Muz Jeksen/image-slider-1.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Muz Jeksen/image-slider-1.webp",
       },
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Muz Jeksen/image-slider-2.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Muz Jeksen/image-slider-2.webp",
       },
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Muz Jeksen/image-slider.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Muz Jeksen/image-slider.webp",
       },
     ],
     achievement: [
@@ -97,15 +97,15 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
     ],
@@ -140,15 +140,15 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
     ],
@@ -183,15 +183,15 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
     ],
@@ -219,15 +219,15 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
     ],
@@ -239,7 +239,7 @@ export const SurfTeam = [
   },
   {
     id: 7,
-    confirm: false,
+    confirm: true,
     full_name: "Putra Pulu",
     nickname: "",
     quotes: "",
@@ -248,23 +248,27 @@ export const SurfTeam = [
     isa: false,
     age: 1998,
     level: "Pro Surfer",
-    experience: "",
+    experience: "1.5 years",
     location: "Lembongan",
     profile: "/assets/team/aspa-coach-7.png",
     user_instagram: "https://www.instagram.com/putrapulu",
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        title: "coach-preview",
+        src: "/assets/team/coach/Putra Pulu/image-slide-1.webp",
       },
       {
-        title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        title: "coach-preview",
+        src: "/assets/team/coach/Putra Pulu/image-slide-2.webp",
       },
       {
-        title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        title: "coach-preview",
+        src: "/assets/team/coach/Putra Pulu/image-slide-3.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Putra Pulu/image-slide-4.webp",
       },
     ],
     achievement: [
@@ -291,15 +295,15 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
     ],
@@ -328,16 +332,16 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Gogo Sujaya/image-slider.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Gogo Sujaya/image-slider.webp",
       },
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Gogo Sujaya/image-slider-1.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Gogo Sujaya/image-slider-1.webp",
       },
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Gogo Sujaya/image-slider-2.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Gogo Sujaya/image-slider-2.webp",
       },
     ],
     achievement: [
@@ -364,15 +368,15 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
     ],
@@ -401,16 +405,16 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Dedi Santosa/image-slider-2.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Dedi Santosa/image-slider-2.webp",
       },
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Dedi Santosa/image-slider.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Dedi Santosa/image-slider.webp",
       },
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Dedi Santosa/image-slider-1.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Dedi Santosa/image-slider-1.webp",
       },
     ],
     achievement: [
@@ -421,7 +425,7 @@ export const SurfTeam = [
   },
   {
     id: 12,
-    confirm: false,
+    confirm: true,
     full_name: "Mickey Sudena",
     nickname: "",
     quotes: "",
@@ -430,23 +434,23 @@ export const SurfTeam = [
     isa: false,
     age: 1998,
     level: "Free Surfer",
-    experience: "",
+    experience: "20 Years",
     location: "Hallway",
     profile: "/assets/team/aspa-coach-12.png",
     user_instagram: "https://www.instagram.com/sudenasurfcoach",
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        title: "coach-preview",
+        src: "/assets/team/coach/Mickey Sudena/image-slide-1.webp",
       },
       {
-        title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        title: "coach-preview",
+        src: "/assets/team/coach/Mickey Sudena/image-slide-2.webp",
       },
       {
-        title: "dummy-image",
-        src: "https://via.placeholder.com/500x500",
+        title: "coach-preview",
+        src: "/assets/team/coach/Mickey Sudena/image-slide-3.webp",
       },
     ],
     achievement: [
@@ -473,15 +477,15 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
     ],
@@ -509,16 +513,16 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Mega Artana/image-slider.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Mega Artana/image-slider.webp",
       },
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Mega Artana/image-slider-1.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Mega Artana/image-slider-1.webp",
       },
       {
-        title: "dummy-image",
-        src: "/assets/team/coach/Mega Artana/image-slider-2.png",
+        title: "coach-preview",
+        src: "/assets/team/coach/Mega Artana/image-slider-2.webp",
       },
     ],
     achievement: [
@@ -545,15 +549,15 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
     ],
@@ -581,15 +585,15 @@ export const SurfTeam = [
     user_soorfinc: "",
     preview_img: [
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
       {
-        title: "dummy-image",
+        title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
       },
     ],

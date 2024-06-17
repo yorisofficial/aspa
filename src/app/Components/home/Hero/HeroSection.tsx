@@ -6,7 +6,7 @@ import MouseAnimate from "./MouseAnimate"
 const HeroSection = () => {
   return (
     <div className="relative h-screen w-full">
-      <Carousel />
+      <Carousel className="" />
       <div className="absolute left-1/2 top-1/2 z-10 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center">
         <Image
           src={"/assets/acc/title-cover.svg"}

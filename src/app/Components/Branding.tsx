@@ -4,17 +4,16 @@ import React from "react"
 
 const Branding = () => {
   return (
-    <Link href={"/"} className="w-[150px] h-fit">
+    <Link href={"/"} className="inline-block">
       <Image
-        src={"/brand/ASPA-dark.svg"}
-        alt="logo"
+        src="/brand/ASPA-dark.svg"
+        alt="ASPA Brand"
+        height={300}
         width={300}
-        height={180}
         quality={75}
-        className={`brand hidden xl:inline-block max-w-32 h-fit object-fill`}
         priority={false}
+        className="w-40 h-full object-fill"
       />
-      <h1 className="text-4xl font-satoshi font-black xl:hidden">ASPA</h1>
     </Link>
   )
 }
