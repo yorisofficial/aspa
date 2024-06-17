@@ -23,6 +23,7 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
     .join(" ")
 
   const getTitle = params.slug[0].replaceAll("-", " ")
+  console.log(getTitle)
 
   const getCoach = params.slug[0].replaceAll("-", " ").includes("coach")
 
@@ -73,9 +74,10 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
                   {item?.full_name}{" "}
                   {item?.nickname && <span className="text-sm font-light">({item?.nickname})</span>}
                 </h1>
-
+                <span className="capitalize">
+                  ASPA {getTitle.includes("ASPA") ? "team" : getTitle}
+                </span>
                 {item?.experience && <p className="text-base font-light">{item?.experience}</p>}
-                <span className="capitalize">{getTitle.replaceAll("aspa", "ASPA")}</span>
               </div>
             </div>
             <div className="intro space-y-8 border-b border-black py-8">
