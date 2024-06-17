@@ -7,20 +7,18 @@ import {HERO} from "../lib/Hero"
 
 // Import Swiper styles
 import "swiper/css"
-import "swiper/css/pagination"
-import "swiper/css/navigation"
 
-const Carousel = () => {
+const Carousel = ({className}: {className: string}) => {
   const dataSlide = HERO
 
   return (
-    <div className="h-screen w-full">
+    <div className={`h-screen w-full ${className}`}>
       <Swiper
         slidesPerView={1}
         spaceBetween={0}
         loop={true}
         autoplay={{
-          delay: 8000,
+          delay: 10000,
         }}
         modules={[Autoplay]}
         className="mySwiper"
@@ -29,8 +27,9 @@ const Carousel = () => {
           <SwiperSlide key={index} className="h-full">
             <Image
               src={item.url}
-              height={1000}
-              width={1000}
+              height={500}
+              width={500}
+              quality={100}
               alt={item.title}
               priority={false}
               className="h-screen w-full object-cover"
