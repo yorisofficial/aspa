@@ -17,25 +17,26 @@ interface Props {
 
 const SliderProgram = ({data}: {data: Props[]}) => {
   return (
-    <div className="list-image h-[200px] md:h-[300px] xl:order-last xl:h-[400px] ">
+    <div className="list-image h-[300px]">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={32}
         loop={true}
-        autoplay={{delay: 2500}}
+        autoplay={{delay: 4000}}
         grabCursor={true}
         slidesPerView={"auto"}
         className="list-coach mySwiper h-full"
       >
         {data.map((item, index) => (
-          <SwiperSlide key={index} className="item-coach h-[400px] w-[400px]">
+          <SwiperSlide key={index} className="item-coach w-full h-full">
             <Image
               src={item.src}
               height={1000}
               width={1000}
               priority={false}
+              quality={100}
               alt="ASPA Image"
-              className={`h-[400px] md:w-[400px] rounded-xl object-center duration-500`}
+              className={`w-full h-full rounded-xl object-center duration-500`}
             />
           </SwiperSlide>
         ))}

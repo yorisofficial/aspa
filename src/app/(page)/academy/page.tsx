@@ -3,7 +3,6 @@ import ContainerContent from "@/app/Components/Container"
 import Image from "next/image"
 import React from "react"
 import HeadingText from "@/app/Components/HeadingText"
-import {Home} from "@/app/lib/Home"
 
 const AcademyPage = () => {
   const image = {

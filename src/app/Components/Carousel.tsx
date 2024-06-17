@@ -26,14 +26,14 @@ const Carousel = () => {
         className="mySwiper"
       >
         {dataSlide.map((item, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="h-full">
             <Image
               src={item.url}
               height={1000}
               width={1000}
               alt={item.title}
               priority={false}
-              className="h-full w-full object-center md:object-cover"
+              className="h-screen w-full object-cover"
             />
           </SwiperSlide>
         ))}

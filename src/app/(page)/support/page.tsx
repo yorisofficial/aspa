@@ -2,6 +2,7 @@ import ContainerContent from "@/app/Components/Container"
 import React from "react"
 import ContactComponent from "./components/ContactComponent"
 import ListFaq from "./components/ListFaq"
+import {ListFaqUser} from "./components/ListFaqUser"
 
 const SupportPage = () => {
   return (
@@ -11,7 +12,8 @@ const SupportPage = () => {
           <h1 className="text-4xl font-black">FAQ</h1>
           <p className="text-base font-light">Find your question bellow</p>
         </div>
-        <ListFaq />
+        {/* <ListFaq /> */}
+        <ListFaqUser />
         <div className="h-full w-full space-y-8 py-8">
           <div className="header-content space-y-8">
             <h1 className="text-base font-black">Customer support</h1>

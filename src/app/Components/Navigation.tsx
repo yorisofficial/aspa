@@ -68,7 +68,7 @@ const Navigation = () => {
           className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 opacity-95" : "xl:py-4"} drop-shadow-xl xl:flex`}
         >
           <div className="brand flex items-center justify-between">
-            <Link href={"/"}>
+            <Link href={"/"} className="inline-block">
               <Image
                 src="/brand/ASPA-dark.svg"
                 alt="ASPA Brand"

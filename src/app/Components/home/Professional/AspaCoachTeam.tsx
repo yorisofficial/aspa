@@ -24,6 +24,7 @@ const AspaCoachTeam = ({
   categories: string
 }) => {
   const data = teamData
+
   return (
     <div className="simple-container border-buttom flex flex-col items-start justify-start gap-8 py-8">
       <h1 className="text-3xl font-black">{title}</h1>
