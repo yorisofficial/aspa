@@ -35,7 +35,7 @@ const FooterPage = () => {
           className="flex items-center gap-2 rounded bg-white p-2 text-black"
         >
           <WhatsappLogo size={24} />
-          chat on Whatsaap
+          Chat on Whatsaap
         </Link>
       </div>
       <div className="list-social">

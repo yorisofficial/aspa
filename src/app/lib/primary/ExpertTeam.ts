@@ -5,7 +5,7 @@ export const ExpertTeam = [
     nickname: "",
     title: "Fitness Coach",
     level: "",
-    age: 1998,
+    age: 0,
     profile: "/assets/team/aspa-expert-1.png",
     quotes: "",
     user_instagram: "https://www.instagram.com/gabrielamackanic",

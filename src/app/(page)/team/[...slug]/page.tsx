@@ -23,7 +23,6 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
     .join(" ")
 
   const getTitle = params.slug[0].replaceAll("-", " ")
-  console.log(getTitle)
 
   const getCoach = params.slug[0].replaceAll("-", " ").includes("coach")
 
@@ -158,16 +157,18 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
                     <span>@{item?.user_instagram.split("https://www.instagram.com/")[1]}</span>
                   </div>
                 )}
-                <div className="flex items-center gap-4">
-                  <Image
-                    src={"/assets/icon/Soorfinc App 1.svg"}
-                    alt="profile-image"
-                    width={24}
-                    height={24}
-                    className="h-6 w-6"
-                  />
-                  <span>{item?.user_soorfinc || "Soorfinc"}</span>
-                </div>
+                {item?.user_soorfinc && (
+                  <div className="flex items-center gap-4">
+                    <Image
+                      src={"/assets/icon/Soorfinc App 1.svg"}
+                      alt="profile-image"
+                      width={24}
+                      height={24}
+                      className="h-6 w-6"
+                    />
+                    <span>{item?.user_soorfinc || "Soorfinc"}</span>
+                  </div>
+                )}
               </div>
             </div>
           </div>
