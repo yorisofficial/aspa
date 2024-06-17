@@ -34,11 +34,11 @@ const ASPAxGP = () => {
               <span className="text-base uppercase">Program</span>
               <h1 className="text-3xl font-black text-brand">{Booking.title}</h1>
             </div>
-            <p className="w-full text-sm font-light md:w-3/4">{Booking.description}</p>
+            <p className="w-full text-sm font-light xl:text-base md:w-3/4">{Booking.description}</p>
           </div>
           <div className="pricing-progrm flex w-full flex-col gap-6">
             <div className="w-full">
-              <span className="font-light">Price</span>
+              <span className="font-normal">Price</span>
               <h1 className="text-3xl font-black text-brand">{Booking.price}</h1>
             </div>
             <div className="w-full flex gap-6 items-center">

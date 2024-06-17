@@ -17,7 +17,7 @@ interface Props {
 
 const SliderProgram = ({data}: {data: Props[]}) => {
   return (
-    <div className="list-image h-[300px]">
+    <div className="list-image h-full">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={32}

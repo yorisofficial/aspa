@@ -8,7 +8,7 @@ export const VideographerTeam = [
     location: "All arround",
     quotes: "",
     age: 1998,
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-videographer-4.png",
     user_instagram: "https://www.instagram.com/futuremondroow",
     user_soorfinc: "",
     experience: "",
