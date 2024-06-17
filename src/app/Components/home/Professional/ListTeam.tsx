@@ -1,7 +1,4 @@
-import Image from "next/image"
-import Link from "next/link"
 import React from "react"
-import IconArrowDetails from "../../IconArrowDetails"
 import ItemTeam from "./ItemTeam"
 
 interface Props {

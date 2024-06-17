@@ -1,9 +1,6 @@
 import React from "react"
 import ContainerContent from "../../Container"
-import Button from "../../Button"
 import Image from "next/image"
-import Link from "next/link"
-import {Home} from "@/app/lib/Home"
 
 const UpcomingEvent = () => {
   return (
