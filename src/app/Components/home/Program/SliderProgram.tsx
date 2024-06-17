@@ -36,7 +36,7 @@ const SliderProgram = ({data}: {data: Props[]}) => {
               priority={false}
               quality={100}
               alt="ASPA Image"
-              className={`w-full h-full rounded-xl object-center duration-500`}
+              className={`w-full h-full rounded-xl object-cover duration-500`}
             />
           </SwiperSlide>
         ))}

@@ -28,7 +28,7 @@ const ASPAxGP = () => {
     <>
       <div className="content-section grid h-full w-full grid-cols-1 gap-8 border-b border-black py-8 pb-8 xl:grid-cols-2">
         <SliderProgram data={SliderImg} />
-        <div className="details flex h-full w-full flex-col gap-8">
+        <div className="details flex xl:order-first h-full w-full flex-col gap-8">
           <div className="content-body space-y-4">
             <div className="header">
               <span className="text-base uppercase">Program</span>
