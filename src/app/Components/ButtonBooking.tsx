@@ -1,35 +1,47 @@
 "use client"
-import React from "react"
-import Button from "./Button"
-import {useRouter} from "next/navigation"
+import Link from "next/link"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
-const ButtonBooking = ({
-  title,
-  disable,
-  variant,
-  url,
-}: {
+type Props = {
+  id: number
   title: string
-  disable: boolean
-  variant: any
+  at_date: string
   url: string
-}) => {
-  const router = useRouter()
-  const handleBooking = () => {
-    router.push(url)
-  }
+}
+
+const ButtonBooking = ({data, invert}: {data: Props[]; invert: boolean}) => {
   return (
     <>
-      {url && (
-        <Button
-          onClick={handleBooking}
-          label="Book now"
-          variant={variant}
-          className={disable ? "cursor-not-allowed" : ""}
-        >
-          {title}
-        </Button>
-      )}
+      <div className="relative">
+        <DropdownMenu>
+          <DropdownMenuTrigger
+            className={`px-6 py-3 font-black ${invert ? "bg-white text-primary" : "bg-primary text-white"}`}
+          >
+            Book now
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="mt-4">
+            <DropdownMenuLabel className="text-2xl">Select Session</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            {data.map((item) => (
+              <DropdownMenuItem key={item.id} className="px-6">
+                <Link target="_blank" key={item.id} href={item.url} className="py-2 group">
+                  <span className="group-hover:underline underline-offset-4 font-black">
+                    #{item.title}
+                  </span>
+                  <br /> <span className="text-sm">Start at : {item.at_date}</span>
+                </Link>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </>
   )
 }

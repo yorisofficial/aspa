@@ -41,15 +41,21 @@ const FooterPage = () => {
       <div className="list-social">
         <div className="flex items-center gap-8">
           <Link
+            target="_blank"
             href={"https://www.instagram.com/aspa_surfacademy/"}
             aria-label="Connect on Instagram"
           >
             <InstagramLogo size={32} />
           </Link>
-          <Link href={"https://x.com/asiansurfacademy"} aria-label="Connect on Twitter">
+          <Link
+            target="_blank"
+            href={"https://x.com/asiansurfacademy"}
+            aria-label="Connect on Twitter"
+          >
             <XLogo size={32} />
           </Link>
           <Link
+            target="_blank"
             href={"https://www.youtube.com/@asiansurfacademy"}
             aria-label="Subscribe ASPA on Youtube"
           >
