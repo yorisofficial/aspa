@@ -13,7 +13,7 @@ export const ExpertTeam = [
     experience: "",
     achievement: [
       {
-        title: "Trained Pro Athletes",
+        title: "Trained and coached International WCT Pro Surfers and Pro Athletes",
       },
     ],
   },

@@ -1,6 +1,9 @@
 import React from "react"
 import ContainerContent from "../../Container"
 import Image from "next/image"
+import ButtonBooking from "../../ButtonBooking"
+import {urlBooking} from "@/app/lib/Booking"
+import Link from "next/link"
 
 const UpcomingEvent = () => {
   return (
@@ -26,6 +29,15 @@ const UpcomingEvent = () => {
             personalized attention to enhance not only their surfing skills but also to develop
             professional qualities such as motivation, teamwork, commitment, and responsibility.
           </p>
+        </div>
+        <div className="mt-4 relative z-10">
+          <Link
+            href={"/program"}
+            aria-label="Book now"
+            className="px-6 py-3 hover:scale-110 duration-500 bg-white text-primary font-black inline-block"
+          >
+            Book now
+          </Link>
         </div>
       </div>
     </ContainerContent>

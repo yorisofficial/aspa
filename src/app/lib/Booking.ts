@@ -9,13 +9,13 @@ export const Booking = {
 export const urlBooking = [
   {
     id: 1,
-    title: "Tipi Jabriks Grom Patrol 2024 - Session 1",
+    title: "Tipi Jabriks Grom Patrol 2024 - Camp 1",
     at_date: "19 - 21 JULY 2024",
     url: "https://liveheats.com/events/243125",
   },
   {
     id: 2,
-    title: "Tipi Jabriks Grom Patrol 2024 - Session 2",
+    title: "Tipi Jabriks Grom Patrol 2024 - Camp 2",
     at_date: "26 - 28 JULY 2024",
     url: "https://liveheats.com/events/243126",
   },
