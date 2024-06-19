@@ -22,7 +22,7 @@ const ButtonBooking = ({data, invert}: {data: Props[]; invert: boolean}) => {
       <div className="relative">
         <DropdownMenu>
           <DropdownMenuTrigger
-            className={`px-6 py-3 font-black ${invert ? "bg-white text-primary" : "bg-primary text-white"}`}
+            className={`px-6 py-3 font-black rounded-xl ${invert ? "bg-white text-primary" : "bg-primary text-white"}`}
           >
             Book now
           </DropdownMenuTrigger>

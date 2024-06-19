@@ -1,6 +1,6 @@
 import React from "react"
 import ContainerContent from "../../Container"
-import SliderCoach from "../../SlideTeam"
+import SlideTeam from "../../SlideTeam"
 import Link from "next/link"
 import Button from "../../Button"
 import {Home} from "@/app/lib/Home"
@@ -12,7 +12,7 @@ const OurProfessional = () => {
         <div className="our-team header w-full flex flex-col items-start justify-between gap-8">
           <div className="space-y-2">
             <h1 className="text-start text-xl font-black text-brand">{Home[3].title}</h1>
-            <p className="text-sm font-light xl:w-1/2">{Home[3].description}</p>
+            <p className="text-sm font-normal md:text-base xl:w-1/2">{Home[3].description}</p>
           </div>
           <Link href={"/team"} className="">
             <Button label="see more" variant="primary">
@@ -20,7 +20,7 @@ const OurProfessional = () => {
             </Button>
           </Link>
         </div>
-        <SliderCoach />
+        <SlideTeam />
       </div>
     </ContainerContent>
   )

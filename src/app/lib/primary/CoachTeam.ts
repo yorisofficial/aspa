@@ -483,25 +483,25 @@ export const SurfTeam = [
         title: "National Surfing Qualification Jakarta Team 2023",
       },
       {
-        title: "Shortboard Man 2nd  (Varun Tanjung)",
+        title: "Shortboard Man 2nd  (Athlete Varun Tanjung)",
       },
       {
-        title: "Shortboard women 2nd  (Jasmine Studer)",
+        title: "Shortboard women 2nd  (Athlete Jasmine Studer)",
       },
       {
-        title: "Longboard man 2nd (Dimas Shabil)",
+        title: "Longboard man 2nd (Athlete Dimas Shabil)",
       },
       {
-        title: "Longboard women 2nd (Flora Christin)",
+        title: "Longboard women 2nd (Athlete Flora Christin)",
       },
       {
-        title: "2023 WSL Manokwari pro junior Man Qs1000 1st  Champion (Westen Hirst)",
+        title: "2023 WSL Manokwari pro junior Man Qs1000 1st  Champion (Athlete Westen Hirst)",
       },
       {
-        title: "Junior women 3rd (Jasmine Studer)",
+        title: "Junior women 3rd (Athlete Jasmine Studer)",
       },
       {
-        title: "2024 WSL Krui pro Pro junior Man Qs1000 3rd  (Westen Hirst)",
+        title: "2024 WSL Krui pro Pro junior Man Qs1000 3rd  (Athlete Westen Hirst)",
       },
     ],
   },

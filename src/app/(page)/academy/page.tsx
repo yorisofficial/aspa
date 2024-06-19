@@ -22,7 +22,7 @@ const AcademyPage = () => {
             width={1500}
             height={1500}
             priority={false}
-            className="w-full xl:min-w-3/4 h-[300px] xl:h-[400px] object-cover"
+            className="w-full rounded-xl xl:min-w-3/4 h-[300px] xl:h-[400px] object-cover"
           />
         </div>
         <div className="small-img gap-4 grid grid-cols-2 xl:grid-cols-1 h-full">
@@ -32,7 +32,7 @@ const AcademyPage = () => {
             width={1500}
             height={1500}
             priority={false}
-            className="xl:w-[250px] h-full object-cover"
+            className="xl:w-[250px] rounded-xl h-full object-cover"
           />
           <Image
             src={image.srcImage_3}
@@ -40,7 +40,7 @@ const AcademyPage = () => {
             width={1500}
             height={1500}
             priority={false}
-            className="xl:w-[250px] h-full object-cover"
+            className="xl:w-[250px] rounded-xl h-full object-cover"
           />
         </div>
       </div>

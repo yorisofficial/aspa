@@ -8,7 +8,7 @@ import Link from "next/link"
 const UpcomingEvent = () => {
   return (
     <ContainerContent url="book-session" className="border-buttom relative py-8">
-      <div className="book-section relative flex w-full flex-col items-center justify-center bg-primary px-4 py-8 text-white">
+      <div className="book-section relative flex w-full flex-col items-center justify-center rounded-xl bg-primary px-4 py-8 text-white">
         <div className="absolute left-1/2 top-1/2 z-0 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
           <Image
             src={"/assets/acc/title-cover-simple.svg"}
@@ -34,7 +34,7 @@ const UpcomingEvent = () => {
           <Link
             href={"/program"}
             aria-label="Book now"
-            className="px-6 py-3 hover:scale-110 duration-500 bg-white text-primary font-black inline-block"
+            className="px-6 py-3 rounded-xl hover:scale-110 duration-500 bg-white text-primary font-black inline-block"
           >
             Book now
           </Link>
