@@ -33,8 +33,8 @@ const CoachSliderImg = ({data}: {data: Props[]}) => {
           >
             <Image
               src={item.src}
-              height={1000}
-              width={1000}
+              height={1500}
+              width={1500}
               priority={false}
               quality={100}
               alt={item.title}

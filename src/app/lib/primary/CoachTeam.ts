@@ -666,21 +666,21 @@ export const SurfTeam = [
     level: "",
     experience: "",
     location: "Bali",
-    profile: "/assets/team/ASPA.png",
+    profile: "/assets/team/aspa-coach-17.png",
     user_instagram: "https://www.instagram.com/madejoi_",
     user_soorfinc: "",
     preview_img: [
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Made Joi/item-image-1.png",
       },
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Made Joi/item-image-2.png",
       },
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Made Joi/item-image-3.png",
       },
     ],
     achievement: [
