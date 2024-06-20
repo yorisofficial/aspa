@@ -188,15 +188,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Oney Anwar/item-image-1.png",
       },
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Oney Anwar/item-image-2.png",
       },
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Oney Anwar/item-image-3.png",
       },
     ],
     achievement: [
