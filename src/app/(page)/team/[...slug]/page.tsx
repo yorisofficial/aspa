@@ -145,7 +145,7 @@ const DetailsTeam = ({params}: {params: {slug: string[]}}) => {
               <h1 className="text-base font-black">Get in touch</h1>
               <div className="space-y-2">
                 {item?.user_instagram && (
-                  <Link href={item?.user_instagram}>
+                  <Link target="_blank" href={item?.user_instagram}>
                     <div className="flex items-center gap-4">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
