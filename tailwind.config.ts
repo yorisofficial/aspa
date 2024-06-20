@@ -12,7 +12,7 @@ const config = {
   theme: {
     colors: {
       primary: "#18181B",
-      white: "#ffffff",
+      white: "#f8f7f4",
       black: "#000000",
       brand: "#07529E",
       bordersolid: "#f4f4f4",

@@ -79,7 +79,57 @@ export const SurfTeam = [
     ],
     achievement: [
       {
-        title: "Pro Surfer",
+        title:
+          "2000 Volvom Contest Halfway Kuta Beach 2nd place under 14 (ranking 1st under 14's after exercise part IV)",
+      },
+      {
+        title: "2008 Winner Indonesia Surfing Championship Junior (ISC)",
+      },
+      {
+        title: "2007 Surftime Award Nominasi Surfer Terberani (most brave)",
+      },
+      {
+        title: "2008 Surftime Award Nominasi Surfer Terberani (most brave)",
+      },
+      {
+        title: "2009 Winner Oakley Pro Canggu",
+      },
+      {
+        title: "2009 Oakley world pro junior keramas bali 9th",
+      },
+      {
+        title: "2011 Ripcurl Cup Padang-Padang 3rd",
+      },
+      {
+        title: "2012 Winner Oakley Pro Canggu",
+      },
+      {
+        title: "2012 2nd Quiksilver Pro Cimaja West Java",
+      },
+      {
+        title: "2014 3rd Ripcurl cup padang-padang 3rd",
+      },
+      {
+        title: "2016 Quiksilver Pro Canggu Charity 3rd",
+      },
+      {
+        title: "2018 Uluwatu Boardrider Challenge 2nd open division",
+      },
+      {
+        title:
+          "Coaching the Japan team from 2007 to 2012. Has successfully coached from amateurs to professionals.",
+      },
+      {
+        title: "Coaching the Hainan province surfing team in 2018 (China).",
+      },
+      {
+        title: "Coaching the Shandong province surfing team from 2019 to 2020 (China).",
+      },
+      {
+        title: "Coaching the Indonesia national team from 2020 to 2021.",
+      },
+      {
+        title: "Coaching the Shandong province surfing team from 2021 to 2024 (China).",
       },
     ],
   },
@@ -577,7 +627,7 @@ export const SurfTeam = [
     ],
     achievement: [
       {
-        title: "Pro Surfer",
+        title: "Pro Surfer: 3rd Krui Pro QS 1000 & 3rd Rip Curl Padand Padang",
       },
     ],
   },

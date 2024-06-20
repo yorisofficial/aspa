@@ -5,8 +5,10 @@ import React from "react"
 import {Autoplay} from "swiper/modules"
 import {Swiper, SwiperSlide} from "swiper/react"
 import {CoreTeam} from "../lib/primary/CoreTeam"
+
 export const calculateAge = (birthYear: number) => {
   const age = new Date().getFullYear() - birthYear
+
   return age
 }
 

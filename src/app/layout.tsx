@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={satoshi.className}>
+      <body className={`${satoshi.className} bg-white`}>
         <UpcamingContainer content={false}>
           <Navigation />
           {children}

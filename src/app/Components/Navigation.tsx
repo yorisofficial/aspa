@@ -59,10 +59,10 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-40 w-full text-black ${isDesktop ? "xl:py-0" : "xl:py-8"}`}
+      className={`fixed left-0 top-0 z-40 w-full text-black ${isDesktop ? "xl:py-0" : "xl:py-4"}`}
     >
       <nav
-        className={`mx-auto container transition-all duration-500 ease-in-out ${isDesktop ? "w-full" : "max-w-5xl"}`}
+        className={`mx-auto container transition-all duration-500 ease-in-out ${isDesktop ? "w-full" : "max-w-7xl"}`}
       >
         <div
           className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 opacity-95" : "xl:py-4 xl:rounded-full"} drop-shadow-xl xl:flex`}
