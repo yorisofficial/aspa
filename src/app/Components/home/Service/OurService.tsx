@@ -1,7 +1,7 @@
-"use client";
-import Image from "next/image";
-import React from "react";
-import ContainerContent from "../../Container";
+"use client"
+import Image from "next/image"
+import React from "react"
+import ContainerContent from "../../Container"
 const Service = [
   {
     id: 1,
@@ -39,9 +39,9 @@ const Service = [
     desc: "Start your day with a hearty breakfast, have a delightful lunch, and end with a satisfying dinner.",
     pathImage: "/assets/icon/food.svg",
   },
-];
+]
 
-const OurService = ({ title }: { title: string }) => {
+const OurService = ({title}: {title: string}) => {
   return (
     <ContainerContent
       url="our-service"
@@ -54,9 +54,9 @@ const OurService = ({ title }: { title: string }) => {
         {Service.map((item) => (
           <div
             key={item.id}
-            className="item-service group flex w-full cursor-pointer flex-col gap-2 border-2 border-bordersolid bg-white p-2 transition-colors duration-500 ease-out hover:bg-primary md:p-4"
+            className="item-service hover:rounded-xl group flex w-full cursor-pointer flex-col gap-2 border-2 border-bordersolid bg-white p-2 transition-colors duration-500 ease-out hover:bg-primary md:p-4"
           >
-            <div className="icon-service w-fit bg-primary p-2 duration-500 group-hover:text-black group-hover:invert">
+            <div className="icon-service w-fit group-hover:rounded-lg bg-primary p-2 duration-500 group-hover:text-black group-hover:invert">
               <Image
                 src={item.pathImage}
                 alt={item.title}
@@ -73,7 +73,7 @@ const OurService = ({ title }: { title: string }) => {
         ))}
       </div>
     </ContainerContent>
-  );
-};
+  )
+}
 
-export default OurService;
+export default OurService

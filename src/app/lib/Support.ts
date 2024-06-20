@@ -10,7 +10,7 @@ export const Support = [
   },
   {
     title:
-      "Jl Subak Sari Barat, Gg. Sri Kahyangan No.77, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali",
+      "Jl. Subak Sari Barat, Gg. Sri Kahyangan No.77, Tibubeneng, Kec. Kuta Utara, Kabupaten Badung, Bali",
     description: "Address",
   },
   {

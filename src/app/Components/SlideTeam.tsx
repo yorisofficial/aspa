@@ -10,6 +10,13 @@ export const calculateAge = (birthYear: number) => {
   return age
 }
 
+// Import Swiper styles
+import "swiper/css"
+import "swiper/css/effect-cards"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+import {ArrowUpRight} from "lucide-react"
+
 const SlideTeam = () => {
   const data = CoreTeam
 
@@ -34,41 +41,28 @@ const SlideTeam = () => {
         className="list-coach mySwiper w-full h-full"
       >
         {data.map((item) => (
-          <SwiperSlide key={item.id} className="item-coach h-full w-full md:w-fit">
-            <div className="item-coach group bored h-full min-h-[400px] w-full cursor-pointer rounded-xl duration-500">
-              <Image
-                src={item.profile}
-                width={1000}
-                height={1000}
-                alt=".."
-                className="h-full min-h-[400px] w-full rounded-xl object-cover duration-500"
-              />
-
-              <div className="profile-coach absolute bottom-4 left-4 text-white">
-                <div className="flex flex-col items-start justify-start gap-4">
-                  <div className="text-start">
-                    <div className="flex items-center gap-2">
-                      <h1 className="coach-name text-start text-2xl font-black ">
-                        {item.full_name}
-                      </h1>
-                      <span className="text-base font-light">
-                        | {calculateAge(item?.age)}
-                        y.o
-                      </span>
-                    </div>
-                    <span className="text-sm">{item.experience}</span>
-                  </div>
-                  <div className="">
-                    <Link
-                      href={`/team/team/${item.full_name.replaceAll(" ", "-").toLocaleLowerCase()}`}
-                      className="text-sm underline underline-offset-4"
-                    >
-                      See profile
-                    </Link>
-                  </div>
+          <SwiperSlide key={item.id} className="item-coach group h-full w-full md:w-fit">
+            <Link
+              className="relative"
+              href={`/team/ASPA/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
+            >
+              <div className="absolute top-2 z-10 text-white right-2">
+                <ArrowUpRight size={32} />
+              </div>
+              <div className="relative">
+                <Image
+                  src={item.profile}
+                  width={1000}
+                  height={1000}
+                  alt=".."
+                  className="h-full group-hover:scale-110 min-h-[400px] w-full rounded-xl object-cover duration-500"
+                />
+                <div className="absolute bottom-4 text-white left-4">
+                  <h1 className="text-xl font-black">{item.full_name}</h1>
+                  <p>{item.title}</p>
                 </div>
               </div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

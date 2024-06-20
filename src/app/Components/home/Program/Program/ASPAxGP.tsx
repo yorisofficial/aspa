@@ -26,7 +26,7 @@ const ASPAxGP = () => {
   ]
   return (
     <>
-      <div className="content-section grid h-full w-full grid-cols-1 gap-8 border-b border-black py-8 pb-8 xl:grid-cols-2">
+      <div className="content-section grid rounded-xl h-full w-full grid-cols-1 gap-8 border-b border-black py-8 pb-8 xl:grid-cols-2">
         <SliderProgram data={SliderImg} />
         <div className="details flex xl:order-first h-full w-full flex-col gap-8">
           <div className="content-body space-y-4">
@@ -34,20 +34,15 @@ const ASPAxGP = () => {
               <span className="text-base uppercase">Program</span>
               <h1 className="text-3xl font-black text-brand">{Booking.title}</h1>
             </div>
-            <p className="w-full text-sm font-light md:w-3/4">{Booking.description}</p>
+            <p className="w-full text-sm font-light md:text-base md:w-3/4">{Booking.description}</p>
           </div>
           <div className="pricing-progrm flex w-full flex-col gap-6">
             <div className="w-full">
-              <span className="font-light">Price</span>
+              <span className="font-normal">Price</span>
               <h1 className="text-3xl font-black text-brand">{Booking.price}</h1>
             </div>
             <div className="w-full flex gap-6 items-center">
-              <ButtonBooking
-                disable={true}
-                url={urlBooking.url}
-                title="Book now"
-                variant="primary"
-              />
+              <ButtonBooking invert={false} data={urlBooking} />
               <DownloadDocument />
             </div>
           </div>

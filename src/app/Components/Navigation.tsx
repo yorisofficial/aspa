@@ -2,7 +2,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import {usePathname} from "next/navigation"
-import React, {Suspense, useEffect, useState} from "react"
+import React, {useEffect, useState} from "react"
 import Branding from "./Branding"
 
 const Navigation = () => {
@@ -65,10 +65,10 @@ const Navigation = () => {
         className={`mx-auto container transition-all duration-500 ease-in-out ${isDesktop ? "w-full" : "max-w-5xl"}`}
       >
         <div
-          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 opacity-95" : "xl:py-4"} drop-shadow-xl xl:flex`}
+          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 opacity-95" : "xl:py-4 xl:rounded-full"} drop-shadow-xl xl:flex`}
         >
           <div className="brand flex items-center justify-between">
-            <Branding />
+            <Branding isScroll={isDesktop} />
             <div className="cta-button xl:hidden">
               <button
                 onClick={handleShow}
@@ -115,7 +115,7 @@ const Navigation = () => {
               </ul>
             </div>
           )}
-          <div className={`desktop-nav hidden items-center gap-4 xl:flex`}>
+          <div className={`desktop-nav hidden items-center gap-4 xl:flex pr-12`}>
             {menuNav.map((item, index) => (
               <Link
                 key={index}

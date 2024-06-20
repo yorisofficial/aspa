@@ -28,7 +28,7 @@ const Testimonial = () => {
       <div className="our-team header flex w-full flex-col items-start justify-between gap-8">
         <div className="space-y-2">
           <h1 className="text-start text-xl font-black text-brand">Our testimonials</h1>
-          <p className="text-sm font-light xl:w-1/2">
+          <p className="text-sm md:text-base font-normal xl:w-1/2">
             Our testimonials reflect the exceptional impact of our surfing boot camp, showcasing how
             our comprehensive training programs have transformed athletes into top-performing
             surfers with unmatched skills and competitive advantages.

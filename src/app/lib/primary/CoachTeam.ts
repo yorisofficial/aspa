@@ -62,15 +62,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/image-slider-1.webp",
+        src: "/assets/team/coach/Muz Jeksen/item-image-1.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/image-slider-2.webp",
+        src: "/assets/team/coach/Muz Jeksen/item-image-2.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/image-slider.webp",
+        src: "/assets/team/coach/Muz Jeksen/item-image-3.png",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Muz Jeksen/item-image-4.png",
       },
     ],
     achievement: [
@@ -167,32 +171,32 @@ export const SurfTeam = [
   },
   {
     id: 5,
-    confirm: false,
+    confirm: true,
     full_name: "Oney Anwar",
-    nickname: "",
+    nickname: "Oney",
     quotes: "",
     title: "surf coach",
     certificated: "no ISA",
     isa: false,
-    age: 1998,
+    age: 1993,
     level: "Pro Surfer",
-    experience: "",
-    location: "Canggu",
+    experience: "20 Years",
+    location: "Bali",
     profile: "/assets/team/aspa-coach-5.png",
     user_instagram: "https://www.instagram.com/oneyanwar",
     user_soorfinc: "",
     preview_img: [
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Oney Anwar/item-image-1.png",
       },
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Oney Anwar/item-image-2.png",
       },
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "/assets/team/coach/Oney Anwar/item-image-3.png",
       },
     ],
     achievement: [
@@ -246,7 +250,7 @@ export const SurfTeam = [
     title: "surf coach",
     certificated: "no ISA",
     isa: false,
-    age: 1998,
+    age: 1992,
     level: "Pro Surfer",
     experience: "1.5 years",
     location: "Lembongan",
@@ -256,19 +260,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/image-slide-1.webp",
+        src: "/assets/team/coach/Putra Pulu/item-image-1.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/image-slide-2.webp",
+        src: "/assets/team/coach/Putra Pulu/item-image-2.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/image-slide-3.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/image-slide-4.webp",
+        src: "/assets/team/coach/Putra Pulu/item-image-3.png",
       },
     ],
     achievement: [
@@ -333,15 +333,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Gogo Sujaya/image-slider.webp",
+        src: "/assets/team/coach/Gogo Sujaya/item-image-1.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Gogo Sujaya/image-slider-1.webp",
+        src: "/assets/team/coach/Gogo Sujaya/item-image-2.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Gogo Sujaya/image-slider-2.webp",
+        src: "/assets/team/coach/Gogo Sujaya/item-image-3.png",
       },
     ],
     achievement: [
@@ -396,7 +396,7 @@ export const SurfTeam = [
     title: "surf coach",
     certificated: "No ISA",
     isa: false,
-    age: 1998,
+    age: 1984,
     level: "Free Surfer",
     experience: "",
     location: "Kuta / Canggu",
@@ -406,15 +406,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/image-slider-2.webp",
+        src: "/assets/team/coach/Dedi Santosa/item-image-1.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/image-slider.webp",
+        src: "/assets/team/coach/Dedi Santosa/item-image-2.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/image-slider-1.webp",
+        src: "/assets/team/coach/Dedi Santosa/item-image-3.png",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Dedi Santosa/item-image-4.png",
       },
     ],
     achievement: [
@@ -442,20 +446,62 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/image-slide-1.webp",
+        src: "/assets/team/coach/Mickey Sudena/item-image-1.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/image-slide-2.webp",
+        src: "/assets/team/coach/Mickey Sudena/item-image-2.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/image-slide-3.webp",
+        src: "/assets/team/coach/Mickey Sudena/item-image-3.png",
       },
     ],
     achievement: [
       {
-        title: "",
+        title: "3rd at Gamang Surfing 1998",
+      },
+      {
+        title: "1st at Junior Surfing Culture Exchange Championships 2000",
+      },
+      {
+        title: "2nd in master division national rank 2021-2022",
+      },
+      {
+        title: "2nd in master division national rank 2022-2023",
+      },
+      {
+        title: "2nd at Halfway Master Challenge 2023",
+      },
+      {
+        title: "4th at Uluwatu Master Challenge 2023",
+      },
+      {
+        title: "2nd in Master division national rank 2023-2024",
+      },
+      {
+        title: "National Surfing Qualification Jakarta Team 2023",
+      },
+      {
+        title: "Shortboard Man 2nd  (Athlete Varun Tanjung)",
+      },
+      {
+        title: "Shortboard women 2nd  (Athlete Jasmine Studer)",
+      },
+      {
+        title: "Longboard man 2nd (Athlete Dimas Shabil)",
+      },
+      {
+        title: "Longboard women 2nd (Athlete Flora Christin)",
+      },
+      {
+        title: "2023 WSL Manokwari pro junior Man Qs1000 1st  Champion (Athlete Westen Hirst)",
+      },
+      {
+        title: "Junior women 3rd (Athlete Jasmine Studer)",
+      },
+      {
+        title: "2024 WSL Krui pro Pro junior Man Qs1000 3rd  (Athlete Westen Hirst)",
       },
     ],
   },
@@ -514,15 +560,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/image-slider.webp",
+        src: "/assets/team/coach/Mega Artana/item-image-1.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/image-slider-1.webp",
+        src: "/assets/team/coach/Mega Artana/item-image-2.png",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/image-slider-2.webp",
+        src: "/assets/team/coach/Mega Artana/item-image-3.png",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Mega Artana/item-image-4.png",
       },
     ],
     achievement: [
@@ -582,6 +632,42 @@ export const SurfTeam = [
     location: "Pererenan",
     profile: "/assets/team/aspa-coach-16.png",
     user_instagram: "https://www.instagram.com/clepuk_balibagus",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
+    achievement: [
+      {
+        title: "",
+      },
+    ],
+  },
+  {
+    id: 17,
+    confirm: true,
+    full_name: "Made Joi",
+    nickname: "Joi",
+    quotes: "",
+    title: "surf coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 0,
+    level: "",
+    experience: "",
+    location: "Bali",
+    profile: "/assets/team/ASPA.png",
+    user_instagram: "https://www.instagram.com/madejoi_",
     user_soorfinc: "",
     preview_img: [
       {
