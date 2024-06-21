@@ -7,7 +7,7 @@ import Testimonial from "./Components/testimonial/Testimonial";
 
 export default function Home() {
   return (
-    <main className="h-full min-h-screen ">
+    <main className="h-full min-h-screen">
       <HeroSection />
       <div className="content-body px-4 md:px-8 xl:px-0">
         <OurProgram />

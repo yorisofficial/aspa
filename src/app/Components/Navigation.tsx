@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { List, X } from "@phosphor-icons/react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navigation = () => {
   const [isShow, setShow] = useState(false);
@@ -40,8 +40,10 @@ const Navigation = () => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setScroll(true);
+        setShow(false);
       } else {
         setScroll(false);
+        setShow(false);
       }
     };
 
@@ -81,55 +83,56 @@ const Navigation = () => {
               />
             </Link>
             <motion.button
-              whileTap={{ scale: 0.9 }}
+              whileTap={{ scale: 0.8 }}
+              transition={{ duration: 0.2 }}
               onClick={handleShow}
               className="block rounded-md bg-primary p-4 text-white xl:hidden"
             >
               {isShow ? <X size={24} /> : <List size={24} />}
             </motion.button>
           </div>
-          {isShow && (
-            <motion.div
-              initial={{ x: "-100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "-100%" }}
-              transition={{ ease: "easeInOut", duration: 0.1 }}
-              className="mobile-menu absolute left-0 top-20 z-40 flex h-full w-full items-start justify-start xl:hidden"
-            >
-              <div className="min-h-screen w-full space-y-2 bg-white pt-12">
-                {menuNav.map((item, index) => (
-                  <motion.div
-                    initial={{ x: "-100%" }}
-                    animate={{ x: 0 }}
-                    exit={{ x: "-100%" }}
-                    transition={{ delay: 0.1 * index }}
-                    whileTap={{ scale: 0.9 }}
-                    key={index}
-                    className="flex w-full flex-col items-start justify-start px-8"
-                  >
-                    <Link
-                      onClick={() => setShow(false)}
-                      href={item.link}
-                      className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${activePath.includes(item.base) ? "bg-primary text-white" : ""}`}
+          <AnimatePresence>
+            {isShow && (
+              <motion.div
+                initial={{ x: "-100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                transition={{ ease: "easeInOut", duration: 0.1 }}
+                className="mobile-menu fixed left-0 top-20 z-40 flex h-full w-full items-start justify-start xl:hidden"
+              >
+                <div className="min-h-screen w-full space-y-2 bg-white px-4 pt-12">
+                  {menuNav.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ x: "-100%" }}
+                      animate={{ x: 0 }}
+                      exit={{ x: "-100%" }}
+                      transition={{ duration: 0.2, delay: 0.1 * index }}
+                      whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
+                      className="flex w-full flex-col items-start justify-start"
                     >
-                      {item.title}
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="min-h-screen w-[20%] bg-white/5 text-white backdrop-blur-sm">
-                <button
-                  id="toggle-menu"
-                  aria-label="Button toggle menu"
-                  title="toggle menu navigation"
-                  onClick={() => setShow(false)}
-                  className="flex h-full min-h-screen w-full items-center justify-center"
-                >
-                  <X size={32} />
-                </button>
-              </div>
-            </motion.div>
-          )}
+                      <Link
+                        onClick={() => setShow(false)}
+                        href={item.link}
+                        className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${activePath.includes(item.base) ? "bg-primary text-white" : ""}`}
+                      >
+                        {item.title}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="h-full min-h-screen w-[25%] ">
+                  <button
+                    id="toggle-menu"
+                    aria-label="Button toggle menu"
+                    title="toggle menu navigation"
+                    onClick={() => setShow(false)}
+                    className="flex h-full min-h-screen w-full items-center justify-center"
+                  ></button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
           <div className="desktop-menu hidden xl:block">
             <ul className="flex items-center gap-4">
               {menuNav.map((item, index) => (
