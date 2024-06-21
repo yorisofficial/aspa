@@ -1,30 +1,35 @@
-"use client"
-import React from "react"
-import Button from "./Button"
-import {ArrowLeft} from "@phosphor-icons/react"
-import {useRouter} from "next/navigation"
-
+"use client";
+import React from "react";
+import Button from "./Button";
+import { ArrowLeft } from "@phosphor-icons/react";
+import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 const BackButton = ({
   url,
   children,
   className,
 }: {
-  url: string
-  children: React.ReactNode
-  className?: string
+  url: string;
+  children: React.ReactNode;
+  className?: string;
 }) => {
-  const Router = useRouter()
+  const Router = useRouter();
   const handleBack = () => {
-    Router.push(url)
-  }
+    Router.push(url);
+  };
   return (
     <div className={`border-buttom w-full pb-8 ${className}`}>
-      <Button onClick={handleBack} label="Back" variant="iconPrimary" className="group">
+      <Button
+        onClick={handleBack}
+        label="Back"
+        variant="iconPrimary"
+        className="group"
+      >
         <ArrowLeft className="duration-300 group-hover:-translate-x-1" />
         {children}
       </Button>
     </div>
-  )
-}
+  );
+};
 
-export default BackButton
+export default BackButton;

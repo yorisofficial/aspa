@@ -5,9 +5,10 @@ import React, { useEffect, useState } from "react";
 import Branding from "./Branding";
 import Image from "next/image";
 import { List, X } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 
 const Navigation = () => {
-  const [isShow, setShow] = useState(true);
+  const [isShow, setShow] = useState(false);
   const [isScroll, setScroll] = useState(false);
 
   const menuNav = [
@@ -80,18 +81,30 @@ const Navigation = () => {
                 className="h-fit w-32 object-contain"
               />
             </Link>
-            <button
+            <motion.button
+              whileTap={{ scale: 0.9 }}
               onClick={handleShow}
               className="block rounded-md bg-primary p-4 text-white xl:hidden"
             >
               {isShow ? <X size={24} /> : <List size={24} />}
-            </button>
+            </motion.button>
           </div>
           {isShow && (
-            <div className="mobile-menu absolute left-0 top-20 z-40 flex h-full w-full items-start justify-start xl:hidden">
+            <motion.div
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ ease: "easeInOut", duration: 0.1 }}
+              className="mobile-menu absolute left-0 top-20 z-40 flex h-full w-full items-start justify-start xl:hidden"
+            >
               <div className="min-h-screen w-full space-y-2 bg-white pt-12">
                 {menuNav.map((item, index) => (
-                  <div
+                  <motion.div
+                    initial={{ x: "-100%" }}
+                    animate={{ x: 0 }}
+                    exit={{ x: "-100%" }}
+                    transition={{ delay: 0.1 * index }}
+                    whileTap={{ scale: 0.9 }}
                     key={index}
                     className="flex w-full flex-col items-start justify-start px-8"
                   >
@@ -102,7 +115,7 @@ const Navigation = () => {
                     >
                       {item.title}
                     </Link>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
               <div className="min-h-screen w-[20%] bg-white/5 text-white backdrop-blur-sm">
@@ -113,7 +126,7 @@ const Navigation = () => {
                   <X size={32} />
                 </button>
               </div>
-            </div>
+            </motion.div>
           )}
           <div className="desktop-menu hidden xl:block">
             <ul className="flex items-center gap-4">
