@@ -5,28 +5,14 @@ import React from "react";
 
 const SocialComponents = () => {
   const social = [
-    // {
-    //   id: 1,
-    //   title: "ASPA youtube",
-    //   url: "https://youtube.com",
-    //   icon: <YoutubeLogo size={32} />,
-    //   iconFill: <YoutubeLogo weight="fill" size={32} />,
-    // },
     {
-      id: 2,
+      id: 1,
       title: "ASPA instagram",
       username: "aspa_surfacademy",
       url: "https://instagram.com/aspa_surfacademy",
       icon: <InstagramLogo size={28} />,
       iconFill: <InstagramLogo weight="fill" size={28} />,
     },
-    // {
-    //   id: 3,
-    //   title: "ASPA twitter",
-    //   url: "https://youtube.com",
-    //   icon: <TwitterLogo size={32} />,
-    //   iconFill: <TwitterLogo weight="fill" size={32} />,
-    // },
   ];
   return (
     <>

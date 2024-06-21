@@ -1,10 +1,10 @@
-import "./globals.css"
-import type {Metadata} from "next"
-import Navigation from "./Components/Navigation"
-import FooterPage from "./Components/Footer"
-import localFont from "next/font/local"
-import ButtonUp from "./Components/ButtonUp"
-import UpcamingContainer from "./Components/UpcamingContainer"
+import "./globals.css";
+import type { Metadata } from "next";
+import Navigation from "./Components/Navigation";
+import FooterPage from "./Components/Footer";
+import localFont from "next/font/local";
+import ButtonUp from "./Components/ButtonUp";
+import UpcamingContainer from "./Components/UpcamingContainer";
 
 const satoshi = localFont({
   src: [
@@ -30,7 +30,7 @@ const satoshi = localFont({
     },
   ],
   variable: "--font-satoshi",
-})
+});
 
 export const metadata: Metadata = {
   title: "Asian Surf Performance Academy",
@@ -38,17 +38,17 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={`${satoshi.className} bg-white`}>
-        <UpcamingContainer content={false}>
+        <UpcamingContainer content={true}>
           <Navigation />
           {children}
           <FooterPage />
@@ -56,5 +56,5 @@ export default function RootLayout({
         </UpcamingContainer>
       </body>
     </html>
-  )
+  );
 }

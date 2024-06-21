@@ -1,26 +1,24 @@
-"use client"
-import React, {useState} from "react"
-import {EnvelopeSimple} from "@phosphor-icons/react"
-import Image from "next/image"
+"use client";
+import React, { useState } from "react";
+import { EnvelopeSimple } from "@phosphor-icons/react";
+import Image from "next/image";
 
 const UpcamingContainer = ({
   children,
   content,
-  title,
 }: {
-  children: React.ReactNode
-  content: boolean
-  title?: string
+  children: React.ReactNode;
+  content: boolean;
 }) => {
-  const [isContent, setContent] = useState(content)
+  const [isContent, setContent] = useState(content);
 
   return (
     <>
       {isContent && (
-        <div className="h-screen w-full px-4 md:px-10 xl:px-0 bg-brand text-white">
-          <div className="w-full flex-col h-full gap-8 flex justify-center items-center">
+        <div className="h-screen w-full bg-brand px-4 text-white md:px-10 xl:px-0">
+          <div className="flex h-full w-full flex-col items-center justify-center gap-8">
             <div className="info-text">
-              <h1 className="font-black text-3xl">COMING SOON!</h1>
+              <h1 className="text-3xl font-black">COMING SOON!</h1>
             </div>
             <div className="brand-aspa">
               <Image
@@ -31,18 +29,23 @@ const UpcamingContainer = ({
                 className="h-full object-cover xl:w-full"
               />
             </div>
-            <div className="text-center gap-4 flex justify-center items-center flex-col">
-              <h1 className="text-2xl font-black">Asian Surf Performance Academy</h1>
+            <div className="flex flex-col items-center justify-center gap-4 text-center">
+              <h1 className="text-2xl font-black">
+                Asian Surf Performance Academy
+              </h1>
               <p className="text-base font-light xl:w-1/2">
-                The Asian Surf Performance Academy (ASPA) is where surfers reach their highest
-                potential. Located in Bali, we focus on supporting and empowering surfers to become
-                their best. We enhance your surfing skills and help you develop professional
-                qualities like motivation, teamwork, and responsibility
+                The Asian Surf Performance Academy (ASPA) is where surfers reach
+                their highest potential. Located in Bali, we focus on supporting
+                and empowering surfers to become their best. We enhance your
+                surfing skills and help you develop professional qualities like
+                motivation, teamwork, and responsibility
               </p>
             </div>
-            <div className="contact-us gap-2 flex flex-col justify-center items-center">
-              <h1 className="font-normal text-base">To get more info connect with us!</h1>
-              <span className="flex text-sm font-light gap-2 items-center">
+            <div className="contact-us flex flex-col items-center justify-center gap-2">
+              <h1 className="text-base font-normal">
+                To get more info connect with us!
+              </h1>
+              <span className="flex items-center gap-2 text-sm font-light">
                 <EnvelopeSimple size={24} />
                 info@asiansurfacademy.com
               </span>
@@ -50,9 +53,9 @@ const UpcamingContainer = ({
           </div>
         </div>
       )}
-      {!isContent && <div className="w-full h-full">{children}</div>}
+      {!isContent && <div className="h-full w-full">{children}</div>}
     </>
-  )
-}
+  );
+};
 
-export default UpcamingContainer
+export default UpcamingContainer;
