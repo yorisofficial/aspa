@@ -119,7 +119,9 @@ const Navigation = () => {
               </div>
               <div className="min-h-screen w-[20%] bg-white/5 text-white backdrop-blur-sm">
                 <button
+                  id="toggle-menu"
                   aria-label="Button toggle menu"
+                  title="toggle menu navigation"
                   onClick={() => setShow(false)}
                   className="flex h-full min-h-screen w-full items-center justify-center"
                 >
