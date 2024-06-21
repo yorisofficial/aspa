@@ -62,19 +62,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/item-image-1.png",
+        src: "/assets/team/coach/Muz Jeksen/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/item-image-2.png",
+        src: "/assets/team/coach/Muz Jeksen/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/item-image-3.png",
+        src: "/assets/team/coach/Muz Jeksen/item-image-3.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/item-image-4.png",
+        src: "/assets/team/coach/Muz Jeksen/item-image-4.webp",
       },
     ],
     achievement: [
@@ -123,13 +123,15 @@ export const SurfTeam = [
         title: "Coaching the Hainan province surfing team in 2018 (China).",
       },
       {
-        title: "Coaching the Shandong province surfing team from 2019 to 2020 (China).",
+        title:
+          "Coaching the Shandong province surfing team from 2019 to 2020 (China).",
       },
       {
         title: "Coaching the Indonesia national team from 2020 to 2021.",
       },
       {
-        title: "Coaching the Shandong province surfing team from 2021 to 2024 (China).",
+        title:
+          "Coaching the Shandong province surfing team from 2021 to 2024 (China).",
       },
     ],
   },
@@ -238,20 +240,25 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Oney Anwar/item-image-1.png",
+        src: "/assets/team/coach/Oney Anwar/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Oney Anwar/item-image-2.png",
+        src: "/assets/team/coach/Oney Anwar/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Oney Anwar/item-image-3.png",
+        src: "/assets/team/coach/Oney Anwar/item-image-3.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Oney Anwar/item-image-4.webp",
       },
     ],
     achievement: [
       {
-        title: "Pro Surfer: First Indonesian surfer to qualify for the World Surf League (WSL)",
+        title:
+          "Pro Surfer: First Indonesian surfer to qualify for the World Surf League (WSL)",
       },
     ],
   },
@@ -310,15 +317,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/item-image-1.png",
+        src: "/assets/team/coach/Putra Pulu/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/item-image-2.png",
+        src: "/assets/team/coach/Putra Pulu/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/item-image-3.png",
+        src: "/assets/team/coach/Putra Pulu/item-image-3.webp",
       },
     ],
     achievement: [
@@ -383,15 +390,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Gogo Sujaya/item-image-1.png",
+        src: "/assets/team/coach/Gogo Sujaya/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Gogo Sujaya/item-image-2.png",
+        src: "/assets/team/coach/Gogo Sujaya/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Gogo Sujaya/item-image-3.png",
+        src: "/assets/team/coach/Gogo Sujaya/item-image-3.webp",
       },
     ],
     achievement: [
@@ -456,19 +463,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-1.png",
+        src: "/assets/team/coach/Dedi Santosa/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-2.png",
+        src: "/assets/team/coach/Dedi Santosa/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-3.png",
+        src: "/assets/team/coach/Dedi Santosa/item-image-3.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-4.png",
+        src: "/assets/team/coach/Dedi Santosa/item-image-4.webp",
       },
     ],
     achievement: [
@@ -496,15 +503,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/item-image-1.png",
+        src: "/assets/team/coach/Mickey Sudena/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/item-image-2.png",
+        src: "/assets/team/coach/Mickey Sudena/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/item-image-3.png",
+        src: "/assets/team/coach/Mickey Sudena/item-image-3.webp",
       },
     ],
     achievement: [
@@ -545,13 +552,15 @@ export const SurfTeam = [
         title: "Longboard women 2nd (Athlete Flora Christin)",
       },
       {
-        title: "2023 WSL Manokwari pro junior Man Qs1000 1st  Champion (Athlete Westen Hirst)",
+        title:
+          "2023 WSL Manokwari pro junior Man Qs1000 1st  Champion (Athlete Westen Hirst)",
       },
       {
         title: "Junior women 3rd (Athlete Jasmine Studer)",
       },
       {
-        title: "2024 WSL Krui pro Pro junior Man Qs1000 3rd  (Athlete Westen Hirst)",
+        title:
+          "2024 WSL Krui pro Pro junior Man Qs1000 3rd  (Athlete Westen Hirst)",
       },
     ],
   },
@@ -610,19 +619,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/item-image-1.png",
+        src: "/assets/team/coach/Mega Artana/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/item-image-2.png",
+        src: "/assets/team/coach/Mega Artana/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/item-image-3.png",
+        src: "/assets/team/coach/Mega Artana/item-image-3.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/item-image-4.png",
+        src: "/assets/team/coach/Mega Artana/item-image-4.webp",
       },
     ],
     achievement: [
@@ -722,15 +731,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Made Joi/item-image-1.png",
+        src: "/assets/team/coach/Made Joi/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Made Joi/item-image-2.png",
+        src: "/assets/team/coach/Made Joi/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Made Joi/item-image-3.png",
+        src: "/assets/team/coach/Made Joi/item-image-3.webp",
       },
     ],
     achievement: [
@@ -739,4 +748,4 @@ export const SurfTeam = [
       },
     ],
   },
-]
+];

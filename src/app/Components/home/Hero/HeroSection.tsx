@@ -32,7 +32,10 @@ const HeroSection = () => {
             </p>
           </div>
           <div className="btn-cta flex items-center gap-4">
-            <Link href={"/academy"}>
+            <Link
+              href={"/academy"}
+              className="group inline-block transition-all duration-500 ease-in-out hover:scale-110"
+            >
               <Button label="about us" variant="invert" className="!text-brand">
                 About us
               </Button>
