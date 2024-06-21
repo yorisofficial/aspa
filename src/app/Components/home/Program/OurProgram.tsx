@@ -34,11 +34,11 @@ const OurProgram = () => {
           <p className="w-full text-justify text-sm font-light md:text-base">
             ASPA has launched the inaugural program for Tipi Jabrik&apos;s Grom
             Patrol 2024. The ASPA Grom Patrol Camp will provide a 5-day training
-            session before the competition. Located at Mamaka Hotel, Kuta Beach,
-            right in front of the competition area, this program aims to
-            promote, support, and mentor the best young surfers. It offers
-            personalized attention to enhance not only their surfing skills but
-            also to develop professional qualities such as motivation, teamwork,
+            camp before and during the competition. Located at Mamaka Hotel,
+            Kuta Beach, right in front of the competition area, this program
+            aims to promote, support, and mentor the best young surfers. It
+            offers personalized attention to enhance their surfing skills and
+            develop professional qualities such as motivation, teamwork,
             commitment, and responsibility.
           </p>
           <div className="flex w-full flex-shrink-0 items-center gap-4">

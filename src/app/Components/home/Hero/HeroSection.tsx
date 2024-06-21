@@ -7,7 +7,7 @@ import Button from "../../Button";
 const HeroSection = () => {
   return (
     <div className="relative h-screen w-full">
-      <div className="h-screen w-full bg-brand px-4 pt-8 text-white md:px-10 xl:px-0">
+      <div className="h-full w-full bg-brand text-white">
         <div className="flex h-full w-full flex-col items-center justify-center gap-8">
           <div className="">
             <Image
