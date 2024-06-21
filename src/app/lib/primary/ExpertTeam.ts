@@ -10,7 +10,7 @@ export const ExpertTeam = [
     quotes: "",
     user_instagram: "https://www.instagram.com/gabrielamackanic",
     user_soorfinc: "",
-    experience: "",
+    experience: "5 years",
     achievement: [
       {
         title:

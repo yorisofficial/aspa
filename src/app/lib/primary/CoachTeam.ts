@@ -62,19 +62,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/item-image-1.png",
+        src: "/assets/team/coach/Muz Jeksen/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/item-image-2.png",
+        src: "/assets/team/coach/Muz Jeksen/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/item-image-3.png",
+        src: "/assets/team/coach/Muz Jeksen/item-image-3.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Muz Jeksen/item-image-4.png",
+        src: "/assets/team/coach/Muz Jeksen/item-image-4.webp",
       },
     ],
     achievement: [
@@ -240,15 +240,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Oney Anwar/item-image-1.png",
+        src: "/assets/team/coach/Oney Anwar/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Oney Anwar/item-image-2.png",
+        src: "/assets/team/coach/Oney Anwar/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Oney Anwar/item-image-3.png",
+        src: "/assets/team/coach/Oney Anwar/item-image-3.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Oney Anwar/item-image-4.webp",
       },
     ],
     achievement: [
@@ -313,15 +317,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/item-image-1.png",
+        src: "/assets/team/coach/Putra Pulu/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/item-image-2.png",
+        src: "/assets/team/coach/Putra Pulu/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Putra Pulu/item-image-3.png",
+        src: "/assets/team/coach/Putra Pulu/item-image-3.webp",
       },
     ],
     achievement: [
@@ -386,15 +390,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Gogo Sujaya/item-image-1.png",
+        src: "/assets/team/coach/Gogo Sujaya/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Gogo Sujaya/item-image-2.png",
+        src: "/assets/team/coach/Gogo Sujaya/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Gogo Sujaya/item-image-3.png",
+        src: "/assets/team/coach/Gogo Sujaya/item-image-3.webp",
       },
     ],
     achievement: [
@@ -459,19 +463,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-1.png",
+        src: "/assets/team/coach/Dedi Santosa/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-2.png",
+        src: "/assets/team/coach/Dedi Santosa/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-3.png",
+        src: "/assets/team/coach/Dedi Santosa/item-image-3.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-4.png",
+        src: "/assets/team/coach/Dedi Santosa/item-image-4.webp",
       },
     ],
     achievement: [
@@ -499,15 +503,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/item-image-1.png",
+        src: "/assets/team/coach/Mickey Sudena/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/item-image-2.png",
+        src: "/assets/team/coach/Mickey Sudena/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/item-image-3.png",
+        src: "/assets/team/coach/Mickey Sudena/item-image-3.webp",
       },
     ],
     achievement: [
@@ -615,19 +619,19 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/item-image-1.png",
+        src: "/assets/team/coach/Mega Artana/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/item-image-2.png",
+        src: "/assets/team/coach/Mega Artana/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/item-image-3.png",
+        src: "/assets/team/coach/Mega Artana/item-image-3.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Mega Artana/item-image-4.png",
+        src: "/assets/team/coach/Mega Artana/item-image-4.webp",
       },
     ],
     achievement: [
@@ -727,15 +731,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Made Joi/item-image-1.png",
+        src: "/assets/team/coach/Made Joi/item-image-1.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Made Joi/item-image-2.png",
+        src: "/assets/team/coach/Made Joi/item-image-2.webp",
       },
       {
         title: "coach-preview",
-        src: "/assets/team/coach/Made Joi/item-image-3.png",
+        src: "/assets/team/coach/Made Joi/item-image-3.webp",
       },
     ],
     achievement: [

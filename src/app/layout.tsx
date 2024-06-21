@@ -1,10 +1,10 @@
-import "./globals.css";
 import type { Metadata } from "next";
 import Navigation from "./Components/Navigation";
 import FooterPage from "./Components/Footer";
 import localFont from "next/font/local";
 import ButtonUp from "./Components/ButtonUp";
 import UpcamingContainer from "./Components/UpcamingContainer";
+import "./globals.css";
 
 const satoshi = localFont({
   src: [
@@ -33,8 +33,9 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Asian Surf Performance Academy",
-  description: "Asian Surf Profesional Academy (ASPA)",
+  title: "Asian Surf Performance Academy (ASPA)",
+  description:
+    "The Asian Surf Performance Academy (ASPA) is where surfers reach their highest potential. Located in Bali, we focus on supporting and empowering surfers to become their best. We enhance your surfing skills and help you develop professional qualities like motivation, teamwork, and responsibility",
   icons: {
     icon: "/favicon.ico",
   },

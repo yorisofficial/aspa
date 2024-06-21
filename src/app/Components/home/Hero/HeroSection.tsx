@@ -6,7 +6,7 @@ import Button from "../../Button";
 const HeroSection = () => {
   return (
     <div className="relative h-screen w-full">
-      <div className="h-screen w-full bg-brand px-4 pt-8 text-white md:px-10 xl:px-0">
+      <div className="h-full w-full bg-brand text-white">
         <div className="flex h-full w-full flex-col items-center justify-center gap-8">
           <div className="">
             <Image
@@ -31,7 +31,10 @@ const HeroSection = () => {
             </p>
           </div>
           <div className="btn-cta flex items-center gap-4">
-            <Link href={"/academy"}>
+            <Link
+              href={"/academy"}
+              className="group inline-block transition-all duration-500 ease-in-out hover:scale-110"
+            >
               <Button label="about us" variant="invert" className="!text-brand">
                 About us
               </Button>

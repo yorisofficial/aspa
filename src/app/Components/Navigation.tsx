@@ -1,13 +1,14 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import Branding from "./Branding";
+import Image from "next/image";
+import { List, X } from "@phosphor-icons/react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navigation = () => {
   const [isShow, setShow] = useState(false);
-  const [isDesktop, setDesktop] = useState(false);
+  const [isScroll, setScroll] = useState(false);
 
   const menuNav = [
     {
@@ -37,10 +38,12 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setDesktop(true);
+      if (window.scrollY > 0) {
+        setScroll(true);
+        setShow(false);
       } else {
-        setDesktop(false);
+        setScroll(false);
+        setShow(false);
       }
     };
 
@@ -59,77 +62,90 @@ const Navigation = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-40 w-full text-black ${isDesktop ? "xl:py-0" : "xl:py-4"}`}
+      className={`z-40 transition-all duration-500 ease-in-out ${isScroll ? "fixed left-0 top-0 w-full" : "block"}`}
     >
       <nav
-        className={`container mx-auto transition-all duration-500 ease-in-out ${isDesktop ? "max-w-full" : "max-w-7xl"}`}
+        className={`flex w-full items-center justify-center ${isScroll && "bg-white drop-shadow-lg"}`}
       >
         <div
-          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "opacity-95 xl:py-2" : "xl:rounded-full xl:py-4"} drop-shadow-xl xl:flex`}
+          className={`nav-container relative flex w-full max-w-5xl items-center justify-between px-4 py-4 xl:px-0`}
         >
-          <div className="brand flex items-center justify-between">
-            <Branding isScroll={isDesktop} />
-            <div className="cta-button xl:hidden">
-              <button
-                onClick={handleShow}
-                aria-label="toggle-menus"
-                className="rounded bg-primary p-4"
-              >
-                {isShow ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="#ffffff"
-                    viewBox="0 0 256 256"
-                  >
-                    <path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path>
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    fill="#ffffff"
-                    viewBox="0 0 256 256"
-                  >
-                    <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path>
-                  </svg>
-                )}
-              </button>
-            </div>
+          <div className="brand-aspa flex w-full items-center justify-between xl:w-fit">
+            <Link href={"/"}>
+              <Image
+                src="/brand/ASPA-dark.svg"
+                alt="Asian Surf Performance Academy"
+                quality={75}
+                width={300}
+                height={300}
+                priority={false}
+                className="h-fit w-32 object-contain"
+              />
+            </Link>
+            <motion.button
+              whileTap={{ scale: 0.8 }}
+              transition={{ duration: 0.2 }}
+              onClick={handleShow}
+              className="block rounded-md bg-primary p-4 text-white xl:hidden"
+            >
+              {isShow ? <X size={24} /> : <List size={24} />}
+            </motion.button>
           </div>
-          {isShow && (
-            <div className="mobile-nav absolute left-0 top-20 h-screen w-full bg-white px-4 pt-8 text-black xl:hidden">
-              <ul className="flex h-full w-full flex-col gap-4">
-                {menuNav.map((item, index) => (
+          <AnimatePresence>
+            {isShow && (
+              <motion.div
+                initial={{ x: "-100%" }}
+                animate={{ x: 0 }}
+                exit={{ x: "-100%" }}
+                transition={{ ease: "easeInOut", duration: 0.1 }}
+                className="mobile-menu fixed left-0 top-20 z-40 flex h-full w-full items-start justify-start xl:hidden"
+              >
+                <div className="min-h-screen w-full space-y-2 bg-white px-4 pt-12">
+                  {menuNav.map((item, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ x: "-100%" }}
+                      animate={{ x: 0 }}
+                      exit={{ x: "-100%" }}
+                      transition={{ duration: 0.2, delay: 0.1 * index }}
+                      whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
+                      className="flex w-full flex-col items-start justify-start"
+                    >
+                      <Link
+                        onClick={() => setShow(false)}
+                        href={item.link}
+                        className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${activePath.includes(item.base) ? "bg-primary text-white" : ""}`}
+                      >
+                        {item.title}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+                <div className="h-full min-h-screen w-[25%] ">
+                  <button
+                    id="toggle-menu"
+                    aria-label="Button toggle menu"
+                    title="toggle menu navigation"
+                    onClick={() => setShow(false)}
+                    className="flex h-full min-h-screen w-full items-center justify-center"
+                  ></button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <div className="desktop-menu hidden xl:block">
+            <ul className="flex items-center gap-4">
+              {menuNav.map((item, index) => (
+                <li key={index}>
                   <Link
-                    onClick={handleShow}
-                    key={index}
                     href={item.link}
-                    className={`${item.base === pathName.slice(1) ? "bg-black text-white" : ""} rounded-xl px-6 py-4 hover:bg-black hover:text-white`}
+                    className={`duration-500 hover:scale-110 ${activePath.includes(item.base) ? "font-bold text-brand underline underline-offset-8" : ""}`}
                   >
                     {item.title}
                   </Link>
-                ))}
-              </ul>
-            </div>
-          )}
-          <div
-            className={`desktop-nav hidden items-center gap-4 pr-12 xl:flex`}
-          >
-            {menuNav.map((item, index) => (
-              <Link
-                key={index}
-                href={item.link}
-                className={`${activePath.includes(item.base) ? "scale-110 font-black text-brand underline underline-offset-4" : ""} group text-base font-medium duration-500 hover:scale-110 hover:text-brand`}
-              >
-                {item.title}
-                <div
-                  className={`bg-blue-700 h-[0.10rem] w-0 transition-all group-hover:w-full`}
-                ></div>
-              </Link>
-            ))}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </nav>
