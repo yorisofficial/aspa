@@ -13,13 +13,12 @@ import SocialComponents from "./SocialComponents";
 
 const FooterPage = () => {
   const phone = Support[0].title;
-  const phoneMassage = Support[0].message?.replaceAll(" ", "%20");
   const postCode = Support[1].title;
   const address = Support[2].title;
   const copyright = Support[3].title;
 
   return (
-    <div className="mt-8 flex h-full w-full flex-col items-center justify-center gap-4 bg-primary py-8 text-white">
+    <div className="mt-8 flex h-full w-full flex-col items-center justify-center gap-4 bg-primary px-4 py-8 text-white">
       <Image
         src={"/brand/ASPA-white.svg"}
         alt="ASPA Logo"
@@ -28,7 +27,7 @@ const FooterPage = () => {
         priority={false}
         className="h-full w-[200px] object-cover"
       />
-      <div className="text-center xl:max-w-[368px]">
+      <div className="text-center text-sm md:w-3/4 md:text-base xl:max-w-[368px]">
         <address>
           {address} {postCode}
         </address>
@@ -36,7 +35,7 @@ const FooterPage = () => {
       </div>
       <div className="cta-whatsapp">
         <Link
-          href={`https://api.whatsapp.com/send/?phone=${phone}&text=${phoneMassage}`}
+          href={`https://api.whatsapp.com/send/?phone=${phone}`}
           target="_blank"
           className="flex items-center gap-2 rounded bg-white p-2 text-black"
         >

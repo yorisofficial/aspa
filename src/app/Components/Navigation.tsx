@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import Branding from "./Branding";
 import Image from "next/image";
 import { List, X } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
@@ -111,7 +110,7 @@ const Navigation = () => {
                     <Link
                       onClick={() => setShow(false)}
                       href={item.link}
-                      className={`w-full rounded-md p-4 hover:bg-primary hover:text-white ${activePath.includes(item.base) ? "bg-primary text-white" : ""}`}
+                      className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${activePath.includes(item.base) ? "bg-primary text-white" : ""}`}
                     >
                       {item.title}
                     </Link>
@@ -134,7 +133,7 @@ const Navigation = () => {
                 <li key={index}>
                   <Link
                     href={item.link}
-                    className={`duration-500 hover:scale-110 ${activePath.includes(item.base) ? "font-bold text-primary underline underline-offset-8" : ""}`}
+                    className={`duration-500 hover:scale-110 ${activePath.includes(item.base) ? "font-bold text-brand underline underline-offset-8" : ""}`}
                   >
                     {item.title}
                   </Link>

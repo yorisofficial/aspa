@@ -3,11 +3,12 @@ import React from "react";
 import Link from "next/link";
 import ButtonBooking from "../../ButtonBooking";
 import { urlBooking } from "@/app/lib/Booking";
+import ContainerContent from "../../Container";
 
 const OurProgram = () => {
   return (
-    <div className="our-program border-buttom relative mx-auto flex w-full items-center justify-center rounded-xl py-8">
-      <div className="relative h-full w-full xl:w-[1024px]">
+    <ContainerContent url="/program" className="border-buttom py-8">
+      <div className="relative h-full w-full xl:max-w-5xl">
         <Image
           src={"/assets/hero-img-1.png"}
           width={1500}
@@ -52,7 +53,7 @@ const OurProgram = () => {
           </div>
         </div>
       </div>
-    </div>
+    </ContainerContent>
   );
 };
 
