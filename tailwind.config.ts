@@ -13,9 +13,10 @@ const config = {
     colors: {
       primary: "#18181B",
       white: "#f8f7f4",
+      foreground: "#ffffff",
       black: "#000000",
       brand: "#07529E",
-      bordersolid: "#f4f4f4",
+      bordersolid: "#e5e7eb",
       red: "#FF0000",
     },
     container: {},

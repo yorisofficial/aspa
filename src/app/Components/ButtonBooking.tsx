@@ -1,5 +1,5 @@
-"use client"
-import Link from "next/link"
+"use client";
+import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -7,35 +7,49 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
 type Props = {
-  id: number
-  title: string
-  at_date: string
-  url: string
-}
+  id: number;
+  title: string;
+  at_date: string;
+  url: string;
+};
 
-const ButtonBooking = ({data, invert}: {data: Props[]; invert: boolean}) => {
+const ButtonBooking = ({
+  data,
+  invert,
+}: {
+  data: Props[];
+  invert: boolean;
+}) => {
   return (
     <>
       <div className="relative">
         <DropdownMenu>
           <DropdownMenuTrigger
-            className={`px-6 py-3 font-black rounded-xl ${invert ? "bg-white text-primary" : "bg-primary text-white"}`}
+            className={`relative rounded-xl px-6 py-3 font-black ${invert ? "bg-white text-primary" : "bg-primary text-white"}`}
           >
             Book now
           </DropdownMenuTrigger>
           <DropdownMenuContent className="mt-4">
-            <DropdownMenuLabel className="text-2xl">Select Session</DropdownMenuLabel>
+            <DropdownMenuLabel className="text-2xl">
+              Select Session
+            </DropdownMenuLabel>
             <DropdownMenuSeparator />
             {data.map((item) => (
               <DropdownMenuItem key={item.id} className="px-6">
-                <Link target="_blank" key={item.id} href={item.url} className="py-2 group">
-                  <span className="group-hover:underline underline-offset-4 font-black">
+                <Link
+                  target="_blank"
+                  key={item.id}
+                  href={item.url}
+                  className="group py-2"
+                >
+                  <span className="font-black underline-offset-4 group-hover:underline">
                     #{item.title}
                   </span>
-                  <br /> <span className="text-sm">Start at : {item.at_date}</span>
+                  <br />{" "}
+                  <span className="text-sm">Start at : {item.at_date}</span>
                 </Link>
               </DropdownMenuItem>
             ))}
@@ -43,7 +57,7 @@ const ButtonBooking = ({data, invert}: {data: Props[]; invert: boolean}) => {
         </DropdownMenu>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ButtonBooking
+export default ButtonBooking;

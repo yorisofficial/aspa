@@ -1,16 +1,22 @@
-"use client"
-import {InstagramLogo, WhatsappLogo, XLogo, YoutubeLogo} from "@phosphor-icons/react"
-import Image from "next/image"
-import Link from "next/link"
-import React from "react"
-import {Support} from "../lib/Support"
+"use client";
+import {
+  InstagramLogo,
+  WhatsappLogo,
+  XLogo,
+  YoutubeLogo,
+} from "@phosphor-icons/react";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import { Support } from "../lib/Support";
+import SocialComponents from "./SocialComponents";
 
 const FooterPage = () => {
-  const phone = Support[0].title
-  const phoneMassage = Support[0].message?.replaceAll(" ", "%20")
-  const postCode = Support[1].title
-  const address = Support[2].title
-  const copyright = Support[3].title
+  const phone = Support[0].title;
+  const phoneMassage = Support[0].message?.replaceAll(" ", "%20");
+  const postCode = Support[1].title;
+  const address = Support[2].title;
+  const copyright = Support[3].title;
 
   return (
     <div className="mt-8 flex h-full w-full flex-col items-center justify-center gap-4 bg-primary py-8 text-white">
@@ -38,46 +44,25 @@ const FooterPage = () => {
           Chat on Whatsaap
         </Link>
       </div>
-      <div className="list-social">
-        <div className="flex items-center gap-8">
-          <Link
-            target="_blank"
-            href={"https://www.instagram.com/aspa_surfacademy/"}
-            aria-label="Connect on Instagram"
-          >
-            <InstagramLogo size={32} />
-          </Link>
-          <Link
-            target="_blank"
-            href={"https://x.com/asiansurfacademy"}
-            aria-label="Connect on Twitter"
-          >
-            <XLogo size={32} />
-          </Link>
-          <Link
-            target="_blank"
-            href={"https://www.youtube.com/@asiansurfacademy"}
-            aria-label="Subscribe ASPA on Youtube"
-          >
-            <YoutubeLogo size={32} />
-          </Link>
-        </div>
+      <div className="list-social flex flex-col items-center justify-center gap-0">
+        <h1 className="text-base font-black">Get in touch</h1>
+        <SocialComponents />
       </div>
-      <div className="copyright-section flex justify-center items-center flex-col">
-        <div className="flex gap-0 items-center">
-          <div className="px-2 border-r border-white">
+      <div className="copyright-section flex flex-col items-center justify-center">
+        <div className="flex items-center gap-0">
+          <div className="border-r border-white px-2">
             <Link
               href={"/support"}
-              className="hover:underline underline-offset-4 duration-500"
+              className="underline-offset-4 duration-500 hover:underline"
               aria-label="cta button for"
             >
               Support
             </Link>
           </div>
-          <div className="px-2 border-r border-white">
+          <div className="border-r border-white px-2">
             <Link
               href={"/support"}
-              className="hover:underline underline-offset-4 duration-500"
+              className="underline-offset-4 duration-500 hover:underline"
               aria-label="cta button for"
             >
               FAQ
@@ -87,7 +72,7 @@ const FooterPage = () => {
             <Link
               target="_blank"
               href={"https://forms.gle/umhnmRWAkB5RKq8C8"}
-              className="hover:underline underline-offset-4 duration-500"
+              className="underline-offset-4 duration-500 hover:underline"
               aria-label="cta button for"
             >
               Waiver Form
@@ -99,7 +84,7 @@ const FooterPage = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default FooterPage
+export default FooterPage;

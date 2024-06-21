@@ -1,14 +1,14 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
-import SocialComponents from "../../SocialComponents"
-import Button from "../../Button"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import SocialComponents from "../../SocialComponents";
+import Button from "../../Button";
 
 const HeroSection = () => {
   return (
     <div className="relative h-screen w-full">
-      <div className="h-screen pt-8 w-full px-4 md:px-10 xl:px-0 bg-brand text-white">
-        <div className="w-full flex-col h-full gap-8 flex justify-center items-center">
+      <div className="h-screen w-full bg-brand px-4 pt-8 text-white md:px-10 xl:px-0">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-8">
           <div className="">
             <Image
               src={"/brand/ASPA-white.svg"}
@@ -16,36 +16,35 @@ const HeroSection = () => {
               height={500}
               alt="ASPA Logo"
               priority={false}
-              className="w-40 xl:w-80 h-fit object-contain"
+              className="h-fit w-40 object-contain xl:w-80"
             />
           </div>
-          <div className="text-center gap-4 flex justify-center items-center flex-col">
-            <h1 className="text-2xl font-black uppercase">Asian Surf Performance Academy</h1>
+          <div className="flex flex-col items-center justify-center gap-4 text-center">
+            <h1 className="text-2xl font-black uppercase">
+              Asian Surf Performance Academy
+            </h1>
             <p className="text-base font-light xl:w-1/2">
-              The Asian Surf Performance Academy (ASPA) is where surfers reach their highest
-              potential. Located in Bali, we focus on supporting and empowering surfers to become
-              their best. We enhance your surfing skills and help you develop professional qualities
-              like motivation, teamwork, and responsibility
+              The Asian Surf Performance Academy (ASPA) is where surfers reach
+              their highest potential. Located in Bali, we focus on supporting
+              and empowering surfers to become their best. We enhance your
+              surfing skills and help you develop professional qualities like
+              motivation, teamwork, and responsibility
             </p>
           </div>
-          <div className="btn-cta flex gap-4 items-center">
+          <div className="btn-cta flex items-center gap-4">
             <Link href={"/academy"}>
               <Button label="about us" variant="invert" className="!text-brand">
                 About us
               </Button>
             </Link>
             <Link href={"/program"} className="underline underline-offset-4">
-              ASPA x GROM PATROL
+              ASPA program
             </Link>
-          </div>
-          <div className="contact-us gap-2 flex flex-col justify-center items-center">
-            <h1 className="font-black text-base">Our social media</h1>
-            <SocialComponents />
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HeroSection
+export default HeroSection;

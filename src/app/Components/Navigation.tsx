@@ -1,13 +1,13 @@
-"use client"
-import Image from "next/image"
-import Link from "next/link"
-import {usePathname} from "next/navigation"
-import React, {useEffect, useState} from "react"
-import Branding from "./Branding"
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import Branding from "./Branding";
 
 const Navigation = () => {
-  const [isShow, setShow] = useState(false)
-  const [isDesktop, setDesktop] = useState(false)
+  const [isShow, setShow] = useState(false);
+  const [isDesktop, setDesktop] = useState(false);
 
   const menuNav = [
     {
@@ -30,42 +30,42 @@ const Navigation = () => {
       base: "team",
       link: "/team",
     },
-  ]
+  ];
   const handleShow = () => {
-    setShow(!isShow)
-  }
+    setShow(!isShow);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setDesktop(true)
+        setDesktop(true);
       } else {
-        setDesktop(false)
+        setDesktop(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // check pathName
-  const pathName = usePathname()
+  const pathName = usePathname();
 
   // get active pathName
-  const activePath = pathName.split("/").slice(1, 2)
+  const activePath = pathName.split("/").slice(1, 2);
 
   return (
     <header
       className={`fixed left-0 top-0 z-40 w-full text-black ${isDesktop ? "xl:py-0" : "xl:py-4"}`}
     >
       <nav
-        className={`mx-auto container transition-all duration-500 ease-in-out ${isDesktop ? "w-full" : "max-w-7xl"}`}
+        className={`container mx-auto transition-all duration-500 ease-in-out ${isDesktop ? "max-w-full" : "max-w-7xl"}`}
       >
         <div
-          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "xl:py-2 opacity-95" : "xl:py-4 xl:rounded-full"} drop-shadow-xl xl:flex`}
+          className={`w-full items-center justify-between bg-white px-4 py-4 ${isDesktop ? "opacity-95 xl:py-2" : "xl:rounded-full xl:py-4"} drop-shadow-xl xl:flex`}
         >
           <div className="brand flex items-center justify-between">
             <Branding isScroll={isDesktop} />
@@ -115,7 +115,9 @@ const Navigation = () => {
               </ul>
             </div>
           )}
-          <div className={`desktop-nav hidden items-center gap-4 xl:flex pr-12`}>
+          <div
+            className={`desktop-nav hidden items-center gap-4 pr-12 xl:flex`}
+          >
             {menuNav.map((item, index) => (
               <Link
                 key={index}
@@ -124,7 +126,7 @@ const Navigation = () => {
               >
                 {item.title}
                 <div
-                  className={`h-[0.10rem] w-0 bg-blue-700 transition-all group-hover:w-full`}
+                  className={`bg-blue-700 h-[0.10rem] w-0 transition-all group-hover:w-full`}
                 ></div>
               </Link>
             ))}
@@ -132,7 +134,7 @@ const Navigation = () => {
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

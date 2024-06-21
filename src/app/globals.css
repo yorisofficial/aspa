@@ -5,3 +5,7 @@
 .border-buttom {
   @apply border-b border-black/40;
 }
+
+.bored {
+  @apply border-2 border-red;
+}
