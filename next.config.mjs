@@ -7,8 +7,19 @@ const nextConfig = {
         hostname: "via.placeholder.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "asiansurf.co",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "asiansurf.co",
+        port: "",
+        pathname: "/wp-content/uploads/**",
+      },
     ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

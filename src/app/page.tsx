@@ -3,7 +3,8 @@ import OurProgram from "./Components/home/Program/OurProgram";
 import OurProfessional from "./Components/home/Professional/OurProfessional";
 import OurService from "./Components/home/Service/OurService";
 import UpcomingEvent from "./Components/home/Event/UpcomingEvent";
-import Testimonial from "./Components/testimonial/Testimonial";
+import Testimonial from "./Components/home/testimonial/Testimonial";
+import LatestBlog from "./Components/home/news/LatestBlog";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <OurService title="Our Services" />
         <Testimonial />
         <UpcomingEvent />
+        <LatestBlog />
         <OurProfessional />
       </div>
     </main>

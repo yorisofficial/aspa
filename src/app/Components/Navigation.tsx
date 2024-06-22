@@ -27,6 +27,11 @@ const Navigation = () => {
       link: "/program",
     },
     {
+      title: "Blog",
+      base: "blog",
+      link: "/blog",
+    },
+    {
       title: "Our Team",
       base: "team",
       link: "/team",
