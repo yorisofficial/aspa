@@ -1,9 +1,20 @@
 # Asian Surf Performance Academy
 
-latest version : ```1.1.0``` || 17 Jun 2024
+latest version : ```1.1.0``` - Jun 2024
+
+# API BLOG
+```
+https://asiansurf.co/wp-json/wp/v2/posts
+```
+### Limits post to view
+```
+{main url}?per_page=6
+```
+license : [Asian Surf Co](https://asiansurf.co/)
+
 
 # How to start :
-### Install requirment
+### Install requirement
 |  Tools | Link   |
 | ------------ | ------------ |
 | Node JS v20.x.x (LTS)  | [Download](http://https://nodejs.org/en/download/package-manager "Download")  |
@@ -12,9 +23,9 @@ latest version : ```1.1.0``` || 17 Jun 2024
 
 How to run the program
 ------------
-1. `npm install` // install all packages
+1. ```npm install``` // install all packages
 2. `npm run dev` // run program in development
 3. `npm run build` // run build to compile the code
 4. `npm run start` // run in production mode
 
-Asian Surf Co @copyright 2024
+[asiansurfco@copyright 2024](https://asiansurf.co/)
