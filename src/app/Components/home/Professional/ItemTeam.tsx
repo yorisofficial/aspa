@@ -1,21 +1,21 @@
-"use client"
-import Link from "next/link"
-import React from "react"
-import IconArrowDetails from "../../IconArrowDetails"
-import Image from "next/image"
+"use client";
+import Link from "next/link";
+import React from "react";
+import IconArrowDetails from "../../IconArrowDetails";
+import Image from "next/image";
 
-const ItemTeam = ({data, categories}: {data: any; categories: string}) => {
-  const item = data
+const ItemTeam = ({ data, categories }: { data: any; categories: string }) => {
+  const item = data;
 
   return (
-    <>
+    <div>
       <Link
         key={item.id}
         href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
-        className="xl:w-fit w-full group rounded-md relative border-2 hover:drop-shadow-xl bg-white duration-500 transition-all ease-in-out border-bordersolid hover:rounded-xl"
+        className="group relative w-full rounded-md border-2 border-bordersolid bg-white transition-all duration-500 ease-in-out hover:rounded-xl hover:drop-shadow-xl xl:w-fit"
       >
-        <IconArrowDetails className="group-hover:translate-x-1 group-hover:-translate-y-1 duration-500 ease-in transition-all" />
-        <div className="item-core flex items-start peer justify-start gap-5 rounded-xl py-6 px-4 md:w-[330px] w-full xl:max-w-[400px]">
+        <IconArrowDetails className="transition-all duration-500 ease-in group-hover:-translate-y-1 group-hover:translate-x-1" />
+        <div className="item-core peer flex w-full items-start justify-start gap-5 rounded-xl px-4 py-6 md:w-[330px] xl:max-w-[400px]">
           <div className="w-fit rounded-full ring-4 ring-brand">
             <Image
               src={item.profile}
@@ -30,12 +30,12 @@ const ItemTeam = ({data, categories}: {data: any; categories: string}) => {
               <span className="text-xs font-light">Full name</span>
               {item.full_name}
             </h1>
-            <h1 className="flex flex-col items-start capitalize justify-start text-base font-semibold">
+            <h1 className="flex flex-col items-start justify-start text-base font-semibold capitalize">
               <span className="text-xs font-light">Title</span>
               {item.title}
             </h1>
             {categories.includes("coach") ? (
-              <h1 className="flex flex-col items-start capitalize justify-start text-base font-semibold">
+              <h1 className="flex flex-col items-start justify-start text-base font-semibold capitalize">
                 <span className="text-xs font-light">Location</span>
                 {item?.location}
               </h1>
@@ -43,8 +43,8 @@ const ItemTeam = ({data, categories}: {data: any; categories: string}) => {
           </div>
         </div>
       </Link>
-    </>
-  )
-}
+    </div>
+  );
+};
 
-export default ItemTeam
+export default ItemTeam;

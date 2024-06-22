@@ -1,4 +1,7 @@
 import BackButton from "@/app/Components/BackButton";
+import ContainerContent from "@/app/Components/Container";
+import GetDateComponent from "@/app/Components/GetDateComponent";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -32,16 +35,31 @@ const BlogPage = async ({ params }: { params: { id: string } }) => {
   const data = await getData(params.id);
 
   return (
-    <div className="container mx-auto max-w-5xl py-32">
+    <ContainerContent
+      url="/blog"
+      className="container mx-auto max-w-5xl xl:space-y-8"
+    >
       <BackButton url="/blog">Back to main</BackButton>
       <div className="mb-8 rounded-xl border-2 p-4">
-        <h1>{data.title.rendered}</h1>
-        <p>{data.date}</p>
+        <div className="h-[400px] w-full">
+          <Image
+            src={data.jetpack_featured_media_url}
+            height={1500}
+            width={1500}
+            priority={false}
+            alt={data.title.rendered}
+            className="h-full w-full rounded-lg object-cover"
+          />
+        </div>
+        <div className="py-4">
+          <GetDateComponent data={data.date} />
+          <h1 className="w-3/4 text-xl font-black">{data.title.rendered}</h1>
+        </div>
       </div>
-      <article className="prose prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-p:text-white prose-strong:text-white">
+      <article className="prose prose-headings:font-black prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-p:text-black prose-strong:text-primary prose-img:rounded-xl max-w-none">
         <div dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
       </article>
-    </div>
+    </ContainerContent>
   );
 };
 

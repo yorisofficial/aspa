@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import GetDateComponent from "./GetDateComponent";
 
 interface Props {
   id: number;
@@ -15,57 +16,32 @@ interface Props {
 }
 
 const ItemPost = ({ post }: { post: Props }) => {
-  const postContent = post;
-  const getInfoDate = postContent.date;
-  const getFullYear = getInfoDate.slice(0, 4);
-  const getMonth = getInfoDate.slice(5, 7);
-  const getDate = getInfoDate.slice(8, 10);
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  const getNameOfMonth = months[parseInt(getMonth) - 1];
-  const datePost = `${getNameOfMonth} ${getDate}, ${getFullYear}`;
-
   return (
-    <div>
-      <div className="card flex flex-col items-start justify-between rounded-xl border-2 p-4">
-        <div className="h-[200px] w-full">
-          <Image
-            src={post.jetpack_featured_media_url}
-            height={500}
-            width={500}
-            priority={false}
-            alt={post.title.rendered}
-            className="h-full w-full rounded-lg object-cover"
-          />
+    <>
+      <Link
+        href={`/blog/${post.id}`}
+        className="card group flex h-full flex-col items-start justify-between rounded-xl border-2 border-bordersolid bg-white p-4 duration-500 hover:scale-105 hover:rounded-xl hover:drop-shadow-xl"
+      >
+        <div className="">
+          <div className="h-[200px] w-full overflow-hidden rounded-lg">
+            <Image
+              src={post.jetpack_featured_media_url}
+              height={500}
+              width={500}
+              priority={false}
+              alt={post.title.rendered}
+              className="h-full w-full rounded-lg object-cover duration-500 group-hover:scale-110"
+            />
+          </div>
+          <div className="h-full py-4">
+            <GetDateComponent data={post.date} />
+            <h1 className="font-black underline-offset-8 group-hover:underline">
+              {post.title.rendered}
+            </h1>
+          </div>
         </div>
-        <div className="group py-4">
-          <span>{datePost}</span>
-          <h1 className="font-black underline-offset-8 group-hover:underline">
-            {post.title.rendered}
-          </h1>
-        </div>
-        <div className="mt-4 w-full">
-          <Link
-            href={`/blog/${post.id}`}
-            className="underline underline-offset-8"
-          >
-            Read the post
-          </Link>
-        </div>
-      </div>
-    </div>
+      </Link>
+    </>
   );
 };
 

@@ -88,6 +88,9 @@ const Navigation = () => {
               />
             </Link>
             <motion.button
+              id="toggle-menu"
+              aria-label="Button toggle menu"
+              title="toggle menu navigation"
               whileTap={{ scale: 0.8 }}
               transition={{ duration: 0.2 }}
               onClick={handleShow}
@@ -132,7 +135,7 @@ const Navigation = () => {
                     aria-label="Button toggle menu"
                     title="toggle menu navigation"
                     onClick={() => setShow(false)}
-                    className="flex h-full min-h-screen w-full items-center justify-center"
+                    className="toggle-menu flex h-full min-h-screen w-full items-center justify-center"
                   ></button>
                 </div>
               </motion.div>

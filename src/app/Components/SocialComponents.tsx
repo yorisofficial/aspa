@@ -18,11 +18,10 @@ const SocialComponents = () => {
     <>
       <div className="flex  items-center gap-4">
         {social.map((item) => (
-          <>
+          <div key={item.id}>
             <Link
               target="_blank"
               href={item.url}
-              key={item.id}
               aria-label={item.title}
               className="group flex items-center gap-2"
             >
@@ -34,7 +33,7 @@ const SocialComponents = () => {
               </span>
               <h1 className="">{item.username}</h1>
             </Link>
-          </>
+          </div>
         ))}
       </div>
     </>

@@ -55,6 +55,7 @@ const OurService = ({ title }: { title: string }) => {
       <div className="list-service grid h-full w-full grid-cols-2 gap-4 xl:grid-cols-3 xl:gap-8">
         {Service.map((item) => (
           <motion.div
+            key={item.id}
             initial={{ scale: 0.6 }}
             viewport={{ once: true }}
             animate={{ scale: 1 }}
@@ -63,7 +64,6 @@ const OurService = ({ title }: { title: string }) => {
               ease: "easeInOut",
               delay: 0.1 * item.id,
             }}
-            key={item.id}
             className="item-service group flex w-full cursor-pointer flex-col gap-2 rounded-xl border-2 border-bordersolid bg-white p-2 transition-colors duration-500 ease-out hover:rounded-xl hover:bg-primary md:p-4"
           >
             <motion.div

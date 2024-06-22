@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import Button from "../../Button";
 import ContainerContent from "../../Container";
+import GetDateComponent from "../../GetDateComponent";
 
 async function getData() {
   const url = process.env.ASC_PUBLIC_POST || "";
@@ -45,60 +46,43 @@ const LatestBlog = async () => {
       url="/blog"
       className="border-buttom flex w-full max-w-5xl flex-col items-center justify-center py-8"
     >
-      <div className="mb-8 flex w-full flex-col items-start justify-center gap-2 text-start">
-        <h1 className="text-start text-xl font-black text-brand">
-          Fill your day with the latest news
-        </h1>
-        <p className="text-sm font-normal md:text-base xl:w-1/2">
-          Join our surfing world, explore the latest news, stories, and tips
-          from our blog. We are ready to inspire you to catch the wave and fill
-          your day with surfing joy.
-        </p>
-        <div className="mt-4">
-          <Link href={"blog"}>
-            <Button variant="primary" label="read more our blog">
-              Read our blog
-            </Button>
-          </Link>
-        </div>
-      </div>
-      <div className="flex flex-col items-end justify-center xl:relative xl:w-full">
-        <div className="header hidden h-full w-full xl:inline-block xl:min-h-[500px] xl:w-3/4">
-          <Image
-            src={latestBlog.jetpack_featured_media_url}
-            alt={latestBlog.title}
-            height={500}
-            width={500}
-            priority={false}
-            quality={75}
-            className="h-full w-full rounded-xl object-cover"
-          />
-        </div>
-        <div className="body flex flex-col items-start justify-center gap-4 space-y-4 rounded-xl bg-primary p-6 text-start text-white xl:absolute xl:left-0 xl:top-1/2 xl:w-1/2 xl:-translate-y-1/2 xl:space-y-0 xl:p-8">
-          <div className="inline-block h-[200px] w-full xl:hidden">
+      <div className="relative h-full w-full space-y-4 xl:max-w-5xl xl:space-y-0">
+        <Image
+          src={latestBlog.jetpack_featured_media_url}
+          width={500}
+          height={500}
+          priority={false}
+          quality={100}
+          alt={latestBlog.title.rendered}
+          className="h-[300px] w-full rounded-xl object-cover xl:h-[440px]"
+        />
+        <div className="latest-news relative z-10 flex flex-col rounded-xl bg-primary p-8 text-white xl:absolute xl:left-4 xl:top-1/2 xl:min-h-[400px] xl:w-[40%] xl:-translate-y-1/2 xl:items-center xl:justify-center ">
+          <div className="mb-4 w-full">
+            <h1 className="text-2xl font-black uppercase text-brand">
+              Latest post
+            </h1>
+          </div>
+          <div className="absolute bottom-0 right-0 -z-10">
             <Image
-              src={latestBlog.jetpack_featured_media_url}
-              alt={latestBlog.title}
-              height={500}
+              src={"/assets/acc/title-cover-simple.svg"}
+              alt="acc-line"
               width={500}
+              height={500}
               priority={false}
-              quality={75}
-              className="h-full w-full rounded-md object-cover"
+              quality={50}
+              className="-z-10 h-[300px] w-[300px] opacity-40"
             />
           </div>
-          <h1 className="hidden text-3xl font-black uppercase xl:inline-block">
-            Latest news
-          </h1>
-          <div className="space-y-2 xl:space-y-0">
-            <span className="underline underline-offset-4">{datePost}</span>
-            <h1 className="text-xl font-normal xl:text-3xl">
+          <div className="header mb-4">
+            <GetDateComponent data={latestBlog.date} />
+            <h1 className="text-base font-bold uppercase xl:text-xl">
               {latestBlog.title.rendered}
             </h1>
           </div>
-          <div className="">
-            <Link href={`/blog/${latestBlog.id}`}>
-              <Button variant="invert" label="read more the latest post">
-                Read More
+          <div className="mt-4 flex w-full items-center justify-start">
+            <Link href={`/blog/${latestBlog.id}`} className="">
+              <Button variant="invert" label="read latest post">
+                Read post
               </Button>
             </Link>
           </div>

@@ -3,7 +3,6 @@ import Navigation from "./Components/Navigation";
 import FooterPage from "./Components/Footer";
 import localFont from "next/font/local";
 import ButtonUp from "./Components/ButtonUp";
-import UpcamingContainer from "./Components/UpcamingContainer";
 import "./globals.css";
 
 const satoshi = localFont({
@@ -49,12 +48,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${satoshi.className} bg-white`}>
-        <UpcamingContainer content={false}>
-          <Navigation />
-          {children}
-          <FooterPage />
-          <ButtonUp />
-        </UpcamingContainer>
+        <Navigation />
+        {children}
+        <FooterPage />
+        <ButtonUp />
       </body>
     </html>
   );
