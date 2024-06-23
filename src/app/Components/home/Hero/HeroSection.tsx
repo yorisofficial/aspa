@@ -6,7 +6,7 @@ import Button from "../../Button";
 const HeroSection = () => {
   return (
     <div className="relative h-screen w-full">
-      <div className="h-full w-full bg-brand text-white">
+      <div className="h-full w-full bg-brand px-4 text-white xl:px-0">
         <div className="flex h-full w-full flex-col items-center justify-center gap-8">
           <div className="">
             <Image
@@ -22,7 +22,7 @@ const HeroSection = () => {
             <h1 className="text-2xl font-black uppercase">
               Asian Surf Performance Academy
             </h1>
-            <p className="text-base font-light xl:w-1/2">
+            <p className="w-full text-base font-light xl:w-1/2">
               The Asian Surf Performance Academy (ASPA) is where surfers reach
               their highest potential. Located in Bali, we focus on supporting
               and empowering surfers to become their best. We enhance your
