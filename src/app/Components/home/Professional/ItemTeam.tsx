@@ -8,7 +8,7 @@ const ItemTeam = ({ data, categories }: { data: any; categories: string }) => {
   const item = data;
 
   return (
-    <div>
+    <>
       <Link
         key={item.id}
         href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
@@ -43,7 +43,7 @@ const ItemTeam = ({ data, categories }: { data: any; categories: string }) => {
           </div>
         </div>
       </Link>
-    </div>
+    </>
   );
 };
 

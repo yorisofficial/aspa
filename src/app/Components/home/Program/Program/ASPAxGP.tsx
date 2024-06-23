@@ -5,25 +5,25 @@ import OurService from "@/app/Components/home/Service/OurService";
 import SliderProgram from "@/app/Components/home/Program/SliderProgram";
 import { GromPatrol } from "@/app/lib/events/grompatrol";
 
+export const SliderImg = [
+  {
+    src: "/assets/program/grompatrol/img-1.png",
+    alt: "image-asset-program",
+  },
+  {
+    src: "/assets/program/grompatrol/img-2.png",
+    alt: "image-asset-program",
+  },
+  {
+    src: "/assets/program/grompatrol/img-3.png",
+    alt: "image-asset-program",
+  },
+  {
+    src: "/assets/program/grompatrol/img-4.png",
+    alt: "image-asset-program",
+  },
+];
 const ASPAxGP = () => {
-  const SliderImg = [
-    {
-      src: "/assets/program/grompatrol/img-1.png",
-      alt: "image-asset-program",
-    },
-    {
-      src: "/assets/program/grompatrol/img-2.png",
-      alt: "image-asset-program",
-    },
-    {
-      src: "/assets/program/grompatrol/img-3.png",
-      alt: "image-asset-program",
-    },
-    {
-      src: "/assets/program/grompatrol/img-4.png",
-      alt: "image-asset-program",
-    },
-  ];
   return (
     <>
       <div className="content-section border-buttom grid h-full w-full grid-cols-1 gap-8 py-8 pb-8 xl:grid-cols-2">

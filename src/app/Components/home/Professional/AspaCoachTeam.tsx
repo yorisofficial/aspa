@@ -19,13 +19,22 @@ const AspaCoachTeam = ({
   const sliceData = teamData.slice(0, valueData);
   const number = 4;
 
-  const handleClick = () => {
+  const handleIncrease = () => {
     if (valueData < teamData.length) {
       setNumber(valueData + number);
       localStorage.setItem("addNumber", JSON.stringify(valueData + number));
     } else {
       setNumber(valueData);
       localStorage.setItem("addNumber", JSON.stringify(valueData));
+    }
+  };
+
+  const handleDecrease = () => {
+    if (localStorage.getItem("addNumber") && valueData > number) {
+      setNumber(valueData - number);
+      localStorage.setItem("addNumber", JSON.stringify(valueData - number));
+
+      // localStorage.removeItem("addNumber");
     }
   };
 
@@ -40,15 +49,26 @@ const AspaCoachTeam = ({
       <h1 className="text-3xl font-black">{title}</h1>
       <Suspense fallback={<Loading />}>
         <ListTeam data={sliceData} categories={categories} />
-        {teamData.length > valueData && (
+        {teamData.length > valueData ? (
           <div className="flex w-full items-center justify-center py-8">
             <Button
               variant="primary"
               label="add more team"
               className=""
-              onClick={handleClick}
+              onClick={handleIncrease}
             >
               Load more
+            </Button>
+          </div>
+        ) : (
+          <div className="flex w-full items-center justify-center py-8">
+            <Button
+              variant="border"
+              label="add more team"
+              className=""
+              onClick={handleDecrease}
+            >
+              Show less
             </Button>
           </div>
         )}

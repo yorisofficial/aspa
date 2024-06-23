@@ -1,8 +1,8 @@
 import BackButton from "@/app/Components/BackButton";
 import ContainerContent from "@/app/Components/Container";
 import GetDateComponent from "@/app/Components/GetDateComponent";
+import { redirect } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 export async function generateStaticParams() {
@@ -24,22 +24,25 @@ async function getData(id: string) {
   const url = process.env.ASC_PUBLIC_POST || "";
   const res = await fetch(`${url}/${id}`);
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
+  if (!res.ok) return undefined;
 
   return res.json();
 }
 
 const BlogPage = async ({ params }: { params: { id: string } }) => {
   const data = await getData(params.id);
+  if (!data) {
+    redirect("/not-found.tsx");
+  }
 
   return (
     <ContainerContent
       url="/blog"
       className="container mx-auto max-w-5xl xl:space-y-8"
     >
-      <BackButton url="/blog">Back to main</BackButton>
+      <BackButton url="/blog" back={true}>
+        Back to main
+      </BackButton>
       <div className="mb-8 rounded-xl border-2 p-4">
         <div className="h-[400px] w-full">
           <Image
@@ -56,7 +59,7 @@ const BlogPage = async ({ params }: { params: { id: string } }) => {
           <h1 className="w-3/4 text-xl font-black">{data.title.rendered}</h1>
         </div>
       </div>
-      <article className="prose prose-headings:font-black prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-p:text-black prose-strong:text-primary prose-img:rounded-xl max-w-none">
+      <article className="prose-a:text-blue-600 hover:prose-a:text-blue-500 prose max-w-none prose-headings:font-black prose-p:text-black prose-strong:text-primary prose-img:rounded-xl">
         <div dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
       </article>
     </ContainerContent>
