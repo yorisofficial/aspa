@@ -45,7 +45,7 @@ const HeroSection = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="flex flex-col gap-4 text-start"
             >
-              <h1 className="text-3xl font-black">
+              <h1 className="text-xl font-black md:text-3xl">
                 Asian Surf Performance Academy
               </h1>
               <p className="">
