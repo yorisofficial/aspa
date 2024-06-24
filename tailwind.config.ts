@@ -21,6 +21,9 @@ const config = {
     },
     container: {},
     extend: {
+      fontFamily: {
+        satoshi: ["var(--font-satoshi)"],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

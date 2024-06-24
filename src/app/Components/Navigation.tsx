@@ -84,7 +84,7 @@ const Navigation = () => {
                 width={300}
                 height={300}
                 priority={false}
-                className="h-fit w-32 object-contain"
+                className="h-12 w-32 object-center"
               />
             </Link>
             <motion.button

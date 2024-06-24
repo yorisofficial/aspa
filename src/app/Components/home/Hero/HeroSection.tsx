@@ -10,20 +10,19 @@ import ContainerContent from "../../Container";
 const HeroSection = () => {
   return (
     <div className="mx-auto flex h-full min-h-screen w-full items-center justify-center bg-brand px-4 text-white">
-      <ContainerContent
-        url="hero"
-        className="grid h-full min-h-screen w-full max-w-5xl grid-cols-1 items-center justify-center gap-4 xl:grid-cols-2"
-      >
-        <div className="mt-4 h-full md:mt-0 xl:order-last xl:h-fit">
+      <ContainerContent url="hero" className="flex flex-col gap-6 xl:flex-row">
+        <div className="h-full md:mt-0 xl:order-last xl:h-fit">
           <iframe
             src="https://www.youtube.com/embed/OkQvr9QW86w?si=jb84mee4Zjkz9P_l"
             title="YouTube video player"
             allow="autoplay"
+            aria-hidden="true"
             allowFullScreen={true}
-            className="aspect-video h-full w-full xl:h-[300px]"
+            className="aspect-video h-[300px] w-full rounded-xl xl:h-[400px]"
+            loading="lazy"
           ></iframe>
         </div>
-        <div className="-mt-12 flex w-full flex-col items-start justify-start gap-8 text-start md:-mt-0">
+        <div className="flex w-full flex-col items-start justify-start gap-8 text-start md:-mt-0">
           <motion.div
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -70,7 +69,7 @@ const HeroSection = () => {
                 <Button
                   label="about us"
                   variant="invert"
-                  className="text-brand"
+                  className="!text-brand"
                 >
                   About us
                 </Button>

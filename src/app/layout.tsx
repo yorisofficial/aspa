@@ -8,22 +8,22 @@ import "./globals.css";
 const satoshi = localFont({
   src: [
     {
-      path: "../../public/fonts/Satoshi-Light.woff2",
+      path: "../../public/fonts/Satoshi-Light.ttf",
       weight: "300",
       style: "light",
     },
     {
-      path: "../../public/fonts/Satoshi-Regular.woff2",
+      path: "../../public/fonts/Satoshi-Regular.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Satoshi-Medium.woff2",
+      path: "../../public/fonts/Satoshi-Medium.ttf",
       weight: "500",
       style: "semibold",
     },
     {
-      path: "../../public/fonts/Satoshi-Black.woff2",
+      path: "../../public/fonts/Satoshi-Black.ttf",
       weight: "900",
       style: "black",
     },

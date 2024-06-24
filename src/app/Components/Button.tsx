@@ -19,9 +19,9 @@ const Button: React.FC<Props> = ({
 }) => {
   const buttonStyle = {
     primary:
-      "px-4 text-sm md:text-base hover:bg-primary/80 rounded-xl hover:bg-slate-600 font-normal md:px-6 py-3 border-2 hover:scale-105 duration-300 border-primary bg-primary text-white",
+      "px-4 text-sm md:text-base hover:bg-primary/80 rounded-xl hover:bg-slate-600 font-medium md:px-6 py-3 border-2 hover:scale-105 duration-300 border-primary bg-primary text-white",
     invert:
-      "px-4 text-sm md:text-base rounded-xl font-normal md:px-6 py-3 border-2 hover:scale-105 duration-300 border-white bg-white text-primary",
+      "px-4 text-sm md:text-base rounded-xl font-medium md:px-6 py-3 border-2 hover:scale-105 duration-300 border-white bg-white text-primary",
     border:
       "px-4 text-sm md:text-base rounded-xl font-semibold md:px-6 py-3 border-2 hover:scale-105 duration-300 border-primary text-primary text-primary",
     link: "text-base underlined",

@@ -9,3 +9,7 @@
 .bored {
   @apply border-2 border-red;
 }
+
+p {
+  @apply font-light;
+}
