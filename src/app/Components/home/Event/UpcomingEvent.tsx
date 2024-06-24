@@ -33,7 +33,7 @@ const UpcomingEvent = () => {
       url="book-session"
       className="border-buttom relative py-8"
     >
-      <div className="book-section relative grid w-full items-start justify-start rounded-xl bg-primary p-8 text-white md:grid-cols-2 md:gap-8">
+      <div className="Upcoming-section relative grid w-full items-start justify-start rounded-xl bg-primary p-8 text-white md:grid-cols-2 md:gap-8">
         <div className="absolute left-1/2 top-1/2 z-0 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
           <Image
             src={"/assets/acc/title-cover-simple.svg"}
@@ -43,7 +43,7 @@ const UpcomingEvent = () => {
             className="h-full w-full opacity-30"
           />
         </div>
-        <div className="details relative z-10 flex flex-col items-start justify-start gap-2 text-start">
+        <div className="details relative z-10 flex h-full flex-col items-start justify-start gap-2 text-start xl:justify-center">
           <span className="text-sm font-light uppercase">
             Book now and get the benefit
           </span>

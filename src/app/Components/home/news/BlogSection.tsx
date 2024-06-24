@@ -5,6 +5,7 @@ import GetDateComponent from "../../GetDateComponent";
 import IconArrowDetails from "../../IconArrowDetails";
 import Link from "next/link";
 import Button from "../../Button";
+import { ArrowRightCircle } from "lucide-react";
 
 async function getData() {
   const url = process.env.ASC_PUBLIC_POST || "";
@@ -55,29 +56,42 @@ const BlogSection = async () => {
             </div>
           </div>
         </Link>
-        <div className="list-post">
-          <div className="flex w-full items-center justify-between pb-4">
+        <div className="list-post space-y-4">
+          <div className="border-buttom flex w-full items-center justify-between pb-4 xl:pb-8">
             <h1 className="text-2xl font-black">Also read post</h1>
-            <Link href={"/blog"}>
-              <Button variant="primary" label="See all post">
+            <Link href={"/blog"} className="">
+              <Button
+                variant="primary"
+                label="See all post"
+                className="hover:bg-primary/80"
+              >
                 See all post
               </Button>
             </Link>
           </div>
-          {data.slice(1, 5).map((item: Props) => (
-            <>
-              <Link href={`/blog/${item.id}`} key={item.id}>
-                <div className="group relative py-2">
-                  <IconArrowDetails className="rounded-full bg-primary/30 p-1 text-white duration-500 group-hover:right-0 group-hover:top-0 group-hover:bg-primary" />
-                  <div className="pr-8">
-                    <h1 className="text-sm font-normal underline-offset-8 group-hover:underline xl:text-base">
-                      {item.title.rendered}
-                    </h1>
+          <div className="">
+            {data.slice(1, 5).map((item: Props) => (
+              <>
+                <Link
+                  href={`/blog/${item.id}`}
+                  key={item.id}
+                  className="w-full"
+                >
+                  <div className="group relative flex w-full items-start justify-between py-2">
+                    <div className="pr-8">
+                      <h1 className="text-sm underline-offset-4 group-hover:underline xl:text-base">
+                        {item.title.rendered}
+                      </h1>
+                    </div>
+                    <ArrowRightCircle
+                      size={24}
+                      className="flex-shrink-0 duration-500 group-hover:translate-x-4"
+                    />
                   </div>
-                </div>
-              </Link>
-            </>
-          ))}
+                </Link>
+              </>
+            ))}
+          </div>
         </div>
       </div>
     </ContainerContent>
