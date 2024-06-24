@@ -58,7 +58,7 @@ const OurService = ({ title }: { title: string }) => {
             key={item.id}
             initial={{ scale: 0.6 }}
             viewport={{ once: true }}
-            animate={{ scale: 1 }}
+            whileInView={{ scale: 1 }}
             transition={{
               duration: 0.5,
               ease: "easeInOut",

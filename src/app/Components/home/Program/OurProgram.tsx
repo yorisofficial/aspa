@@ -1,14 +1,22 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import Link from "next/link";
 import ButtonBooking from "../../ButtonBooking";
 import { urlBooking } from "@/app/lib/Booking";
 import ContainerContent from "../../Container";
+import { motion } from "framer-motion";
 
 const OurProgram = () => {
   return (
     <ContainerContent url="/program" className="border-buttom py-8">
-      <div className="relative h-full w-full xl:max-w-5xl">
+      <motion.div
+        initial={{ y: "100%", opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="relative h-full w-full xl:max-w-5xl"
+      >
         <Image
           src={"/assets/hero-img-1.webp"}
           width={1500}
@@ -52,7 +60,7 @@ const OurProgram = () => {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </ContainerContent>
   );
 };

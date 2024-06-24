@@ -19,7 +19,7 @@ const YoutubeVideo = () => {
           onClick={handleModal}
           className="h-full w-full rounded-xl"
         >
-          <PlayCircle size={32} weight="fill" className="h-16 w-16" />
+          <PlayCircle size={32} weight="fill" className="h-14 w-14" />
         </button>
       </div>
       {isShowModal && (

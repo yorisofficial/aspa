@@ -1,15 +1,35 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../Button";
 import YoutubeVideo from "../../YoutubeVideo";
+import { motion } from "framer-motion";
+import ContainerContent from "../../Container";
 
 const HeroSection = () => {
   return (
     <div className="mx-auto flex h-full min-h-screen w-full items-center justify-center bg-brand px-4 text-white">
-      <div className="mx-auto flex h-full w-full max-w-5xl items-center justify-center">
-        <div className="flex h-full w-full flex-col items-center justify-center gap-4">
-          <div className="">
+      <ContainerContent
+        url="hero"
+        className="grid h-full min-h-screen w-full max-w-5xl grid-cols-1 items-center justify-center gap-4 xl:grid-cols-2"
+      >
+        <div className="mt-4 h-full md:mt-0 xl:order-last xl:h-fit">
+          <iframe
+            src="https://www.youtube.com/embed/OkQvr9QW86w?si=jb84mee4Zjkz9P_l"
+            title="YouTube video player"
+            allow="autoplay"
+            allowFullScreen={true}
+            className="aspect-video h-full w-full xl:h-[300px]"
+          ></iframe>
+        </div>
+        <div className="-mt-12 flex w-full flex-col items-start justify-start gap-8 text-start md:-mt-0">
+          <motion.div
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className=""
+          >
             <Image
               src={"/brand/ASPA-white.svg"}
               width={500}
@@ -18,9 +38,14 @@ const HeroSection = () => {
               priority={false}
               className="h-fit w-40 object-contain xl:w-80"
             />
-          </div>
+          </motion.div>
           <div className="flex h-full w-full flex-col items-center justify-center text-center">
-            <div className="flex flex-col gap-4">
+            <motion.div
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col gap-4 text-start"
+            >
               <h1 className="text-3xl font-black">
                 Asian Surf Performance Academy
               </h1>
@@ -31,9 +56,13 @@ const HeroSection = () => {
                 surfing skills and help you develop professional qualities like
                 motivation, teamwork, and responsibility
               </p>
-            </div>
-            <div className="btn-cta flex w-full items-center justify-center gap-4 py-8">
-              <YoutubeVideo />
+            </motion.div>
+            <motion.div
+              initial={{ y: "100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="btn-cta flex w-full items-center justify-start gap-4 py-8"
+            >
               <Link
                 href={"/academy"}
                 className="group inline-block transition-all duration-500 ease-in-out hover:scale-110"
@@ -49,10 +78,10 @@ const HeroSection = () => {
               <Link href={"/program"} className="underline underline-offset-4">
                 ASPA program
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </ContainerContent>
     </div>
   );
 };

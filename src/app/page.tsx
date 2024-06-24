@@ -3,7 +3,6 @@ import OurProgram from "./Components/home/Program/OurProgram";
 import OurProfessional from "./Components/home/Professional/OurProfessional";
 import OurService from "./Components/home/Service/OurService";
 import UpcomingEvent from "./Components/home/Event/UpcomingEvent";
-import Testimonial from "./Components/home/testimonial/Testimonial";
 import BlogSection from "./Components/home/news/BlogSection";
 
 export default function Home() {

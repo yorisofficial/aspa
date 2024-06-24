@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { GromPatrol } from "@/app/lib/events/grompatrol";
 import SliderProgram from "../Program/SliderProgram";
+import { motion } from "framer-motion";
 
 export const GromPatrolImage = [
   {
@@ -32,7 +33,13 @@ const UpcomingEvent = () => {
       url="book-session"
       className="border-buttom relative py-8"
     >
-      <div className="Upcoming-section relative grid w-full items-start justify-start rounded-xl bg-primary p-8 text-white md:grid-cols-2 md:gap-8">
+      <motion.div
+        initial={{ y: "100%", opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="Upcoming-section relative grid w-full items-start justify-start rounded-xl bg-primary p-8 text-white md:grid-cols-2 md:gap-8"
+      >
         <div className="absolute left-1/2 top-1/2 z-0 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
           <Image
             src={"/assets/acc/title-cover-simple.svg"}
@@ -73,7 +80,7 @@ const UpcomingEvent = () => {
         <div className="hidden h-[300px] md:inline-block xl:h-[400px]">
           <SliderProgram data={GromPatrolImage} />
         </div>
-      </div>
+      </motion.div>
     </ContainerContent>
   );
 };
