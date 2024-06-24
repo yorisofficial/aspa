@@ -8,12 +8,11 @@ import BlogSection from "./Components/home/news/BlogSection";
 
 export default function Home() {
   return (
-    <main className="h-full min-h-screen">
+    <main className="h-full w-full">
       <HeroSection />
-      <div className="content-body px-4 md:px-8 xl:px-0">
+      <div className="content-body relative px-4 md:px-8 xl:px-0">
         <OurProgram />
         <OurService title="Our Services" />
-        <Testimonial />
         <UpcomingEvent />
         <BlogSection />
         <OurProfessional />

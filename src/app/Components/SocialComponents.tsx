@@ -24,7 +24,7 @@ const SocialComponents = () => {
   ];
   return (
     <>
-      <div className="flex  items-center gap-4">
+      <div className="flex flex-col items-center gap-4 md:flex-row">
         {social.map((item) => (
           <div key={item.id}>
             <Link

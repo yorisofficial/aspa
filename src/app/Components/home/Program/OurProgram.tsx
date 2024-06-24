@@ -10,7 +10,7 @@ const OurProgram = () => {
     <ContainerContent url="/program" className="border-buttom py-8">
       <div className="relative h-full w-full xl:max-w-5xl">
         <Image
-          src={"/assets/hero-img-1.png"}
+          src={"/assets/hero-img-1.webp"}
           width={1500}
           height={1500}
           priority={false}
