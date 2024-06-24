@@ -23,9 +23,9 @@ const SlideTeam = () => {
     <div className="list-coach h-full w-full">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={32}
+        spaceBetween={16}
         loop={true}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 8000 }}
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -39,9 +39,9 @@ const SlideTeam = () => {
         }}
         className="list-coach mySwiper h-full w-full"
       >
-        {data.map((item) => (
+        {data.map((item, index) => (
           <SwiperSlide
-            key={item.id}
+            key={index}
             className="item-coach group h-full w-full md:w-fit"
           >
             <Link
@@ -51,14 +51,10 @@ const SlideTeam = () => {
               <div className="absolute right-2 top-2 z-10 text-white">
                 <ArrowUpRight size={32} />
               </div>
-              <div className="relative">
-                <Image
-                  src={item.profile}
-                  width={1000}
-                  height={1000}
-                  alt=".."
-                  className="h-full min-h-[400px] w-full rounded-xl object-cover duration-500 group-hover:scale-110"
-                />
+              <div
+                className="relative min-h-[400px] w-full rounded-xl bg-cover bg-center bg-no-repeat duration-500 group-hover:scale-110"
+                style={{ backgroundImage: `url(${item.profile})` }}
+              >
                 <div className="absolute bottom-4 left-4 text-white">
                   <h1 className="text-xl font-black">{item.full_name}</h1>
                   <p>{item.title}</p>

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../Button";
@@ -10,19 +10,14 @@ import ContainerContent from "../../Container";
 const HeroSection = () => {
   return (
     <div className="mx-auto flex h-full min-h-screen w-full items-center justify-center bg-brand px-4 text-white">
-      <ContainerContent url="hero" className="flex flex-col gap-6 xl:flex-row">
-        <div className="h-full md:mt-0 xl:order-last xl:h-fit">
-          <iframe
-            src="https://www.youtube.com/embed/OkQvr9QW86w?si=jb84mee4Zjkz9P_l"
-            title="YouTube video player"
-            allow="autoplay"
-            aria-hidden="true"
-            allowFullScreen={true}
-            className="aspect-video h-[300px] w-full rounded-xl xl:h-[400px]"
-            loading="lazy"
-          ></iframe>
-        </div>
-        <div className="flex w-full flex-col items-start justify-start gap-8 text-start md:-mt-0">
+      <ContainerContent
+        url="hero"
+        className="grid h-full grid-cols-1 gap-8 xl:grid-cols-2"
+      >
+        <Suspense>
+          <YoutubeVideo />
+        </Suspense>
+        <div className="flex w-full flex-col items-start justify-start gap-8 text-start">
           <motion.div
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -38,7 +33,7 @@ const HeroSection = () => {
               className="h-fit w-40 object-contain xl:w-80"
             />
           </motion.div>
-          <div className="flex h-full w-full flex-col items-center justify-center text-center">
+          <div className="flex h-[300px] w-full flex-col items-center justify-center text-center">
             <motion.div
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
