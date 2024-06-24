@@ -13,6 +13,14 @@ const SocialComponents = () => {
       icon: <InstagramLogo size={28} />,
       iconFill: <InstagramLogo weight="fill" size={28} />,
     },
+    {
+      id: 2,
+      title: "ASPA Youtube",
+      username: "AsianSurfPerformanceAcademy",
+      url: "http://www.youtube.com/@AsianSurfPerformanceAcademy",
+      icon: <YoutubeLogo size={28} />,
+      iconFill: <YoutubeLogo weight="fill" size={28} />,
+    },
   ];
   return (
     <>
