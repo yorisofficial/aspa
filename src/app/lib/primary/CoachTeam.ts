@@ -257,8 +257,16 @@ export const SurfTeam = [
     ],
     achievement: [
       {
-        title:
-          "Pro Surfer: First Indonesian surfer to qualify for the World Surf League (WSL)",
+        title: "1st Place Gold Coast Pro Burleigh Head",
+      },
+      {
+        title: "Gold Medal 2019 SEA GAMES",
+      },
+      {
+        title: "Indonesia National Surfing team",
+      },
+      {
+        title: "Qualified for 2019 - 2022 Olympics Qualifications",
       },
     ],
   },
