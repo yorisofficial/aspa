@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { GromPatrol } from "@/app/lib/events/grompatrol";
 import SliderProgram from "../Program/SliderProgram";
-import { Island } from "@phosphor-icons/react";
 
 export const GromPatrolImage = [
   {

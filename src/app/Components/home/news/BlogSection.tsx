@@ -71,12 +71,8 @@ const BlogSection = async () => {
           </div>
           <div className="">
             {data.slice(1, 5).map((item: Props) => (
-              <>
-                <Link
-                  href={`/blog/${item.id}`}
-                  key={item.id}
-                  className="w-full"
-                >
+              <div key={item.id}>
+                <Link href={`/blog/${item.id}`} className="w-full">
                   <div className="group relative flex w-full items-start justify-between py-2">
                     <div className="pr-8">
                       <h1 className="text-sm underline-offset-4 group-hover:underline xl:text-base">
@@ -89,7 +85,7 @@ const BlogSection = async () => {
                     />
                   </div>
                 </Link>
-              </>
+              </div>
             ))}
           </div>
         </div>

@@ -7,9 +7,12 @@ const YoutubeVideo = () => {
       <iframe
         src="https://www.youtube.com/embed/wMqsr1sa2es?si=lnKOjzqvJKyv_eOh"
         title="YouTube video player"
-        className="h-[300px] w-full rounded-xl xl:h-[400px] xl:min-w-[500px]"
+        height={400}
+        width={720}
+        className="aspect-video h-[300px] w-full self-stretch rounded-xl md:min-h-96 xl:h-full xl:w-[500px]"
         loading="lazy"
         allowFullScreen={true}
+        aria-hidden={true}
       ></iframe>
     </>
   );

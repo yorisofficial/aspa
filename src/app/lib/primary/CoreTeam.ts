@@ -15,19 +15,22 @@ export const CoreTeam = [
     experience: "+15 years coach",
     achievement: [
       {
-        title: "2024 Junior National Coach, ISA World Championship Junior El Salvador",
+        title:
+          "2024 Junior National Coach, ISA World Championship Junior El Salvador",
       },
       {
         title: "2021 National Coach, Olympic Tokyo",
       },
       {
-        title: "2021 National Coach, Olympic Qualification ISA World Championship ElSalvador",
+        title:
+          "2021 National Coach, Olympic Qualification ISA World Championship ElSalvador",
       },
       {
         title: "2017 National Coach, Sea Games Manila",
       },
       {
-        title: "2010 Junior National Coach, ISA World Junior Championship New Zealand",
+        title:
+          "2010 Junior National Coach, ISA World Junior Championship New Zealand",
       },
       {
         title: "2018 Quiksilver Uluwatu Challenge Champion",
@@ -59,7 +62,8 @@ export const CoreTeam = [
         title: "2022 Master's Degree in Digital Marketing",
       },
       {
-        title: "2021 Bachelor in Business Administration & Management + Digital Business Skills",
+        title:
+          "2021 Bachelor in Business Administration & Management + Digital Business Skills",
       },
       {
         title: "2018 Surf Instructor",
@@ -87,8 +91,39 @@ export const CoreTeam = [
     experience: "+5 years coach",
     achievement: [
       {
-        title: "",
+        title: "2024 National Coach, Olympic Paris  ",
+      },
+      {
+        title: "2024 National Coach, Olympic Qualification ISA Puerto Rico",
+      },
+      {
+        title:
+          "2023 National Coach, Olympic Qualification ISA Huntington Beach",
+      },
+      {
+        title: "2021 National Coach, Olympic Qualification ISA El Salvador",
+      },
+      {
+        title: "2019 National Coach, Sea Games Manila",
+      },
+      {
+        title: "2018 National Coach, Olympic Qualification Miyazaki, Japan",
+      },
+      {
+        title: "2017 National Coach, Olympic Qualification Tahara, Japan",
+      },
+      {
+        title: "Rip Curl Team Manager (2012-2018)",
+      },
+      {
+        title: "Reef Team Rider (2008-2010)",
+      },
+      {
+        title: "Quiksilver Team Rider (2000-2008)",
+      },
+      {
+        title: "Champion Rip Curl GS Keramas 2004",
       },
     ],
   },
-]
+];
