@@ -3,44 +3,32 @@ import ContainerContent from "@/app/Components/Container";
 import Image from "next/image";
 import React from "react";
 import HeadingText from "@/app/Components/HeadingText";
+import VideoComponent from "./components/VideoComponent";
 
 const AcademyPage = () => {
-  const ImageAcademy = {
-    srcImage_1: "/assets/academy/aspa-academy-1.webp",
-    srcImage_2: "/assets/academy/aspa-academy-2.webp",
-    srcImage_3: "/assets/academy/aspa-academy-3.webp",
-  };
+  const ImageAcademy = [
+    { srcImage: "/assets/academy/aspa-academy-1.webp" },
+    { srcImage: "/assets/academy/aspa-academy-2.webp" },
+    { srcImage: "/assets/academy/aspa-academy-3.webp" },
+  ];
   return (
     <ContainerContent url="/academy" className="min-h-screen w-full">
       <BackButton url="/">Back to main</BackButton>
-      <div className="image-group my-8 flex w-full flex-col gap-4 xl:h-[400px] xl:flex-row">
-        <div className="h-full w-full">
-          <Image
-            src={ImageAcademy.srcImage_1}
-            alt="image-asset-academy"
-            width={1500}
-            height={1500}
-            priority={false}
-            className="xl:min-w-3/4 h-[300px] w-full rounded-xl object-cover xl:h-[400px]"
-          />
-        </div>
-        <div className="small-img grid h-full grid-cols-2 gap-4 xl:grid-cols-1">
-          <Image
-            src={ImageAcademy.srcImage_2}
-            alt="image-asset-academy"
-            width={1500}
-            height={1500}
-            priority={false}
-            className="h-full rounded-xl object-cover xl:w-[250px]"
-          />
-          <Image
-            src={ImageAcademy.srcImage_3}
-            alt="image-asset-academy"
-            width={1500}
-            height={1500}
-            priority={false}
-            className="h-full rounded-xl object-cover xl:w-[250px]"
-          />
+      <div className="flex h-fit w-full flex-col gap-4 py-4">
+        <VideoComponent />
+        <div className="grid w-full grid-cols-3 gap-4">
+          {ImageAcademy?.map((item, index) => (
+            <div key={index} className="w-full">
+              <Image
+                src={item.srcImage}
+                alt="ASPA Logo"
+                width={1000}
+                height={1000}
+                priority
+                className="rounded-xl"
+              />
+            </div>
+          ))}
         </div>
       </div>
       <div className="content-about-us">
