@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 
 const ItemBlog = ({ data, index }: { data: any; index: number }) => {
   const item = data;
+  const url = item.title.rendered.replaceAll(" ", "-").toLowerCase();
+
   return (
     <>
       <motion.div
@@ -15,7 +17,7 @@ const ItemBlog = ({ data, index }: { data: any; index: number }) => {
         viewport={{ once: true }}
         key={item.id}
       >
-        <Link href={`/blog/${item.id}`} className="w-full">
+        <Link href={`/blog/${item.id}/${url}`} className="w-full">
           <div className="group relative flex w-full items-start justify-between py-2">
             <div className="pr-8">
               <h1 className="text-sm underline-offset-4 group-hover:underline xl:text-base">

@@ -26,6 +26,7 @@ const SlideTeam = () => {
         spaceBetween={16}
         loop={true}
         autoplay={{ delay: 8000 }}
+        slidesPerView={1}
         breakpoints={{
           640: {
             slidesPerView: 1,
