@@ -28,8 +28,11 @@ const YoutubeVideo = () => {
             width={500}
             height={500}
             alt="ASPA Training session"
-            priority={false}
-            className="z-0 h-[250px] w-full rounded-xl object-cover xl:w-full"
+            priority
+            aria-hidden={true}
+            className="z-0 min-h-[250px] w-full rounded-xl object-cover"
+            placeholder="blur"
+            blurDataURL="/assets/hero-img-1.webp"
           />
           <PlayCircle
             size={64}

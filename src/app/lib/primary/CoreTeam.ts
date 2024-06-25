@@ -6,7 +6,7 @@ export const CoreTeam = [
     title: "ASPA Director",
     level: "ISA Lv1",
     location: "Bali",
-    profile: "/assets/team/tipi-jabrik.png",
+    profile: "/assets/team/tipi-jabrik.webp",
     quotes:
       "Surfing development has been a significant part of my professional life. I was a professional surfer throughout my life, traveling around the globe and competing since a young age. In 2001, I contributed to the development of surfing by creating the Indonesian Surfing Championship. This initiative evolved into the Asian Surfing Championship in 2008, with our company accelerating the development of surfing in Indonesia and beyond through the ASC since 2004. Additionally, I have been involved in youth movement by creating the Grom Patrol surf series since 2019. I also played a role in helping Indonesia secure gold medals in the Sea Games in Manila and assisted the first Indonesian surfer to qualify for the Tokyo Olympics.With all this experience, ASPA will be the channel to help every potential athlete achieve their goals by providing guidance and strategy.",
     age: 1977,
@@ -49,7 +49,7 @@ export const CoreTeam = [
     nickname: "Juan",
     age: 1999,
     level: "",
-    profile: "/assets/team/juan.png",
+    profile: "/assets/team/juan.webp",
     location: "Bali",
     quotes:
       "Surfing has always been a significant part of my life. I started surfing as a child when my father taught me how to ride the waves. Since then, I have been traveling and surfing all over the world. In 2015, I began competing and training in the Basque Country, Spain, and across Europe. After several years of competition, I decided to focus on my studies and pursue a professional career while working as a surf instructor. Upon completing my studies, I decided to travel to Indonesia and Australia to surf, work, and gain experience. I am now part of the Asian Surf Cooperative and serve as the Manager of ASPA, a surf performance academy that provides support and guidance to international athletes in the surfing world, helping them improve and achieve their goals.",
@@ -82,7 +82,7 @@ export const CoreTeam = [
     nickname: "Dylan",
     title: "ASPA Head coach",
     level: "",
-    profile: "/assets/team/dylan.png",
+    profile: "/assets/team/dylan.webp",
     location: "Bali",
     quotes: "",
     age: 1998,

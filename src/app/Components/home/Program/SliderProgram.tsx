@@ -21,7 +21,7 @@ const SliderProgram = ({ data }: { data: Props[] }) => {
         loop={true}
         autoplay={{ delay: 4000 }}
         grabCursor={true}
-        slidesPerView={"auto"}
+        slidesPerView={1}
         className="list-coach mySwiper h-full"
       >
         {data.map((item, index) => (

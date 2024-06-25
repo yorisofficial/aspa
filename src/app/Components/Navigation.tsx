@@ -77,7 +77,7 @@ const Navigation = () => {
         >
           <div className="brand-aspa flex w-full items-center justify-between xl:w-fit">
             <Link href={"/"}>
-              <h1 className="text-4xl font-black uppercase">ASPA</h1>
+              <h1 className="text-3xl font-black uppercase">ASPA</h1>
             </Link>
             <motion.button
               id="toggle-menu"

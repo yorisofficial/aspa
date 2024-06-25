@@ -14,9 +14,7 @@ const HeroSection = () => {
         url="hero"
         className="grid h-full grid-cols-1 gap-8 xl:grid-cols-2"
       >
-        <Suspense>
-          <YoutubeVideo />
-        </Suspense>
+        <YoutubeVideo />
         <div className="flex w-full flex-col items-start justify-start gap-8 text-start">
           <motion.div
             initial={{ y: "100%", opacity: 0 }}
@@ -30,6 +28,7 @@ const HeroSection = () => {
               height={500}
               alt="ASPA Logo"
               priority={false}
+              quality={75}
               className="h-fit w-40 object-contain xl:w-80"
             />
           </motion.div>

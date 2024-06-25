@@ -4,6 +4,7 @@ import FooterPage from "./Components/Footer";
 import localFont from "next/font/local";
 import ButtonUp from "./Components/ButtonUp";
 import "./globals.css";
+import Head from "next/head";
 
 const satoshi = localFont({
   src: [
