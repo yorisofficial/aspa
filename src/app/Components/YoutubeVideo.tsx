@@ -21,7 +21,7 @@ const YoutubeVideo = () => {
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="play video intro ASPA"
-          className="h-[250px] w-full rounded-full xl:h-full"
+          className="h-[250px] w-full rounded-xl md:h-full"
         >
           <Image
             src={"/assets/hero-img-1.webp"}

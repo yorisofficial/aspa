@@ -1,10 +1,5 @@
 "use client";
-import {
-  InstagramLogo,
-  WhatsappLogo,
-  XLogo,
-  YoutubeLogo,
-} from "@phosphor-icons/react";
+import { WhatsappLogo } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -12,7 +7,7 @@ import { Support } from "../lib/Support";
 import SocialComponents from "./SocialComponents";
 
 const FooterPage = () => {
-  const phone = Support[0].title;
+  const phone = Support[0].url;
   const postCode = Support[1].title;
   const address = Support[2].title;
   const copyright = Support[3].title;
@@ -31,7 +26,7 @@ const FooterPage = () => {
         <address>
           {address} {postCode}
         </address>
-        <span>Tel : {phone}</span>
+        <span>Tel : {Support[0].title}</span>
       </div>
       <div className="cta-whatsapp">
         <Link
