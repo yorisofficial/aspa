@@ -7,6 +7,7 @@ const SocialComponents = () => {
   const social = [
     {
       id: 1,
+      platform: "Instagram",
       title: "ASPA instagram",
       username: "aspa_surfacademy",
       url: "https://instagram.com/aspa_surfacademy",
@@ -15,6 +16,7 @@ const SocialComponents = () => {
     },
     {
       id: 2,
+      platform: "Youtube",
       title: "ASPA Youtube",
       username: "AsianSurfPerformanceAcademy",
       url: "http://www.youtube.com/@AsianSurfPerformanceAcademy",
@@ -24,7 +26,7 @@ const SocialComponents = () => {
   ];
   return (
     <>
-      <div className="flex flex-col items-center gap-4 md:flex-row">
+      <div className="mt-2 flex items-center gap-4">
         {social.map((item) => (
           <div key={item.id}>
             <Link
@@ -39,7 +41,7 @@ const SocialComponents = () => {
               <span className="hidden group-hover:inline-block">
                 {item.iconFill}
               </span>
-              <h1 className="">{item.username}</h1>
+              <h1 className="">{item.platform}</h1>
             </Link>
           </div>
         ))}

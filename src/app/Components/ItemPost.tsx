@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,10 +15,12 @@ interface Props {
 }
 
 const ItemPost = ({ post }: { post: Props }) => {
+  const url = post.title.rendered.replaceAll(" ", "-").toLowerCase();
+
   return (
     <>
       <Link
-        href={`/blog/${post.id}`}
+        href={`/blog/${post.id}/${url}`}
         className="card group flex h-full flex-col items-start justify-between rounded-xl border-2 border-bordersolid bg-white p-4 duration-500 hover:scale-105 hover:rounded-xl hover:drop-shadow-xl"
       >
         <div className="">

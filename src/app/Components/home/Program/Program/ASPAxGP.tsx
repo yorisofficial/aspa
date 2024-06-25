@@ -46,6 +46,7 @@ const ASPAxGP = () => {
               <h1 className="text-3xl font-black text-brand">
                 {GromPatrol.price}
               </h1>
+              <span>{GromPatrol.details}</span>
             </div>
             <div className="flex w-full items-center gap-6">
               <ButtonBooking invert={false} data={GromPatrol.url} />
@@ -54,7 +55,7 @@ const ASPAxGP = () => {
           </div>
         </div>
       </div>
-      <OurService title="GET MORE BENEFIT" />
+      <OurService title="Our Services" />
     </>
   );
 };
