@@ -6,9 +6,9 @@ import HeadingText from "@/app/Components/HeadingText";
 
 const AcademyPage = () => {
   const ImageAcademy = {
-    srcImage_1: "/assets/academy/aspa-academy-1.png",
-    srcImage_2: "/assets/academy/aspa-academy-2.png",
-    srcImage_3: "/assets/academy/aspa-academy-3.png",
+    srcImage_1: "/assets/academy/aspa-academy-1.webp",
+    srcImage_2: "/assets/academy/aspa-academy-2.webp",
+    srcImage_3: "/assets/academy/aspa-academy-3.webp",
   };
   return (
     <ContainerContent url="/academy" className="min-h-screen w-full">
