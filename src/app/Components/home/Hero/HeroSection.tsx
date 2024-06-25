@@ -3,10 +3,9 @@ import React, { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../Button";
-import YoutubeVideo from "../../YoutubeVideo";
 import { motion } from "framer-motion";
 import ContainerContent from "../../Container";
-import VideoComponent from "@/app/(page)/academy/components/VideoComponent";
+import VideoComponent from "../../VideoComponent";
 
 const HeroSection = () => {
   return (

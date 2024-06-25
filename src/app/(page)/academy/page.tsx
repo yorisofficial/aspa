@@ -3,7 +3,7 @@ import ContainerContent from "@/app/Components/Container";
 import Image from "next/image";
 import React from "react";
 import HeadingText from "@/app/Components/HeadingText";
-import VideoComponent from "./components/VideoComponent";
+import VideoComponent from "../../Components/VideoComponent";
 
 const AcademyPage = () => {
   const ImageAcademy = [
