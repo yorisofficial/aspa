@@ -1,9 +1,6 @@
 import BackButton from "@/app/Components/BackButton";
 import ContainerContent from "@/app/Components/Container";
 import ItemPost from "@/app/Components/ItemPost";
-import next from "next";
-import Image from "next/image";
-import Link from "next/link";
 import React, { Suspense } from "react";
 
 async function getData() {

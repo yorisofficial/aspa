@@ -29,8 +29,9 @@ async function getData(id: string) {
   return res.json();
 }
 
-const BlogPage = async ({ params }: { params: { id: string } }) => {
-  const data = await getData(params.id);
+const BlogPage = async ({ params }: { params: { slug: string } }) => {
+  const data = await getData(params.slug[0]);
+
   if (!data) {
     redirect("/not-found.tsx");
   }
