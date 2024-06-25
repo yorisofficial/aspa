@@ -9,15 +9,15 @@ import { motion } from "framer-motion";
 
 export const GromPatrolImage = [
   {
-    src: "/assets/academy/aspa-academy-1.png",
+    src: "/assets/academy/aspa-academy-1.webp",
     alt: "image-asset-program",
   },
   {
-    src: "/assets/academy/aspa-academy-2.png",
+    src: "/assets/academy/aspa-academy-2.webp",
     alt: "image-asset-program",
   },
   {
-    src: "/assets/academy/aspa-academy-3.png",
+    src: "/assets/academy/aspa-academy-3.webp",
     alt: "image-asset-program",
   },
 ];
