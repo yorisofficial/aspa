@@ -19,27 +19,7 @@ async function getData() {
 const LatestBlog = async () => {
   const data = await getData();
   const latestBlog = data[0];
-
-  const getInfoDate = latestBlog.date;
-  const getFullYear = getInfoDate.slice(0, 4);
-  const getMonth = getInfoDate.slice(5, 7);
-  const getDate = getInfoDate.slice(8, 10);
-  const months = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
-  const getNameOfMonth = months[parseInt(getMonth) - 1];
-  const datePost = `${getNameOfMonth} ${getDate}, ${getFullYear}`;
+  const url = latestBlog.title.rendered.replaceAll(" ", "-").toLowerCase();
 
   return (
     <ContainerContent
@@ -80,7 +60,7 @@ const LatestBlog = async () => {
             </h1>
           </div>
           <div className="mt-4 flex w-full items-center justify-start">
-            <Link href={`/blog/${latestBlog.id}`} className="">
+            <Link href={`/blog/${latestBlog.id}/${url}`} className="">
               <Button variant="invert" label="read latest post">
                 Read post
               </Button>

@@ -31,11 +31,12 @@ interface Props {
 const BlogSection = async () => {
   const data = await getData();
   const latestBlog = data[0];
+  const url = latestBlog.title.rendered.replaceAll(" ", "-").toLowerCase();
 
   return (
     <ContainerContent url="/blog" className="border-buttom h-full w-full py-8">
       <div className="blog-content grid grid-cols-1 items-start justify-start gap-4 xl:grid-cols-2 xl:gap-8">
-        <Link href={`/blog/${latestBlog.id}`} className="group">
+        <Link href={`/blog/${latestBlog.id}/${url}`} className="group">
           <div className="latest-post flex w-full flex-col gap-3 py-8 xl:py-0">
             <div className="h-full w-full overflow-hidden rounded-xl ">
               <Image
