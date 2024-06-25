@@ -1,4 +1,4 @@
-import type {Config} from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
@@ -12,22 +12,26 @@ const config = {
   theme: {
     colors: {
       primary: "#18181B",
-      white: "#ffffff",
+      white: "#f8f7f4",
+      foreground: "#ffffff",
       black: "#000000",
       brand: "#07529E",
-      bordersolid: "#f4f4f4",
+      bordersolid: "#e5e7eb",
       red: "#FF0000",
     },
     container: {},
     extend: {
+      fontFamily: {
+        satoshi: ["var(--font-satoshi)"],
+      },
       keyframes: {
         "accordion-down": {
-          from: {height: "0"},
-          to: {height: "var(--radix-accordion-content-height)"},
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {height: "var(--radix-accordion-content-height)"},
-          to: {height: "0"},
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
@@ -36,7 +40,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+} satisfies Config;
 
-export default config
+export default config;

@@ -1,37 +1,63 @@
-"use client"
-import React from "react"
-import Button from "./Button"
-import {useRouter} from "next/navigation"
+"use client";
+import Link from "next/link";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+type Props = {
+  id: number;
+  title: string;
+  at_date: string;
+  url: string;
+};
 
 const ButtonBooking = ({
-  title,
-  disable,
-  variant,
-  url,
+  data,
+  invert,
 }: {
-  title: string
-  disable: boolean
-  variant: any
-  url: string
+  data: Props[];
+  invert: boolean;
 }) => {
-  const router = useRouter()
-  const handleBooking = () => {
-    router.push(url)
-  }
   return (
     <>
-      {url && (
-        <Button
-          onClick={handleBooking}
-          label="Book now"
-          variant={variant}
-          className={disable ? "cursor-not-allowed" : ""}
-        >
-          {title}
-        </Button>
-      )}
+      <div className="relative">
+        <DropdownMenu>
+          <DropdownMenuTrigger
+            className={`relative rounded-xl px-6 py-3 font-black ${invert ? "bg-white text-primary" : "bg-primary text-white"}`}
+          >
+            Book now
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="mt-4">
+            <DropdownMenuLabel className="text-2xl">
+              Select Session
+            </DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            {data.map((item) => (
+              <DropdownMenuItem key={item.id} className="px-6">
+                <Link
+                  target="_blank"
+                  key={item.id}
+                  href={item.url}
+                  className="group py-2"
+                >
+                  <span className="font-black underline-offset-4 group-hover:underline">
+                    #{item.title}
+                  </span>
+                  <br />{" "}
+                  <span className="text-sm">Start at : {item.at_date}</span>
+                </Link>
+              </DropdownMenuItem>
+            ))}
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default ButtonBooking
+export default ButtonBooking;

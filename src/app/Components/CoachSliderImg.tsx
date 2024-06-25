@@ -27,11 +27,14 @@ const CoachSliderImg = ({data}: {data: Props[]}) => {
         className="list-coach mySwiper h-full w-full"
       >
         {data.map((item, index) => (
-          <SwiperSlide key={index} className="item-coach h-[400px] w-[400px] xl:w-full">
+          <SwiperSlide
+            key={index}
+            className="item-coach h-[400px] w-[400px] xl:h-[500px] xl:w-full"
+          >
             <Image
               src={item.src}
-              height={1000}
-              width={1000}
+              height={1500}
+              width={1500}
               priority={false}
               quality={100}
               alt={item.title}

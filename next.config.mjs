@@ -1,24 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/academy",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/program",
-        destination: "/",
-        permanent: true,
-      },
-      {
-        source: "/team",
-        destination: "/",
-        permanent: true,
-      },
-    ]
-  },
   images: {
     remotePatterns: [
       {
@@ -26,8 +7,19 @@ const nextConfig = {
         hostname: "via.placeholder.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "asiansurf.co",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "asiansurf.co",
+        port: "",
+        pathname: "/wp-content/uploads/**",
+      },
     ],
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;
