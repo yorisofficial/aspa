@@ -1,6 +1,7 @@
 export const Support = [
   {
     title: "+34 662495482",
+    url: "34662495482",
     description: "Phone",
     message: "Hallo",
   },
@@ -25,4 +26,4 @@ export const Support = [
     title: "support@asiansurfacademy.com",
     description: "Email-support",
   },
-]
+];

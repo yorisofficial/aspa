@@ -77,7 +77,15 @@ const Navigation = () => {
         >
           <div className="brand-aspa flex w-full items-center justify-between xl:w-fit">
             <Link href={"/"}>
-              <h1 className="text-3xl font-black uppercase">ASPA</h1>
+              <Image
+                src={"/brand/ASPA-dark.svg"}
+                alt="ASPA Brand"
+                width={300}
+                height={300}
+                quality={75}
+                priority={true}
+                className="h-full w-40 object-fill"
+              />
             </Link>
             <motion.button
               id="toggle-menu"

@@ -3,9 +3,9 @@ import React, { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "../../Button";
-import YoutubeVideo from "../../YoutubeVideo";
 import { motion } from "framer-motion";
 import ContainerContent from "../../Container";
+import VideoComponent from "../../VideoComponent";
 
 const HeroSection = () => {
   return (
@@ -14,7 +14,6 @@ const HeroSection = () => {
         url="hero"
         className="grid h-full grid-cols-1 gap-8 xl:grid-cols-2"
       >
-        <YoutubeVideo />
         <div className="flex w-full flex-col items-start justify-start gap-8 text-start">
           <motion.div
             initial={{ y: "100%", opacity: 0 }}
@@ -74,6 +73,7 @@ const HeroSection = () => {
             </motion.div>
           </div>
         </div>
+        <VideoComponent className="" />
       </ContainerContent>
     </div>
   );

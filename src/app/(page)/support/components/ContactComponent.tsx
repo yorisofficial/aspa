@@ -1,9 +1,11 @@
-import {Support} from "@/app/lib/Support"
+import { Support } from "@/app/lib/Support";
 
 const ContactComponent = () => {
-  const phone = Support[0].title
-  const emailInfo = Support[4].title
-  const emailSupport = Support[5].title
+  const phone = Support[0].url;
+  console.log(phone);
+
+  const emailInfo = Support[4].title;
+  const emailSupport = Support[5].title;
 
   return (
     <div className="body-content space-y-2">
@@ -64,7 +66,7 @@ const ContactComponent = () => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactComponent
+export default ContactComponent;
