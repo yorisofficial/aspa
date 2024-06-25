@@ -11,9 +11,17 @@ const YoutubeVideo = () => {
 
     if (isOpen) {
       video?.play();
-    } else {
-      video?.pause();
     }
+
+    addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setIsOpen(false);
+      }
+    });
+
+    return () => {
+      video?.pause();
+    };
   }, [isOpen]);
   return (
     <div className="xl:order-last">
@@ -37,24 +45,24 @@ const YoutubeVideo = () => {
           <PlayCircle
             size={64}
             weight="fill"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 ease-in-out xl:opacity-0 xl:group-hover:opacity-100"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           />
         </button>
       </div>
       {isOpen && (
-        <div className="fixed left-0 top-0 z-50 flex h-screen w-full items-center justify-center overflow-y-hidden bg-white p-4 backdrop-blur-sm xl:p-16">
+        <div className="fixed left-0 top-0 z-50 flex h-screen w-full flex-col items-center justify-center overflow-y-hidden bg-white p-4 backdrop-blur-sm xl:p-16">
           <video
             id="video-intro"
             width="500"
             height="500"
             controls
             preload="none"
-            className="h-1/2 w-full rounded-xl"
+            className="h-1/2 w-full rounded-xl xl:h-full"
           >
             <source src="/assets/aspa-intro.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-          <div className="fixed bottom-4 left-1/2 -translate-x-1/2">
+          <div className="mt-4">
             <Button
               variant="primary"
               onClick={() => setIsOpen(!isOpen)}
