@@ -90,7 +90,7 @@ const Navigation = () => {
                 height={300}
                 quality={75}
                 priority={true}
-                className="h-full w-40 object-fill"
+                className="h-[70px] w-40 object-fill xl:h-full"
               />
             </Link>
             <motion.button
