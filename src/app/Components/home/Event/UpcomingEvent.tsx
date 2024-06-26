@@ -33,13 +33,7 @@ const UpcomingEvent = () => {
       url="book-session"
       className="border-buttom relative py-8"
     >
-      <motion.div
-        initial={{ y: "100%", opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-        className="Upcoming-section relative grid w-full items-start justify-start rounded-xl bg-primary p-8 text-white md:grid-cols-2 md:gap-8"
-      >
+      <div className="Upcoming-section relative grid w-full items-start justify-start rounded-xl bg-primary p-8 text-white md:grid-cols-2 md:gap-8">
         <div className="absolute left-1/2 top-1/2 z-0 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
           <Image
             src={"/assets/acc/title-cover-simple.svg"}
@@ -50,51 +44,24 @@ const UpcomingEvent = () => {
           />
         </div>
         <div className="details relative z-10 flex h-full flex-col items-start justify-start gap-2 text-start xl:justify-center">
-          <motion.span
-            initial={{ y: "100%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-sm font-light uppercase"
-          >
+          <span className="text-sm font-light uppercase">
             Book now and get the benefit
-          </motion.span>
-          <motion.h1
-            initial={{ y: "100%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-xl font-black text-brand xl:text-3xl"
-          >
+          </span>
+          <h1 className="text-xl font-black text-brand xl:text-3xl">
             {GromPatrol.title}
-          </motion.h1>
-          <motion.p
-            initial={{ y: "100%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            onClick={handleDescription}
+          </h1>
+          <p
             className={`w-full text-sm font-light md:text-base ${isSorted ? "" : "line-clamp-4"}`}
           >
             {GromPatrol.desc}
-          </motion.p>
-          <motion.button
-            initial={{ y: "100%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
+          </p>
+          <button
             onClick={handleDescription}
             className="mt-2 underline underline-offset-4"
           >
             {isSorted ? "Read less" : "Read more"}
-          </motion.button>
-          <motion.div
-            initial={{ y: "100%", opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="relative z-10 mt-4"
-          >
+          </button>
+          <div className="relative z-10 mt-4">
             <Link
               href={"/program"}
               aria-label="Book now"
@@ -102,12 +69,12 @@ const UpcomingEvent = () => {
             >
               Book now
             </Link>
-          </motion.div>
+          </div>
         </div>
         <div className="hidden h-[300px] md:inline-block xl:h-[400px]">
           <SliderProgram data={GromPatrolImage} />
         </div>
-      </motion.div>
+      </div>
     </ContainerContent>
   );
 };
