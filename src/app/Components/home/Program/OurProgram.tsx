@@ -13,7 +13,7 @@ const OurProgram = () => {
       <motion.div
         initial={{ y: "100%", opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2 }}
         viewport={{ once: true }}
         className="relative h-full w-full xl:max-w-5xl"
       >
@@ -25,7 +25,7 @@ const OurProgram = () => {
           alt="ASPA Logo"
           className="hidden h-[440px] w-full rounded-xl object-cover md:inline-block"
         />
-        <div className="program-card relative z-10 space-y-4 rounded-xl bg-primary p-8 text-white md:absolute md:left-2 md:top-1/2 md:w-[450px] md:-translate-y-1/2">
+        <motion.div className="program-card inline-block space-y-4 rounded-lg bg-primary p-6 text-white xl:absolute xl:left-6 xl:top-1/2 xl:w-1/2 xl:-translate-y-1/2 xl:p-8">
           <div className="absolute bottom-0 right-0 -z-10">
             <Image
               src={"/assets/acc/title-cover-simple.svg"}
@@ -35,12 +35,24 @@ const OurProgram = () => {
               className="h-[300px] w-[300px] opacity-40"
             />
           </div>
-          <div className="header">
+          <motion.div
+            initial={{ y: "100%", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="header"
+          >
             <h1 className="text-base font-bold uppercase xl:text-xl">
               ASPA x GROM PATROL 2024
             </h1>
-          </div>
-          <p className="w-full text-justify text-sm font-light md:text-base">
+          </motion.div>
+          <motion.p
+            initial={{ y: "100%", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="w-full text-justify text-sm font-light md:text-base"
+          >
             ASPA has launched the inaugural program for Tipi Jabrik&apos;s Grom
             Patrol 2024. The ASPA Grom Patrol Camp will provide a 5-day training
             camp before and during the competition. Located at Mamaka Hotel,
@@ -49,8 +61,14 @@ const OurProgram = () => {
             offers personalized attention to enhance their surfing skills and
             develop professional qualities such as motivation, teamwork,
             commitment, and responsibility.
-          </p>
-          <div className="flex w-full flex-shrink-0 items-center gap-4">
+          </motion.p>
+          <motion.div
+            initial={{ y: "100%", opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            viewport={{ once: true }}
+            className="flex w-full flex-shrink-0 items-center gap-4"
+          >
             <ButtonBooking invert={true} data={urlBooking} />
             <Link
               href={"/program"}
@@ -58,8 +76,8 @@ const OurProgram = () => {
             >
               About the program
             </Link>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </motion.div>
     </ContainerContent>
   );

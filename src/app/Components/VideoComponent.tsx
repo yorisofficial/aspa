@@ -4,6 +4,9 @@ import React from "react";
 const VideoComponent = ({ className }: { className?: string }) => {
   return (
     <div className={`h-full w-full ${className}`}>
+      <h1 className="mb-4 inline-block text-sm font-black xl:hidden">
+        Watch the video
+      </h1>
       <iframe
         width="560"
         height="315"

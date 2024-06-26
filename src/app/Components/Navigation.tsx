@@ -4,60 +4,57 @@ import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { List, X } from "@phosphor-icons/react";
-import { AnimatePresence, motion } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
+
+export const menuNav = [
+  {
+    title: "Home",
+    base: "",
+    link: "/",
+  },
+  {
+    title: "Academy",
+    base: "academy",
+    link: "/academy",
+  },
+  {
+    title: "Our Program",
+    base: "program",
+    link: "/program",
+  },
+  {
+    title: "Blog",
+    base: "blog",
+    link: "/blog",
+  },
+  {
+    title: "Our Team",
+    base: "team",
+    link: "/team",
+  },
+];
 
 const Navigation = () => {
-  const [isShow, setShow] = useState(false);
-  const [isScroll, setScroll] = useState(false);
+  const { scrollY } = useScroll();
+  const [isShow, setShow] = useState(true);
+  const [isMenus, setMenus] = useState(false);
 
-  const menuNav = [
-    {
-      title: "Home",
-      base: "",
-      link: "/",
-    },
-    {
-      title: "Academy",
-      base: "academy",
-      link: "/academy",
-    },
-    {
-      title: "Our Program",
-      base: "program",
-      link: "/program",
-    },
-    {
-      title: "Blog",
-      base: "blog",
-      link: "/blog",
-    },
-    {
-      title: "Our Team",
-      base: "team",
-      link: "/team",
-    },
-  ];
-  const handleShow = () => {
-    setShow(!isShow);
-  };
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScroll(true);
-        setShow(false);
-      } else {
-        setScroll(false);
-        setShow(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    if (previous !== undefined && latest > previous && latest > 0) {
+      setShow(false);
+      setMenus(false);
+    } else {
+      setShow(true);
+      setMenus(false);
+    }
+  });
 
   // check pathName
   const pathName = usePathname();
@@ -65,13 +62,22 @@ const Navigation = () => {
   // get active pathName
   const activePath = pathName.split("/").slice(1, 2);
 
+  const handleShow = () => {
+    setMenus(!isMenus);
+  };
+
   return (
-    <header
-      className={`z-40 transition-all duration-500 ease-in-out ${isScroll ? "fixed left-0 top-0 w-full" : "block"}`}
+    <motion.div
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={!isShow ? "hidden" : "visible"}
+      exit="visible"
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className={`sticky left-0 top-0 z-40 w-full bg-white ${isShow ? "" : "drop-shadow-xl"}`}
     >
-      <nav
-        className={`flex w-full items-center justify-center ${isScroll && "bg-white drop-shadow-lg"}`}
-      >
+      <nav className={`flex w-full items-center justify-center`}>
         <div
           className={`nav-container relative flex w-full max-w-5xl items-center justify-between px-4 py-4 xl:px-0`}
         >
@@ -96,11 +102,11 @@ const Navigation = () => {
               onClick={handleShow}
               className="block rounded-md bg-primary p-4 text-white xl:hidden"
             >
-              {isShow ? <X size={24} /> : <List size={24} />}
+              {isMenus ? <X size={24} /> : <List size={24} />}
             </motion.button>
           </div>
           <AnimatePresence>
-            {isShow && (
+            {isMenus && (
               <motion.div
                 initial={{ x: "-100%" }}
                 animate={{ x: 0 }}
@@ -120,7 +126,7 @@ const Navigation = () => {
                       className="flex w-full flex-col items-start justify-start"
                     >
                       <Link
-                        onClick={() => setShow(false)}
+                        onClick={() => setMenus(false)}
                         href={item.link}
                         className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${activePath.includes(item.base) ? "bg-primary text-white" : ""}`}
                       >
@@ -134,7 +140,7 @@ const Navigation = () => {
                     id="toggle-menu"
                     aria-label="Button toggle menu"
                     title="toggle menu navigation"
-                    onClick={() => setShow(false)}
+                    onClick={() => setMenus(false)}
                     className="toggle-menu flex h-full min-h-screen w-full items-center justify-center"
                   ></button>
                 </div>
@@ -157,7 +163,7 @@ const Navigation = () => {
           </div>
         </div>
       </nav>
-    </header>
+    </motion.div>
   );
 };
 
