@@ -12,14 +12,13 @@ const HeroSection = () => {
     <div className="mx-auto flex h-full min-h-screen w-full items-center justify-center bg-brand px-4 text-white">
       <ContainerContent
         url="hero"
-        className="grid h-full grid-cols-1 gap-8 xl:grid-cols-2"
+        className="grid h-full grid-cols-1 items-center justify-center gap-8 xl:grid-cols-2"
       >
         <div className="flex w-full flex-col items-start justify-start gap-8 text-start">
           <motion.div
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className=""
           >
             <Image
               src={"/brand/ASPA-white.svg"}
@@ -31,7 +30,7 @@ const HeroSection = () => {
               className="h-fit w-40 object-contain xl:w-80"
             />
           </motion.div>
-          <div className="flex h-[300px] w-full flex-col items-center justify-center text-center">
+          <div className="flex h-full w-full flex-col items-center justify-center text-center">
             <motion.div
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -53,7 +52,7 @@ const HeroSection = () => {
               initial={{ y: "100%", opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="btn-cta flex w-full items-center justify-start gap-4 py-8"
+              className="btn-cta flex w-full items-center justify-start gap-4 pt-4"
             >
               <Link
                 href={"/academy"}
@@ -73,7 +72,7 @@ const HeroSection = () => {
             </motion.div>
           </div>
         </div>
-        <VideoComponent className="" />
+        <VideoComponent />
       </ContainerContent>
     </div>
   );
