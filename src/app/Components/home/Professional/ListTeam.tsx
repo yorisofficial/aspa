@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ItemTeam from "./ItemTeam";
 
 interface Props {
@@ -21,12 +21,9 @@ const ListTeam = ({
     <>
       <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         {data.map((item, index) => (
-          <ItemTeam
-            index={index}
-            key={item.id}
-            data={item}
-            categories={categories}
-          />
+          <Suspense key={item.id}>
+            <ItemTeam index={index} data={item} categories={categories} />
+          </Suspense>
         ))}
       </div>
     </>

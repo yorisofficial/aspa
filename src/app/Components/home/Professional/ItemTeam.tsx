@@ -17,13 +17,7 @@ const ItemTeam = ({
   const item = data;
 
   return (
-    <motion.div
-      initial={{ y: "100%", opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.2, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="group relative w-full rounded-md border-2 border-bordersolid bg-white transition-all duration-500 ease-in-out hover:rounded-xl hover:drop-shadow-xl xl:w-fit"
-    >
+    <div className="group relative w-full rounded-md border-2 border-bordersolid bg-white transition-all duration-500 ease-in-out hover:rounded-xl hover:drop-shadow-xl xl:w-fit">
       <Link
         key={item.id}
         href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
@@ -58,7 +52,7 @@ const ItemTeam = ({
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 };
 
