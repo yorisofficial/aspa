@@ -15,8 +15,6 @@ import { VideographerTeam } from "@/app/lib/primary/VideographerTeam";
 // import {SurfTeam} from "@/app/lib/primary/CoachTeam"
 import { SurfTeam } from "@/app/lib/primary/CoachTeam";
 import Link from "next/link";
-import NotFound from "@/app/not-found";
-import BackToBefore from "@/app/Components/BackToBefore";
 
 const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
   const getTeam = params?.slug[1]
