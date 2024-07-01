@@ -60,7 +60,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
           <h1 className="w-3/4 text-xl font-black">{data.title.rendered}</h1>
         </div>
       </div>
-      <article className="prose-a:text-blue-600 hover:prose-a:text-blue-500 prose max-w-none prose-headings:font-black prose-p:text-black prose-strong:text-primary prose-img:rounded-xl">
+      <article className="prose-a:text-blue-600 hover:prose-a:text-blue-500 container prose mx-auto max-w-3xl prose-headings:font-black prose-p:text-black prose-strong:text-primary prose-img:rounded-xl">
         <div dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
       </article>
     </ContainerContent>
