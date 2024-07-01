@@ -18,7 +18,6 @@ import Link from "next/link";
 
 const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
   const getTeam = params?.slug[1]
-    .replaceAll("%20", " ")
     .replaceAll("-", " ")
     .split(" ")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))

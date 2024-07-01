@@ -32,6 +32,7 @@ const BlogSection = async () => {
   const data = await getData();
   const latestBlog = data[0];
   const url = latestBlog.title.rendered.replaceAll(" ", "-").toLowerCase();
+  console.log(latestBlog.title);
 
   return (
     <ContainerContent url="/blog" className="border-buttom h-full w-full py-8">

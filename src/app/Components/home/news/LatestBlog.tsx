@@ -7,18 +7,21 @@ import GetDateComponent from "../../GetDateComponent";
 
 async function getData() {
   const url = process.env.ASC_PUBLIC_POST || "";
-  const res = await fetch(`${url}`);
+  const res = await fetch(`${url}/?per_page=9`, {
+    next: { revalidate: 1000 },
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
 
-  return res.json();
+  const data = await res.json();
+  return data;
 }
 
 const LatestBlog = async () => {
   const data = await getData();
-  const latestBlog = data[0];
+  const latestBlog = data;
   const url = latestBlog.title.rendered.replaceAll(" ", "-").toLowerCase();
 
   return (
