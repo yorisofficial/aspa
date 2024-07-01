@@ -502,7 +502,7 @@ export const SurfTeam = [
     title: "surf coach",
     certificated: "No ISA",
     isa: false,
-    age: 1998,
+    age: 1983,
     level: "Free Surfer",
     experience: "20 Years",
     location: "Hallway",
