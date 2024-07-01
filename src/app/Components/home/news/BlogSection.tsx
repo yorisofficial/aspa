@@ -4,12 +4,13 @@ import Image from "next/image";
 import GetDateComponent from "../../GetDateComponent";
 import Link from "next/link";
 import Button from "../../Button";
-import { ArrowRightCircle } from "lucide-react";
 import ItemBlog from "./components/ItemBlog";
 
 async function getData() {
   const url = process.env.ASC_PUBLIC_POST || "";
-  const res = await fetch(`${url}`);
+  const res = await fetch(`${url}/?per_page=5`, {
+    next: { revalidate: 500 },
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -32,7 +33,6 @@ const BlogSection = async () => {
   const data = await getData();
   const latestBlog = data[0];
   const url = latestBlog.title.rendered.replaceAll(" ", "-").toLowerCase();
-  console.log(latestBlog.title);
 
   return (
     <ContainerContent url="/blog" className="border-buttom h-full w-full py-8">

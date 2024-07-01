@@ -25,13 +25,13 @@ const ItemTeam = ({
       >
         <IconArrowDetails className="transition-all duration-500 ease-in group-hover:-translate-y-1 group-hover:translate-x-1" />
         <div className="item-core peer flex w-full items-start justify-start gap-5 rounded-xl px-4 py-6 md:w-[330px] xl:max-w-[400px]">
-          <div className="w-fit rounded-full ring-4 ring-brand">
+          <div className="h-fit w-fit flex-shrink-0 rounded-full ring-4 ring-brand">
             <Image
               src={item.profile}
               alt="prifile-picture"
               width={500}
               height={500}
-              className="h-[100px] w-[100px] rounded-full object-cover"
+              className="max-h-[100px] w-[100px] rounded-full object-cover"
             />
           </div>
           <div className="">
@@ -39,10 +39,10 @@ const ItemTeam = ({
               <span className="text-xs font-light">Full name</span>
               {item.full_name}
             </h1>
-            <h1 className="flex flex-col items-start justify-start text-base font-semibold capitalize">
+            <h2 className="flex flex-col items-start justify-start text-sm font-semibold capitalize">
               <span className="text-xs font-light">Title</span>
               {item.title}
-            </h1>
+            </h2>
             {categories.includes("coach") ? (
               <h1 className="flex flex-col items-start justify-start text-base font-semibold capitalize">
                 <span className="text-xs font-light">Location</span>
