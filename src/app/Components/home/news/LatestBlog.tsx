@@ -21,7 +21,7 @@ async function getData() {
 
 const LatestBlog = async () => {
   const data = await getData();
-  const latestBlog = data;
+  const latestBlog = data[0];
   const url = latestBlog.title.rendered.replaceAll(" ", "-").toLowerCase();
 
   return (
