@@ -48,7 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${satoshi.className} select-none bg-white`}>
+      <body className={`${satoshi.className} bg-white`}>
         <Navigation />
         {children}
         <FooterPage />
