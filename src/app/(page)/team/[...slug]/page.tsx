@@ -43,8 +43,6 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
   const detailsData = [teamCore || teamSurf || teamExpert || teamVideo];
   const filteredDetails = detailsData.filter((item) => item !== undefined);
 
-  console.log(filteredDetails);
-
   const router = useRouter();
   const handleBack = () => {
     router.back();
