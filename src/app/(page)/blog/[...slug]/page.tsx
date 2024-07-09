@@ -45,14 +45,14 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
         Back to main
       </BackButton>
       <div className="mb-8 rounded-xl border-2 p-4">
-        <div className="h-[400px] w-full">
+        <div className="h-[300px] w-full max-w-5xl md:h-full xl:w-[400px]">
           <Image
             src={data.jetpack_featured_media_url}
             height={1500}
             width={1500}
             priority={false}
             alt={data.title.rendered}
-            className="h-full w-full rounded-lg object-cover"
+            className="h-full w-[300px] rounded-lg object-cover md:w-full"
           />
         </div>
         <div className="py-4">
@@ -60,7 +60,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
           <h1 className="w-3/4 text-xl font-black">{data.title.rendered}</h1>
         </div>
       </div>
-      <article className="prose-a:text-blue-600 hover:prose-a:text-blue-500 container prose mx-auto max-w-3xl prose-headings:font-black prose-p:text-black prose-strong:text-primary prose-img:rounded-xl">
+      <article className="prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-figcaption: prose max-w-none prose-headings:font-black prose-p:text-sm prose-p:text-black prose-figure:!w-full prose-figcaption:w-full prose-figcaption:text-balance prose-strong:text-primary prose-img:w-[300px] prose-img:max-w-5xl prose-img:rounded-xl xl:prose-img:w-full">
         <div dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
       </article>
     </ContainerContent>
