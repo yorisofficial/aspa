@@ -4,6 +4,7 @@ import FooterPage from "./Components/Footer";
 import localFont from "next/font/local";
 import ButtonUp from "./Components/ButtonUp";
 import "./globals.css";
+import ScriptGoogle from "./Components/ScriptGoogle";
 
 const satoshi = localFont({
   src: [
@@ -49,6 +50,7 @@ export default function RootLayout({
         {children}
         <FooterPage />
         <ButtonUp />
+        <ScriptGoogle />
       </body>
     </html>
   );
