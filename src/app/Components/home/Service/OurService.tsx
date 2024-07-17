@@ -30,18 +30,6 @@ export const Service = [
     desc: "Judging criteria, Heat Strategy, & Support during competition",
     pathImage: "/assets/icon/reward.svg",
   },
-  {
-    id: 5,
-    title: "ACCOMMODATION",
-    desc: "Enjoy Mamaka's facilities: Room, Pool, Gym & More",
-    pathImage: "/assets/icon/bad.svg",
-  },
-  {
-    id: 6,
-    title: "MEALS",
-    desc: "Start your day with a hearty breakfast, have a delightful lunch, and end with a satisfying dinner.",
-    pathImage: "/assets/icon/food.svg",
-  },
 ];
 
 const OurService = ({ title }: { title: string }) => {

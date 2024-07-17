@@ -1,6 +1,6 @@
 export const GromPatrol = {
-  title: "ASPA x Grom Patrol Program",
-  desc: "ASPA has launched the inaugural program for Tipi Jabrik's Grom Patrol 2024. The ASPA Grom Patrol Camp will provide a 5-day training camp before and during the competition. Located at Mamaka Hotel, Kuta Beach, right in front of the competition area, this program aims to promote, support, and mentor the best young surfers. It offers personalized attention to enhance their surfing skills and develop professional qualities such as motivation, teamwork, commitment, and responsibility.",
+  title: "ASPA Rising Star Camp",
+  desc: "ASPA has launched the inaugural program for Tipi Jabrik's Grom Patrol 2024. The ASPA Rising Star Camp will provide a training camp before and during the Grom Patrol competition. This program aims to promote, support, and mentor the best young surfers. It offers personalized attention to enhance their surfing skills and develop professional qualities such as motivation, teamwork, commitment, and responsibility.",
   price: "AUD 1500",
   details: "ASPA Camp + Entry Grom Patrol",
   url: [
