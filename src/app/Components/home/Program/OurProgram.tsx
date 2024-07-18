@@ -1,11 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import Link from "next/link";
-import ButtonBooking from "../../ButtonBooking";
-import { urlBooking } from "@/app/lib/Booking";
 import ContainerContent from "../../Container";
-import { motion } from "framer-motion";
 import { GromPatrol } from "@/app/lib/events/grompatrol";
 
 const OurProgram = () => {
