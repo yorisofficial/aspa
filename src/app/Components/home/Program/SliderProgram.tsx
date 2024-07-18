@@ -14,7 +14,7 @@ interface Props {
 
 const SliderProgram = ({ data }: { data: Props[] }) => {
   return (
-    <div className="list-image h-full">
+    <div className="list-image h-[250px] md:h-[300px] xl:h-[400px]">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={32}
@@ -33,7 +33,7 @@ const SliderProgram = ({ data }: { data: Props[] }) => {
               priority={false}
               quality={100}
               alt="ASPA Image"
-              className={`h-full w-full rounded-xl object-cover duration-500`}
+              className={`h-full w-full rounded-xl  object-cover object-top duration-500 md:object-center`}
             />
           </SwiperSlide>
         ))}
