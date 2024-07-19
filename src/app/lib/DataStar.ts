@@ -2,7 +2,7 @@ export const DataStar = [
   {
     id: 1,
     full_name: "Darma Wisesa",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/aspa_profile_DARMA.jpg",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -41,7 +41,7 @@ export const DataStar = [
   {
     id: 2,
     full_name: "Gusde Junior",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/aspa_profile_GUSDE.jpg",
     country: "Indonesia",
     born: 2013,
     achievements: [
@@ -66,7 +66,7 @@ export const DataStar = [
   {
     id: 3,
     full_name: "Jhuan Nanda",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/aspa_profile_JHUAN NANDA.jpg",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -93,7 +93,7 @@ export const DataStar = [
   {
     id: 4,
     full_name: "Aditya Somiya",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/aspa_profile_ADITYA SOMIYA.jpg",
     country: "Indonesia",
     born: 2010,
     achievements: [
@@ -127,7 +127,7 @@ export const DataStar = [
   {
     id: 5,
     full_name: "Putu Yunie",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/aspa_profile_PUTU YUNIE.jpg",
     country: "Indonesia",
     born: 2008,
     achievements: [
@@ -152,7 +152,7 @@ export const DataStar = [
   {
     id: 6,
     full_name: "Hanasuri Jabrik",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/aspa_profile_SURI JABRIK.jpg",
     country: "Indonesia",
     born: 2008,
     achievements: [
@@ -191,7 +191,7 @@ export const DataStar = [
   {
     id: 7,
     full_name: "Shia Jabrik",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/aspa_profile_SHIA.jpg",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -230,7 +230,7 @@ export const DataStar = [
   {
     id: 8,
     full_name: "Raflin Wau",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/aspa_profile_RAFLIN.jpg",
     country: "Indonesia",
     born: 2007,
     achievements: [

@@ -45,7 +45,7 @@ const ASPAxGP = () => {
         </div>
       </div>
       <OurService title="Our Services" />
-      <div className="star-section flex w-full flex-col gap-5 py-8">
+      <div className="star-section border-buttom flex min-h-[60vh] w-full flex-col gap-5 py-8">
         <h1 className="text-xl font-bold uppercase text-brand">
           Our Rising Star Surfers
         </h1>
