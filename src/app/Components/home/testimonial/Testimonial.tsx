@@ -1,28 +1,43 @@
 import React from "react";
 import ContainerContent from "../../Container";
+import ListTestimonials from "./ListTestimonials";
 
 export const OurTestimonial = [
   {
     id: 1,
     full_name: "Rian",
-    quotes: "",
-    img_profile: "/assets/team/ASPA.png",
+    gp_user: "Grom Patrol #1",
+    quotes:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla dolorum, voluptatem magnam itaque culpa eveniet mollitia eligendi esse sint voluptatibus voluptate provident aspernatur alias iure non a iusto odit illum quidem.",
+    img_profile: "/assets/team/ASPA.webp",
   },
   {
-    id: 1,
+    id: 2,
     full_name: "Rian",
-    quotes: "",
-    img_profile: "/assets/team/ASPA.png",
+    gp_user: "Grom Patrol #1",
+    quotes:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla dolorum, voluptatem magnam itaque culpa eveniet mollitia eligendi esse sint voluptatibus voluptate provident aspernatur alias iure non a iusto odit illum quidem.",
+    img_profile: "/assets/team/ASPA.webp",
   },
   {
-    id: 1,
+    id: 3,
     full_name: "Rian",
-    quotes: "",
-    img_profile: "/assets/team/ASPA.png",
+    gp_user: "Grom Patrol #2",
+    quotes:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla dolorum, voluptatem magnam itaque culpa eveniet mollitia eligendi esse sint voluptatibus voluptate provident aspernatur alias iure non a iusto odit illum quidem.",
+    img_profile: "/assets/team/ASPA.webp",
+  },
+  {
+    id: 3,
+    full_name: "Rian",
+    gp_user: "Grom Patrol #2",
+    quotes:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla dolorum, voluptatem magnam itaque culpa eveniet mollitia eligendi esse sint voluptatibus voluptate provident aspernatur alias iure non a iusto odit illum quidem.",
+    img_profile: "/assets/team/ASPA.webp",
   },
 ];
 
-const Testimonial = () => {
+const TestimonialPage = () => {
   return (
     <ContainerContent
       url="/testimoni"
@@ -41,9 +56,9 @@ const Testimonial = () => {
           </p>
         </div>
       </div>
-      <h1 className="text-base font-black">Coming Soon</h1>
+      <ListTestimonials data={OurTestimonial} />
     </ContainerContent>
   );
 };
 
-export default Testimonial;
+export default TestimonialPage;

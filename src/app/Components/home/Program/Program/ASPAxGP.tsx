@@ -45,11 +45,25 @@ const ASPAxGP = () => {
         </div>
       </div>
       <OurService title="Our Services" />
-      <div className="star-section border-buttom flex min-h-[60vh] w-full flex-col gap-5 py-8">
-        <h1 className="text-xl font-bold uppercase text-brand">
-          Our Rising Star Surfers
-        </h1>
-        <SliderStar data={DataStar} />
+      <div className="star-section border-buttom flex min-h-[60vh] w-full flex-col gap-6 py-8 md:gap-8">
+        <div className="header-section space-y-3">
+          <h1 className="text-2xl font-bold uppercase text-brand">
+            rising star program
+          </h1>
+          <p className="w-full xl:w-1/2">
+            We are excited to introduce the Rising Star program, part of the
+            ASPA initiative, where we have selected 8 talented young surfers for
+            intensive training. This comprehensive program focuses on three key
+            areas: physical training to build strength and endurance, surf
+            coaching to enhance technical skills, and surf strategy to improve
+            competitive tactics. Through this holistic approach, we aim to
+            develop the next generation of surfing champions.
+          </p>
+        </div>
+        <div className="list-rising-star flex flex-col gap-6 md:gap-8">
+          <SliderStar title="aspa rising star program #1" data={DataStar} />
+          <SliderStar title="aspa rising star program #2" data={DataStar} />
+        </div>
       </div>
     </>
   );

@@ -1,34 +1,35 @@
-"use client"
-import React from "react"
-import ItemTestimonial from "./ItemTestimonial"
-import {Swiper, SwiperSlide} from "swiper/react"
-import {Autoplay, Pagination} from "swiper/modules"
+"use client";
+import React from "react";
+import ItemTestimonial from "./ItemTestimonial";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 
 interface Props {
-  id: number
-  img_profile: string
-  full_name: string
-  quotes: string
+  id: number;
+  img_profile: string;
+  gp_user: string;
+  full_name: string;
+  quotes: string;
 }
 
 // Import Swiper styles
-import "swiper/css"
-import "swiper/css/pagination"
+import "swiper/css";
+import "swiper/css/pagination";
+import ButtonSlideSwiper from "../../ButtonSlideSwiper";
 
-const ListTestimonials = ({data}: {data: Props[]}) => {
-  const dataTestimonial = data
+const ListTestimonials = ({ data }: { data: Props[] }) => {
+  const dataTestimonial = data;
   const paginationMode = {
     clickable: true,
-  }
+  };
 
   return (
     <div className="">
       <Swiper
-        modules={[Autoplay, Pagination]}
+        modules={[Autoplay]}
         spaceBetween={32}
         loop={true}
-        pagination={paginationMode}
-        autoplay={{delay: 5000}}
+        autoplay={{ delay: 5000 }}
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -47,9 +48,10 @@ const ListTestimonials = ({data}: {data: Props[]}) => {
             <ItemTestimonial data={item} />
           </SwiperSlide>
         ))}
+        <ButtonSlideSwiper />
       </Swiper>
     </div>
-  )
-}
+  );
+};
 
-export default ListTestimonials
+export default ListTestimonials;

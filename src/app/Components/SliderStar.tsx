@@ -23,14 +23,17 @@ const CountAge = (born: number) => {
   return new Date().getFullYear() - born;
 };
 
-const SliderStar = ({ data }: { data: Props[] }) => {
+const SliderStar = ({ data, title }: { data: Props[]; title: string }) => {
   return (
     <div className="">
+      <div className="pb-4">
+        <h1 className="text-base font-bold uppercase">{title}</h1>
+      </div>
       <Swiper
         modules={[Autoplay]}
         spaceBetween={32}
         loop={true}
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: 8000 }}
         grabCursor={true}
         breakpoints={{
           640: {

@@ -304,3 +304,23 @@ export const DataStar = [
     instagram_profile: "",
   },
 ];
+
+export const DataStar2 = [
+  {
+    id: 1,
+    full_name: "",
+    img_profile: "",
+    country: "Indonesia",
+    born: 0,
+    achievements: [
+      {
+        title: "",
+      },
+    ],
+    sponsors: [
+      {
+        title: "",
+      },
+    ],
+  },
+];
