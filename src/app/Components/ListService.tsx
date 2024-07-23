@@ -12,13 +12,13 @@ interface Props {
 
 const ListService = ({ data }: { data: Props[] }) => {
   return (
-    <Suspense fallback={<Loading />}>
-      <div className="list-service grid w-full grid-cols-2 gap-4 xl:grid-cols-2 xl:gap-8">
-        {data.map((item) => (
-          <ItemService key={item.id} dataItem={item} />
-        ))}
-      </div>
-    </Suspense>
+    <div className="list-service grid w-full grid-cols-2 gap-4 xl:gap-8">
+      {data.map((item) => (
+        <Suspense key={item.id} fallback={<Loading />}>
+          <ItemService dataItem={item} />
+        </Suspense>
+      ))}
+    </div>
   );
 };
 
