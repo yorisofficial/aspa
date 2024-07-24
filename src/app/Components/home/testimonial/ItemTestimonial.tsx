@@ -38,7 +38,7 @@ const ItemTestimonial = ({ data }: { data: Props }) => {
             <Image
               src={data.img_profile}
               alt="ASPA"
-              width={500}
+              width={1200}
               height={500}
               priority
               quality={75}

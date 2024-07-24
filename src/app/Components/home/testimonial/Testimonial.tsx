@@ -1,41 +1,7 @@
 import React from "react";
 import ContainerContent from "../../Container";
 import ListTestimonials from "./ListTestimonials";
-
-export const OurTestimonial = [
-  {
-    id: 1,
-    full_name: "Rian",
-    gp_user: "Grom Patrol #1",
-    quotes:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla dolorum, voluptatem magnam itaque culpa eveniet mollitia eligendi esse sint voluptatibus voluptate provident aspernatur alias iure non a iusto odit illum quidem.",
-    img_profile: "/assets/team/ASPA.webp",
-  },
-  {
-    id: 2,
-    full_name: "Rian",
-    gp_user: "Grom Patrol #1",
-    quotes:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla dolorum, voluptatem magnam itaque culpa eveniet mollitia eligendi esse sint voluptatibus voluptate provident aspernatur alias iure non a iusto odit illum quidem.",
-    img_profile: "/assets/team/ASPA.webp",
-  },
-  {
-    id: 3,
-    full_name: "Rian",
-    gp_user: "Grom Patrol #2",
-    quotes:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla dolorum, voluptatem magnam itaque culpa eveniet mollitia eligendi esse sint voluptatibus voluptate provident aspernatur alias iure non a iusto odit illum quidem.",
-    img_profile: "/assets/team/ASPA.webp",
-  },
-  {
-    id: 3,
-    full_name: "Rian",
-    gp_user: "Grom Patrol #2",
-    quotes:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque nulla dolorum, voluptatem magnam itaque culpa eveniet mollitia eligendi esse sint voluptatibus voluptate provident aspernatur alias iure non a iusto odit illum quidem.",
-    img_profile: "/assets/team/ASPA.webp",
-  },
-];
+import { OurTestimonial } from "@/app/lib/TestimonialQuotes";
 
 const TestimonialPage = () => {
   return (
