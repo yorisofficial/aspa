@@ -47,4 +47,12 @@ export const OurTestimonial = [
     gp_user: "Rising start Grom Patrol #1",
     img_profile: "/assets/List star/aspa_profile_SHIA.jpg",
   },
+  {
+    id: 7,
+    full_name: "Isabel Higgs",
+    quotes:
+      "The ASPA program was really good and I thought it was very helpful",
+    gp_user: "Rising start Grom Patrol #1",
+    img_profile: "/assets/List star/aspa_profile_SHIA.jpg",
+  },
 ];

@@ -14,7 +14,7 @@ interface Props {
   img_profile: string;
   country: string;
   born: number;
-  instagram_profile: string;
+  instagram_profile?: string;
   achievements?: { title: string }[];
   sponsors: { title: string }[];
 }
