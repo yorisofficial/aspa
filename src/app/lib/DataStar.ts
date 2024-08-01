@@ -2,7 +2,7 @@ export const DataStar = [
   {
     id: 1,
     full_name: "Darma Wisesa",
-    img_profile: "/assets/List star/aspa_profile_DARMA.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_DARMA.jpg",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -41,7 +41,7 @@ export const DataStar = [
   {
     id: 2,
     full_name: "Gusde Junior",
-    img_profile: "/assets/List star/aspa_profile_GUSDE.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_GUSDE.jpg",
     country: "Indonesia",
     born: 2013,
     achievements: [
@@ -66,7 +66,7 @@ export const DataStar = [
   {
     id: 3,
     full_name: "Jhuan Nanda",
-    img_profile: "/assets/List star/aspa_profile_JHUAN NANDA.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_JHUAN NANDA.jpg",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -93,7 +93,7 @@ export const DataStar = [
   {
     id: 4,
     full_name: "Aditya Somiya",
-    img_profile: "/assets/List star/aspa_profile_ADITYA SOMIYA.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_ADITYA SOMIYA.jpg",
     country: "Indonesia",
     born: 2010,
     achievements: [
@@ -127,7 +127,7 @@ export const DataStar = [
   {
     id: 5,
     full_name: "Putu Yunie",
-    img_profile: "/assets/List star/aspa_profile_PUTU YUNIE.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_PUTU YUNIE.jpg",
     country: "Indonesia",
     born: 2008,
     achievements: [
@@ -152,7 +152,7 @@ export const DataStar = [
   {
     id: 6,
     full_name: "Hanasuri Jabrik",
-    img_profile: "/assets/List star/aspa_profile_SURI JABRIK.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_SURI JABRIK.jpg",
     country: "Indonesia",
     born: 2008,
     achievements: [
@@ -191,7 +191,7 @@ export const DataStar = [
   {
     id: 7,
     full_name: "Shia Jabrik",
-    img_profile: "/assets/List star/aspa_profile_SHIA.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_SHIA.jpg",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -230,7 +230,7 @@ export const DataStar = [
   {
     id: 8,
     full_name: "Raflin Wau",
-    img_profile: "/assets/List star/aspa_profile_RAFLIN.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_RAFLIN.jpg",
     country: "Indonesia",
     born: 2007,
     achievements: [
@@ -309,7 +309,7 @@ export const DataStar2 = [
   {
     id: 1,
     full_name: "Zio Jeksen",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/batch-2/aspa_profile_zio jackson.webp",
     country: "Indonesia",
     born: 2013,
     achievements: [
@@ -370,7 +370,7 @@ export const DataStar2 = [
   {
     id: 2,
     full_name: "Amanah Putri Annisa",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/batch-2/aspa_profile_amanah putri anisa.webp",
     country: "Indonesia",
     born: 2015,
     achievements: [
@@ -388,7 +388,7 @@ export const DataStar2 = [
   {
     id: 3,
     full_name: "Rico Bastian Wiggins",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/batch-2/aspa_profile_rico bastian.webp",
     country: "Indonesia",
     born: 2011,
     achievements: [
@@ -404,7 +404,7 @@ export const DataStar2 = [
   {
     id: 4,
     full_name: "I Wayan Miyura Yano Jaya",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/batch-2/aspa_profile_wayan miyura.webp",
     country: "Indonesia",
     born: 2013,
     achievements: [
@@ -420,7 +420,7 @@ export const DataStar2 = [
   {
     id: 5,
     full_name: "Farel Zlatanera Wau",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/batch-2/aspa_profile_farel wau.webp",
     country: "Indonesia",
     born: 2013,
     achievements: [{ title: "No" }],
@@ -429,7 +429,7 @@ export const DataStar2 = [
   {
     id: 6,
     full_name: "Dika Anwar",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/batch-2/aspa_profile_dika anwar.webp",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -455,7 +455,7 @@ export const DataStar2 = [
   {
     id: 7,
     full_name: "Diky Anwar",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile: "/assets/List star/batch-2/aspa_profile_diki anwar.webp",
     country: "Indonesia",
     born: 2012,
     achievements: [

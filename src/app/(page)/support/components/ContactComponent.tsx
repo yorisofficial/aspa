@@ -2,8 +2,6 @@ import { Support } from "@/app/lib/Support";
 
 const ContactComponent = () => {
   const phone = Support[0].url;
-  console.log(phone);
-
   const emailInfo = Support[4].title;
   const emailSupport = Support[5].title;
 

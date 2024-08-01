@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import ButtonSlideSwiper from "./ButtonSlideSwiper";
+import ListAchievementsKiddo from "./Achievements/ListAchievementsKiddo";
 
 interface Props {
   id: number;
@@ -69,23 +70,14 @@ const SliderStar = ({ data, title }: { data: Props[]; title: string }) => {
                 <span className="text-base font-light">{item.country}</span>
               </div>
             </div>
-            <div className="achievement-card  h-full">
-              <h1 className="font-bold">Achievement</h1>
-              <ul className="list-inside list-disc">
-                {item.achievements?.map((item, index) => (
-                  <li key={index} className="w-full truncate">
-                    {item.title}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ListAchievementsKiddo dataAchievements={item.achievements || []} />
             <div className="sponsor-card  space-y-3">
               <h1 className="font-bold">Sponsors</h1>
               <div className="flex flex-wrap gap-2">
                 {item.sponsors.map((item, index) => (
                   <div
                     key={index}
-                    className="min-w-[60px] rounded-full bg-black px-2 py-1 text-center text-white"
+                    className="w-fit rounded-full bg-black px-2 text-center text-sm text-white"
                   >
                     <small>{item.title}</small>
                   </div>

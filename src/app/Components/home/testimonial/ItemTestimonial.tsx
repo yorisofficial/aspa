@@ -2,7 +2,7 @@
 import { Quotes } from "@phosphor-icons/react";
 import { Item } from "@radix-ui/react-accordion";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 interface Props {
   id: number;
@@ -13,6 +13,20 @@ interface Props {
 }
 
 const ItemTestimonial = ({ data }: { data: Props }) => {
+  const [isQuotes, setQuotes] = useState(false);
+  const [isQuotesChar, setQuotesChar] = useState(20);
+
+  const quotesText = data.quotes
+    .split(" ")
+    .slice(0, isQuotes ? data.quotes.length : isQuotesChar)
+    .join(" ");
+
+  const handleQuotes = () => {
+    setQuotes(!isQuotes);
+  };
+
+  console.log(quotesText);
+
   return (
     <div>
       <div className="item-slider relative space-y-4 rounded-xl border border-bordersolid bg-white p-8 drop-shadow-lg">
@@ -31,10 +45,21 @@ const ItemTestimonial = ({ data }: { data: Props }) => {
           />
         </div>
         <div className="">
-          <p className={`text-start text-base font-light`}>{data.quotes}</p>
+          <p className={`quotes-section text-start text-base font-light`}>
+            {quotesText}
+          </p>
+          {data.quotes.split(" ").length > isQuotesChar && (
+            <button
+              aria-label="read more quotes"
+              onClick={handleQuotes}
+              className="py-2 text-sm underline underline-offset-4"
+            >
+              Read more
+            </button>
+          )}
         </div>
-        <div className="profile-details flex w-full items-start justify-start gap-2">
-          <div className="h-12 w-12 rounded-full border-2 border-brand">
+        <div className="profile-details flex w-full items-start justify-start gap-4">
+          <div className="h-12 w-12 rounded-full ring-4 ring-brand">
             <Image
               src={data.img_profile}
               alt="ASPA"
