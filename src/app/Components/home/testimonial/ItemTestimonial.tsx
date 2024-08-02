@@ -25,7 +25,6 @@ const ItemTestimonial = ({ data }: { data: Props }) => {
     setQuotes(!isQuotes);
   };
 
-  console.log(quotesText);
 
   return (
     <div>

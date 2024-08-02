@@ -4,6 +4,18 @@ import SliderProgram from "@/app/Components/home/Program/SliderProgram";
 import { GromPatrol } from "@/app/lib/events/grompatrol";
 import SliderStar from "@/app/Components/SliderStar";
 import { DataStar, DataStar2 } from "@/app/lib/DataStar";
+import Link from "next/link";
+
+//shadcn ui
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 
 export const SliderImg = [
   {
@@ -39,6 +51,40 @@ const ASPAxGP = () => {
             <p className="w-full text-sm font-light md:w-3/4 md:text-base xl:w-full">
               {GromPatrol.desc}
             </p>
+            <div className="w-full">
+              <h1 className="text-xl font-bold">Download report documents</h1>
+              <div className="mt-4">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center gap-3 rounded border border-black px-4 py-2">
+                    Select batch <CaretDown size={24} />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="origin-center translate-x-4 transition-all xl:translate-x-0">
+                    <DropdownMenuLabel>Download file bellow</DropdownMenuLabel>
+                    <DropdownMenuSeparator />
+                    <DropdownMenuItem>
+                      <Link
+                        target="_blank"
+                        href="/public/documents/ASPA RISING STAR REPORT GP #2.pdf"
+                        download="ASPA RISING STAR REPORT GP #2.pdf"
+                        className="underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-brand"
+                      >
+                        REPORT ASPA RISING STAR STOP #2
+                      </Link>
+                    </DropdownMenuItem>
+                    <DropdownMenuItem>
+                      <Link
+                        target="_blank"
+                        href="/documents/ASPA RISING STAR REPORT GP #3.pdf"
+                        download="ASPA RISING STAR REPORT GP #3.pdf"
+                        className="underline underline-offset-4 transition-all duration-300 ease-in-out hover:text-brand"
+                      >
+                        REPORT ASPA RISING STAR STOP #3
+                      </Link>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+            </div>
           </div>
         </div>
       </div>
