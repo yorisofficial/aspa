@@ -36,6 +36,7 @@ const DownloadDocument = () => {
               link bellow
             </span>
             <Link
+              target="_blank"
               href="/documents/Rising stop 2.pdf"
               download="Rising star report GP #1.pdf"
               className="flex items-center gap-3 transition-all duration-300 ease-in-out hover:text-brand"
@@ -43,6 +44,7 @@ const DownloadDocument = () => {
               <FilePdf size={24} /> REPORT ASPA RISING STAR STOP #2
             </Link>
             <Link
+              target="_blank"
               href="/documents/Rising stop 3.pdf"
               download="Rising star report GP #2.pdf"
               className="flex items-center gap-3 transition-all duration-300 ease-in-out hover:text-brand"

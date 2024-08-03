@@ -28,7 +28,7 @@ const ListAchievementsKiddo = ({
           <Itemachievements key={index} dataProps={item} />
         ))}
       </ul>
-      {item.length >= medal && (
+      {item.length > medal && (
         <button
           onClick={handleShowMedal}
           aria-label="See more achievement"
