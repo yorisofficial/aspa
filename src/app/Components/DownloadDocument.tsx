@@ -1,14 +1,5 @@
 "use client";
 import React, { useState } from "react";
-//shadcn ui
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { CaretDown, CaretRight, FilePdf } from "@phosphor-icons/react";
 import Link from "next/link";
 
