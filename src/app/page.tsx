@@ -4,6 +4,7 @@ import OurProfessional from "./Components/home/Professional/OurProfessional";
 import OurService from "./Components/home/Service/OurService";
 import UpcomingEvent from "./Components/home/Event/UpcomingEvent";
 import BlogSection from "./Components/home/news/BlogSection";
+import TestimonialPage from "./Components/home/testimonial/Testimonial";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <OurProgram />
         <OurService title="Our Services" />
         <UpcomingEvent />
+        <TestimonialPage />
         <BlogSection />
         <OurProfessional />
       </div>

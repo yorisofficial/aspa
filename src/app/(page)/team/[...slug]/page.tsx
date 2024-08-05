@@ -67,10 +67,10 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
           Back to before
         </Button>
       </div>
-      <div className="details-team py-8">
+      <div className="details-team h-fit py-8">
         {filteredDetails &&
           filteredDetails.map((item) => (
-            <div key={item?.id} className="">
+            <div key={item?.id} className="h-fit">
               {getCoachImage && <CoachSliderImg data={getCoachImage} />}
               <div className="quick-intro mt-8 flex w-full gap-8 space-y-4 border-b border-black pb-8">
                 <Image

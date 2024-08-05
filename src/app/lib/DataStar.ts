@@ -2,7 +2,7 @@ export const DataStar = [
   {
     id: 1,
     full_name: "Darma Wisesa",
-    img_profile: "/assets/List star/aspa_profile_DARMA.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_DARMA.jpg",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -41,7 +41,7 @@ export const DataStar = [
   {
     id: 2,
     full_name: "Gusde Junior",
-    img_profile: "/assets/List star/aspa_profile_GUSDE.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_GUSDE.jpg",
     country: "Indonesia",
     born: 2013,
     achievements: [
@@ -66,7 +66,7 @@ export const DataStar = [
   {
     id: 3,
     full_name: "Jhuan Nanda",
-    img_profile: "/assets/List star/aspa_profile_JHUAN NANDA.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_JHUAN NANDA.jpg",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -93,7 +93,7 @@ export const DataStar = [
   {
     id: 4,
     full_name: "Aditya Somiya",
-    img_profile: "/assets/List star/aspa_profile_ADITYA SOMIYA.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_ADITYA SOMIYA.jpg",
     country: "Indonesia",
     born: 2010,
     achievements: [
@@ -127,7 +127,7 @@ export const DataStar = [
   {
     id: 5,
     full_name: "Putu Yunie",
-    img_profile: "/assets/List star/aspa_profile_PUTU YUNIE.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_PUTU YUNIE.jpg",
     country: "Indonesia",
     born: 2008,
     achievements: [
@@ -152,7 +152,7 @@ export const DataStar = [
   {
     id: 6,
     full_name: "Hanasuri Jabrik",
-    img_profile: "/assets/List star/aspa_profile_SURI JABRIK.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_SURI JABRIK.jpg",
     country: "Indonesia",
     born: 2008,
     achievements: [
@@ -191,7 +191,7 @@ export const DataStar = [
   {
     id: 7,
     full_name: "Shia Jabrik",
-    img_profile: "/assets/List star/aspa_profile_SHIA.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_SHIA.jpg",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -230,7 +230,7 @@ export const DataStar = [
   {
     id: 8,
     full_name: "Raflin Wau",
-    img_profile: "/assets/List star/aspa_profile_RAFLIN.jpg",
+    img_profile: "/assets/List star/batch-1/aspa_profile_RAFLIN.jpg",
     country: "Indonesia",
     born: 2007,
     achievements: [
@@ -302,5 +302,179 @@ export const DataStar = [
       },
     ],
     instagram_profile: "",
+  },
+];
+
+export const DataStar2 = [
+  {
+    id: 1,
+    full_name: "Zio Jeksen",
+    img_profile: "/assets/List star/batch-2/aspa_profile_zio jackson.webp",
+    country: "Indonesia",
+    born: 2013,
+    achievements: [
+      { title: "Grom Patrol 2020 ( Bravest Grom )" },
+      {
+        title:
+          "Juara 1st Pushing Division Division HALFWAY KUTA BOARDRIDER Surf Club Contest series #1 tahun 2021",
+      },
+      {
+        title:
+          "Juara 1st Pushing Division HALFWAY KUTA BOARDRIDER Surf Club Contest series #2 tahun 2021",
+      },
+      {
+        title:
+          "Juara 1st Pushing Division HALFWAY KUTA BOARDRIDER Surf Club Contest series #3 tahun 2021",
+      },
+      {
+        title:
+          "Juara 1st Pushing Division HALFWAY KUTA BOARDRIDER Surf Club Contest series #4 tahun 2021",
+      },
+      {
+        title:
+          "Juara 2nd Pushing Division HALFWAY KUTA BOARDRIDER Surf Club Contest series #5 tahun 2021",
+      },
+      { title: "PSOI Bali Final Pro Finished 9th Under 10 Division" },
+      {
+        title:
+          "Juara 5th Under 10 Division HALFWAY KUTA BOARDRIDER Surf Club Contest series #2 tahun 2022",
+      },
+      {
+        title:
+          "Juara 2nd Under 10 Division HALFWAY KUTA BOARDRIDER Surf Club Contest series #3 tahun 2022",
+      },
+      {
+        title:
+          "Juara 1st Under 10 Division HALFWAY KUTA BOARDRIDER Surf Club Contest series #4 tahun 2022",
+      },
+      {
+        title:
+          "Juara 3rd Under 10 Division HALFWAY KUTA BOARDRIDER Surf Club Contest series #5 tahun 2022",
+      },
+      { title: "U-10 Juara 1st Series #1 Halfway Kuta Boardrider April 2023" },
+      { title: "U-10 Juara 2nd Series #2 Halfway Kuta Boardrider May 2023" },
+      { title: "U-10 Juara 2nd Series #4 Halfway Kuta Boardrider August 2023" },
+      {
+        title:
+          "U-10 Juara 1st Series #5 Halfway Kuta Boardrider September 2023",
+      },
+      { title: "U-10 Champion of Halfway Kuta Boardrider 2023" },
+    ],
+    sponsors: [
+      { title: "Volcom Indonesia" },
+      { title: "Warner Surfboard" },
+      { title: "Creature of leisure" },
+    ],
+    instagram_profile: "https://www.instagram.com/zio.jeksen",
+  },
+  {
+    id: 2,
+    full_name: "Amanah Putri Annisa",
+    img_profile: "/assets/List star/batch-2/aspa_profile_amanah putri anisa.webp",
+    country: "Indonesia",
+    born: 2015,
+    achievements: [
+      { title: "Grom Patrol under 12 girl 3rd place 2021" },
+      { title: "Grom Patrol under 10 girl 3rd place 2022" },
+    ],
+    sponsors: [
+      { title: "Flanagan surfboards" },
+      { title: "Formula surf internasional" },
+      { title: "DWT surfskate" },
+      { title: "Myshapes" },
+    ],
+    instagram_profile: "https://www.instagram.com/myannisa_bali",
+  },
+  {
+    id: 3,
+    full_name: "Rico Bastian Wiggins",
+    img_profile: "/assets/List star/batch-2/aspa_profile_rico bastian.webp",
+    country: "Indonesia",
+    born: 2011,
+    achievements: [
+      { title: "Padma boys 2nd 2018" },
+      { title: "Padma challenge 1st 2019" },
+      { title: "U10 Juara 1 LBC #1 2021" },
+      { title: "U10 Juara 3 LBC #3 2021" },
+      { title: "Junior boys Juara 1 LBC #1 2024" },
+    ],
+    sponsors: [{ title: "No" }],
+    instagram_profile: "https://www.instagram.com/riko_wigginss",
+  },
+  {
+    id: 4,
+    full_name: "I Wayan Miyura Yano Jaya",
+    img_profile: "/assets/List star/batch-2/aspa_profile_wayan miyura.webp",
+    country: "Indonesia",
+    born: 2013,
+    achievements: [
+      { title: "Sep. 2022 Grom Patrol U10 3rd" },
+      { title: "Nov. 2023 Seven Mellow" },
+      { title: "Style Jasri Beach U16 3rd" },
+      { title: "Denpasar Cup July 2024 Junior Class 3rd" },
+      { title: "Jul. 2024 Grom Patrol U12 1st" },
+    ],
+    sponsors: [{ title: "Free Movement" }],
+    instagram_profile: "https://www.instagram.com/wayan_miyura",
+  },
+  {
+    id: 5,
+    full_name: "Farel Zlatanera Wau",
+    img_profile: "/assets/List star/batch-2/aspa_profile_farel wau.webp",
+    country: "Indonesia",
+    born: 2013,
+    achievements: [{ title: "No" }],
+    sponsors: [{ title: "Jowa" }],
+  },
+  {
+    id: 6,
+    full_name: "Dika Anwar",
+    img_profile: "/assets/List star/batch-2/aspa_profile_dika anwar.webp",
+    country: "Indonesia",
+    born: 2012,
+    achievements: [
+      { title: "2021 Medewi Board Riders Series1 1st" },
+      { title: "2021 Medewi Board Riders Series2 1st" },
+      { title: "2021 Medewi Board Riders Series3 1st" },
+      { title: "2021 Medewi Board Riders Series4 2nd" },
+      { title: "2022 LSI Grand Final 2nd" },
+      { title: "2022 Medewi Board Riders U-10 1st -U16 3rd" },
+      { title: "2022 Medewi Board Riders Series1 1st" },
+      { title: "2022 Medewi Board Riders Series2 1st" },
+      { title: "2022 Medewi Board Riders Series3 2nd" },
+      { title: "Vans Bali Pro 2022 4th" },
+      { title: "2021 PSOI Bali Final 3rd" },
+    ],
+    sponsors: [
+      { title: "Volcom" },
+      { title: "Annesley" },
+      { title: "Myshapers" },
+    ],
+    instagram_profile: "https://www.instagram.com/dika_.anwar",
+  },
+  {
+    id: 7,
+    full_name: "Diky Anwar",
+    img_profile: "/assets/List star/batch-2/aspa_profile_diki anwar.webp",
+    country: "Indonesia",
+    born: 2012,
+    achievements: [
+      { title: "2021 Grom Patrol 5th" },
+      { title: "2021 Medewi Board Riders Series1 2nd" },
+      { title: "2021 Medewi Board Riders Series2 3rd" },
+      { title: "2021 Medewi Board Riders Series3 2nd" },
+      { title: "2021 Medewi Board Riders Series4 1st" },
+      { title: "2022 LSI Grand Final 2nd" },
+      { title: "2022 Medewi Board Riders U-10 2nd" },
+      { title: "2022 Medewi Board Riders Series1 2nd" },
+      { title: "2022 Medewi Board Riders Series2 2nd" },
+      { title: "2022 Medewi Board Riders Series3 1st" },
+    ],
+    sponsors: [
+      { title: "Volcom" },
+      { title: "Annesley" },
+      { title: "Myshapers" },
+    ],
+    instagram_profile: "https://www.instagram.com/diki_.anwar",
   },
 ];

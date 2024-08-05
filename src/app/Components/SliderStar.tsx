@@ -1,12 +1,13 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import ButtonSlideSwiper from "./ButtonSlideSwiper";
+import ListAchievementsKiddo from "./Achievements/ListAchievementsKiddo";
 
 interface Props {
   id: number;
@@ -14,7 +15,7 @@ interface Props {
   img_profile: string;
   country: string;
   born: number;
-  instagram_profile: string;
+  instagram_profile?: string;
   achievements?: { title: string }[];
   sponsors: { title: string }[];
 }
@@ -23,14 +24,17 @@ const CountAge = (born: number) => {
   return new Date().getFullYear() - born;
 };
 
-const SliderStar = ({ data }: { data: Props[] }) => {
+const SliderStar = ({ data, title }: { data: Props[]; title: string }) => {
   return (
     <div className="">
+      <div className="pb-4">
+        <h1 className="text-base font-bold uppercase">{title}</h1>
+      </div>
       <Swiper
         modules={[Autoplay]}
         spaceBetween={32}
         loop={true}
-        autoplay={{ delay: 4000 }}
+        autoplay={{ delay: 8000 }}
         grabCursor={true}
         breakpoints={{
           640: {
@@ -66,23 +70,14 @@ const SliderStar = ({ data }: { data: Props[] }) => {
                 <span className="text-base font-light">{item.country}</span>
               </div>
             </div>
-            <div className="achievement-card  h-full">
-              <h1 className="font-bold">Achievement</h1>
-              <ul className="list-inside list-disc">
-                {item.achievements?.map((item, index) => (
-                  <li key={index} className="w-full truncate">
-                    {item.title}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ListAchievementsKiddo dataAchievements={item.achievements || []} />
             <div className="sponsor-card  space-y-3">
               <h1 className="font-bold">Sponsors</h1>
               <div className="flex flex-wrap gap-2">
                 {item.sponsors.map((item, index) => (
                   <div
                     key={index}
-                    className="min-w-[60px] rounded-full bg-black px-2 py-1 text-center text-white"
+                    className="w-fit rounded-full bg-black px-2 text-center text-sm text-white"
                   >
                     <small>{item.title}</small>
                   </div>

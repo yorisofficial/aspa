@@ -1,8 +1,6 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import ContainerContent from "../../Container";
-import { motion } from "framer-motion";
 import ListService from "../../ListService";
 
 export const Service = [
@@ -36,7 +34,7 @@ const OurService = ({ title }: { title: string }) => {
   return (
     <ContainerContent
       url="our-service"
-      className="border-buttom flex h-full min-h-[60vh] w-full flex-col items-center justify-center gap-8 py-8"
+      className="border-buttom h-fit w-full space-y-4 py-8"
     >
       <div className="w-full">
         <h1 className="text-xl font-black text-brand">{title}</h1>

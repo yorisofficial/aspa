@@ -1,28 +1,9 @@
 import React from "react";
 import ContainerContent from "../../Container";
+import ListTestimonials from "./ListTestimonials";
+import { OurTestimonial } from "@/app/lib/TestimonialQuotes";
 
-export const OurTestimonial = [
-  {
-    id: 1,
-    full_name: "Rian",
-    quotes: "",
-    img_profile: "/assets/team/ASPA.png",
-  },
-  {
-    id: 1,
-    full_name: "Rian",
-    quotes: "",
-    img_profile: "/assets/team/ASPA.png",
-  },
-  {
-    id: 1,
-    full_name: "Rian",
-    quotes: "",
-    img_profile: "/assets/team/ASPA.png",
-  },
-];
-
-const Testimonial = () => {
+const TestimonialPage = () => {
   return (
     <ContainerContent
       url="/testimoni"
@@ -41,9 +22,9 @@ const Testimonial = () => {
           </p>
         </div>
       </div>
-      <h1 className="text-base font-black">Coming Soon</h1>
+      <ListTestimonials data={OurTestimonial} />
     </ContainerContent>
   );
 };
 
-export default Testimonial;
+export default TestimonialPage;

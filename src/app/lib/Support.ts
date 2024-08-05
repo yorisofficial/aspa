@@ -1,7 +1,7 @@
 export const Support = [
   {
-    title: "+34 662495482",
-    url: "34662495482",
+    title: "+62 81238584060",
+    url: "6281238584060",
     description: "Phone",
     message: "Hallo",
   },
