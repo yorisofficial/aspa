@@ -5,8 +5,7 @@ import Link from "next/link";
 import Button from "../../Button";
 import { motion } from "framer-motion";
 import ContainerContent from "../../Container";
-import VideoComponent from "../../VideoComponent";
-
+import PlayYoutube from "../VideoPreview/PlayYoutube";
 const HeroSection = () => {
   return (
     <div className="mx-auto flex h-full min-h-screen w-full items-center justify-center bg-brand px-4 text-white">
@@ -72,7 +71,7 @@ const HeroSection = () => {
             </motion.div>
           </div>
         </div>
-        <VideoComponent />
+        {/* <PlayYoutube /> */}
       </ContainerContent>
     </div>
   );
