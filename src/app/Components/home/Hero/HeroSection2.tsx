@@ -8,6 +8,7 @@ export const AspaProgram = [
   {
     id: 1930,
     title: "basic program",
+    url: "basic",
     description:
       "Our Basic Program is designed just for you! Tailored for surfers committed to improvement, this program offers a concentrated half-day of expert training and coaching.",
     promoteBook:
@@ -27,11 +28,12 @@ export const AspaProgram = [
           "After each surf session, benefit from a detailed video analysis. Our expert coaches will review your performance, providing targeted feedback and actionable tips to refine your technique and accelerate your progress.",
       },
     ],
-    paymentUrl: [
+    session: [
       {
         id: 1,
         show: true,
         title: "private",
+        pricing: "IDR 1.350.000",
         url: "/",
         icon: "",
       },
@@ -39,6 +41,7 @@ export const AspaProgram = [
         id: 2,
         show: true,
         title: "group",
+        pricing: "IDR 850.000",
         url: "/",
         icon: "",
       },
@@ -47,6 +50,7 @@ export const AspaProgram = [
   {
     id: 1920,
     title: "basic+ program",
+    url: "basicplus",
     description:
       "Our Basic+ Program is the perfect choice for surfers dedicated to continuous improvement, offering a full day of immersive surf and physical training.",
     promoteBook:
@@ -72,16 +76,18 @@ export const AspaProgram = [
           "Become a more complete surfer with our physical training sessions, focusing on strength, mobility, and endurance.",
       },
     ],
-    paymentUrl: [
+    session: [
       {
         id: 1,
         title: "private",
+        pricing: "IDR 2.700.000",
         url: "/",
         icon: "",
       },
       {
         id: 2,
         title: "group",
+        pricing: "IDR 1.400.000",
         url: "/",
         icon: "",
       },
@@ -134,14 +140,14 @@ const HeroSection2 = () => {
               </div>
               <div className="btn-cta flex items-center gap-2 xl:gap-4">
                 <Link
-                  href={`/program/${item.id}`}
+                  href={`/program/${item.id}/booking`}
                   aria-label="booking the program"
                   className={`rounded px-2 py-2 text-[10px] font-semibold xl:px-6 xl:py-3 xl:text-base ${item.id === 1920 ? "bg-white text-brand" : "bg-black text-white"}`}
                 >
                   Book now
                 </Link>
                 <Link
-                  href={"/program"}
+                  href={`/program/${item.id}`}
                   aria-hidden
                   aria-label="learn more about program"
                   className="rounded text-[10px] underline underline-offset-4 xl:text-base"

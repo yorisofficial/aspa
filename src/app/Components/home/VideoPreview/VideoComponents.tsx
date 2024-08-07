@@ -19,7 +19,7 @@ const VideoComponents = () => {
             alt="thumbnail-video"
             width={1200}
             height={500}
-            priority={false}
+            priority
             quality={75}
             className="w-full rounded-xl object-cover md:h-[250px] xl:h-[350px]"
           />

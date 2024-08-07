@@ -6,7 +6,6 @@ import SliderStar from "@/app/Components/SliderStar";
 import { DataStar, DataStar2 } from "@/app/lib/DataStar";
 import Link from "next/link";
 
-
 import DownloadDocument from "@/app/Components/DownloadDocument";
 
 export const SliderImg = [
@@ -35,7 +34,7 @@ const ASPAxGP = () => {
         <div className="details flex h-full w-full flex-col gap-8 xl:order-first">
           <div className="content-body space-y-4">
             <div className="header">
-              <span className="text-base uppercase">Program</span>
+              <span className="text-base uppercase">Our Previous Program</span>
               <h1 className="text-3xl font-black text-brand">
                 {GromPatrol.title}
               </h1>

@@ -45,7 +45,7 @@ const UpcomingEvent = () => {
         </div>
         <div className="details relative z-10 flex h-full flex-col items-start justify-start gap-2 text-start xl:justify-center">
           <span className="text-sm font-light uppercase">
-            our previos program
+            our previous program
           </span>
           <h1 className="text-xl font-black text-brand xl:text-3xl">
             {GromPatrol.title}

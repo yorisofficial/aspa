@@ -5,7 +5,6 @@ import BackButton from "@/app/Components/BackButton";
 
 const ProgramPage = ({ params }: { params: { slug: string } }) => {
   const data = AspaProgram.find((item) => item.id.toString() === params.slug);
-  console.log();
 
   return (
     <div className="mx-auto min-h-screen w-full max-w-5xl">
