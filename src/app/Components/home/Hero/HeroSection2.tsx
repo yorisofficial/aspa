@@ -14,7 +14,28 @@ export const AspaProgram = [
       "Our Basic+ Program is the perfect choice for surfers dedicated to continuous improvement, offering a full day of immersive surf and physical training.",
     promoteBook:
       "Transform your surfing skills with a full day of expert guidance, personalized training and non-stop action. Book your Basic Full Day Program today!",
-    image: "",
+    image: [
+      {
+        id: 1,
+        src: "/assets/team/ASPA.webp",
+      },
+      {
+        id: 2,
+        src: "/assets/team/ASPA.webp",
+      },
+      {
+        id: 3,
+        src: "/assets/team/ASPA.webp",
+      },
+      {
+        id: 4,
+        src: "/assets/team/ASPA.webp",
+      },
+      {
+        id: 5,
+        src: "/assets/team/ASPA.webp",
+      },
+    ],
     benefit: [
       {
         id: 1,
@@ -61,7 +82,28 @@ export const AspaProgram = [
       "Our Basic Program is designed just for you! Tailored for surfers committed to improvement, this program offers a concentrated half-day of expert training and coaching.",
     promoteBook:
       "Join us for a half-day of transformative training, expert guidance, and thrilling wave action. Book your spot now!",
-    image: "",
+    image: [
+      {
+        id: 1,
+        src: "/assets/team/ASPA.webp",
+      },
+      {
+        id: 2,
+        src: "/assets/team/ASPA.webp",
+      },
+      {
+        id: 3,
+        src: "/assets/team/ASPA.webp",
+      },
+      {
+        id: 4,
+        src: "/assets/team/ASPA.webp",
+      },
+      {
+        id: 5,
+        src: "/assets/team/ASPA.webp",
+      },
+    ],
     benefit: [
       {
         id: 1,
@@ -122,23 +164,27 @@ const HeroSection2 = () => {
           {AspaProgram.map((item, index) => (
             <div
               key={item.id}
-              className={`item-aspa-program relative h-fit rounded-xl bg-white px-6 py-8 ${item.promote ? "border-8 border-brand text-black drop-shadow-2xl" : "border border-black"}`}
+              className={`item-aspa-program relative h-fit rounded-xl bg-white p-2 xl:px-6 xl:py-8 ${item.promote ? "border-4 border-brand xl:border-8" : "border border-black"}`}
             >
               <div
-                className={`content flex flex-col items-start gap-6 ${item.promote && " xl:pt-8"}`}
+                className={`content flex flex-col items-start gap-6 ${item.promote && "pt-8"}`}
               >
                 {item.promote && (
-                  <div className="promote absolute left-0 top-0 rounded-br-xl bg-brand px-4 py-2 text-white">
-                    <h1 className="text-sm font-bold">Best Program</h1>
+                  <div className="promote absolute left-0 top-0 rounded-br-xl bg-brand px-3 py-1 text-white xl:py-2">
+                    <h1 className="text-xs font-medium md:text-sm xl:font-bold">
+                      Best Program
+                    </h1>
                   </div>
                 )}
-                <h1 className="text-base font-bold capitalize xl:text-2xl">
+                <h1
+                  className={`text-base font-bold capitalize xl:text-2xl ${item.promote ? "text-brand" : "text-black"}`}
+                >
                   {item.title}
                 </h1>
                 <div className="list-benefit flex flex-col gap-2">
                   {item.benefit.map((item, index) => (
                     <div key={item.id} className="item-benefit">
-                      <div className="flex flex-shrink-0 items-start gap-1 xl:items-center xl:gap-4">
+                      <div className="flex flex-shrink-0 items-start justify-start gap-2 text-start xl:items-center xl:gap-4">
                         <CheckCircle
                           size={24}
                           className="h-4 w-4 xl:h-6 xl:w-6"
@@ -152,7 +198,7 @@ const HeroSection2 = () => {
                   <Link
                     href={`/program/${item.id}/booking`}
                     aria-label="booking the program"
-                    className={`rounded-lg px-2 py-2 text-[10px] font-semibold xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-brand text-white" : "bg-black text-white"}`}
+                    className={`rounded-lg p-2 text-[10px] font-semibold sm:px-3 sm:py-2 xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-brand text-white" : "bg-black text-white"}`}
                   >
                     Book now
                   </Link>
