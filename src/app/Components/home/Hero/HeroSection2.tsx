@@ -6,49 +6,8 @@ import Link from "next/link";
 
 export const AspaProgram = [
   {
-    id: 1930,
-    title: "basic program",
-    url: "basic",
-    description:
-      "Our Basic Program is designed just for you! Tailored for surfers committed to improvement, this program offers a concentrated half-day of expert training and coaching.",
-    promoteBook:
-      "Join us for a half-day of transformative training, expert guidance, and thrilling wave action. Book your spot now!",
-    image: "",
-    benefit: [
-      {
-        id: 1,
-        title: "One Surf Session",
-        description:
-          "A surf session packed with personalized coaching and hands-on practice to sharpen your skills and boost your confidence on the waves.",
-      },
-      {
-        id: 2,
-        title: "Video Analysis Coaching",
-        description:
-          "After each surf session, benefit from a detailed video analysis. Our expert coaches will review your performance, providing targeted feedback and actionable tips to refine your technique and accelerate your progress.",
-      },
-    ],
-    session: [
-      {
-        id: 1,
-        show: true,
-        title: "private",
-        pricing: "IDR 1.350.000",
-        url: "/",
-        icon: "",
-      },
-      {
-        id: 2,
-        show: true,
-        title: "group",
-        pricing: "IDR 850.000",
-        url: "/",
-        icon: "",
-      },
-    ],
-  },
-  {
-    id: 1920,
+    id: "0124bb75a2045fdfd9c7211b12e9390c",
+    promote: true,
     title: "basic+ program",
     url: "basicplus",
     description:
@@ -93,6 +52,49 @@ export const AspaProgram = [
       },
     ],
   },
+  {
+    id: "397920486010c9a37d193b58b71983b6",
+    promote: false,
+    title: "basic program",
+    url: "basic",
+    description:
+      "Our Basic Program is designed just for you! Tailored for surfers committed to improvement, this program offers a concentrated half-day of expert training and coaching.",
+    promoteBook:
+      "Join us for a half-day of transformative training, expert guidance, and thrilling wave action. Book your spot now!",
+    image: "",
+    benefit: [
+      {
+        id: 1,
+        title: "One Surf Session",
+        description:
+          "A surf session packed with personalized coaching and hands-on practice to sharpen your skills and boost your confidence on the waves.",
+      },
+      {
+        id: 2,
+        title: "Video Analysis Coaching",
+        description:
+          "After each surf session, benefit from a detailed video analysis. Our expert coaches will review your performance, providing targeted feedback and actionable tips to refine your technique and accelerate your progress.",
+      },
+    ],
+    session: [
+      {
+        id: 1,
+        show: true,
+        title: "private",
+        pricing: "IDR 1.350.000",
+        url: "/",
+        icon: "",
+      },
+      {
+        id: 2,
+        show: true,
+        title: "group",
+        pricing: "IDR 850.000",
+        url: "/",
+        icon: "",
+      },
+    ],
+  },
 ];
 
 const HeroSection2 = () => {
@@ -120,40 +122,49 @@ const HeroSection2 = () => {
           {AspaProgram.map((item, index) => (
             <div
               key={item.id}
-              className={`item-aspa-program flex h-fit flex-col gap-4 rounded-lg border border-brand p-3 text-start xl:gap-6 xl:p-6 ${item.id === 1920 ? "bg-brand text-white drop-shadow-xl" : ""}`}
+              className={`item-aspa-program relative h-fit rounded-xl bg-white px-6 py-8 ${item.promote ? "border-8 border-brand text-black drop-shadow-2xl" : "border border-black"}`}
             >
-              <h1 className="text-base font-bold capitalize xl:text-2xl">
-                {item.title}
-              </h1>
-              <div className="list-benefit flex flex-col gap-2">
-                {item.benefit.map((item, index) => (
-                  <div key={item.id} className="item-benefit">
-                    <div className="flex flex-shrink-0 items-start gap-1 xl:items-center xl:gap-4">
-                      <CheckCircle
-                        size={24}
-                        className="h-4 w-4 xl:h-6 xl:w-6"
-                      />{" "}
-                      <h1 className="text-xs xl:text-base">{item.title}</h1>
-                    </div>
+              <div
+                className={`content flex flex-col items-start gap-6 ${item.promote && " xl:pt-8"}`}
+              >
+                {item.promote && (
+                  <div className="promote absolute left-0 top-0 rounded-br-xl bg-brand px-4 py-2 text-white">
+                    <h1 className="text-sm font-bold">Best Program</h1>
                   </div>
-                ))}
-              </div>
-              <div className="btn-cta flex items-center gap-2 xl:gap-4">
-                <Link
-                  href={`/program/${item.id}/booking`}
-                  aria-label="booking the program"
-                  className={`rounded px-2 py-2 text-[10px] font-semibold xl:px-6 xl:py-3 xl:text-base ${item.id === 1920 ? "bg-white text-brand" : "bg-black text-white"}`}
-                >
-                  Book now
-                </Link>
-                <Link
-                  href={`/program/${item.id}`}
-                  aria-hidden
-                  aria-label="learn more about program"
-                  className="rounded text-[10px] underline underline-offset-4 xl:text-base"
-                >
-                  Learn more
-                </Link>
+                )}
+                <h1 className="text-base font-bold capitalize xl:text-2xl">
+                  {item.title}
+                </h1>
+                <div className="list-benefit flex flex-col gap-2">
+                  {item.benefit.map((item, index) => (
+                    <div key={item.id} className="item-benefit">
+                      <div className="flex flex-shrink-0 items-start gap-1 xl:items-center xl:gap-4">
+                        <CheckCircle
+                          size={24}
+                          className="h-4 w-4 xl:h-6 xl:w-6"
+                        />{" "}
+                        <h1 className="text-xs xl:text-base">{item.title}</h1>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="btn-cta flex items-center gap-2 xl:gap-4">
+                  <Link
+                    href={`/program/${item.id}/booking`}
+                    aria-label="booking the program"
+                    className={`rounded-lg px-2 py-2 text-[10px] font-semibold xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-brand text-white" : "bg-black text-white"}`}
+                  >
+                    Book now
+                  </Link>
+                  <Link
+                    href={`/program/${item.id}`}
+                    aria-hidden
+                    aria-label="learn more about program"
+                    className="rounded text-[10px] underline underline-offset-4 xl:text-base"
+                  >
+                    Learn more
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

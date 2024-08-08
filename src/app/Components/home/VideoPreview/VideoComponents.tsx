@@ -29,6 +29,7 @@ const VideoComponents = () => {
         {!play && (
           <div className="play-button absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center">
             <button
+              aria-label="open youtube video"
               onClick={handlePlayVideo}
               className="rounded-full bg-white p-4 duration-500 hover:scale-110"
             >

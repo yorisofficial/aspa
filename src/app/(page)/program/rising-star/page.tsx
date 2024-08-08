@@ -4,7 +4,7 @@ import BackButton from "@/app/Components/BackButton";
 import ContainerContent from "@/app/Components/Container";
 import ASPAxGP from "@/app/Components/home/Program/Program/ASPAxGP";
 
-const GromPatrol = () => {
+const RisingStarProgram = () => {
   return (
     <ContainerContent
       url="/program"
@@ -17,4 +17,4 @@ const GromPatrol = () => {
   );
 };
 
-export default GromPatrol;
+export default RisingStarProgram;

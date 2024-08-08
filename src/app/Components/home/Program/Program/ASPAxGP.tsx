@@ -4,7 +4,6 @@ import SliderProgram from "@/app/Components/home/Program/SliderProgram";
 import { GromPatrol } from "@/app/lib/events/grompatrol";
 import SliderStar from "@/app/Components/SliderStar";
 import { DataStar, DataStar2 } from "@/app/lib/DataStar";
-import Link from "next/link";
 
 import DownloadDocument from "@/app/Components/DownloadDocument";
 
@@ -68,8 +67,16 @@ const ASPAxGP = () => {
           </p>
         </div>
         <div className="list-rising-star flex flex-col gap-6 md:gap-8">
-          <SliderStar title="aspa rising star program #1" data={DataStar} />
-          <SliderStar title="aspa rising star program #2" data={DataStar2} />
+          <SliderStar
+            title="aspa rising star program #1"
+            time={4000}
+            data={DataStar}
+          />
+          <SliderStar
+            title="aspa rising star program #2"
+            time={6000}
+            data={DataStar2}
+          />
         </div>
       </div>
     </>

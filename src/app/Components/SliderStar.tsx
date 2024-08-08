@@ -24,7 +24,15 @@ const CountAge = (born: number) => {
   return new Date().getFullYear() - born;
 };
 
-const SliderStar = ({ data, title }: { data: Props[]; title: string }) => {
+const SliderStar = ({
+  data,
+  title,
+  time,
+}: {
+  data: Props[];
+  title: string;
+  time: number;
+}) => {
   return (
     <div className="">
       <div className="pb-4">
@@ -34,7 +42,7 @@ const SliderStar = ({ data, title }: { data: Props[]; title: string }) => {
         modules={[Autoplay]}
         spaceBetween={32}
         loop={true}
-        autoplay={{ delay: 8000 }}
+        autoplay={{ delay: time }}
         grabCursor={true}
         breakpoints={{
           640: {

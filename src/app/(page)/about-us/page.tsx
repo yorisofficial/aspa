@@ -12,7 +12,10 @@ const AcademyPage = () => {
     { srcImage: "/assets/academy/aspa-academy-3.webp" },
   ];
   return (
-    <ContainerContent url="/academy" className="min-h-screen w-full">
+    <ContainerContent
+      url="/academy"
+      className="min-h-screen w-full px-4 md:px-10 xl:px-0"
+    >
       <BackButton url="/">Back to main</BackButton>
       <div className="flex h-fit w-full flex-col gap-4 py-4">
         <VideoComponent />
