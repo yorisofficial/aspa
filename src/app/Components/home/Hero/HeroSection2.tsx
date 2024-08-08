@@ -204,11 +204,10 @@ const HeroSection2 = () => {
                   </Link>
                   <Link
                     href={`/program/${item.id}`}
-                    aria-hidden
                     aria-label="learn more about program"
                     className="rounded text-[10px] underline underline-offset-4 xl:text-base"
                   >
-                    Learn more
+                    Learn the program
                   </Link>
                 </div>
               </div>

@@ -18,10 +18,10 @@ const VideoComponents = () => {
             src={"/assets/hero-img-1.webp"}
             alt="thumbnail-video"
             width={1200}
-            height={500}
+            height={300}
             priority
             quality={75}
-            className="w-full rounded-xl object-cover md:h-[250px] xl:h-[350px]"
+            className="h-[150px] w-full rounded-xl object-cover md:h-[250px] xl:h-[350px]"
           />
         ) : (
           <PlayYoutube />
