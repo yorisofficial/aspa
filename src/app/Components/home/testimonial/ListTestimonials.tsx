@@ -6,10 +6,10 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 interface Props {
   id: number;
-  img_profile: string;
-  gp_user: string;
   full_name: string;
   quotes: string;
+  gp_user: string;
+  img_profile: string;
 }
 
 // Import Swiper styles
