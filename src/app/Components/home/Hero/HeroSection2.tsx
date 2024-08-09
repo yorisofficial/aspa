@@ -164,20 +164,11 @@ const HeroSection2 = () => {
           {AspaProgram.map((item, index) => (
             <div
               key={item.id}
-              className={`item-aspa-program relative h-fit rounded-xl bg-white p-2 xl:px-6 xl:py-8 ${item.promote ? "border-4 border-brand xl:border-8" : "border border-black"}`}
+              className={`item-aspa-program relative h-fit rounded-xl p-2 xl:px-6 xl:py-8 ${item.promote ? "border-4 border-brand bg-brand text-white xl:border-8" : "border border-black  bg-white"}`}
             >
-              <div
-                className={`content flex flex-col items-start gap-6 ${item.promote && "pt-8"}`}
-              >
-                {item.promote && (
-                  <div className="promote absolute left-0 top-0 rounded-br-xl bg-brand px-3 py-1 text-white xl:py-2">
-                    <h1 className="text-xs font-medium md:text-sm xl:font-bold">
-                      Best Selection
-                    </h1>
-                  </div>
-                )}
+              <div className={`content flex flex-col items-start gap-6`}>
                 <h1
-                  className={`text-base font-bold capitalize xl:text-2xl ${item.promote ? "text-brand" : "text-black"}`}
+                  className={`text-base font-bold capitalize xl:text-2xl ${item.promote ? "text-white" : "text-black"}`}
                 >
                   {item.title}
                 </h1>
@@ -198,7 +189,7 @@ const HeroSection2 = () => {
                   <Link
                     href={`/program/${item.id}/booking`}
                     aria-label="booking the program"
-                    className={`rounded-lg px-4 py-2 text-xs xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-brand text-white" : "bg-black text-white"}`}
+                    className={`rounded-lg px-4 py-2 text-xs xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-white text-brand" : "bg-black text-white"}`}
                   >
                     Book now
                   </Link>
