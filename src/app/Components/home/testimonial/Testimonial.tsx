@@ -15,10 +15,8 @@ const TestimonialPage = () => {
             Our testimonials
           </h1>
           <p className="text-sm font-normal md:text-base xl:w-1/2">
-            Our testimonials reflect the exceptional impact of our surfing boot
-            camp, showcasing how our comprehensive training programs have
-            transformed athletes into top-performing surfers with unmatched
-            skills and competitive advantages.
+            Our testimonials reflect the exceptional impact of ASPA in the
+            surfing community.
           </p>
         </div>
       </div>

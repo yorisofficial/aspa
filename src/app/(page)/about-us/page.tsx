@@ -45,16 +45,14 @@ const AcademyPage = () => {
           />
           <h1 className={`text-xl font-black text-brand`}>About us</h1>
           <p className="text-justify">
-            ASPA is the Asian Surf Performance Academy; ASPA it&apos;s about
-            reaching your highest potential as an athlete, in and out of the
-            water. Our goal is to empower and support excellent surfers to break
-            through their limits and become the best surfer they can be. The
-            Asian Surf Performance Academy is located in Bali and aims to
-            promote, support and accompany the best sportsmen and athletes in
-            the world of surfing. Offering athletes a personalized attention
-            where we not only seek to improve their surfing level but also to
-            acquire new professional attributes such as; achievement motivation,
-            team work, sense of commitment, responsibility, etc.
+            The Asian Surf Performance Academy (ASPA) is a high-performance surf
+            academy for all levels, from beginners to professionals. We train
+            national and foreign teams for competitions, supported by
+            experienced coaches with a proven track record. ASPA offers private
+            and group sessions covering coaching, analysis, physical training,
+            judging criteria, profile building, and mental preparation. Whether
+            you&apos;re starting out or aiming to go pro, ASPA provides the
+            tools and support to reach your full potential.
           </p>
         </div>
         <div className="border-buttom moto-about border-buttom container space-y-8 py-8">

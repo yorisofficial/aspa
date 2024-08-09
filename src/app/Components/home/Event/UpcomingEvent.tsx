@@ -63,11 +63,11 @@ const UpcomingEvent = () => {
           </button>
           <div className="relative z-10 mt-4">
             <Link
-              href={"/program"}
+              href={"/program/rising-star"}
               aria-label="Book now"
               className="inline-block rounded-xl bg-white px-6 py-3 font-black text-primary duration-500 hover:scale-110"
             >
-              Learn more the program
+              learn more about the program
             </Link>
           </div>
         </div>

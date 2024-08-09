@@ -194,7 +194,7 @@ const HeroSection2 = () => {
                     </div>
                   ))}
                 </div>
-                <div className="btn-cta flex flex-col items-center gap-2 md:flex-row xl:gap-4">
+                <div className="btn-cta flex flex-col items-start gap-2">
                   <Link
                     href={`/program/${item.id}/booking`}
                     aria-label="booking the program"
@@ -207,7 +207,7 @@ const HeroSection2 = () => {
                     aria-label="learn more about program"
                     className="rounded text-[10px] underline underline-offset-4 xl:text-base"
                   >
-                    Learn the program
+                    Learn more about the program
                   </Link>
                 </div>
               </div>
