@@ -36,6 +36,7 @@ const ItemPost = ({ post }: { post: Props }) => {
           </div>
           <div className="h-full py-4">
             <GetDateComponent data={post.date} />
+            <div dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
             <h1 className="font-black underline-offset-8 group-hover:underline">
               {post.title.rendered}
             </h1>

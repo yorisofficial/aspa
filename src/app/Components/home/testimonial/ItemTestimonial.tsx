@@ -25,7 +25,6 @@ const ItemTestimonial = ({ data }: { data: Props }) => {
     setQuotes(!isQuotes);
   };
 
-
   return (
     <div>
       <div className="item-slider relative space-y-4 rounded-xl border border-bordersolid bg-white p-8 drop-shadow-lg">
@@ -44,8 +43,10 @@ const ItemTestimonial = ({ data }: { data: Props }) => {
           />
         </div>
         <div className="">
-          <p className={`quotes-section text-start text-base font-light`}>
-            {quotesText}
+          <p>
+            <q className={`quotes-section text-start text-base font-light`}>
+              {quotesText}
+            </q>
           </p>
           {data.quotes.split(" ").length > isQuotesChar && (
             <button

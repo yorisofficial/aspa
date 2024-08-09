@@ -192,7 +192,7 @@ const Navigation = () => {
                                   aria-label="ASPA item list program"
                                   className="flex w-full items-center justify-between gap-2 py-2 capitalize"
                                 >
-                                  Our Previous Program{" "}
+                                  Our Previous Programs{" "}
                                   <ArrowRight
                                     size={16}
                                     className="duration-500 group-hover:translate-x-4"
@@ -271,7 +271,7 @@ const Navigation = () => {
                             aria-label="ASPA item list program"
                             className="flex w-full items-center justify-between gap-2 py-2 capitalize"
                           >
-                            Our Previous Program
+                            Our Previous Programs
                             <ArrowRight
                               size={16}
                               className="duration-500 group-hover:translate-x-2"

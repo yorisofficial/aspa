@@ -67,7 +67,7 @@ const UpcomingEvent = () => {
               aria-label="Book now"
               className="inline-block rounded-xl bg-white px-6 py-3 font-black text-primary duration-500 hover:scale-110"
             >
-              learn more about the program
+              Learn more about the program
             </Link>
           </div>
         </div>
