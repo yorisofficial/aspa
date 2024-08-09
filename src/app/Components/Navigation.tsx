@@ -169,7 +169,10 @@ const Navigation = () => {
                                   className="item-program group w-full"
                                 >
                                   <Link
-                                    onClick={handleShow}
+                                    onClick={() => {
+                                      setShowDropdown(!isShowDropdown);
+                                      setMenus(false);
+                                    }}
                                     href={`/program/${item.id}`}
                                     aria-label="ASPA item list program"
                                     className="flex w-full items-center justify-between gap-2 py-2 capitalize"
@@ -249,6 +252,7 @@ const Navigation = () => {
                             className="item-program group w-full border-b border-bordersolid/0 hover:border-black"
                           >
                             <Link
+                              onClick={() => setShowDropdown(false)}
                               href={`/program/${item.id}`}
                               aria-label="ASPA item list program"
                               className="flex w-full items-center justify-between gap-2 py-2 capitalize"

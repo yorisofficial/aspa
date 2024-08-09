@@ -17,23 +17,23 @@ export const AspaProgram = [
     image: [
       {
         id: 1,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic+/basic-plus-1.webp",
       },
       {
         id: 2,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic+/basic-plus-2.webp",
       },
       {
         id: 3,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic+/basic-plus-3.webp",
       },
       {
         id: 4,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic+/basic-plus-4.webp",
       },
       {
         id: 5,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic+/basic-plus-5.webp",
       },
     ],
     benefit: [
@@ -85,23 +85,23 @@ export const AspaProgram = [
     image: [
       {
         id: 1,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic/basic-5.webp",
       },
       {
         id: 2,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic/basic-2.webp",
       },
       {
         id: 3,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic/basic-1.webp",
       },
       {
         id: 4,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic/basic-4.webp",
       },
       {
         id: 5,
-        src: "/assets/team/ASPA.webp",
+        src: "/assets/program/class/basic/basic-3.webp",
       },
     ],
     benefit: [
@@ -143,7 +143,7 @@ const HeroSection2 = () => {
   return (
     <ContainerContent url="hero">
       <div className="hero-section-phase2 h-fit w-full space-y-6 px-4 py-8 text-center md:px-5 xl:px-0">
-        <div className="header-content mt-8 flex flex-col items-center justify-center gap-6">
+        <div className="header-content mt-8 flex h-fit flex-col items-center justify-center gap-6">
           <div className="flex h-fit w-full flex-col items-center justify-center gap-6">
             <h1 className="text-center text-2xl font-black text-brand xl:text-4xl">
               ASIAN SURF <br /> PERFORMANCE ACADEMY
@@ -160,7 +160,7 @@ const HeroSection2 = () => {
             </p>
           </div>
         </div>
-        <div className="list-program-section mx-auto grid grid-cols-2 gap-2 md:max-w-xl md:gap-5 xl:max-w-3xl">
+        <div className="list-program-section mx-auto grid h-fit grid-cols-2 gap-2 md:max-w-xl md:gap-5 xl:max-w-3xl">
           {AspaProgram.map((item, index) => (
             <div
               key={item.id}
@@ -172,7 +172,7 @@ const HeroSection2 = () => {
                 {item.promote && (
                   <div className="promote absolute left-0 top-0 rounded-br-xl bg-brand px-3 py-1 text-white xl:py-2">
                     <h1 className="text-xs font-medium md:text-sm xl:font-bold">
-                      Best Program
+                      Best Selection
                     </h1>
                   </div>
                 )}
@@ -194,11 +194,11 @@ const HeroSection2 = () => {
                     </div>
                   ))}
                 </div>
-                <div className="btn-cta flex items-center gap-2 xl:gap-4">
+                <div className="btn-cta flex flex-col items-center gap-2 md:flex-row xl:gap-4">
                   <Link
                     href={`/program/${item.id}/booking`}
                     aria-label="booking the program"
-                    className={`rounded-lg p-2 text-[10px] font-semibold sm:px-3 sm:py-2 xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-brand text-white" : "bg-black text-white"}`}
+                    className={`rounded-lg px-4 py-2 text-xs xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-brand text-white" : "bg-black text-white"}`}
                   >
                     Book now
                   </Link>

@@ -212,6 +212,7 @@ const BookingSession = ({
                       agreement: e.target.checked ? "Yes" : "No",
                     })
                   }
+                  className="peer h-4 w-4 rounded-xl accent-primary"
                 />
                 <span className="ml-2 text-xs font-light">
                   Yes, I agree terms & regulation service

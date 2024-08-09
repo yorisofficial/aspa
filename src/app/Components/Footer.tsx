@@ -5,6 +5,8 @@ import Link from "next/link";
 import React from "react";
 import { Support } from "../lib/Support";
 import SocialComponents from "./SocialComponents";
+import BtnDownloadFile from "./BtnDownloadFile";
+import { RegulationService } from "../lib/RegulationService";
 
 const FooterPage = () => {
   const phone = Support[0].url;
@@ -53,24 +55,12 @@ const FooterPage = () => {
               Support
             </Link>
           </div>
-          <div className="border-r border-white px-2">
-            <Link
-              href={"/support"}
-              className="underline-offset-4 duration-500 hover:underline"
-              aria-label="cta button for"
-            >
-              FAQ
-            </Link>
-          </div>
           <div className="px-2">
-            <Link
-              target="_blank"
-              href={"https://forms.gle/umhnmRWAkB5RKq8C8"}
-              className="underline-offset-4 duration-500 hover:underline"
-              aria-label="cta button for"
-            >
-              Waiver Form
-            </Link>
+            <BtnDownloadFile
+              title={RegulationService[0].footer}
+              src={RegulationService[0].src}
+              docName={RegulationService[0].docName}
+            />
           </div>
         </div>
         <div className="">
