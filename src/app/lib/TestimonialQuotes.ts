@@ -5,7 +5,7 @@ export const OurTestimonial = [
     quotes:
       "What I think of the ASPA program is that it's very helpful for all the groms because it prepares you for your heat. You can absorb all the knowledge from Coach Dedi and apply it while surfing, which I did, and it helped me a lot in my heats. I think it will do the same for everyone else. The gym sessions with Gaby also really helped because they prepare your muscles for the next day, allowing you to perform your best while feeling good and happy. With all the support from everyone, you will probably feel great!",
     gp_user: "Rising start Grom Patrol",
-    img_profile: "/assets/List star/batch-1/aspa_profile_RAFLIN.webp",
+    img_profile: "/assets/List star/batch-1/aspa_profile_RAFLIN.jpg",
   },
   {
     id: 2,
