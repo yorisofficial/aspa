@@ -3,25 +3,25 @@ import OurService from "@/app/Components/home/Service/OurService";
 import SliderProgram from "@/app/Components/home/Program/SliderProgram";
 import { GromPatrol } from "@/app/lib/events/grompatrol";
 import SliderStar from "@/app/Components/SliderStar";
-import { DataStar, DataStar2 } from "@/app/lib/DataStar";
+import { DataStar, DataStar2 } from "@/app/lib/program/risingstar/DataStar";
 
 import DownloadDocument from "@/app/Components/DownloadDocument";
 
 export const SliderImg = [
   {
-    src: "/assets/program/grompatrol/img-1.webp",
+    src: "/assets/program/grompatrol/main/img-1.webp",
     alt: "image-asset-program",
   },
   {
-    src: "/assets/program/grompatrol/img-2.webp",
+    src: "/assets/program/grompatrol/main/img-2.webp",
     alt: "image-asset-program",
   },
   {
-    src: "/assets/program/grompatrol/img-3.webp",
+    src: "/assets/program/grompatrol/main/img-3.webp",
     alt: "image-asset-program",
   },
   {
-    src: "/assets/program/grompatrol/img-4.webp",
+    src: "/assets/program/grompatrol/main/img-4.webp",
     alt: "image-asset-program",
   },
 ];

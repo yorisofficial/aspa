@@ -1,5 +1,5 @@
 import OurProfessional from "./Components/home/Professional/OurProfessional";
-import UpcomingEvent from "./Components/home/Event/UpcomingEvent";
+import RisingStarProgram from "./Components/home/Event/RisingStarProgram";
 import BlogSection from "./Components/home/news/BlogSection";
 import TestimonialPage from "./Components/home/testimonial/Testimonial";
 import HeroSection2 from "./Components/home/Hero/HeroSection2";
@@ -12,7 +12,7 @@ export default function Home() {
       <div className="content-body relative px-4 md:px-8 xl:px-0">
         <VideoComponents />
         <TestimonialPage />
-        <UpcomingEvent />
+        <RisingStarProgram />
         <BlogSection />
         <OurProfessional />
       </div>

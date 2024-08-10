@@ -19,9 +19,6 @@ import ButtonSlideSwiper from "../../ButtonSlideSwiper";
 
 const ListTestimonials = ({ data }: { data: Props[] }) => {
   const dataTestimonial = data;
-  const paginationMode = {
-    clickable: true,
-  };
 
   return (
     <div className="">

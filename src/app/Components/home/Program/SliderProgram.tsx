@@ -17,11 +17,11 @@ const SliderProgram = ({ data }: { data: Props[] }) => {
     <div className="list-image h-[250px] md:h-[300px] xl:h-[400px]">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={32}
+        spaceBetween={24}
         loop={true}
         autoplay={{ delay: 4000 }}
         grabCursor={true}
-        slidesPerView={1}
+        slidesPerView={1.3}
         className="list-coach mySwiper h-full"
       >
         {data.map((item, index) => (

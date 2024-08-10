@@ -1,7 +1,7 @@
 import React from "react";
 import ContainerContent from "../../Container";
 import ListTestimonials from "./ListTestimonials";
-import { OurTestimonial } from "@/app/lib/TestimonialQuotes";
+import { OurTestimonial } from "@/app/lib/program/testimonial/TestimonialQuotes";
 
 const TestimonialPage = () => {
   return (
