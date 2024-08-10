@@ -74,7 +74,7 @@ const BookingSession = ({
     }
     setDisableButton(false);
 
-    router.push("/");
+    router.push(`${dataSession?.url}`);
   };
 
   return (

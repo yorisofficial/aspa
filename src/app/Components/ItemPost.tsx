@@ -21,13 +21,13 @@ const ItemPost = ({ post }: { post: Props }) => {
     <>
       <Link
         href={`/blog/${post.id}/${url}`}
-        className="card group flex h-full flex-col items-start justify-between rounded-xl border-2 border-bordersolid bg-white p-4 duration-500 hover:scale-105 hover:rounded-xl hover:drop-shadow-xl"
+        className="card group flex h-full w-full flex-col items-start justify-between rounded-xl border-2 border-bordersolid bg-white p-4 duration-500 hover:scale-105 hover:rounded-xl hover:drop-shadow-xl"
       >
-        <div className="">
-          <div className="h-[200px] w-full overflow-hidden rounded-lg">
+        <div className="h-fit w-full">
+          <div className="h-[200px] w-full overflow-hidden rounded-lg md:h-[300px] xl:h-[200px]">
             <Image
               src={post.jetpack_featured_media_url}
-              height={500}
+              height={1500}
               width={500}
               priority={false}
               alt={post.title.rendered}
@@ -36,10 +36,10 @@ const ItemPost = ({ post }: { post: Props }) => {
           </div>
           <div className="h-full py-4">
             <GetDateComponent data={post.date} />
-            <div dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
-            <h1 className="font-black underline-offset-8 group-hover:underline">
-              {post.title.rendered}
-            </h1>
+            <h1
+              className="font-black underline-offset-8 group-hover:underline"
+              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+            ></h1>
           </div>
         </div>
       </Link>

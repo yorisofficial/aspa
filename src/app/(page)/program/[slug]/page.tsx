@@ -1,8 +1,11 @@
 "use client";
 import React from "react";
+
+// Get data needs
 import { AspaProgram } from "@/app/Components/home/Hero/HeroSection2";
+import { RegulationService } from "@/app/lib/RegulationService";
+
 import BackButton from "@/app/Components/BackButton";
-import Image from "next/image";
 import ContainerContent from "@/app/Components/Container";
 import { CheckCircle, User, UsersFour } from "@phosphor-icons/react";
 import BottomNavigation from "@/app/Components/BottomNavigation";
@@ -10,7 +13,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import BtnDownloadFile from "@/app/Components/BtnDownloadFile";
 import GaleryPreviewProgram from "@/app/Components/home/Program/Program/Basic Program/GaleryPreviewProgram";
-import { RegulationService } from "@/app/lib/RegulationService";
 
 const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
   const data = AspaProgram.find((item) => item.id.toString() === params.slug);
