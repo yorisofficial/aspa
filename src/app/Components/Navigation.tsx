@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { CaretDown, CaretRight, List, X } from "@phosphor-icons/react";
+import { CaretDown, CaretRight, CaretUp, List, X } from "@phosphor-icons/react";
 import {
   AnimatePresence,
   motion,
@@ -41,6 +41,19 @@ export const menuNav = [
   },
 ];
 
+export const PreviousProgram = [
+  {
+    id: 1,
+    title: "Rising Star",
+    url: "/program/rising-star",
+  },
+  {
+    id: 2,
+    title: "ISA world junior surf champion",
+    url: "/program/isa-world-junior",
+  },
+];
+
 const Navigation = () => {
   const { scrollY } = useScroll();
   const [isShow, setShow] = useState(true);
@@ -53,9 +66,11 @@ const Navigation = () => {
     if (previous !== undefined && latest > previous && latest > 0) {
       setShow(false);
       setMenus(false);
+      setShowDropdown(false);
     } else {
       setShow(true);
       setMenus(false);
+      setShowDropdown(false);
     }
   });
 
@@ -141,9 +156,9 @@ const Navigation = () => {
                           <button className="flex w-full items-center justify-between">
                             {item.title}{" "}
                             {isShowDropdown ? (
-                              <CaretDown size={24} />
+                              <CaretUp size={24} />
                             ) : (
-                              <CaretRight size={24} />
+                              <CaretDown size={24} />
                             )}
                           </button>
                         ) : (
@@ -177,7 +192,7 @@ const Navigation = () => {
                                     aria-label="ASPA item list program"
                                     className="flex w-full items-center justify-between gap-2 py-2 capitalize"
                                   >
-                                    {item.title}{" "}
+                                    {item.title.replaceAll("program", "")}
                                     <ArrowRight
                                       size={16}
                                       className="duration-500 group-hover:translate-x-4"
@@ -185,19 +200,28 @@ const Navigation = () => {
                                   </Link>
                                 </motion.li>
                               ))}
-                              <li className="item-program group w-full">
-                                <Link
-                                  onClick={handleShow}
-                                  href={"/program/rising-star"}
-                                  aria-label="ASPA item list program"
-                                  className="flex w-full items-center justify-between gap-2 py-2 capitalize"
-                                >
-                                  Our Previous Programs{" "}
-                                  <ArrowRight
-                                    size={16}
-                                    className="duration-500 group-hover:translate-x-4"
-                                  />
-                                </Link>
+                              <li className="item-program  w-full">
+                                <div className="flex items-center justify-start gap-3">
+                                  <div className="h-[1px] w-2 bg-primary"></div>
+                                  <h1 className="text-base font-bold">
+                                    Previous program
+                                  </h1>
+                                </div>
+                                {PreviousProgram.map((item, index) => (
+                                  <Link
+                                    key={item.id}
+                                    onClick={handleShow}
+                                    href={"/program/rising-star"}
+                                    aria-label="ASPA item list program"
+                                    className="group flex w-full items-center justify-between gap-2 py-2 capitalize"
+                                  >
+                                    {item.title}
+                                    <ArrowRight
+                                      size={16}
+                                      className="duration-500 group-hover:translate-x-4"
+                                    />
+                                  </Link>
+                                ))}
                               </li>
                             </ul>
                           </motion.div>
@@ -229,13 +253,13 @@ const Navigation = () => {
                     {item.base === "program" ? (
                       <button
                         onClick={() => setShowDropdown(!isShowDropdown)}
-                        className={`flex items-center gap-2 ${isShowDropdown && "scale-110 font-bold"}`}
+                        className={`flex items-center gap-2`}
                       >
                         {item.title}{" "}
                         {isShowDropdown ? (
-                          <CaretDown size={18} />
+                          <CaretUp size={18} />
                         ) : (
-                          <CaretRight size={18} />
+                          <CaretDown size={18} />
                         )}
                       </button>
                     ) : (
@@ -244,39 +268,49 @@ const Navigation = () => {
                   </Link>
                   {item.base === "program" && isShowDropdown && (
                     <div className="dropdown absolute left-0 top-full w-[300px] -translate-x-6 translate-y-3 rounded-xl border border-bordersolid bg-white p-5 text-black drop-shadow-xl">
-                      <h1 className="mb-2 text-xl font-bold">Our Program</h1>
+                      <div className="flex items-center justify-start gap-3">
+                        <div className="h-[1px] w-4 bg-primary"></div>
+                        <h1 className="text-base font-bold">Our program</h1>
+                      </div>
                       <ul className="flex w-full flex-col">
                         {AspaProgram.map((item, index) => (
-                          <li
-                            key={index}
-                            className="item-program group w-full border-b border-bordersolid/0 hover:border-black"
-                          >
+                          <li key={index} className="item-program group w-full">
                             <Link
                               onClick={() => setShowDropdown(false)}
                               href={`/program/${item.id}`}
                               aria-label="ASPA item list program"
-                              className="flex w-full items-center justify-between gap-2 py-2 capitalize"
+                              className="flex w-full items-center justify-start gap-3 py-2 capitalize"
                             >
-                              {item.title}
                               <ArrowRight
                                 size={16}
-                                className="duration-500 group-hover:translate-x-2"
+                                className="duration-500 group-hover:translate-x-1"
                               />
+                              {item.title.replaceAll("program", "")}
                             </Link>
                           </li>
                         ))}
-                        <li className="item-program group w-full border-b border-bordersolid/0 hover:border-black">
-                          <Link
-                            href={"/program/rising-star"}
-                            aria-label="ASPA item list program"
-                            className="flex w-full items-center justify-between gap-2 py-2 capitalize"
-                          >
-                            Our Previous Programs
-                            <ArrowRight
-                              size={16}
-                              className="duration-500 group-hover:translate-x-2"
-                            />
-                          </Link>
+                        <li className="item-program group w-full">
+                          <div className="flex items-center justify-start gap-3">
+                            <div className="h-[1px] w-4 bg-primary"></div>
+                            <h1 className="text-base font-bold">
+                              Previous program
+                            </h1>
+                          </div>
+                          {PreviousProgram.map((item, index) => (
+                            <Link
+                              key={item.id}
+                              onClick={handleShow}
+                              href={"/program/rising-star"}
+                              aria-label="ASPA item list program"
+                              className="start group flex w-full items-center gap-3 py-2 capitalize"
+                            >
+                              <ArrowRight
+                                size={16}
+                                className="duration-500 group-hover:translate-x-1"
+                              />
+                              {item.title}
+                            </Link>
+                          ))}
                         </li>
                       </ul>
                     </div>

@@ -185,20 +185,20 @@ const HeroSection2 = () => {
                     </div>
                   ))}
                 </div>
-                <div className="btn-cta flex flex-col items-start gap-2">
+                <div className="btn-cta flex flex-col items-start gap-2 xl:flex-row">
                   <Link
                     href={`/program/${item.id}/booking`}
                     aria-label="booking the program"
-                    className={`rounded-lg px-4 py-2 text-xs xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-white text-brand" : "bg-black text-white"}`}
+                    className={`rounded-lg px-4 py-2 text-xs font-semibold xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-white text-brand" : "bg-black text-white"}`}
                   >
                     Book now
                   </Link>
                   <Link
                     href={`/program/${item.id}`}
                     aria-label="learn more about program"
-                    className="rounded text-[10px] underline underline-offset-4 xl:text-base"
+                    className="rounded text-[10px] underline underline-offset-4 xl:text-sm"
                   >
-                    Learn more about the program
+                    About the program
                   </Link>
                 </div>
               </div>

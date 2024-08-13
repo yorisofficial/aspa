@@ -68,6 +68,7 @@ export const OurTestimonial = [
     quotes:
       "The ASPA program was really good and I thought it was very helpful",
     gp_user: "Rising start Grom Patrol",
-    img_profile: "/assets/team/ASPA.webp",
+    img_profile:
+      "/assets/program/grompatrol/List star/batch-1/isabel-higgs.jpg",
   },
 ];

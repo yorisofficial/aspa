@@ -1,6 +1,6 @@
 export const GromPatrol = {
   title: "ASPA Rising Star Camp",
-  desc: "The Asian Surf Performance Academy (ASPA) is a high-performance surf academy for all levels, from beginners to professionals. We train national and foreign teams for competitions, supported by experienced coaches with a proven track record. ASPA offers private and group sessions covering coaching, analysis, physical training, judging criteria, profile building, and mental preparation. Whether you're starting out or aiming to go pro, ASPA provides the tools and support to reach your full potential.",
+  desc: "ASPA has launched the inaugural program for Tipi Jabrik's Grom Patrol2024. The ASPA Rising Star Camp will provide a training camp before andduring the Grom Patrol competition. This program aims to promote, support,and mentor the best young surfers.",
   price: "AUD 1500",
   details: "ASPA Camp + Entry Grom Patrol",
   url: [

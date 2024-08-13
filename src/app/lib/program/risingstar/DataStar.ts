@@ -273,7 +273,8 @@ export const DataStar = [
   {
     id: 9,
     full_name: "Izzy Higgs",
-    img_profile: "/assets/program/team/ASPA.webp",
+    img_profile:
+      "/assets/program/grompatrol/List star/batch-1/isabel-higgs.jpg",
     country: "Thailand",
     born: 2008,
     achievements: [
@@ -318,7 +319,7 @@ export const DataStar2 = [
     id: 1,
     full_name: "Zio Jeksen",
     img_profile:
-      "/assets/program/List star/batch-2/aspa_profile_zio jackson.webp",
+      "/assets/program/grompatrol/List star/batch-2/aspa_profile_zio jackson.webp",
     country: "Indonesia",
     born: 2013,
     achievements: [
@@ -380,7 +381,7 @@ export const DataStar2 = [
     id: 2,
     full_name: "Amanah Putri Annisa",
     img_profile:
-      "/assets/program/List star/batch-2/aspa_profile_amanah putri anisa.webp",
+      "/assets/program/grompatrol/List star/batch-2/aspa_profile_amanah putri anisa.webp",
     country: "Indonesia",
     born: 2015,
     achievements: [
@@ -399,7 +400,7 @@ export const DataStar2 = [
     id: 3,
     full_name: "Rico Bastian Wiggins",
     img_profile:
-      "/assets/program/List star/batch-2/aspa_profile_rico bastian.webp",
+      "/assets/program/grompatrol/List star/batch-2/aspa_profile_rico bastian.webp",
     country: "Indonesia",
     born: 2011,
     achievements: [
@@ -409,14 +410,14 @@ export const DataStar2 = [
       { title: "U10 Juara 3 LBC #3 2021" },
       { title: "Junior boys Juara 1 LBC #1 2024" },
     ],
-    sponsors: [{ title: "No" }],
+    sponsors: [{ title: "" }],
     instagram_profile: "https://www.instagram.com/riko_wigginss",
   },
   {
     id: 4,
     full_name: "I Wayan Miyura Yano Jaya",
     img_profile:
-      "/assets/program/List star/batch-2/aspa_profile_wayan miyura.webp",
+      "/assets/program/grompatrol/List star/batch-2/aspa_profile_wayan miyura.webp",
     country: "Indonesia",
     born: 2013,
     achievements: [
@@ -433,17 +434,17 @@ export const DataStar2 = [
     id: 5,
     full_name: "Farel Zlatanera Wau",
     img_profile:
-      "/assets/program/List star/batch-2/aspa_profile_farel wau.webp",
+      "/assets/program/grompatrol/List star/batch-2/aspa_profile_farel wau.webp",
     country: "Indonesia",
     born: 2013,
-    achievements: [{ title: "No" }],
+    achievements: [{ title: "" }],
     sponsors: [{ title: "Jowa" }],
   },
   {
     id: 6,
     full_name: "Dika Anwar",
     img_profile:
-      "/assets/program/List star/batch-2/aspa_profile_dika anwar.webp",
+      "/assets/program/grompatrol/List star/batch-2/aspa_profile_dika anwar.webp",
     country: "Indonesia",
     born: 2012,
     achievements: [
@@ -470,7 +471,7 @@ export const DataStar2 = [
     id: 7,
     full_name: "Diky Anwar",
     img_profile:
-      "/assets/program/List star/batch-2/aspa_profile_diki anwar.webp",
+      "/assets/program/grompatrol/List star/batch-2/aspa_profile_diki anwar.webp",
     country: "Indonesia",
     born: 2012,
     achievements: [
