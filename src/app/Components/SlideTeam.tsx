@@ -20,7 +20,7 @@ const SlideTeam = () => {
   const data = CoreTeam;
 
   return (
-    <div className="list-coach h-full w-full max-w-3xl">
+    <div className="list-coach mx-auto h-full w-full max-w-3xl">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={46}

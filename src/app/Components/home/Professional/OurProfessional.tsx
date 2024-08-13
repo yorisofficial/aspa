@@ -9,9 +9,9 @@ const OurProfessional = () => {
   return (
     <ContainerContent url="/our-team" className="border-buttom py-8">
       <div className="our-professional-teams h-full w-full space-y-8">
-        <div className="our-team header flex w-full flex-col items-start justify-between gap-8">
-          <div className="space-y-2">
-            <h1 className="text-start text-xl font-black text-brand">
+        <div className="our-team header flex w-full flex-col items-center justify-between gap-8">
+          <div className="flex flex-col items-center justify-center space-y-2 text-center">
+            <h1 className="text-center text-xl font-black text-brand">
               {Home[3].title}
             </h1>
             <p className="text-sm font-normal md:text-base xl:w-1/2">
