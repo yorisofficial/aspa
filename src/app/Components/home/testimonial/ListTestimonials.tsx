@@ -24,12 +24,13 @@ const ListTestimonials = ({ data }: { data: Props[] }) => {
     <div className="">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={32}
+        spaceBetween={20}
         loop={true}
         autoplay={{ delay: 5000 }}
+        slidesPerView={1.2}
         breakpoints={{
           640: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
           },
           768: {
             slidesPerView: 2,

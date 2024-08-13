@@ -20,13 +20,13 @@ const SlideTeam = () => {
   const data = CoreTeam;
 
   return (
-    <div className="list-coach h-full w-full">
+    <div className="list-coach h-full w-full max-w-3xl">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={16}
+        spaceBetween={46}
         loop={true}
         autoplay={{ delay: 8000 }}
-        slidesPerView={1}
+        slidesPerView={1.2}
         breakpoints={{
           640: {
             slidesPerView: 1,
@@ -43,20 +43,26 @@ const SlideTeam = () => {
         {data.map((item, index) => (
           <SwiperSlide
             key={index}
-            className="item-coach group h-full w-full md:w-fit"
+            className="item-coach group h-[350px] w-full md:w-fit"
           >
             <Link
               className="relative"
               href={`/team/ASPA/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
             >
               <div className="absolute right-2 top-2 z-10 text-white">
-                <ArrowUpRight size={32} />
+                <ArrowUpRight size={24} />
               </div>
-              <div
-                className="relative min-h-[400px] w-full rounded-xl bg-cover bg-center bg-no-repeat duration-500 group-hover:scale-110"
-                style={{ backgroundImage: `url(${item.profile})` }}
-              >
-                <div className="absolute bottom-4 left-4 text-white">
+              <div className="relative min-h-[400px] w-full rounded-xl bg-cover bg-center bg-no-repeat duration-500">
+                <div className="">
+                  <Image
+                    src={item.profile}
+                    height={500}
+                    width={1200}
+                    alt={item.nickname}
+                    className="h-[200px] rounded-lg object-cover"
+                  />
+                </div>
+                <div className="py-4 text-black">
                   <h1 className="text-xl font-black">{item.full_name}</h1>
                   <p>{item.title}</p>
                 </div>

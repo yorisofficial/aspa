@@ -49,7 +49,7 @@ export const PreviousProgram = [
   },
   {
     id: 2,
-    title: "ISA world junior surf champion",
+    title: "Junior Team Indonesia",
     url: "/program/isa-world-junior",
   },
 ];
@@ -165,6 +165,7 @@ const Navigation = () => {
                           <span>{item.title}</span>
                         )}
                       </Link>
+
                       <AnimatePresence>
                         {item.base === "program" && isShowDropdown && (
                           <motion.div
@@ -175,6 +176,12 @@ const Navigation = () => {
                             className="dropdown w-full bg-white p-3 text-black"
                           >
                             <ul className="flex w-full flex-col">
+                              <div className="flex items-center justify-start gap-3">
+                                <div className="h-[1px] w-2 bg-primary"></div>
+                                <h1 className="text-base font-bold">
+                                  Our program
+                                </h1>
+                              </div>
                               {AspaProgram.map((item, index) => (
                                 <motion.li
                                   initial={{ scale: 1 }}
@@ -190,19 +197,19 @@ const Navigation = () => {
                                     }}
                                     href={`/program/${item.id}`}
                                     aria-label="ASPA item list program"
-                                    className="flex w-full items-center justify-between gap-2 py-2 capitalize"
+                                    className="flex w-full items-center justify-start gap-2 py-2 capitalize"
                                   >
-                                    {item.title.replaceAll("program", "")}
                                     <ArrowRight
                                       size={16}
-                                      className="duration-500 group-hover:translate-x-4"
+                                      className="duration-500 group-hover:translate-x-1"
                                     />
+                                    {item.title.replaceAll("program", "")}
                                   </Link>
                                 </motion.li>
                               ))}
                               <li className="item-program  w-full">
                                 <div className="flex items-center justify-start gap-3">
-                                  <div className="h-[1px] w-2 bg-primary"></div>
+                                  <div className="h-[2px] w-2 bg-primary"></div>
                                   <h1 className="text-base font-bold">
                                     Previous program
                                   </h1>
@@ -213,13 +220,13 @@ const Navigation = () => {
                                     onClick={handleShow}
                                     href={"/program/rising-star"}
                                     aria-label="ASPA item list program"
-                                    className="group flex w-full items-center justify-between gap-2 py-2 capitalize"
+                                    className="group flex w-full items-center justify-start gap-2 py-2 capitalize"
                                   >
-                                    {item.title}
                                     <ArrowRight
                                       size={16}
-                                      className="duration-500 group-hover:translate-x-4"
+                                      className="duration-500 group-hover:translate-x-1"
                                     />
+                                    {item.title}
                                   </Link>
                                 ))}
                               </li>
@@ -269,7 +276,7 @@ const Navigation = () => {
                   {item.base === "program" && isShowDropdown && (
                     <div className="dropdown absolute left-0 top-full w-[300px] -translate-x-6 translate-y-3 rounded-xl border border-bordersolid bg-white p-5 text-black drop-shadow-xl">
                       <div className="flex items-center justify-start gap-3">
-                        <div className="h-[1px] w-4 bg-primary"></div>
+                        <div className="h-[2px] w-4 bg-primary"></div>
                         <h1 className="text-base font-bold">Our program</h1>
                       </div>
                       <ul className="flex w-full flex-col">
@@ -289,11 +296,11 @@ const Navigation = () => {
                             </Link>
                           </li>
                         ))}
-                        <li className="item-program group w-full">
+                        <li className="item-program` w-full">
                           <div className="flex items-center justify-start gap-3">
-                            <div className="h-[1px] w-4 bg-primary"></div>
+                            <div className="h-[2px] w-4 bg-primary"></div>
                             <h1 className="text-base font-bold">
-                              Previous program
+                              Specialty program
                             </h1>
                           </div>
                           {PreviousProgram.map((item, index) => (

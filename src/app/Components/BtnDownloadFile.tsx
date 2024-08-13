@@ -11,7 +11,12 @@ const BtnDownloadFile = ({
 }) => {
   return (
     <>
-      <a href={src} target="_blank" download={docName} className="text-base">
+      <a
+        href={src}
+        target="_blank"
+        download={docName}
+        className="text-base underline underline-offset-4"
+      >
         {title}
       </a>
     </>

@@ -69,7 +69,7 @@ const RisingStarProgram = () => {
             </Link>
           </div>
         </div>
-        <div className="order-first mt-6 h-[300px] w-[300px] xl:order-last xl:mt-0 xl:h-[400px] xl:w-full">
+        <div className="order-first mt-6 h-[300px] w-full min-w-[300px] xl:order-last xl:mt-0 xl:h-[400px] xl:w-full">
           <SliderProgram data={GromPatrolImage} />
         </div>
       </div>

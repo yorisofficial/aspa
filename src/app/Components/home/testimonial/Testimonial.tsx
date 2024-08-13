@@ -14,7 +14,7 @@ const TestimonialPage = () => {
           <h1 className="text-start text-xl font-black text-brand">
             Our testimonials
           </h1>
-          <p className="text-sm font-normal md:text-base xl:w-1/2">
+          <p className="w-full text-sm font-normal md:text-base xl:w-3/4">
             Our testimonials reflect the exceptional impact of ASPA in the
             surfing community.
           </p>

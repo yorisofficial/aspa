@@ -27,7 +27,7 @@ const ItemTestimonial = ({ data }: { data: Props }) => {
 
   return (
     <div>
-      <div className="item-slider relative space-y-4 rounded-xl border border-bordersolid bg-white p-8 drop-shadow-lg">
+      <div className="item-slider relative space-y-4 rounded-xl border border-bordersolid bg-white p-5 drop-shadow-lg">
         <div className="quotes absolute right-3 top-3 text-primary">
           <Quotes size={32} weight="fill" />
         </div>
@@ -44,7 +44,9 @@ const ItemTestimonial = ({ data }: { data: Props }) => {
         </div>
         <div className="">
           <p>
-            <q className={`quotes-section text-start text-base font-light`}>
+            <q
+              className={`quotes-section text-start text-sm font-light md:text-base`}
+            >
               {quotesText}
             </q>
           </p>

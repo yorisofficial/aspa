@@ -21,7 +21,7 @@ const VideoComponents = () => {
             height={300}
             priority
             quality={75}
-            className="h-[150px] w-full rounded-xl object-cover md:h-[250px] xl:h-[350px]"
+            className="h-[200px] w-full rounded-xl object-cover md:h-[250px] xl:h-[350px]"
           />
         ) : (
           <PlayYoutube />

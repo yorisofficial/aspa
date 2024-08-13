@@ -28,7 +28,6 @@ const FooterPage = () => {
         <address>
           {address} {postCode}
         </address>
-        <span>Tel : {Support[0].title}</span>
       </div>
       <div className="cta-whatsapp">
         <Link
