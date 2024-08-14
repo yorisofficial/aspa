@@ -207,11 +207,11 @@ const Navigation = () => {
                                   </Link>
                                 </motion.li>
                               ))}
-                              <li className="item-program  w-full">
+                              <li className="item-program mt-4 w-full">
                                 <div className="flex items-center justify-start gap-3">
                                   <div className="h-[2px] w-2 bg-primary"></div>
                                   <h1 className="text-base font-bold">
-                                    Previous program
+                                    Specialty program
                                   </h1>
                                 </div>
                                 {PreviousProgram.map((item, index) => (
@@ -296,7 +296,7 @@ const Navigation = () => {
                             </Link>
                           </li>
                         ))}
-                        <li className="item-program` w-full">
+                        <li className="item-program mt-4 w-full">
                           <div className="flex items-center justify-start gap-3">
                             <div className="h-[2px] w-4 bg-primary"></div>
                             <h1 className="text-base font-bold">

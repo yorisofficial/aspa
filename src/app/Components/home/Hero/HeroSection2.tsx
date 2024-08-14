@@ -195,7 +195,7 @@ export const AspaProgram = [
         id: "97c5365da68a",
         show: true,
         title: "private",
-        pricing: "IDR 1.350.000",
+        pricing: "",
         url: "https://yorisofficial.me/basic/private",
         icon: "",
       },
@@ -203,7 +203,7 @@ export const AspaProgram = [
         id: "585e9f86adb2",
         show: true,
         title: "group",
-        pricing: "IDR 850.000",
+        pricing: "",
         url: "https://yorisofficial.me/basic/group",
         icon: "",
       },
@@ -232,79 +232,11 @@ const HeroSection2 = () => {
             </p>
           </div>
         </div>
-        {/* <div className="list-program-section mx-auto grid h-fit grid-cols-3 gap-2 md:max-w-xl md:gap-5 xl:max-w-5xl">
-          {AspaProgram.map((item, index) => (
-            <div
-              key={item.id}
-              className={`item-aspa-program relative h-fit rounded-xl p-2 xl:px-6 xl:py-8 ${item.promote ? "border-4 border-brand bg-brand text-white xl:border-8" : "border border-black  bg-white"}`}
-            >
-              <div className={`content flex flex-col items-start gap-6`}>
-                <h1
-                  className={`text-base font-bold capitalize xl:text-2xl ${item.promote ? "text-white" : "text-black"}`}
-                >
-                  {item.title}
-                </h1>
-                <div className="list-benefit flex flex-col gap-2">
-                  {item.id === "32" ? (
-                    <>
-                      <p className="text-start">{item.promoteBook}</p>
-                    </>
-                  ) : (
-                    <>
-                      {item.benefit.map((item, index) => (
-                        <div key={item.id} className="item-benefit">
-                          <div className="flex flex-shrink-0 items-start justify-start gap-2 text-start xl:items-center xl:gap-4">
-                            <CheckCircle
-                              size={24}
-                              className="h-4 w-4 xl:h-6 xl:w-6"
-                            />{" "}
-                            <h1 className="text-xs xl:text-base">
-                              {item.title}
-                            </h1>
-                          </div>
-                        </div>
-                      ))}
-                    </>
-                  )}
-                </div>
-                <div className="btn-cta flex flex-col items-center gap-2 xl:flex-row xl:gap-4">
-                  {item.id === "32" ? (
-                    <div className="">
-                      <Link
-                        href={`/program/${item.id}/booking`}
-                        aria-label="booking the program"
-                      >
-                        <button
-                          className={`flex items-center gap-3 rounded-lg px-4 py-2 text-xs font-semibold xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-white text-brand" : "bg-black text-white"}`}
-                        >
-                          <Headset size={24} />
-                          Book now
-                        </button>
-                      </Link>
-                    </div>
-                  ) : (
-                    <>
-                      <Link
-                        href={`/program/${item.id}/booking`}
-                        aria-label="booking the program"
-                        className={`rounded-lg px-4 py-2 text-xs font-semibold xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-white text-brand" : "bg-black text-white"}`}
-                      >
-                        Book now
-                      </Link>
-                      <Link
-                        href={`/program/${item.id}`}
-                        aria-label="learn more about program"
-                        className="rounded text-[10px] underline underline-offset-4 xl:text-sm"
-                      >
-                        About the program
-                      </Link>
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div> */}
+        <div className="header">
+          <h1 className="text-center text-xl font-black text-brand xl:text-4xl">
+            Programs
+          </h1>
+        </div>
         <SliderPackage />
       </div>
     </ContainerContent>

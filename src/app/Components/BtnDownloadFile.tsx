@@ -15,7 +15,7 @@ const BtnDownloadFile = ({
         href={src}
         target="_blank"
         download={docName}
-        className="text-base underline underline-offset-4"
+        className="text-sm underline underline-offset-4"
       >
         {title}
       </a>

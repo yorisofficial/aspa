@@ -95,10 +95,20 @@ const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
               {data?.id === "32" ? (
                 <>
                   <Link href={`https://wa.me/${Support[0].url}`}>
-                    <button className="btn-icon flex w-fit items-center gap-3 rounded-lg bg-black px-5 py-2 font-semibold text-white xl:gap-3 xl:py-3 xl:pl-4 xl:pr-6">
+                    <motion.button
+                      initial={{ scale: 1 }}
+                      whileTap={{ scale: 0.9 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 10,
+                      }}
+                      exit={{ scale: 1 }}
+                      className="btn-icon flex w-fit items-center gap-3 rounded-lg bg-black px-5 py-2 font-semibold text-white xl:gap-3 xl:py-3 xl:pl-4 xl:pr-6"
+                    >
                       <Headset size={24} />
                       Contact us
-                    </button>
+                    </motion.button>
                   </Link>
                 </>
               ) : (

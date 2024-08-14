@@ -5,6 +5,7 @@ import React from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { CoreTeam } from "../lib/primary/CoreTeam";
+import { motion } from "framer-motion";
 
 export const calculateAge = (birthYear: number) => {
   const age = new Date().getFullYear() - birthYear;
@@ -81,12 +82,20 @@ const SliderPackage = () => {
                         href={`/program/${item.id}/booking`}
                         aria-label="booking the program"
                       >
-                        <button
+                        <motion.button
+                          initial={{ scale: 1 }}
+                          whileTap={{ scale: 0.9 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 10,
+                          }}
+                          exit={{ scale: 1 }}
                           className={`flex items-center gap-3 rounded-lg px-4 py-2 text-xs font-semibold xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-white text-brand" : "bg-black text-white"}`}
                         >
                           <Headset size={24} />
                           Contact us
-                        </button>
+                        </motion.button>
                       </Link>
                     </div>
                   ) : (
@@ -96,14 +105,36 @@ const SliderPackage = () => {
                         aria-label="booking the program"
                         className={`rounded-lg px-4 py-2 text-xs font-semibold xl:px-6 xl:py-3 xl:text-base ${item.promote ? "bg-white text-brand" : "bg-black text-white"}`}
                       >
-                        Book now
+                        <motion.button
+                          initial={{ scale: 1 }}
+                          whileTap={{ scale: 0.9 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 10,
+                          }}
+                          exit={{ scale: 1 }}
+                        >
+                          Book now
+                        </motion.button>
                       </Link>
                       <Link
                         href={`/program/${item.id}`}
                         aria-label="learn more about program"
                         className="rounded text-[10px] underline underline-offset-4 xl:text-sm"
                       >
-                        About the program
+                        <motion.button
+                          initial={{ scale: 1 }}
+                          whileTap={{ scale: 0.9 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 400,
+                            damping: 10,
+                          }}
+                          exit={{ scale: 1 }}
+                        >
+                          About the program
+                        </motion.button>
                       </Link>
                     </>
                   )}
