@@ -75,7 +75,7 @@ const SliderPackage = () => {
                     </>
                   )}
                 </div>
-                <div className="btn-cta flex flex-col items-center gap-2 xl:flex-row xl:gap-4">
+                <div className="btn-cta flex flex-col items-center gap-3 xl:flex-row xl:gap-4">
                   {item.id === "32" ? (
                     <div className="">
                       <Link

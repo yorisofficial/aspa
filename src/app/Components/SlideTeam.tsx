@@ -62,7 +62,7 @@ const SlideTeam = () => {
                     className="h-[200px] rounded-lg object-cover"
                   />
                 </div>
-                <div className="py-4 text-black">
+                <div className="py-4 text-center text-black">
                   <h1 className="text-xl font-black">{item.full_name}</h1>
                   <p>{item.title}</p>
                 </div>

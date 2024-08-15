@@ -63,14 +63,14 @@ export const AspaProgram = [
         id: "4365b5f709d4",
         title: "private",
         pricing: "IDR 2.700.000",
-        url: "https://yorisofficial.me/basicplus/private",
+        url: "https://pay.doku.com/p-link/p/OevIafJ",
         icon: "",
       },
       {
         id: "24761790db19",
         title: "group",
         pricing: "IDR 1.400.000",
-        url: "https://yorisofficial.me/basicplus/group",
+        url: "https://pay.doku.com/p-link/p/mjqnDCl",
         icon: "",
       },
     ],
@@ -126,7 +126,7 @@ export const AspaProgram = [
         show: true,
         title: "private",
         pricing: "IDR 1.350.000",
-        url: "https://yorisofficial.me/basic/private",
+        url: "https://pay.doku.com/p-link/p/uAfycCv",
         icon: "",
       },
       {
@@ -134,7 +134,7 @@ export const AspaProgram = [
         show: true,
         title: "group",
         pricing: "IDR 850.000",
-        url: "https://yorisofficial.me/basic/group",
+        url: " https://pay.doku.com/p-link/p/N2PvzVv",
         icon: "",
       },
     ],
@@ -233,7 +233,7 @@ const HeroSection2 = () => {
           </div>
         </div>
         <div className="header">
-          <h1 className="text-center text-xl font-black text-brand xl:text-4xl">
+          <h1 className="text-center text-base font-black text-brand xl:text-4xl">
             Programs
           </h1>
         </div>

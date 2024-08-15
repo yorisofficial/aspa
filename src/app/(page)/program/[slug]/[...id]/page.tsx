@@ -51,7 +51,8 @@ const BookingSession = ({
     router.replace(`${pathName}?session=${e.target.value}`);
   };
 
-  const dataUrl = "https://sheetdb.io/api/v1/3pq6sdp42d0a5";
+  // const dataUrl = "https://sheetdb.io/api/v1/3pq6sdp42d0a5";
+  const dataUrl = "https://sheetdb.io/api/v1/773504vnr9gup";
 
   //submit form
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -68,7 +69,7 @@ const BookingSession = ({
         agreement: form.agreement,
         created_at: form.created_at,
       });
-      alert("Data Submitted");
+      alert("Your form was submit, let's finish the payment");
     } catch (error: Error | any) {
       alert("Data Not Submitted:" + error.message);
     }
@@ -195,9 +196,12 @@ const BookingSession = ({
             <div className="footer-section flex flex-col gap-4">
               <div className="flex flex-col border-b py-2">
                 <span>Total price</span>
-                <h1 className="text-2xl font-bold">
-                  {dataSession?.pricing || "IDR 0"}
-                </h1>
+                <div className="flex items-end justify-start gap-3">
+                  <h1 className="text-2xl font-bold">
+                    {dataSession?.pricing || "IDR 0"}
+                  </h1>
+                  {form.session_selected !== "" && <small>/ Person</small>}
+                </div>
               </div>
               <label htmlFor="termservice" className="flex items-center">
                 <input

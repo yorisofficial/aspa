@@ -218,7 +218,7 @@ const Navigation = () => {
                                   <Link
                                     key={item.id}
                                     onClick={handleShow}
-                                    href={"/program/rising-star"}
+                                    href={"/program/isa-world-junior"}
                                     aria-label="ASPA item list program"
                                     className="group flex w-full items-center justify-start gap-2 py-2 capitalize"
                                   >
