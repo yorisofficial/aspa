@@ -51,7 +51,6 @@ const BookingSession = ({
     router.replace(`${pathName}?session=${e.target.value}`);
   };
 
-  // const dataUrl = "https://sheetdb.io/api/v1/3pq6sdp42d0a5";
   const dataUrl = "https://sheetdb.io/api/v1/773504vnr9gup";
 
   //submit form

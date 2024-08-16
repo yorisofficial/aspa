@@ -57,11 +57,7 @@ const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
               </div>
             ))}
           </div>
-          {data?.id === "32" ? (
-            <div className="session-details">
-              <h1 className="text-2xl font-bold">Connect with us</h1>
-            </div>
-          ) : (
+          {data?.id !== "32" && (
             <div className="session-detail flex flex-col gap-4">
               <h1 className="text-2xl font-bold">Services</h1>
               <div className="flex flex-col gap-6">
