@@ -143,11 +143,11 @@ export const AspaProgram = [
     id: "32",
     promote: false,
     title: "Custom",
-    url: "https://yorisofficial.me/link",
+    url: "https://wa.me/6281238584060",
     description:
-      "Our Basic Program is designed just for you! Tailored for surfers committed to improvement, this program offers a concentrated half-day of expert training and coaching.",
+      "Our custom programs are designed with your unique needs in mind. Whether you're looking for specific features, flexible terms, or tailored support, we're here to help. Simply let us know your requirements, and our customer support team will work with you to create a program that fits perfectly with your goals. Experience a solution that's truly made for you.",
     promoteBook:
-      "Join us for a half-day of transformative training, expert guidance, and thrilling wave action. Book your spot now!",
+      "Need a program tailored to your needs? Contact our customer support for a customized offer!",
     image: [
       {
         id: 1,
@@ -196,7 +196,7 @@ export const AspaProgram = [
         show: true,
         title: "private",
         pricing: "",
-        url: "https://yorisofficial.me/basic/private",
+        url: "",
         icon: "",
       },
       {
@@ -204,7 +204,7 @@ export const AspaProgram = [
         show: true,
         title: "group",
         pricing: "",
-        url: "https://yorisofficial.me/basic/group",
+        url: "",
         icon: "",
       },
     ],

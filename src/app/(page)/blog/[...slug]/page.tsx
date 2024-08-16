@@ -32,6 +32,9 @@ async function getData(id: string) {
 const BlogPage = async ({ params }: { params: { slug: string } }) => {
   const data = await getData(params.slug[0]);
 
+  console.log(data);
+  
+
   if (!data) {
     redirect("/not-found.tsx");
   }
@@ -57,9 +60,10 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
         </div>
         <div className="py-4">
           <GetDateComponent data={data.date} />
-          <h1 className="w-full text-xl font-black md:w-3/4">
-            {data.title.rendered}
-          </h1>
+          <h1
+            className="w-full text-xl font-black md:w-3/4"
+            dangerouslySetInnerHTML={{ __html: data.title.rendered }}
+          ></h1>
         </div>
       </div>
       <article className="prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-figcaption: prose max-w-none prose-headings:font-black prose-p:text-sm prose-p:text-black prose-figure:!w-full prose-figcaption:w-full prose-figcaption:text-balance prose-strong:text-primary prose-img:w-full prose-img:max-w-5xl prose-img:rounded-xl md:prose-img:w-full">

@@ -161,7 +161,7 @@ const BookingSession = ({
                   required
                   inputMode="numeric"
                   value={form.phone}
-                  minLength={1}
+                  minLength={8}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
                   className="peer w-full rounded-lg border border-bordersolid bg-foreground px-4 py-2 outline-none focus:outline-2 focus:outline-black"
                 />
@@ -183,7 +183,6 @@ const BookingSession = ({
                   id="email_address"
                   placeholder="Ex: example@example.com"
                   required
-                  inputMode="email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   className="peer w-full rounded-lg border border-bordersolid bg-foreground px-4 py-2 outline-none focus:outline-2 focus:outline-black"

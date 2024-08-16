@@ -50,7 +50,7 @@ const SliderPackage = () => {
                 <h1
                   className={`text-base font-bold capitalize xl:text-2xl ${item.promote ? "text-white" : "text-black"}`}
                 >
-                  {item.title}
+                  {item.title.replaceAll("program","")}
                 </h1>
                 <div className="list-benefit flex flex-col gap-2">
                   {item.id === "32" ? (
