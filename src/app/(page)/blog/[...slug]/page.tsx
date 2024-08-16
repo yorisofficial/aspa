@@ -32,9 +32,6 @@ async function getData(id: string) {
 const BlogPage = async ({ params }: { params: { slug: string } }) => {
   const data = await getData(params.slug[0]);
 
-  console.log(data);
-  
-
   if (!data) {
     redirect("/not-found.tsx");
   }

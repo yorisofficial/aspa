@@ -150,6 +150,10 @@ export const AspaProgram = [
       "Need a program tailored to your needs? Contact our customer support for a customized offer!",
     image: [
       {
+        id: 5,
+        src: "/assets/program/class/basic/basic-3.webp",
+      },
+      {
         id: 1,
         src: "/assets/program/class/basic/basic-5.webp",
       },
@@ -157,6 +161,7 @@ export const AspaProgram = [
         id: 2,
         src: "/assets/program/class/basic/basic-2.webp",
       },
+
       {
         id: 3,
         src: "/assets/program/class/basic/basic-1.webp",
@@ -164,10 +169,6 @@ export const AspaProgram = [
       {
         id: 4,
         src: "/assets/program/class/basic/basic-4.webp",
-      },
-      {
-        id: 5,
-        src: "/assets/program/class/basic/basic-3.webp",
       },
     ],
     benefit: [
