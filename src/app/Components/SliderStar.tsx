@@ -3,11 +3,11 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ButtonSlideSwiper from "./ButtonSlideSwiper";
+import ListAchievementsKiddo from "./Achievements/ListAchievementsKiddo";
 
 // Import Swiper styles
 import "swiper/css";
-import ButtonSlideSwiper from "./ButtonSlideSwiper";
-import ListAchievementsKiddo from "./Achievements/ListAchievementsKiddo";
 
 interface Props {
   id: number;
@@ -65,7 +65,7 @@ const SliderStar = ({
             <div className="profile-star flex h-full items-start justify-start gap-4">
               <Image
                 src={item.img_profile}
-                alt={`prifile-picture ${item.full_name}`}
+                alt={`profile-picture-${item.full_name}`}
                 height={400}
                 width={400}
                 className="h-[100px] w-[100px] rounded-full"
