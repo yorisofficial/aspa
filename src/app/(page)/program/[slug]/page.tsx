@@ -78,9 +78,9 @@ const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
             </div>
           )}
         </div>
-        <div className="right-side hidden items-start justify-center md:flex">
+        <div className="right-side hidden items-start justify-end md:flex">
           <div className="w-full flex-col rounded-xl border border-bordersolid bg-white p-8 drop-shadow-xl md:flex md:max-w-[300px] xl:max-w-[400px]">
-            <span className="text-sm font-semibold uppercase">
+            <span className="text-xs font-semibold uppercase">
               book the program
             </span>
             <h1 className="text-3xl font-bold capitalize text-brand">

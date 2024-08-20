@@ -21,8 +21,8 @@ const GaleryPreviewProgram = ({
           src={firstImage}
           alt={"preview-image"}
           priority
-          width={1500}
-          height={1200}
+          width={2400}
+          height={1800}
           quality={100}
           className="h-[200px] w-full rounded-xl object-cover md:h-[250px] xl:h-[380px]"
         />

@@ -145,21 +145,21 @@ export const AspaProgram = [
     title: "Custom",
     url: "https://wa.me/6281238584060",
     description:
-      "Our custom programs are designed with your unique needs in mind. Whether you're looking for specific features, flexible terms, or tailored support, we're here to help. Simply let us know your requirements, and our customer support team will work with you to create a program that fits perfectly with your goals. Experience a solution that's truly made for you.",
+      "Our custom surf programs are designed to meet your unique needs and aspirations. Whether you're looking for specific surf training techniques, flexible scheduling, or personalized coaching, we're here to help. Share your goals with us, and our team will work closely with you to create a surf program that's perfectly aligned with your vision. Experience a surf training program that's truly made for you.",
     promoteBook:
       "Need a program tailored to your needs? Contact our customer support for a customized offer!",
     image: [
       {
         id: 5,
-        src: "/assets/program/class/basic/basic-3.webp",
+        src: "/assets/program/class/basic/basic-2.webp",
       },
       {
         id: 1,
-        src: "/assets/program/class/basic/basic-5.webp",
+        src: "/assets/program/class/basic/basic-3.webp",
       },
       {
         id: 2,
-        src: "/assets/program/class/basic/basic-2.webp",
+        src: "/assets/program/class/basic/basic-5.webp",
       },
 
       {
