@@ -140,7 +140,6 @@ const Navigation = () => {
                       animate={{ x: 0 }}
                       exit={{ x: "-100%" }}
                       transition={{ duration: 0.2, delay: 0.1 * index }}
-                      // whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
                       className="relative flex w-full flex-col items-start justify-start"
                     >
                       <Link
@@ -217,8 +216,11 @@ const Navigation = () => {
                                 {PreviousProgram.map((item, index) => (
                                   <Link
                                     key={item.id}
-                                    onClick={() => setShowDropdown(false)}
-                                    href={"/program/isa-world-junior"}
+                                    onClick={() => {
+                                      setShowDropdown(false);
+                                      setMenus(false);
+                                    }}
+                                    href={item.url}
                                     aria-label="ASPA item list program"
                                     className="group flex w-full items-center justify-start gap-2 py-2 capitalize"
                                   >
