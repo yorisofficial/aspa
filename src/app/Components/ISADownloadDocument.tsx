@@ -32,7 +32,7 @@ const ISADownloadDocument = () => {
               download="ISA JUNIOR EL SAVADOR REPORT 2024.pdf"
               className="flex items-center gap-3 transition-all duration-300 ease-in-out hover:text-brand"
             >
-              <FilePdf size={24} /> REPORT ISA JUNIOR EL SAVADOR 2024
+              <FilePdf size={24} /> REPORT ISA JUNIOR EL SALVADOR 2024
             </Link>
           </div>
         )}
