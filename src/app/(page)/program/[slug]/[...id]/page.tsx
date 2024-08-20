@@ -51,7 +51,7 @@ const BookingSession = ({
     router.replace(`${pathName}?session=${e.target.value}`);
   };
 
-  const dataUrl = "https://sheetdb.io/api/v1/773504vnr9gup";
+  const dataUrl = "https://sheetdb.io/api/v1/0c37z0pcute1t";
 
   //submit form
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
