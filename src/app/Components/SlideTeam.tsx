@@ -20,19 +20,18 @@ const SlideTeam = () => {
   const data = CoreTeam;
 
   return (
-    <div className="list-coach mx-auto h-full w-full max-w-3xl">
+    <div className="list-coach mx-auto w-full max-w-3xl">
       <Swiper
         modules={[Autoplay]}
         loop={true}
         autoplay={{ delay: 8000 }}
-        slidesPerView={1.2}
         breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 16,
+          360: {
+            slidesPerView: 1.2,
+            spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 2.2,
             spaceBetween: 24,
           },
           1024: {
@@ -40,13 +39,10 @@ const SlideTeam = () => {
             spaceBetween: 46,
           },
         }}
-        className="list-coach mySwiper h-full w-full"
+        className="list-coach mySwiper w-full"
       >
         {data.map((item, index) => (
-          <SwiperSlide
-            key={index}
-            className="item-coach group h-[350px] w-full md:w-fit"
-          >
+          <SwiperSlide key={index} className="item-coach group w-full md:w-fit">
             <Link
               className="relative"
               href={`/team/ASPA/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
