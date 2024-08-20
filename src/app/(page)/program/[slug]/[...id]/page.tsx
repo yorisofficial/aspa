@@ -83,9 +83,6 @@ const BookingSession = ({
         Back to before
       </BackButton>
       <div className="content mx-auto mt-4 h-fit space-y-8 xl:w-[600px]">
-        <div className="fixed bottom-0 left-0 z-40 h-fit w-fit">
-          {form.id} | {form.created_at}
-        </div>
         <div className="flex flex-col gap-4 rounded-xl border border-bordersolid bg-foreground p-6 drop-shadow-xl">
           <div className="mx-auto flex flex-col gap-2 text-center">
             <span>Finish your booking</span>
