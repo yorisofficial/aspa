@@ -14,7 +14,7 @@ interface Props {
 
 const SliderProgram = ({ data }: { data: Props[] }) => {
   return (
-    <div className="order-first md:order-last">
+    <div className="">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={16}

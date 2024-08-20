@@ -6,6 +6,7 @@ import Image from "next/image";
 
 // Import Swiper styles
 import "swiper/css";
+import ButtonSlideSwiper from "./ButtonSlideSwiper";
 
 interface Props {
   id: number;
@@ -26,11 +27,11 @@ const SliderSurferISA = ({ timer, data }: { timer: number; data: Props[] }) => {
         autoplay={{ delay: timer }}
         grabCursor={true}
         breakpoints={{
-          640: {
-            slidesPerView: 1,
+          360: {
+            slidesPerView: 1.2,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 2.2,
           },
           1024: {
             slidesPerView: 3,
@@ -60,6 +61,7 @@ const SliderSurferISA = ({ timer, data }: { timer: number; data: Props[] }) => {
             </div>
           </SwiperSlide>
         ))}
+        <ButtonSlideSwiper />
       </Swiper>
     </div>
   );

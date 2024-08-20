@@ -22,7 +22,7 @@ const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
   return (
     <ContainerContent
       url=""
-      className="relative mx-auto min-h-screen w-full max-w-5xl"
+      className="bored relative mx-auto min-h-screen w-full max-w-5xl"
     >
       <BackButton url="" back={true}>
         Back to before

@@ -37,7 +37,7 @@ const ISAJunior = () => {
                 INDONESIA NATIONAL JUNIOR TEAM ISA EL SALVADOR
               </h1>
             </div>
-            <p className="w-full text-sm font-light md:w-3/4 md:text-base xl:w-full">
+            <p className="w-full text-sm font-light md:text-base xl:w-full">
               The International Surfing Association (ISA) governs global surfing
               and annually hosts the World Junior Surfing Championship, where
               young athletes compete for the world title. This year, El Salvador
@@ -61,13 +61,13 @@ const ISAJunior = () => {
         </div>
       </div>
       <OurService title="Our Services" />
-      <div className="star-section border-buttom flex min-h-[60vh] w-full flex-col gap-6 py-8 md:gap-8">
+      <div className="star-section border-buttom flex h-fit w-full flex-col gap-6 py-8 md:gap-8">
         <div className="header-section space-y-3">
           <h1 className="text-2xl font-bold uppercase text-brand">
             Surf athlete
           </h1>
         </div>
-        <div className="list-rising-star flex flex-col gap-6 md:gap-8">
+        <div className="list-rising-star flex h-fit flex-col gap-6 md:gap-8">
           <SliderSurferISA timer={4000} data={SurfAthlete} />
         </div>
       </div>

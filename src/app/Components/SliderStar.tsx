@@ -40,19 +40,21 @@ const SliderStar = ({
       </div>
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={32}
         loop={true}
         autoplay={{ delay: time }}
         grabCursor={true}
         breakpoints={{
           640: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
+            spaceBetween: 16,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 2.2,
+            spaceBetween: 20,
           },
           1024: {
             slidesPerView: 3,
+            spaceBetween: 32,
           },
         }}
         className="list-coach mySwiper h-full"

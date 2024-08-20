@@ -18,6 +18,7 @@ import { AspaProgram } from "./home/Hero/HeroSection2";
 
 // Import Swiper styles
 import "swiper/css";
+import ButtonSlideSwiper from "./ButtonSlideSwiper";
 
 const SliderPackage = () => {
   const data = CoreTeam;
@@ -43,7 +44,7 @@ const SliderPackage = () => {
         className="list-coach mySwiper h-full w-full"
       >
         {AspaProgram.map((item, index) => (
-          <SwiperSlide key={item.id} className="w-fit">
+          <SwiperSlide key={item.id} className="w-fit pb-8">
             <div
               className={`item-aspa-program relative h-fit w-full max-w-sm rounded-xl p-3 drop-shadow-lg xl:px-6 xl:py-8 ${item.promote ? "border-4 border-brand bg-brand text-white xl:border-8" : "border border-bordersolid  bg-white"}`}
             >
@@ -158,6 +159,7 @@ const SliderPackage = () => {
             </div>
           </SwiperSlide>
         ))}
+        <ButtonSlideSwiper />
       </Swiper>
     </div>
   );
