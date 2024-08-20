@@ -23,19 +23,21 @@ const SlideTeam = () => {
     <div className="list-coach mx-auto h-full w-full max-w-3xl">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={46}
         loop={true}
         autoplay={{ delay: 8000 }}
         slidesPerView={1.2}
         breakpoints={{
           640: {
             slidesPerView: 1,
+            spaceBetween: 16,
           },
           768: {
             slidesPerView: 2,
+            spaceBetween: 24,
           },
           1024: {
             slidesPerView: 3,
+            spaceBetween: 46,
           },
         }}
         className="list-coach mySwiper h-full w-full"
