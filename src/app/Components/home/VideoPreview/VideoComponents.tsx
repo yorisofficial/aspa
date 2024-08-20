@@ -17,6 +17,7 @@ const VideoComponents = () => {
       initial={{ scale: 1.2, opacity: 0 }}
       whileInView={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
       className="video relative mx-auto flex h-fit w-full max-w-5xl items-center justify-center"
     >
       <div className="video-thumbnail h-fit w-full">
@@ -35,9 +36,10 @@ const VideoComponents = () => {
         )}
         {!play && (
           <motion.div
-            initial={{ scale: 2, opacity: 0 }}
+            initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.3 }}
+            viewport={{ once: true }}
             className="play-button group absolute left-0 top-0 flex h-full w-full items-center justify-center"
           >
             <button

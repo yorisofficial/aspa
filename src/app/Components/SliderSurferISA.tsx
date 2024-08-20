@@ -11,6 +11,7 @@ interface Props {
   id: number;
   full_name: string;
   nickname: string;
+  age: string;
   region: string;
   profile_image: string;
 }
@@ -51,8 +52,10 @@ const SliderSurferISA = ({ timer, data }: { timer: number; data: Props[] }) => {
                 <h1 className="text-base font-black capitalize">
                   {item.full_name}
                 </h1>
-                <span className="text-base font-normal">- Y.o</span>
-                <span className="text-base font-light">{item.region}</span>
+                <span className="text-base font-normal">{item.age} Y.o</span>
+                <span className="text-base font-light capitalize">
+                  {item.region}
+                </span>
               </div>
             </div>
           </SwiperSlide>

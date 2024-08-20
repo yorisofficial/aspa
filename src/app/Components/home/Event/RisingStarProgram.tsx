@@ -62,7 +62,7 @@ const RisingStarProgram = () => {
               onClick={handleDescription}
               className="mt-4 underline underline-offset-4"
             >
-              {isSorted ? "Read more" : "Read less"}
+              {isSorted ? "Read less" : "Read more"}
             </button>
           </div>
           <div className="relative z-10 mt-4">

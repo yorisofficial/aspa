@@ -93,7 +93,7 @@ const Navigation = () => {
       animate={!isShow ? "hidden" : "visible"}
       exit="visible"
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`sticky left-0 top-0 z-40 w-full bg-white ${isShow ? "" : "drop-shadow-xl"}`}
+      className={`sticky left-0 top-0 z-40 w-full bg-white`}
     >
       <nav className={`flex w-full items-center justify-center`}>
         <div
@@ -217,7 +217,7 @@ const Navigation = () => {
                                 {PreviousProgram.map((item, index) => (
                                   <Link
                                     key={item.id}
-                                    onClick={handleShow}
+                                    onClick={() => setShowDropdown(false)}
                                     href={"/program/isa-world-junior"}
                                     aria-label="ASPA item list program"
                                     className="group flex w-full items-center justify-start gap-2 py-2 capitalize"
@@ -306,7 +306,7 @@ const Navigation = () => {
                           {PreviousProgram.map((item, index) => (
                             <Link
                               key={item.id}
-                              onClick={handleShow}
+                              onClick={() => setShowDropdown(false)}
                               href={item.url}
                               aria-label="ASPA item list program"
                               className="start group flex w-full items-center gap-3 py-2 capitalize"
