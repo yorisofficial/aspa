@@ -63,15 +63,21 @@ const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
               <div className="flex flex-col gap-6">
                 {data?.benefit.map((item, index) => (
                   <div key={item.id} className="flex items-start gap-2">
-                    <div className="h-full text-brand">
-                      <CheckCircle size={24} weight="bold" />
-                    </div>
-                    <div className="flex flex-col gap-2">
-                      <h1 className="flex items-center gap-4 font-semibold text-brand">
-                        {item.title}
-                      </h1>
-                      <p className="text-sm font-light">{item.description}</p>
-                    </div>
+                    {item.status && (
+                      <>
+                        <div className="h-full text-brand">
+                          <CheckCircle size={24} weight="bold" />
+                        </div>
+                        <div className="flex flex-col gap-2">
+                          <h1 className="flex items-center gap-4 font-semibold text-brand">
+                            {item.title}
+                          </h1>
+                          <p className="text-sm font-light">
+                            {item.description}
+                          </p>
+                        </div>
+                      </>
+                    )}
                   </div>
                 ))}
               </div>

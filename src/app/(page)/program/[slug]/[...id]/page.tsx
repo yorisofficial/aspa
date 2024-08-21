@@ -25,6 +25,9 @@ const BookingSession = ({
     (item) => item.id.toString() === params.slug,
   );
 
+  console.log(getData);
+  console.log(params.slug);
+
   const dataSession = getData?.session.find(
     (item) => item.title === getSession,
   );
@@ -39,11 +42,12 @@ const BookingSession = ({
     agreement: "",
     created_at: "",
   });
+
   const [disableButton, setDisableButton] = useState(false);
 
   useEffect(() => {
     form.id = Math.random().toString(36).substring(2, 14);
-    form.created_at = new Date().toLocaleString();
+    form.created_at = new Date().toString();
   }, [form]);
 
   const handleSession = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -51,7 +55,8 @@ const BookingSession = ({
     router.replace(`${pathName}?session=${e.target.value}`);
   };
 
-  const dataUrl = "https://sheetdb.io/api/v1/0c37z0pcute1t";
+  // const dataUrl = "https://sheetdb.io/api/v1/0c37z0pcute1t";
+  const dataUrl = "https://sheetdb.io/api/v1/773504vnr9gup";
 
   //submit form
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -133,7 +138,7 @@ const BookingSession = ({
                 </small>
               </label>
             </div>
-            <div className="details-profile flex flex-col gap-2 border-y py-2">
+            <div className="details-profile flex flex-col gap-2 border-b py-2">
               <h1 className="text-2xl font-bold">Input your details</h1>
               <label htmlFor="full_name" className="flex w-full flex-col gap-2">
                 <span className="">Full name</span>

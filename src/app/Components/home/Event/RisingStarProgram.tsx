@@ -32,7 +32,7 @@ const RisingStarProgram = () => {
       url="book-session"
       className="border-buttom relative h-fit py-8"
     >
-      <div className="hightlight-program-section relative grid h-fit w-full grid-cols-1 gap-4 rounded-xl bg-black p-8 text-white md:grid-cols-2">
+      <div className="hightlight-program-section relative grid h-fit w-full grid-cols-1 gap-4 rounded-xl bg-black p-8 text-white md:grid-cols-2 md:gap-5 xl:gap-8">
         <div className="absolute left-1/2 top-1/2 z-0 flex h-full w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center">
           <Image
             src={"/assets/acc/title-cover-simple.svg"}
@@ -42,7 +42,8 @@ const RisingStarProgram = () => {
             className="h-full w-full opacity-30"
           />
         </div>
-        <div className="details relative z-20 flex h-full flex-col items-start justify-center">
+        <SliderProgram data={GromPatrolImage} />
+        <div className="details relative z-20 flex h-full flex-col items-start justify-center md:order-first">
           <div className="content">
             <span className="text-sm font-light uppercase">
               our previous program
@@ -75,7 +76,6 @@ const RisingStarProgram = () => {
             </Link>
           </div>
         </div>
-        <SliderProgram data={GromPatrolImage} />
       </div>
     </ContainerContent>
   );
