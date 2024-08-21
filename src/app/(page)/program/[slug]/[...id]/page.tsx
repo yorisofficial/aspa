@@ -72,6 +72,16 @@ const BookingSession = ({
     } catch (error: Error | any) {
       alert("Data Not Submitted:" + error.message);
     }
+    setForm({
+      id: "",
+      fullname: "",
+      email: "",
+      phone: "",
+      program_selected: "",
+      session_selected: "",
+      agreement: "",
+      created_at: "",
+    });
     setDisableButton(false);
 
     router.push(`${dataSession?.url}`);
