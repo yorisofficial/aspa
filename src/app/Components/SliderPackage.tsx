@@ -26,8 +26,6 @@ import "swiper/css";
 import ButtonSlideSwiper from "./ButtonSlideSwiper";
 
 const SliderPackage = () => {
-  const idForm = Math.random().toString(36).substring(2, 14);
-
   return (
     <div className="list-coach h-full w-full">
       <Swiper
@@ -139,7 +137,7 @@ const SliderPackage = () => {
                   ) : (
                     <div className="flex w-full items-center gap-4 md:gap-5">
                       <Link
-                        href={`/program/${item.id}/booking?user=${idForm}`}
+                        href={`/program/${item.id}/booking`}
                         aria-label="booking the program"
                         className={`rounded-lg px-6 py-3 text-xs font-semibold xl:text-sm ${item.promote ? "bg-white text-black" : "bg-black text-white"}`}
                       >
