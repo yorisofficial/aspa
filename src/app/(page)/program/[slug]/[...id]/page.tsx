@@ -20,13 +20,13 @@ const BookingSession = ({
   // get session
   const getSession = searchParams.get("session");
 
+  // get iduser
+  const getIdUser = searchParams.get("user");
+
   // get data
   const getData = AspaProgram.find(
     (item) => item.id.toString() === params.slug,
   );
-
-  console.log(getData);
-  console.log(params.slug);
 
   const dataSession = getData?.session.find(
     (item) => item.title === getSession,
@@ -38,7 +38,7 @@ const BookingSession = ({
     email: "",
     phone: "",
     program_selected: getData?.title,
-    session_selected: "",
+    session_selected: searchParams.get("session") || "",
     agreement: "",
     created_at: "",
   });
@@ -46,13 +46,16 @@ const BookingSession = ({
   const [disableButton, setDisableButton] = useState(false);
 
   useEffect(() => {
+    if (getIdUser === form.id) {
+      router.push("/");
+    }
     form.id = Math.random().toString(36).substring(2, 14);
     form.created_at = new Date().toString();
-  }, [form]);
+  }, [form, getIdUser, router]);
 
   const handleSession = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setForm({ ...form, session_selected: e.target.value });
-    router.replace(`${pathName}?session=${e.target.value}`);
+    router.replace(`${pathName}?user=${getIdUser}&session=${e.target.value}`);
   };
 
   // const dataUrl = "https://sheetdb.io/api/v1/0c37z0pcute1t";
@@ -88,7 +91,6 @@ const BookingSession = ({
       created_at: "",
     });
     setDisableButton(false);
-
     router.push(`${dataSession?.url}`);
   };
 
@@ -97,6 +99,9 @@ const BookingSession = ({
       <BackButton url="" back={true}>
         Back to before
       </BackButton>
+      <div className="fixed bottom-0 left-0 z-40">
+        <span className="text-xl font-light">{form.id}</span>
+      </div>
       <div className="content mx-auto mt-4 h-fit space-y-8 xl:w-[600px]">
         <div className="flex flex-col gap-4 rounded-xl border border-bordersolid bg-foreground p-6 drop-shadow-xl">
           <div className="mx-auto flex flex-col gap-2 text-center">
