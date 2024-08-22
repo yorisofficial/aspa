@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import BackButton from "@/app/Components/BackButton";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { AspaProgram } from "@/app/Components/home/Hero/HeroSection2";
+import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
 import ContainerContent from "@/app/Components/Container";
 import axios from "axios";
 
@@ -94,7 +94,6 @@ const BookingSession = ({
       <BackButton url="" back={true}>
         Back to before
       </BackButton>
-      <div className="fixed bottom-0 left-0 z-40">{form.id}</div>
       <div className="content mx-auto mt-4 h-fit space-y-8 xl:w-[600px]">
         <div className="flex flex-col gap-4 rounded-xl border border-bordersolid bg-foreground p-6 drop-shadow-xl">
           <div className="mx-auto flex flex-col gap-2 text-center">

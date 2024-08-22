@@ -10,7 +10,7 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import { AspaProgram } from "./home/Hero/HeroSection2";
+import { AspaProgram } from "../lib/program/academy/AspaAcademy";
 import { ArrowRight } from "lucide-react";
 
 export const menuNav = [

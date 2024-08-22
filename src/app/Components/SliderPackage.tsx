@@ -1,24 +1,21 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { CoreTeam } from "../lib/primary/CoreTeam";
 import { motion } from "framer-motion";
+import { CheckCircle, Headset, XCircle } from "@phosphor-icons/react";
+import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
+
+// Import Swiper styles
+import "swiper/css";
+import ButtonSlideSwiper from "./ButtonSlideSwiper";
 
 export const calculateAge = (birthYear: number) => {
   const age = new Date().getFullYear() - birthYear;
 
   return age;
 };
-
-import { CheckCircle, Headset, XCircle } from "@phosphor-icons/react";
-import { AspaProgram } from "./home/Hero/HeroSection2";
-
-// Import Swiper styles
-import "swiper/css";
-import ButtonSlideSwiper from "./ButtonSlideSwiper";
 
 const SliderPackage = () => {
   return (

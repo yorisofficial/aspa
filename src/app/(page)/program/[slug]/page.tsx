@@ -1,8 +1,8 @@
 "use client";
-import React from "react";
+import React, { Fragment } from "react";
 
 // Get data needs
-import { AspaProgram } from "@/app/Components/home/Hero/HeroSection2";
+import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
 import { RegulationService } from "@/app/lib/RegulationService";
 
 import BackButton from "@/app/Components/BackButton";
@@ -62,23 +62,25 @@ const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
               <h1 className="text-2xl font-bold">Services</h1>
               <div className="flex flex-col gap-6">
                 {data?.benefit.map((item, index) => (
-                  <div key={item.id} className="flex items-start gap-2">
-                    {item.status && (
-                      <>
-                        <div className="h-full text-brand">
-                          <CheckCircle size={24} weight="bold" />
-                        </div>
-                        <div className="flex flex-col gap-2">
-                          <h1 className="flex items-center gap-4 font-semibold text-brand">
-                            {item.title}
-                          </h1>
-                          <p className="text-sm font-light">
-                            {item.description}
-                          </p>
-                        </div>
-                      </>
-                    )}
-                  </div>
+                  <Fragment key={item.id}>
+                    <div className="flex items-start gap-2">
+                      {item.status && (
+                        <>
+                          <div className="h-full text-brand">
+                            <CheckCircle size={24} weight="bold" />
+                          </div>
+                          <div className="flex flex-col gap-2">
+                            <h1 className="flex items-center gap-4 font-semibold text-brand">
+                              {item.title}
+                            </h1>
+                            <p className="text-sm font-light">
+                              {item.description}
+                            </p>
+                          </div>
+                        </>
+                      )}
+                    </div>
+                  </Fragment>
                 ))}
               </div>
             </div>
