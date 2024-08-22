@@ -73,6 +73,9 @@ const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
                             <h1 className="flex items-center gap-4 font-semibold text-brand">
                               {item.title}
                             </h1>
+                            <span className="text-sm font-bold">
+                              {item.duration}
+                            </span>
                             <p className="text-sm font-light">
                               {item.description}
                             </p>
