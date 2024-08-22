@@ -3,11 +3,11 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import ButtonSlideSwiper from "./ButtonSlideSwiper";
+import ListAchievementsKiddo from "./Achievements/ListAchievementsKiddo";
 
 // Import Swiper styles
 import "swiper/css";
-import ButtonSlideSwiper from "./ButtonSlideSwiper";
-import ListAchievementsKiddo from "./Achievements/ListAchievementsKiddo";
 
 interface Props {
   id: number;
@@ -24,7 +24,15 @@ const CountAge = (born: number) => {
   return new Date().getFullYear() - born;
 };
 
-const SliderStar = ({ data, title }: { data: Props[]; title: string }) => {
+const SliderStar = ({
+  data,
+  title,
+  time,
+}: {
+  data: Props[];
+  title: string;
+  time: number;
+}) => {
   return (
     <div className="">
       <div className="pb-4">
@@ -32,19 +40,21 @@ const SliderStar = ({ data, title }: { data: Props[]; title: string }) => {
       </div>
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={32}
         loop={true}
-        autoplay={{ delay: 8000 }}
+        autoplay={{ delay: time }}
         grabCursor={true}
         breakpoints={{
           640: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
+            spaceBetween: 16,
           },
           768: {
-            slidesPerView: 2,
+            slidesPerView: 2.2,
+            spaceBetween: 20,
           },
           1024: {
             slidesPerView: 3,
+            spaceBetween: 32,
           },
         }}
         className="list-coach mySwiper h-full"
@@ -57,7 +67,7 @@ const SliderStar = ({ data, title }: { data: Props[]; title: string }) => {
             <div className="profile-star flex h-full items-start justify-start gap-4">
               <Image
                 src={item.img_profile}
-                alt={`prifile-picture ${item.full_name}`}
+                alt={`profile-picture-${item.full_name}`}
                 height={400}
                 width={400}
                 className="h-[100px] w-[100px] rounded-full"

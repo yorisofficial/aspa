@@ -1,7 +1,7 @@
 import React from "react";
 import ContainerContent from "../../Container";
 import ListTestimonials from "./ListTestimonials";
-import { OurTestimonial } from "@/app/lib/TestimonialQuotes";
+import { OurTestimonial } from "@/app/lib/program/testimonial/TestimonialQuotes";
 
 const TestimonialPage = () => {
   return (
@@ -14,11 +14,9 @@ const TestimonialPage = () => {
           <h1 className="text-start text-xl font-black text-brand">
             Our testimonials
           </h1>
-          <p className="text-sm font-normal md:text-base xl:w-1/2">
-            Our testimonials reflect the exceptional impact of our surfing boot
-            camp, showcasing how our comprehensive training programs have
-            transformed athletes into top-performing surfers with unmatched
-            skills and competitive advantages.
+          <p className="w-full text-sm font-normal md:text-base xl:w-3/4">
+            Our testimonials reflect the exceptional impact of ASPA in the
+            surfing community.
           </p>
         </div>
       </div>

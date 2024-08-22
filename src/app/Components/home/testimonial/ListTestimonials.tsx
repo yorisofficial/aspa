@@ -6,10 +6,10 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 interface Props {
   id: number;
-  img_profile: string;
-  gp_user: string;
   full_name: string;
   quotes: string;
+  gp_user: string;
+  img_profile: string;
 }
 
 // Import Swiper styles
@@ -19,20 +19,18 @@ import ButtonSlideSwiper from "../../ButtonSlideSwiper";
 
 const ListTestimonials = ({ data }: { data: Props[] }) => {
   const dataTestimonial = data;
-  const paginationMode = {
-    clickable: true,
-  };
 
   return (
     <div className="">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={32}
+        spaceBetween={20}
         loop={true}
         autoplay={{ delay: 5000 }}
+        slidesPerView={1.2}
         breakpoints={{
           640: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
           },
           768: {
             slidesPerView: 2,

@@ -58,9 +58,10 @@ const LatestBlog = async () => {
           </div>
           <div className="header mb-4">
             <GetDateComponent data={latestBlog.date} />
-            <h1 className="text-base font-bold uppercase xl:text-xl">
-              {latestBlog.title.rendered}
-            </h1>
+            <h1
+              className="text-base font-bold uppercase xl:text-xl"
+              dangerouslySetInnerHTML={{ __html: latestBlog.title.rendered }}
+            ></h1>
           </div>
           <div className="mt-4 flex w-full items-center justify-start">
             <Link href={`/blog/${latestBlog.id}/${url}`} className="">

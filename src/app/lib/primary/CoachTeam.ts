@@ -1,5 +1,162 @@
 export const SurfTeam = [
   {
+    id: 11,
+    confirm: true,
+    full_name: "Dedi Santosa",
+    nickname: "",
+    quotes:
+      "Surfing is a journey, not a destination, take every wave as an opportunity to learn and grow.",
+    title: "surf coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 1984,
+    level: "Free Surfer",
+    experience: "5 years + judge",
+    location: "Kuta / Canggu",
+    profile: "/assets/team/aspa-coach-11.webp",
+    user_instagram: "https://www.instagram.com/dedisantosa_",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Dedi Santosa/item-image-1.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Dedi Santosa/item-image-2.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Dedi Santosa/item-image-3.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Dedi Santosa/item-image-4.webp",
+      },
+    ],
+    achievement: [
+      {
+        title: "Pro Surfer",
+      },
+    ],
+  },
+  {
+    id: 12,
+    confirm: true,
+    full_name: "Mickey Sudena",
+    nickname: "",
+    quotes: "",
+    title: "surf coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 1983,
+    level: "Free Surfer",
+    experience: "20 Years",
+    location: "Hallway",
+    profile: "/assets/team/aspa-coach-12.webp",
+    user_instagram: "https://www.instagram.com/sudenasurfcoach",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Mickey Sudena/item-image-1.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Mickey Sudena/item-image-2.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Mickey Sudena/item-image-3.webp",
+      },
+    ],
+    achievement: [
+      {
+        title: "3rd at Gamang Surfing 1998",
+      },
+      {
+        title: "1st at Junior Surfing Culture Exchange Championships 2000",
+      },
+      {
+        title: "2nd in master division national rank 2021-2022",
+      },
+      {
+        title: "2nd in master division national rank 2022-2023",
+      },
+      {
+        title: "2nd at Halfway Master Challenge 2023",
+      },
+      {
+        title: "4th at Uluwatu Master Challenge 2023",
+      },
+      {
+        title: "2nd in Master division national rank 2023-2024",
+      },
+      {
+        title: "National Surfing Qualification Jakarta Team 2023",
+      },
+      {
+        title: "Shortboard Man 2nd  (Athlete Varun Tanjung)",
+      },
+      {
+        title: "Shortboard women 2nd  (Athlete Jasmine Studer)",
+      },
+      {
+        title: "Longboard man 2nd (Athlete Dimas Shabil)",
+      },
+      {
+        title: "Longboard women 2nd (Athlete Flora Christin)",
+      },
+      {
+        title:
+          "2023 WSL Manokwari pro junior Man Qs1000 1st  Champion (Athlete Westen Hirst)",
+      },
+      {
+        title: "Junior women 3rd (Athlete Jasmine Studer)",
+      },
+      {
+        title:
+          "2024 WSL Krui pro Pro junior Man Qs1000 3rd  (Athlete Westen Hirst)",
+      },
+    ],
+  },
+  {
+    id: 17,
+    confirm: true,
+    full_name: "Made Joi",
+    nickname: "Joi",
+    quotes: "",
+    title: "surf coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 0,
+    level: "",
+    experience: "",
+    location: "Bali",
+    profile: "/assets/team/aspa-coach-17.webp",
+    user_instagram: "https://www.instagram.com/madejoi_",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Made Joi/item-image-1.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Made Joi/item-image-2.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Made Joi/item-image-3.webp",
+      },
+    ],
+    achievement: [
+      {
+        title: "",
+      },
+    ],
+  },
+  {
     id: 1,
     confirm: false,
     full_name: "Muklis Anwar",
@@ -453,127 +610,6 @@ export const SurfTeam = [
     ],
   },
   {
-    id: 11,
-    confirm: true,
-    full_name: "Dedi Santosa",
-    nickname: "",
-    quotes:
-      "Surfing is a journey, not a destination, take every wave as an opportunity to learn and grow.",
-    title: "surf coach",
-    certificated: "No ISA",
-    isa: false,
-    age: 1984,
-    level: "Free Surfer",
-    experience: "5 years + judge",
-    location: "Kuta / Canggu",
-    profile: "/assets/team/aspa-coach-11.webp",
-    user_instagram: "https://www.instagram.com/dedisantosa_",
-    user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-1.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-2.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-3.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-4.webp",
-      },
-    ],
-    achievement: [
-      {
-        title: "Pro Surfer",
-      },
-    ],
-  },
-  {
-    id: 12,
-    confirm: true,
-    full_name: "Mickey Sudena",
-    nickname: "",
-    quotes: "",
-    title: "surf coach",
-    certificated: "No ISA",
-    isa: false,
-    age: 1983,
-    level: "Free Surfer",
-    experience: "20 Years",
-    location: "Hallway",
-    profile: "/assets/team/aspa-coach-12.webp",
-    user_instagram: "https://www.instagram.com/sudenasurfcoach",
-    user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/item-image-1.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/item-image-2.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Mickey Sudena/item-image-3.webp",
-      },
-    ],
-    achievement: [
-      {
-        title: "3rd at Gamang Surfing 1998",
-      },
-      {
-        title: "1st at Junior Surfing Culture Exchange Championships 2000",
-      },
-      {
-        title: "2nd in master division national rank 2021-2022",
-      },
-      {
-        title: "2nd in master division national rank 2022-2023",
-      },
-      {
-        title: "2nd at Halfway Master Challenge 2023",
-      },
-      {
-        title: "4th at Uluwatu Master Challenge 2023",
-      },
-      {
-        title: "2nd in Master division national rank 2023-2024",
-      },
-      {
-        title: "National Surfing Qualification Jakarta Team 2023",
-      },
-      {
-        title: "Shortboard Man 2nd  (Athlete Varun Tanjung)",
-      },
-      {
-        title: "Shortboard women 2nd  (Athlete Jasmine Studer)",
-      },
-      {
-        title: "Longboard man 2nd (Athlete Dimas Shabil)",
-      },
-      {
-        title: "Longboard women 2nd (Athlete Flora Christin)",
-      },
-      {
-        title:
-          "2023 WSL Manokwari pro junior Man Qs1000 1st  Champion (Athlete Westen Hirst)",
-      },
-      {
-        title: "Junior women 3rd (Athlete Jasmine Studer)",
-      },
-      {
-        title:
-          "2024 WSL Krui pro Pro junior Man Qs1000 3rd  (Athlete Westen Hirst)",
-      },
-    ],
-  },
-  {
     id: 13,
     confirm: false,
     full_name: "Danyel Amar",
@@ -713,42 +749,6 @@ export const SurfTeam = [
       {
         title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
-      },
-    ],
-    achievement: [
-      {
-        title: "",
-      },
-    ],
-  },
-  {
-    id: 17,
-    confirm: true,
-    full_name: "Made Joi",
-    nickname: "Joi",
-    quotes: "",
-    title: "surf coach",
-    certificated: "No ISA",
-    isa: false,
-    age: 0,
-    level: "",
-    experience: "",
-    location: "Bali",
-    profile: "/assets/team/aspa-coach-17.webp",
-    user_instagram: "https://www.instagram.com/madejoi_",
-    user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Made Joi/item-image-1.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Made Joi/item-image-2.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Made Joi/item-image-3.webp",
       },
     ],
     achievement: [

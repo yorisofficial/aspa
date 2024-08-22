@@ -3,13 +3,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { List, X } from "@phosphor-icons/react";
+import { CaretDown, CaretRight, CaretUp, List, X } from "@phosphor-icons/react";
 import {
   AnimatePresence,
   motion,
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
+import { AspaProgram } from "../lib/program/academy/AspaAcademy";
+import { ArrowRight } from "lucide-react";
 
 export const menuNav = [
   {
@@ -18,12 +20,12 @@ export const menuNav = [
     link: "/",
   },
   {
-    title: "Academy",
-    base: "academy",
-    link: "/academy",
+    title: "About us",
+    base: "about-us",
+    link: "/about-us",
   },
   {
-    title: "Our Program",
+    title: "Programs",
     base: "program",
     link: "/program",
   },
@@ -33,9 +35,22 @@ export const menuNav = [
     link: "/blog",
   },
   {
-    title: "Our Team",
+    title: "Team",
     base: "team",
     link: "/team",
+  },
+];
+
+export const PreviousProgram = [
+  {
+    id: 1,
+    title: "Rising Star",
+    url: "/program/rising-star",
+  },
+  {
+    id: 2,
+    title: "Junior Team Indonesia",
+    url: "/program/isa-world-junior",
   },
 ];
 
@@ -43,6 +58,7 @@ const Navigation = () => {
   const { scrollY } = useScroll();
   const [isShow, setShow] = useState(true);
   const [isMenus, setMenus] = useState(false);
+  const [isShowDropdown, setShowDropdown] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -50,9 +66,11 @@ const Navigation = () => {
     if (previous !== undefined && latest > previous && latest > 0) {
       setShow(false);
       setMenus(false);
+      setShowDropdown(false);
     } else {
       setShow(true);
       setMenus(false);
+      setShowDropdown(false);
     }
   });
 
@@ -75,7 +93,7 @@ const Navigation = () => {
       animate={!isShow ? "hidden" : "visible"}
       exit="visible"
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`sticky left-0 top-0 z-40 w-full bg-white ${isShow ? "" : "drop-shadow-xl"}`}
+      className={`sticky left-0 top-0 z-40 w-full bg-white`}
     >
       <nav className={`flex w-full items-center justify-center`}>
         <div
@@ -112,9 +130,9 @@ const Navigation = () => {
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ ease: "easeInOut", duration: 0.1 }}
-                className="mobile-menu fixed left-0 top-20 z-40 flex h-full w-full items-start justify-start xl:hidden"
+                className="mobile-menu fixed left-0 top-20 z-40 flex h-fit w-full items-start justify-start xl:hidden"
               >
-                <div className="min-h-screen w-full space-y-2 bg-white px-4 pt-12">
+                <div className="h-fit min-h-screen w-full space-y-2 bg-white px-4 pt-12">
                   {menuNav.map((item, index) => (
                     <motion.div
                       key={index}
@@ -122,16 +140,102 @@ const Navigation = () => {
                       animate={{ x: 0 }}
                       exit={{ x: "-100%" }}
                       transition={{ duration: 0.2, delay: 0.1 * index }}
-                      whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
-                      className="flex w-full flex-col items-start justify-start"
+                      className="relative flex w-full flex-col items-start justify-start"
                     >
                       <Link
-                        onClick={() => setMenus(false)}
-                        href={item.link}
+                        onClick={
+                          item.base === "program"
+                            ? () => setShowDropdown(!isShowDropdown)
+                            : () => setMenus(false)
+                        }
+                        href={item.base === "program" ? "#" : item.link}
                         className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${activePath.includes(item.base) ? "bg-primary text-white" : ""}`}
                       >
-                        {item.title}
+                        {item.base === "program" ? (
+                          <button className="flex w-full items-center justify-between">
+                            {item.title}{" "}
+                            {isShowDropdown ? (
+                              <CaretUp size={24} />
+                            ) : (
+                              <CaretDown size={24} />
+                            )}
+                          </button>
+                        ) : (
+                          <span>{item.title}</span>
+                        )}
                       </Link>
+
+                      <AnimatePresence>
+                        {item.base === "program" && isShowDropdown && (
+                          <motion.div
+                            initial={{ height: 0, originY: 0, opacity: 0 }}
+                            animate={{ height: "auto", originY: 0, opacity: 1 }}
+                            exit={{ height: 0, originY: 0, opacity: 0 }}
+                            transition={{ duration: 0.2, ease: "easeInOut" }}
+                            className="dropdown w-full bg-white p-3 text-black"
+                          >
+                            <ul className="flex w-full flex-col">
+                              <div className="flex items-center justify-start gap-3">
+                                <div className="h-[1px] w-2 bg-primary"></div>
+                                <h1 className="text-base font-bold">
+                                  Our program
+                                </h1>
+                              </div>
+                              {AspaProgram.map((item, index) => (
+                                <motion.li
+                                  initial={{ scale: 1 }}
+                                  whileTap={{ scale: 0.9 }}
+                                  exit={{ scale: 1 }}
+                                  key={index}
+                                  className="item-program group w-full"
+                                >
+                                  <Link
+                                    onClick={() => {
+                                      setShowDropdown(!isShowDropdown);
+                                      setMenus(false);
+                                    }}
+                                    href={`/program/${item.id}`}
+                                    aria-label="ASPA item list program"
+                                    className="flex w-full items-center justify-start gap-2 py-2 capitalize"
+                                  >
+                                    <ArrowRight
+                                      size={16}
+                                      className="duration-500 group-hover:translate-x-1"
+                                    />
+                                    {item.title.replaceAll("program", "")}
+                                  </Link>
+                                </motion.li>
+                              ))}
+                              <li className="item-program mt-4 w-full">
+                                <div className="flex items-center justify-start gap-3">
+                                  <div className="h-[2px] w-2 bg-primary"></div>
+                                  <h1 className="text-base font-bold">
+                                    Specialty program
+                                  </h1>
+                                </div>
+                                {PreviousProgram.map((item, index) => (
+                                  <Link
+                                    key={item.id}
+                                    onClick={() => {
+                                      setShowDropdown(false);
+                                      setMenus(false);
+                                    }}
+                                    href={item.url}
+                                    aria-label="ASPA item list program"
+                                    className="group flex w-full items-center justify-start gap-2 py-2 capitalize"
+                                  >
+                                    <ArrowRight
+                                      size={16}
+                                      className="duration-500 group-hover:translate-x-1"
+                                    />
+                                    {item.title}
+                                  </Link>
+                                ))}
+                              </li>
+                            </ul>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </motion.div>
                   ))}
                 </div>
@@ -150,13 +254,76 @@ const Navigation = () => {
           <div className="desktop-menu hidden xl:block">
             <ul className="flex items-center gap-4">
               {menuNav.map((item, index) => (
-                <li key={index}>
+                <li key={index} className="relative">
                   <Link
-                    href={item.link}
+                    href={item.base === "program" ? "#" : item.link}
                     className={`duration-500 hover:scale-110 ${activePath.includes(item.base) ? "font-bold text-brand underline underline-offset-8" : ""}`}
                   >
-                    {item.title}
+                    {item.base === "program" ? (
+                      <button
+                        onClick={() => setShowDropdown(!isShowDropdown)}
+                        className={`flex items-center gap-2`}
+                      >
+                        {item.title}{" "}
+                        {isShowDropdown ? (
+                          <CaretUp size={18} />
+                        ) : (
+                          <CaretDown size={18} />
+                        )}
+                      </button>
+                    ) : (
+                      <span>{item.title}</span>
+                    )}
                   </Link>
+                  {item.base === "program" && isShowDropdown && (
+                    <div className="dropdown absolute left-0 top-full w-[300px] -translate-x-6 translate-y-3 rounded-xl border border-bordersolid bg-white p-5 text-black drop-shadow-xl">
+                      <div className="flex items-center justify-start gap-3">
+                        <div className="h-[2px] w-4 bg-primary"></div>
+                        <h1 className="text-base font-bold">Our program</h1>
+                      </div>
+                      <ul className="flex w-full flex-col">
+                        {AspaProgram.map((item, index) => (
+                          <li key={index} className="item-program group w-full">
+                            <Link
+                              onClick={() => setShowDropdown(false)}
+                              href={`/program/${item.id}`}
+                              aria-label="ASPA item list program"
+                              className="flex w-full items-center justify-start gap-3 py-2 capitalize"
+                            >
+                              <ArrowRight
+                                size={16}
+                                className="duration-500 group-hover:translate-x-1"
+                              />
+                              {item.title.replaceAll("program", "")}
+                            </Link>
+                          </li>
+                        ))}
+                        <li className="item-program mt-4 w-full">
+                          <div className="flex items-center justify-start gap-3">
+                            <div className="h-[2px] w-4 bg-primary"></div>
+                            <h1 className="text-base font-bold">
+                              Specialty program
+                            </h1>
+                          </div>
+                          {PreviousProgram.map((item, index) => (
+                            <Link
+                              key={item.id}
+                              onClick={() => setShowDropdown(false)}
+                              href={item.url}
+                              aria-label="ASPA item list program"
+                              className="start group flex w-full items-center gap-3 py-2 capitalize"
+                            >
+                              <ArrowRight
+                                size={16}
+                                className="duration-500 group-hover:translate-x-1"
+                              />
+                              {item.title}
+                            </Link>
+                          ))}
+                        </li>
+                      </ul>
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>

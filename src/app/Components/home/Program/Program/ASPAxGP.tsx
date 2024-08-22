@@ -3,27 +3,25 @@ import OurService from "@/app/Components/home/Service/OurService";
 import SliderProgram from "@/app/Components/home/Program/SliderProgram";
 import { GromPatrol } from "@/app/lib/events/grompatrol";
 import SliderStar from "@/app/Components/SliderStar";
-import { DataStar, DataStar2 } from "@/app/lib/DataStar";
-import Link from "next/link";
-
+import { DataStar, DataStar2 } from "@/app/lib/program/risingstar/DataStar";
 
 import DownloadDocument from "@/app/Components/DownloadDocument";
 
 export const SliderImg = [
   {
-    src: "/assets/program/grompatrol/img-1.webp",
+    src: "/assets/program/grompatrol/main/img-1.webp",
     alt: "image-asset-program",
   },
   {
-    src: "/assets/program/grompatrol/img-2.webp",
+    src: "/assets/program/grompatrol/main/img-2.webp",
     alt: "image-asset-program",
   },
   {
-    src: "/assets/program/grompatrol/img-3.webp",
+    src: "/assets/program/grompatrol/main/img-3.webp",
     alt: "image-asset-program",
   },
   {
-    src: "/assets/program/grompatrol/img-4.webp",
+    src: "/assets/program/grompatrol/main/img-4.webp",
     alt: "image-asset-program",
   },
 ];
@@ -35,7 +33,7 @@ const ASPAxGP = () => {
         <div className="details flex h-full w-full flex-col gap-8 xl:order-first">
           <div className="content-body space-y-4">
             <div className="header">
-              <span className="text-base uppercase">Program</span>
+              <span className="text-base uppercase">Our Previous Program</span>
               <h1 className="text-3xl font-black text-brand">
                 {GromPatrol.title}
               </h1>
@@ -69,8 +67,16 @@ const ASPAxGP = () => {
           </p>
         </div>
         <div className="list-rising-star flex flex-col gap-6 md:gap-8">
-          <SliderStar title="aspa rising star program #1" data={DataStar} />
-          <SliderStar title="aspa rising star program #2" data={DataStar2} />
+          <SliderStar
+            title="aspa rising star program #1"
+            time={4000}
+            data={DataStar}
+          />
+          <SliderStar
+            title="aspa rising star program #2"
+            time={6000}
+            data={DataStar2}
+          />
         </div>
       </div>
     </>

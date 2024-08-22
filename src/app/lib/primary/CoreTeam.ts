@@ -63,7 +63,7 @@ export const CoreTeam = [
       },
       {
         title:
-          "2021 Bachelor in Business Administration & Management + Digital Business Skills",
+          "2021 Deusto University Bachelor Degree in Business Administration & Management + Digital Business Skills",
       },
       {
         title: "2018 Surf Instructor",

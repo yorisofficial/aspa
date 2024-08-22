@@ -18,6 +18,7 @@ const config = {
       brand: "#07529E",
       bordersolid: "#e5e7eb",
       red: "#FF0000",
+      green: "#22C55E",
     },
     container: {},
     extend: {

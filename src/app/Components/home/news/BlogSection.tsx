@@ -9,7 +9,8 @@ import ItemBlog from "./components/ItemBlog";
 async function getData() {
   const url = process.env.ASC_PUBLIC_POST || "";
   const res = await fetch(`${url}/?per_page=5`, {
-    next: { revalidate: 500 },
+    cache: "force-cache",
+    // next: { revalidate: 3600 },
   });
 
   if (!res.ok) {
@@ -52,9 +53,10 @@ const BlogSection = async () => {
             </div>
             <div className="header w-full">
               <GetDateComponent data={latestBlog.date} />
-              <h1 className="text-start text-xl font-bold uppercase underline-offset-8 group-hover:underline">
-                {latestBlog.title.rendered}
-              </h1>
+              <h1
+                className="text-start text-xl font-bold uppercase underline-offset-8 group-hover:underline"
+                dangerouslySetInnerHTML={{ __html: latestBlog.title.rendered }}
+              ></h1>
             </div>
           </div>
         </Link>

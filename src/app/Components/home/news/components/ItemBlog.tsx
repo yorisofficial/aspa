@@ -6,7 +6,13 @@ import { motion } from "framer-motion";
 
 const ItemBlog = ({ data, index }: { data: any; index: number }) => {
   const item = data;
-  const url = item.title.rendered.replaceAll(" ", "-").toLowerCase();
+  const url = item.title.rendered
+    .replaceAll("&#8217;", "'")
+    .replaceAll(" ", "-")
+    .toLowerCase();
+  const titleHeading = {
+    dangerouslySetInnerHTML: { __html: item.title.rendered },
+  };
 
   return (
     <>
@@ -20,9 +26,10 @@ const ItemBlog = ({ data, index }: { data: any; index: number }) => {
         <Link href={`/blog/${item.id}/${url}`} className="w-full">
           <div className="group relative flex w-full items-start justify-between py-2">
             <div className="pr-8">
-              <h1 className="text-sm underline-offset-4 group-hover:underline xl:text-base">
-                {item.title.rendered}
-              </h1>
+              <h1
+                className="text-sm underline-offset-4 group-hover:underline xl:text-base"
+                dangerouslySetInnerHTML={{ __html: item.title.rendered }}
+              ></h1>
             </div>
             <ArrowRightCircle
               size={24}
