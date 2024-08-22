@@ -117,7 +117,7 @@ const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
                 </>
               ) : (
                 <Link
-                  href={`/program/${data?.id}/booking`}
+                  href={`/program/${data?.id}/booking?user=${Math.random().toString(36).substring(2, 14)}`}
                   className="inline-block w-full"
                 >
                   <motion.button

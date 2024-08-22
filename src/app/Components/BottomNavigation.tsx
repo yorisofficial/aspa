@@ -38,7 +38,10 @@ const BottomNavigation = ({ data }: { data?: string }) => {
             </Link>
           </>
         ) : (
-          <Link href={`/program/${data}/booking`} className="flex w-full">
+          <Link
+            href={`/program/${data}/booking?user=${Math.random().toString(36).substring(2, 14)}`}
+            className="flex w-full"
+          >
             <motion.button
               initial={{ scale: 1 }}
               whileTap={{ scale: 0.9 }}

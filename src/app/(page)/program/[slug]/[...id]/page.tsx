@@ -19,26 +19,24 @@ const BookingSession = ({
 
   // get session
   const getSession = searchParams.get("session");
+  const getUserId = searchParams.get("user");
 
   // get data
   const getData = AspaProgram.find(
     (item) => item.id.toString() === params.slug,
   );
 
-  console.log(getData);
-  console.log(params.slug);
-
   const dataSession = getData?.session.find(
     (item) => item.title === getSession,
   );
 
   const [form, setForm] = useState({
-    id: "",
+    id: getUserId,
     fullname: "",
     email: "",
     phone: "",
     program_selected: getData?.title,
-    session_selected: "",
+    session_selected: getSession,
     agreement: "",
     created_at: "",
   });
@@ -46,13 +44,12 @@ const BookingSession = ({
   const [disableButton, setDisableButton] = useState(false);
 
   useEffect(() => {
-    form.id = Math.random().toString(36).substring(2, 14);
     form.created_at = new Date().toString();
   }, [form]);
 
   const handleSession = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setForm({ ...form, session_selected: e.target.value });
-    router.replace(`${pathName}?session=${e.target.value}`);
+    router.replace(`${pathName}?user=${getUserId}&session=${e.target.value}`);
   };
 
   // const dataUrl = "https://sheetdb.io/api/v1/0c37z0pcute1t";
@@ -78,7 +75,7 @@ const BookingSession = ({
       alert("Data Not Submitted:" + error.message);
     }
     setForm({
-      id: "",
+      id: getUserId,
       fullname: "",
       email: "",
       phone: "",
@@ -97,6 +94,7 @@ const BookingSession = ({
       <BackButton url="" back={true}>
         Back to before
       </BackButton>
+      <div className="fixed bottom-0 left-0 z-40">{form.id}</div>
       <div className="content mx-auto mt-4 h-fit space-y-8 xl:w-[600px]">
         <div className="flex flex-col gap-4 rounded-xl border border-bordersolid bg-foreground p-6 drop-shadow-xl">
           <div className="mx-auto flex flex-col gap-2 text-center">
