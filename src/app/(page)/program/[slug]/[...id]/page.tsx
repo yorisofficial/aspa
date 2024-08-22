@@ -78,8 +78,8 @@ const BookingSession = ({
       fullname: "",
       email: "",
       phone: "",
-      program_selected: "",
-      session_selected: "",
+      program_selected: getData?.title,
+      session_selected: getSession,
       agreement: "",
       created_at: "",
     });
@@ -93,6 +93,13 @@ const BookingSession = ({
       <BackButton url="" back={true}>
         Back to before
       </BackButton>
+      <div className="fixed bottom-4 left-4 hidden select-none rounded-xl border-2 border-bordersolid bg-white p-4 drop-shadow-xl md:block">
+        <ul>
+          <li>{form.id}</li>
+          <li>{form.program_selected}</li>
+          <li>{form.session_selected}</li>
+        </ul>
+      </div>
       <div className="content mx-auto mt-4 h-fit space-y-8 xl:w-[600px]">
         <div className="flex flex-col gap-4 rounded-xl border border-bordersolid bg-foreground p-6 drop-shadow-xl">
           <div className="mx-auto flex flex-col gap-2 text-center">
