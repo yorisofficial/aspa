@@ -50,7 +50,7 @@ const SliderPackage = () => {
         {AspaProgram.map((item, index) => (
           <SwiperSlide key={item.id} className="w-fit py-8">
             <div
-              className={`item-aspa-program h-[300px] w-full rounded-xl p-4 md:p-6 xl:h-[400px] ${item.promote ? "border-2 border-brand  bg-primary text-white" : "border-2 border-bordersolid  bg-white text-black"}`}
+              className={`item-aspa-program h-[300px] w-full rounded-xl p-4 md:p-6 xl:h-[400px] ${item.promote ? "border-2 border-primary bg-primary text-white" : "border-2 border-bordersolid  bg-white text-black"}`}
             >
               <div
                 className={`content flex h-full flex-col items-start justify-between gap-6`}
