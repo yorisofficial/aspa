@@ -10,7 +10,7 @@ export const AspaProgram = [
     title: "basic program",
     url: "basic",
     description:
-      "Our Basic Program is designed just for you! Tailored for surfers committed to improvement, this program offers a concentrated half-day of expert training and coaching.",
+      "Our Basic+ Program is designed for surfers aiming to enhance their technique and skills to reach the next level. Take advantage of our coached surf sessions and video analysis coaching to elevate your surf performance.",
     promoteBook:
       "Join us for a half-day of transformative training, expert guidance, and thrilling wave action. Book your spot now!",
     image: [
@@ -39,6 +39,7 @@ export const AspaProgram = [
       {
         id: 1,
         title: "One Surf Session",
+        duration: "90 Minutes",
         status: true,
         description:
           "A surf session packed with personalized coaching and hands-on practice to sharpen your skills and boost your confidence on the waves.",
@@ -46,13 +47,15 @@ export const AspaProgram = [
       {
         id: 2,
         title: "Video Analysis Coaching",
+        duration: "30 - 60 Minutes",
         status: false,
         description:
-          "After each surf session, benefit from a detailed video analysis. Our expert coaches will review your performance, providing targeted feedback and actionable tips to refine your technique and accelerate your progress.",
+          "After the surf session, benefit from a video analysis. Our coach will review your performance and provide targeted feedback and actionable tips to keep improving.",
       },
       {
         id: 3,
         title: "Physical Training Session",
+        duration: "",
         status: false,
         description:
           "Become a more complete surfer with our physical training sessions, focusing on strength, mobility, and endurance.",
@@ -112,6 +115,7 @@ export const AspaProgram = [
       {
         id: 1,
         title: "One Surf Session",
+        duration: "90 Minutes",
         status: true,
         description:
           "A surf session packed with personalized coaching and hands-on practice to sharpen your skills and boost your confidence on the waves.",
@@ -119,13 +123,15 @@ export const AspaProgram = [
       {
         id: 2,
         title: "Video Analysis Coaching",
+        duration: "30 - 60 Minutes",
         status: true,
         description:
-          "After each surf session, benefit from a detailed video analysis. Our expert coaches will review your performance, providing targeted feedback and actionable tips to refine your technique and accelerate your progress.",
+          "After the surf session, benefit from a video analysis. Our coach will review your performance and provide targeted feedback and actionable tips to keep improving.",
       },
       {
         id: 3,
         title: "Physical Training Session",
+        duration: "",
         status: false,
         description:
           "Become a more complete surfer with our physical training sessions, focusing on strength, mobility, and endurance.",
@@ -185,6 +191,7 @@ export const AspaProgram = [
       {
         id: 1,
         title: "One Surf Session with Elite Surf Coach",
+        duration: "90 Minutes",
         status: true,
         description:
           "A surf session with an Elite Surf Coach, packed with personalized coaching and hands-on practice to sharpen your skills and performance.",
@@ -192,6 +199,7 @@ export const AspaProgram = [
       {
         id: 2,
         title: "Video Analysis Coaching with Elite Surf Coach",
+        duration: "30 - 60 Minutes",
         status: true,
         description:
           "After each surf session, benefit from a detailed video analysis. Our elite coach will review your performance, providing targeted feedback and actionable tips to refine your technique.",
@@ -199,6 +207,7 @@ export const AspaProgram = [
       {
         id: 3,
         title: "Performance Data and Training session with Elite Athlete Coach",
+        duration: "60 Minutes",
         status: true,
         description:
           "Our Elite Athlete Coach will make a Performance Data analysis in order to make a personalized training and become a more complete surfer with our physical training sessions.",
@@ -257,6 +266,7 @@ export const AspaProgram = [
       {
         id: 1,
         title: "One Surf Session",
+        duration: "",
         status: false,
         description:
           "A surf session packed with personalized coaching and hands-on practice to sharpen your skills and boost your confidence on the waves.",
@@ -264,6 +274,7 @@ export const AspaProgram = [
       {
         id: 2,
         title: "Video Analysis Coaching",
+        duration: "",
         status: false,
         description:
           "After each surf session, benefit from a detailed video analysis. Our expert coaches will review your performance, providing targeted feedback and actionable tips to refine your technique and accelerate your progress.",
@@ -271,6 +282,7 @@ export const AspaProgram = [
       {
         id: 3,
         title: "Physical Training Session",
+        duration: "",
         status: false,
         description:
           "Become a more complete surfer with our physical training sessions, focusing on strength, mobility, and endurance.",
