@@ -1,10 +1,10 @@
 "use client";
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
 
 // Get data needs
+import { redirect } from "next/navigation";
 import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
 import { RegulationService } from "@/app/lib/RegulationService";
-
 import BackButton from "@/app/Components/BackButton";
 import ContainerContent from "@/app/Components/Container";
 import { CheckCircle, Headset, User, UsersFour } from "@phosphor-icons/react";
@@ -17,8 +17,9 @@ import { Support } from "@/app/lib/Support";
 
 const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
   const data = AspaProgram.find((item) => item.id.toString() === params.slug);
-  console.log();
-
+  useEffect(() => {
+    data?.id ?? redirect("/not-found");
+  });
   return (
     <ContainerContent
       url=""
