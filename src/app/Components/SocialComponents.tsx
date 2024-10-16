@@ -1,5 +1,10 @@
 "use client";
-import { InstagramLogo, TwitterLogo, YoutubeLogo } from "@phosphor-icons/react";
+import {
+  FacebookLogo,
+  InstagramLogo,
+  TwitterLogo,
+  YoutubeLogo,
+} from "@phosphor-icons/react";
 import Link from "next/link";
 import React from "react";
 
@@ -7,6 +12,15 @@ const SocialComponents = () => {
   const social = [
     {
       id: 1,
+      platform: "Facebook",
+      title: "ASPA facebook",
+      username: "aspa_surfacademy",
+      url: "https://www.facebook.com/profile.php?id=61566494376055",
+      icon: <FacebookLogo size={28} />,
+      iconFill: <FacebookLogo weight="fill" size={28} />,
+    },
+    {
+      id: 2,
       platform: "Instagram",
       title: "ASPA instagram",
       username: "aspa_surfacademy",
