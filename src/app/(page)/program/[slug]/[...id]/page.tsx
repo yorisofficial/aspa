@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import BackButton from "@/app/Components/BackButton";
-import { usePathname, useSearchParams } from "next/navigation";
+import { redirect, usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
 import ContainerContent from "@/app/Components/Container";
@@ -44,8 +44,9 @@ const BookingSession = ({
   const [disableButton, setDisableButton] = useState(false);
 
   useEffect(() => {
+    getData ?? redirect("/not-found");
     form.created_at = new Date().toString();
-  }, [form]);
+  }, [getData, form]);
 
   const handleSession = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setForm({ ...form, session_selected: e.target.value });
@@ -93,7 +94,7 @@ const BookingSession = ({
       <BackButton url="" back={true}>
         Back to before
       </BackButton>
-     
+
       <div className="content mx-auto mt-4 h-fit space-y-8 xl:w-[600px]">
         <div className="flex flex-col gap-4 rounded-xl border border-bordersolid bg-foreground p-6 drop-shadow-xl">
           <div className="mx-auto flex flex-col gap-2 text-center">
