@@ -13,11 +13,11 @@ const AspaCoachTeam = ({
   categories: string;
   teamData: CoachProps[];
 }) => {
-  const [addNumber, setNumber] = useState(4);
+  const number = 6;
+  const [addNumber, setNumber] = useState(number);
 
   const valueData = addNumber;
   const sliceData = teamData.slice(0, valueData);
-  const number = 4;
 
   const handleIncrease = () => {
     if (valueData < teamData.length) {
