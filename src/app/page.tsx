@@ -19,3 +19,9 @@ export default function Home() {
     </main>
   );
 }
+
+export const metadata = {
+  title: "Asian Surf Performance Academy",
+  description:
+    "The Asian Surf Performance Academy (ASPA) is where surfers reach their highest potential. Located in Bali, we focus on supporting and empowering surfers to become their best. We enhance your surfing skills and help you develop professional qualities like motivation, teamwork, and responsibility",
+};

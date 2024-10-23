@@ -1,6 +1,6 @@
 export const SurfTeam = [
   {
-    id: 11,
+    id: 1,
     confirm: true,
     full_name: "Dedi Santosa",
     nickname: "",
@@ -41,7 +41,7 @@ export const SurfTeam = [
     ],
   },
   {
-    id: 12,
+    id: 2,
     confirm: true,
     full_name: "Mickey Sudena",
     nickname: "",
@@ -121,7 +121,7 @@ export const SurfTeam = [
     ],
   },
   {
-    id: 17,
+    id: 3,
     confirm: true,
     full_name: "Made Joi",
     nickname: "Joi",
@@ -157,51 +157,43 @@ export const SurfTeam = [
     ],
   },
   {
-    id: 1,
-    confirm: false,
-    full_name: "Muklis Anwar",
-    nickname: "",
+    id: 4,
+    confirm: true,
+    full_name: "Kadek Murtika",
+    nickname: "Celupuk",
     quotes: "",
     title: "surf coach",
-    certificated: "ISA",
-    isa: true,
+    certificated: "No ISA",
+    isa: false,
     age: 1998,
-    level: "ISA Level 1",
+    level: "Free Surfer",
     experience: "",
-    location: "Medewi",
-    profile: "/assets/team/aspa-coach-1.webp",
-    user_instagram: "https://www.instagram.com/muklis_.anwar",
+    location: "Pererenan",
+    profile: "/assets/team/aspa-coach-16.webp",
+    user_instagram: "https://www.instagram.com/clepuk_balibagus",
     user_soorfinc: "",
     preview_img: [
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "",
       },
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/300x500",
+        src: "",
       },
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/520x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/550x500",
+        src: "",
       },
     ],
     achievement: [
       {
-        title: "ISA Surf Judge",
+        title: "",
       },
     ],
   },
   {
-    id: 2,
+    id: 5,
     confirm: true,
     full_name: "Muz Jeksen",
     nickname: "",
@@ -293,9 +285,9 @@ export const SurfTeam = [
     ],
   },
   {
-    id: 3,
+    id: 6,
     confirm: false,
-    full_name: "I Made Agus Setyawan",
+    full_name: "Muklis Anwar",
     nickname: "",
     quotes: "",
     title: "surf coach",
@@ -304,9 +296,9 @@ export const SurfTeam = [
     age: 1998,
     level: "ISA Level 1",
     experience: "",
-    location: "Uluwatu",
-    profile: "/assets/team/aspa-coach-3.webp",
-    user_instagram: "https://www.instagram.com/gus_bentir",
+    location: "Medewi",
+    profile: "/assets/team/aspa-coach-1.webp",
+    user_instagram: "https://www.instagram.com/muklis_.anwar",
     user_soorfinc: "",
     preview_img: [
       {
@@ -315,71 +307,29 @@ export const SurfTeam = [
       },
       {
         title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
+        src: "https://via.placeholder.com/300x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/520x500",
       },
       {
         title: "coach-preview",
         src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/550x500",
       },
     ],
     achievement: [
       {
-        title:
-          "Pro Surfer: Open Men's Champion ASC (Winner Mens Open Rip Curl Surf and Music Festival (2009)",
-      },
-      {
-        title: "Coca-cola Indonesian Surf Championship Winner (2012)",
-      },
-      {
-        title: "Monsoon Mayhem International Surf Challenge winner (2012)",
+        title: "ISA Surf Judge",
       },
     ],
   },
   {
-    id: 4,
-    confirm: false,
-    full_name: "Raditya Rondi",
-    nickname: "",
-    quotes: "",
-    title: "surf coach",
-    certificated: "no ISA",
-    isa: false,
-    age: 1998,
-    level: "Pro Surfer",
-    experience: "24 years",
-    location: "Kuta",
-    profile: "/assets/team/aspa-coach-4.webp",
-    user_instagram: "https://www.instagram.com/radityarondi",
-    user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-    ],
-    achievement: [
-      {
-        title:
-          "Pro Surfer: Open Men's Champion ASC (Winner Mens Open Rip Curl Surf and Music Festival (2009)",
-      },
-      {
-        title: "Coca-cola Indonesian Surf Championship Winner (2012)",
-      },
-      {
-        title: "Monsoon Mayhem International Surf Challenge winner (2012)",
-      },
-    ],
-  },
-  {
-    id: 5,
+    id: 7,
     confirm: true,
     full_name: "Oney Anwar",
     nickname: "Oney",
@@ -428,43 +378,7 @@ export const SurfTeam = [
     ],
   },
   {
-    id: 6,
-    confirm: false,
-    full_name: "Dharma Putra Tonjo",
-    nickname: "",
-    quotes: "",
-    title: "surf coach",
-    certificated: "no ISA",
-    isa: false,
-    age: 1998,
-    level: "Pro Surfer",
-    experience: "",
-    location: "Legian",
-    profile: "/assets/team/aspa-coach-6.webp",
-    user_instagram: "https://www.instagram.com/darmaputratonjo",
-    user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-    ],
-    achievement: [
-      {
-        title: "Pro Surfer",
-      },
-    ],
-  },
-  {
-    id: 7,
+    id: 8,
     confirm: true,
     full_name: "Putra Pulu",
     nickname: "",
@@ -497,43 +411,6 @@ export const SurfTeam = [
       {
         title:
           "Pro Surfer: Indonesia champion 2010 & Indonesia pro junior champion 2010",
-      },
-    ],
-  },
-  {
-    id: 8,
-    confirm: false,
-    full_name: "Dede Suryana",
-    nickname: "",
-    quotes: "",
-    title: "surf coach",
-    certificated: "no ISA",
-    isa: false,
-    age: 1998,
-    level: "Pro Surfer",
-    experience: "",
-    location: "Cimaja",
-    profile: "/assets/team/aspa-coach-8.webp",
-    user_instagram: "https://www.instagram.com/mankdede",
-    user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-    ],
-    achievement: [
-      {
-        title:
-          "Pro Surfer: 2008 ISC Winner, 2008 Asian Beach Games: Gold-Air, Gold-Team, Youth Achievement award",
       },
     ],
   },
@@ -575,78 +452,6 @@ export const SurfTeam = [
   },
   {
     id: 10,
-    confirm: false,
-    full_name: "Dharma Yasa",
-    nickname: "Blerong",
-    quotes: "",
-    title: "surf coach",
-    certificated: "no ISA",
-    isa: false,
-    age: 1998,
-    level: "Pro Surfer",
-    experience: "",
-    location: "Legian",
-    profile: "/assets/team/aspa-coach-10.webp",
-    user_instagram: "https://www.instagram.com/darmayasablerok",
-    user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-    ],
-    achievement: [
-      {
-        title: "Pro Surfer",
-      },
-    ],
-  },
-  {
-    id: 13,
-    confirm: false,
-    full_name: "Danyel Amar",
-    nickname: "",
-    quotes: "",
-    title: "surf coach",
-    certificated: "No ISA",
-    isa: false,
-    age: 1998,
-    level: "Free Surfer",
-    experience: "",
-    location: "Legian",
-    profile: "/assets/team/aspa-coach-13.webp",
-    user_instagram: "https://www.instagram.com/danyel_amar",
-    user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-    ],
-    achievement: [
-      {
-        title: "",
-      },
-    ],
-  },
-  {
-    id: 14,
     confirm: true,
     full_name: "Mega Artana",
     nickname: "",
@@ -686,7 +491,239 @@ export const SurfTeam = [
     ],
   },
   {
+    id: 11,
+    confirm: false,
+    full_name: "I Made Agus Setyawan",
+    nickname: "",
+    quotes: "",
+    title: "surf coach",
+    certificated: "ISA",
+    isa: true,
+    age: 1998,
+    level: "ISA Level 1",
+    experience: "",
+    location: "Uluwatu",
+    profile: "/assets/team/aspa-coach-3.webp",
+    user_instagram: "https://www.instagram.com/gus_bentir",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
+    achievement: [
+      {
+        title:
+          "Pro Surfer: Open Men's Champion ASC (Winner Mens Open Rip Curl Surf and Music Festival (2009)",
+      },
+      {
+        title: "Coca-cola Indonesian Surf Championship Winner (2012)",
+      },
+      {
+        title: "Monsoon Mayhem International Surf Challenge winner (2012)",
+      },
+    ],
+  },
+  {
+    id: 12,
+    confirm: false,
+    full_name: "Raditya Rondi",
+    nickname: "",
+    quotes: "",
+    title: "surf coach",
+    certificated: "no ISA",
+    isa: false,
+    age: 1998,
+    level: "Pro Surfer",
+    experience: "24 years",
+    location: "Kuta",
+    profile: "/assets/team/aspa-coach-4.webp",
+    user_instagram: "https://www.instagram.com/radityarondi",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
+    achievement: [
+      {
+        title:
+          "Pro Surfer: Open Men's Champion ASC (Winner Mens Open Rip Curl Surf and Music Festival (2009)",
+      },
+      {
+        title: "Coca-cola Indonesian Surf Championship Winner (2012)",
+      },
+      {
+        title: "Monsoon Mayhem International Surf Challenge winner (2012)",
+      },
+    ],
+  },
+  {
+    id: 13,
+    confirm: false,
+    full_name: "Dharma Putra Tonjo",
+    nickname: "",
+    quotes: "",
+    title: "surf coach",
+    certificated: "no ISA",
+    isa: false,
+    age: 1998,
+    level: "Pro Surfer",
+    experience: "",
+    location: "Legian",
+    profile: "/assets/team/aspa-coach-6.webp",
+    user_instagram: "https://www.instagram.com/darmaputratonjo",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
+    achievement: [
+      {
+        title: "Pro Surfer",
+      },
+    ],
+  },
+  {
+    id: 14,
+    confirm: false,
+    full_name: "Dede Suryana",
+    nickname: "",
+    quotes: "",
+    title: "surf coach",
+    certificated: "no ISA",
+    isa: false,
+    age: 1998,
+    level: "Pro Surfer",
+    experience: "",
+    location: "Cimaja",
+    profile: "/assets/team/aspa-coach-8.webp",
+    user_instagram: "https://www.instagram.com/mankdede",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
+    achievement: [
+      {
+        title:
+          "Pro Surfer: 2008 ISC Winner, 2008 Asian Beach Games: Gold-Air, Gold-Team, Youth Achievement award",
+      },
+    ],
+  },
+  {
     id: 15,
+    confirm: false,
+    full_name: "Dharma Yasa",
+    nickname: "Blerong",
+    quotes: "",
+    title: "surf coach",
+    certificated: "no ISA",
+    isa: false,
+    age: 1998,
+    level: "Pro Surfer",
+    experience: "",
+    location: "Legian",
+    profile: "/assets/team/aspa-coach-10.webp",
+    user_instagram: "https://www.instagram.com/darmayasablerok",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
+    achievement: [
+      {
+        title: "Pro Surfer",
+      },
+    ],
+  },
+  {
+    id: 16,
+    confirm: false,
+    full_name: "Danyel Amar",
+    nickname: "",
+    quotes: "",
+    title: "surf coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 1998,
+    level: "Free Surfer",
+    experience: "",
+    location: "Legian",
+    profile: "/assets/team/aspa-coach-13.webp",
+    user_instagram: "https://www.instagram.com/danyel_amar",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+      {
+        title: "coach-preview",
+        src: "https://via.placeholder.com/500x500",
+      },
+    ],
+    achievement: [
+      {
+        title: "",
+      },
+    ],
+  },
+
+  {
+    id: 17,
     confirm: false,
     full_name: "Garut Widiarta",
     nickname: "",
@@ -718,42 +755,6 @@ export const SurfTeam = [
     achievement: [
       {
         title: "Pro Surfer",
-      },
-    ],
-  },
-  {
-    id: 16,
-    confirm: false,
-    full_name: "Kadek Murtika",
-    nickname: "",
-    quotes: "",
-    title: "surf coach",
-    certificated: "No ISA",
-    isa: false,
-    age: 1998,
-    level: "Free Surfer",
-    experience: "",
-    location: "Pererenan",
-    profile: "/assets/team/aspa-coach-16.webp",
-    user_instagram: "https://www.instagram.com/clepuk_balibagus",
-    user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-      {
-        title: "coach-preview",
-        src: "https://via.placeholder.com/500x500",
-      },
-    ],
-    achievement: [
-      {
-        title: "",
       },
     ],
   },

@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import ButtonUp from "./Components/ButtonUp";
 import "./globals.css";
 import ScriptGoogle from "./Components/ScriptGoogle";
+import Head from "next/head";
 
 const satoshi = localFont({
   src: [
@@ -45,6 +46,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta property="og:title" content={metadata.title?.toString()} />
+        <meta property="og:description" content={metadata.title?.toString()} />
+      </head>
       <body
         className={`${satoshi.className} bg-white selection:bg-black selection:text-white `}
       >
