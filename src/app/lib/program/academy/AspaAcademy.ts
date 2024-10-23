@@ -1,5 +1,14 @@
 import { Support } from "../../Support";
 
+// Data ini menjadi patokan untuk membuat program ASPA
+// -------------------------------------------------
+// ID pada session akan menjadi id program
+// Title pada session akan menjadi title program
+// Description pada session akan menjadi description program
+// Image pada session akan menjadi previews image program
+// URL pada session akan menjadi url untuk payment link DOKU
+// -------------------------------------------------
+
 interface Props {
   id: string;
   title: string;
