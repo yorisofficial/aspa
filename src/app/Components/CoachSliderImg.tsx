@@ -23,7 +23,7 @@ const CoachSliderImg = ({ data }: { data: Props[] }) => {
         loop={true}
         autoplay={{ delay: 2500 }}
         grabCursor={true}
-        slidesPerView={"auto"}
+        slidesPerView={1.1}
         className="list-coach mySwiper h-full w-full"
       >
         {data.map((item, index) => (
