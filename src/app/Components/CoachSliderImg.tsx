@@ -19,11 +19,22 @@ const CoachSliderImg = ({ data }: { data: Props[] }) => {
     <div className="list-image h-[250px] w-full md:h-[300px] xl:order-last xl:h-[400px]">
       <Swiper
         modules={[Autoplay]}
-        spaceBetween={32}
         loop={true}
-        autoplay={{ delay: 2500 }}
-        grabCursor={true}
-        slidesPerView={"auto"}
+        autoplay={{ delay: 8000 }}
+        breakpoints={{
+          360: {
+            slidesPerView: 1.1,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 1.1,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 1.1,
+            spaceBetween: 20,
+          },
+        }}
         className="list-coach mySwiper h-full w-full"
       >
         {data.map((item, index) => (

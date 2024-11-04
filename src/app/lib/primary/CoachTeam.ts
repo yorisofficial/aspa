@@ -175,15 +175,15 @@ export const SurfTeam = [
     preview_img: [
       {
         title: "coach-preview",
-        src: "",
+        src: "/assets/team/coach/Kadek Murtika/celepok_balibagus.webp",
       },
       {
         title: "coach-preview",
-        src: "",
+        src: "/assets/team/coach/Kadek Murtika/celepok_balibagus_1.webp",
       },
       {
         title: "coach-preview",
-        src: "",
+        src: "/assets/team/coach/Kadek Murtika/celepok_balibagus_2.webp",
       },
     ],
     achievement: [
