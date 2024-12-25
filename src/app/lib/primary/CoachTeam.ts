@@ -193,6 +193,54 @@ export const SurfTeam = [
     ],
   },
   {
+    id: 4,
+    confirm: true,
+    full_name: "Danyel Amar",
+    nickname: "Danyel",
+    quotes:
+      "Living 2 minutes away by Legian Beach made surfings part of my whole life, since the very young age I have learned surfing and compete. At the age of 23 I began to focusing on my career as a surf instructor and surf coaching.",
+    title: "surf coach",
+    certificated: "",
+    isa: false,
+    age: 0,
+    level: "Free Surfer",
+    experience: "",
+    location: "Legian",
+    profile: "/assets/team/coach/Danyel Amar/danyel-amar_3.webp",
+    user_instagram: "https://www.instagram.com/danyel_amar",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Danyel Amar/danyel-amar_1.webp",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Danyel Amar/danyel-amar_2.webp",
+      },
+    ],
+    achievement: [
+      {
+        title: "2nd Ripcurl Grom Search Keramas 2008",
+      },
+      {
+        title: "Riders Carve Aus 2011-2019",
+      },
+      {
+        title: "2nd Volcom Qualifying series Legian 2013",
+      },
+      {
+        title: "3rd Red Island 2015",
+      },
+      {
+        title: "2nd Mandiri Cup BWI 2016",
+      },
+      {
+        title: "Head Coach (Aloha Bali Surf 2015-now)",
+      },
+    ],
+  },
+  {
     id: 5,
     confirm: true,
     full_name: "Muz Jeksen",
