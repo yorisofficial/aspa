@@ -48,7 +48,7 @@ const RisingStarProgram = () => {
             <span className="text-sm font-light uppercase">
               our previous program
             </span>
-            <h1 className="text-xl font-black text-brand xl:text-3xl">
+            <h1 className="text-heading text-start !text-3xl">
               {GromPatrol.title}
             </h1>
             <p

@@ -13,3 +13,7 @@
 p {
   @apply text-sm font-light md:text-base;
 }
+
+.text-heading {
+  @apply text-base font-black uppercase text-brand xl:text-xl;
+}

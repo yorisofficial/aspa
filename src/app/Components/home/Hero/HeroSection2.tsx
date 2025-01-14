@@ -24,9 +24,7 @@ const HeroSection2 = () => {
           </div>
         </div>
         <div className="header">
-          <h1 className="text-center text-base font-black text-brand xl:text-4xl">
-            Programs
-          </h1>
+          <h1 className="text-heading">Programs</h1>
         </div>
         <SliderPackage />
       </div>
