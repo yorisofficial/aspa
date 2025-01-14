@@ -11,9 +11,7 @@ const TestimonialPage = () => {
     >
       <div className="our-team header flex w-full flex-col items-start justify-between gap-8">
         <div className="space-y-2">
-          <h1 className="text-start text-xl font-black text-brand">
-            Our testimonials
-          </h1>
+          <h1 className="text-heading text-start">Testimonials About Us</h1>
           <p className="w-full text-sm font-normal md:text-base xl:w-3/4">
             Our testimonials reflect the exceptional impact of ASPA in the
             surfing community.
