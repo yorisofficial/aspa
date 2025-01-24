@@ -27,16 +27,16 @@ const SlideTeam = () => {
         autoplay={{ delay: 8000 }}
         breakpoints={{
           360: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.1,
             spaceBetween: 20,
           },
           768: {
-            slidesPerView: 2.2,
-            spaceBetween: 24,
+            slidesPerView: 2.1,
+            spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 3,
-            spaceBetween: 46,
+            slidesPerView: 3.1,
+            spaceBetween: 20,
           },
         }}
         className="list-coach mySwiper w-full"

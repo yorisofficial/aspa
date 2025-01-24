@@ -11,9 +11,7 @@ const OurProfessional = () => {
       <div className="our-professional-teams w-full space-y-8">
         <div className="our-team header flex w-full flex-col items-center justify-between gap-8">
           <div className="flex flex-col items-center justify-center space-y-2 text-center">
-            <h1 className="text-center text-xl font-black text-brand">
-              {Home[3].title}
-            </h1>
+            <h1 className="text-heading text-center">{Home[3].title}</h1>
             <p className="text-sm font-normal md:text-base xl:w-1/2">
               {Home[3].description}
             </p>
