@@ -23,10 +23,6 @@ const HeroSection2 = () => {
             </p>
           </div>
         </div>
-        <div className="header">
-          <h1 className="text-heading">Programs</h1>
-        </div>
-        <SliderPackage />
       </div>
     </ContainerContent>
   );

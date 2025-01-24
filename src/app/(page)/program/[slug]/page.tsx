@@ -102,41 +102,20 @@ const DetailsProgramPage = ({ params }: { params: { slug: string } }) => {
               {data?.promoteBook}
             </p>
             <div className="cta-button mt-3 flex flex-col gap-2">
-              {data?.id === "32" ? (
-                <>
-                  <Link href={`https://wa.me/${Support[0].url}`}>
-                    <motion.button
-                      initial={{ scale: 1 }}
-                      whileTap={{ scale: 0.9 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 10,
-                      }}
-                      exit={{ scale: 1 }}
-                      className="btn-icon flex w-fit items-center gap-3 rounded-lg bg-black px-5 py-2 font-semibold text-white xl:gap-3 xl:py-3 xl:pl-4 xl:pr-6"
-                    >
-                      <Headset size={24} />
-                      Contact us
-                    </motion.button>
-                  </Link>
-                </>
-              ) : (
-                <Link
-                  href={`/program/${data?.id}/booking?user=${Math.random().toString(36).substring(2, 14)}`}
-                  className="inline-block w-full"
+              <Link
+                href={`/program/${data?.id}/booking?user=${Math.random().toString(36).substring(2, 14)}`}
+                className="inline-block w-full"
+              >
+                <motion.button
+                  initial={{ scale: 1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  exit={{ scale: 1 }}
+                  className="w-full rounded-lg bg-black px-6 py-3 text-center font-medium uppercase text-white"
                 >
-                  <motion.button
-                    initial={{ scale: 1 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                    exit={{ scale: 1 }}
-                    className="w-full rounded-lg bg-black px-6 py-3 text-center font-medium text-white"
-                  >
-                    Book now
-                  </motion.button>
-                </Link>
-              )}
+                  Contact us
+                </motion.button>
+              </Link>
               <BtnDownloadFile
                 title={RegulationService[0].title}
                 src={RegulationService[0].src}

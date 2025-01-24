@@ -10,7 +10,7 @@ import axios from "axios";
 const BookingSession = ({
   params,
 }: {
-  params: { slug: string; id: string };
+  params: { id: string; slug: string };
 }) => {
   //initial needs
   const searchParams = useSearchParams();
@@ -89,12 +89,13 @@ const BookingSession = ({
     router.push(`${dataSession?.url}`);
   };
 
+  console.log(params.slug);
+
   return (
     <ContainerContent url="">
       <BackButton url="" back={true}>
         Back to before
       </BackButton>
-
       <div className="content mx-auto mt-4 h-fit space-y-8 xl:w-[600px]">
         <div className="flex flex-col gap-4 rounded-xl border border-bordersolid bg-foreground p-6 drop-shadow-xl">
           <div className="mx-auto flex flex-col gap-2 text-center">
@@ -119,21 +120,45 @@ const BookingSession = ({
                 />
               </label>
               <label htmlFor="session" className="flex w-full flex-col gap-2">
-                <span className="text-required">Select session</span>
-                <select
-                  name="session"
-                  required
-                  id="session"
-                  onChange={handleSession}
-                  className="peer w-full rounded-lg border border-bordersolid bg-foreground px-4 py-2 font-medium capitalize outline-none focus:outline-2 focus:outline-black"
-                >
-                  <option value="">-- select session</option>
-                  <option value="private">Private</option>
-                  <option value="group">Group</option>
-                </select>
-                <small className="hidden font-normal text-red peer-invalid:block">
-                  Please select session
-                </small>
+                <span className="text-required">
+                  {params.slug !== "32" ? "Select session" : "Details"}
+                </span>
+                {params.slug !== "32" ? (
+                  <>
+                    <select
+                      name="session"
+                      required
+                      id="session"
+                      onChange={handleSession}
+                      className="peer w-full rounded-lg border border-bordersolid bg-foreground px-4 py-2 font-medium capitalize outline-none focus:outline-2 focus:outline-black"
+                    >
+                      <option value="">-- select session</option>
+                      <option value="private">Private</option>
+                      <option value="group">Group</option>
+                    </select>
+                    <small className="hidden font-normal text-red peer-invalid:block">
+                      Please select session
+                    </small>
+                  </>
+                ) : (
+                  <>
+                    <textarea
+                      name="session"
+                      id="session"
+                      required
+                      minLength={2}
+                      value={form.session_selected || ""}
+                      onChange={(e) =>
+                        setForm({ ...form, session_selected: e.target.value })
+                      }
+                      placeholder="Explain your need"
+                      className="peer min-h-[100px] w-full rounded-lg border border-bordersolid bg-foreground px-4 py-2 text-sm font-medium capitalize outline-none focus:outline-2 focus:outline-black"
+                    />
+                    <small className="hidden font-normal text-black peer-invalid:block">
+                      Please tell me about you need
+                    </small>
+                  </>
+                )}
               </label>
             </div>
             <div className="details-profile flex flex-col gap-2 border-b py-2">
