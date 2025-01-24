@@ -13,8 +13,8 @@ const TestimonialPage = () => {
         <div className="space-y-2">
           <h1 className="text-heading text-start">Testimonials About Us</h1>
           <p className="w-full text-sm font-normal md:text-base xl:w-3/4">
-            Our testimonials reflect the exceptional impact of ASPA in the
-            surfing community.
+            The testimonials about us reflect the exceptional impact of ASPA in
+            the surfing community.
           </p>
         </div>
       </div>
