@@ -17,3 +17,8 @@ p {
 .text-heading {
   @apply text-base font-black uppercase text-brand xl:text-xl;
 }
+
+.text-required::after {
+  content: "*";
+  color: red;
+}

@@ -108,7 +108,7 @@ const BookingSession = ({
                 htmlFor="selected_program"
                 className="flex w-full flex-col gap-4"
               >
-                <span className="">Selected program</span>
+                <span className="text-required">Selected program</span>
                 <input
                   type="text"
                   name="selected_program"
@@ -119,7 +119,7 @@ const BookingSession = ({
                 />
               </label>
               <label htmlFor="session" className="flex w-full flex-col gap-2">
-                <span className="">Select session</span>
+                <span className="text-required">Select session</span>
                 <select
                   name="session"
                   required
@@ -139,7 +139,7 @@ const BookingSession = ({
             <div className="details-profile flex flex-col gap-2 border-b py-2">
               <h1 className="text-2xl font-bold">Input your details</h1>
               <label htmlFor="full_name" className="flex w-full flex-col gap-2">
-                <span className="">Full name</span>
+                <span className="text-required">Full name</span>
                 <input
                   type="text"
                   name="full_name"
@@ -161,7 +161,7 @@ const BookingSession = ({
                 htmlFor="phone_number"
                 className="flex w-full flex-col gap-2"
               >
-                <span className="">Active phone number</span>
+                <span className="text-required">Active phone number</span>
                 <input
                   type="text"
                   name="phone_number"
@@ -185,7 +185,7 @@ const BookingSession = ({
                 htmlFor="email_address"
                 className="flex w-full flex-col gap-2"
               >
-                <span className="">Email address</span>
+                <span className="text-required">Email address</span>
                 <input
                   type="email"
                   name="email_address"
@@ -201,17 +201,8 @@ const BookingSession = ({
                 </small>
               </label>
             </div>
-            <div className="footer-section flex flex-col gap-4">
-              <div className="flex flex-col border-b py-2">
-                <span>Total price</span>
-                <div className="flex items-end justify-start gap-3">
-                  <h1 className="text-2xl font-bold">
-                    {dataSession?.pricing || "IDR 0"}
-                  </h1>
-                  {form.session_selected !== "" && <small>/ Person</small>}
-                </div>
-              </div>
-              <label htmlFor="termservice" className="flex items-center">
+            <div className="footer-section mt-4 flex flex-col gap-4">
+              <label htmlFor="termservice" className="flex items-center gap-1">
                 <input
                   type="checkbox"
                   name="termservice"
@@ -226,7 +217,7 @@ const BookingSession = ({
                   }
                   className="peer h-4 w-4 rounded-xl accent-primary"
                 />
-                <span className="ml-2 text-xs font-light">
+                <span className="text-requiredml-2 text-xs font-light">
                   Yes, I agree terms & regulation service
                 </span>
               </label>
@@ -235,11 +226,22 @@ const BookingSession = ({
                   type="submit"
                   disabled={disableButton}
                   aria-label="submit form"
-                  className="btn-primary text-bg-foreground rounded bg-black px-5 py-2 text-white disabled:cursor-not-allowed disabled:bg-black/10"
+                  className="btn-primary text-bg-foreground flex items-center justify-center gap-4 rounded bg-black px-5 py-2 text-white disabled:cursor-not-allowed disabled:bg-black/10"
                 >
-                  {disableButton
-                    ? "Loading..."
-                    : "Send and continue to payment"}
+                  {disableButton ? "Loading..." : "Send"}
+                  {!disableButton && (
+                    <>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="#f2e3e3"
+                        viewBox="0 0 256 256"
+                      >
+                        <path d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.49,29.8L102,154l41.3,84.87A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14,0-.07-40.06-82.3,48-48a8,8,0,0,0-11.31-11.31l-48,48L24.08,98.25l-.07,0,.14,0L216,40Z"></path>
+                      </svg>
+                    </>
+                  )}
                 </button>
               </div>
             </div>
