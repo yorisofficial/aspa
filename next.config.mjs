@@ -18,6 +18,12 @@ const nextConfig = {
         port: "",
         pathname: "/wp-content/uploads/**",
       },
+      {
+        protocol: "https",
+        hostname: "s3-alpha-sig.figma.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
