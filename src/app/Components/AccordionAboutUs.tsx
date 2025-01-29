@@ -10,10 +10,10 @@ const AccordionAboutUs = ({
   title: string;
   description: string;
 }) => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   return (
     <>
-      <div className="section-accordion mt-4 h-fit w-full border-b-[0.5px] border-black py-4">
+      <div className="section-accordion mt-4 h-fit w-full border-b-[0.5px] border-black py-4 transition-all duration-500 ease-in-out">
         <button
           type="button"
           aria-label="about us mission and vision"

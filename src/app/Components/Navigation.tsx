@@ -254,15 +254,20 @@ const Navigation = () => {
           <div className="desktop-menu hidden xl:block">
             <ul className="flex items-center gap-4">
               {menuNav.map((item, index) => (
-                <li key={index} className="relative">
+                <li
+                  key={index}
+                  className={`relative ${activePath.includes(item.base) ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
+                >
                   <Link
+                    aria-label="ASPA menu navigation"
                     href={item.base === "program" ? "#" : item.link}
-                    className={`duration-500 hover:scale-110 ${activePath.includes(item.base) ? "font-bold text-brand underline underline-offset-8" : ""}`}
+                    className={`block duration-500 hover:scale-110 `}
                   >
                     {item.base === "program" ? (
                       <button
+                        type="button"
                         onClick={() => setShowDropdown(!isShowDropdown)}
-                        className={`flex items-center gap-2`}
+                        className={`flex items-center gap-2  px-4 py-2 ${isShowDropdown && "bg-brand text-white"}`}
                       >
                         {item.title}{" "}
                         {isShowDropdown ? (
@@ -272,7 +277,9 @@ const Navigation = () => {
                         )}
                       </button>
                     ) : (
-                      <span>{item.title}</span>
+                      <div className="flex items-center gap-2  px-4 py-2">
+                        <span>{item.title}</span>
+                      </div>
                     )}
                   </Link>
                   {item.base === "program" && isShowDropdown && (
