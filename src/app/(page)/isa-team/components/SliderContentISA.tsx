@@ -10,17 +10,9 @@ import Link from "next/link";
 // Import Swiper styles
 import "swiper/css";
 import ButtonSlideSwiper from "@/app/Components/ButtonSlideSwiper";
+import { DataCourseType } from "@/app/lib/DataCourse";
 
-interface Props {
-  id: string;
-  sectionId: string;
-  name: string;
-  description: string;
-  image: string;
-  link: string;
-}
-
-const SliderContentISA = ({ data }: { data: Props[] }) => {
+const SliderContentISA = ({ data }: { data: DataCourseType[] }) => {
   return (
     <div className="mx-auto mt-8 h-fit w-full max-w-6xl px-4 md:px-10 xl:px-0">
       <div className="content-header">
