@@ -45,7 +45,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <meta property="og:title" content={metadata.title?.toString()} />
         <meta property="og:description" content={metadata.title?.toString()} />

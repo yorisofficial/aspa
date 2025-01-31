@@ -25,6 +25,11 @@ export const menuNav = [
     link: "/about-us",
   },
   {
+    title: "ISA",
+    base: "isa-team",
+    link: "/isa-team",
+  },
+  {
     title: "Programs",
     base: "program",
     link: "/program",
