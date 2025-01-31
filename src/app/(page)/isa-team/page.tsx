@@ -2,6 +2,47 @@ import React from "react";
 import ISAHeader from "./components/ISAHeader";
 import Image from "next/image";
 import SliderContentISA from "./components/SliderContentISA";
+import Link from "next/link";
+import { ArrowCircleRight } from "@phosphor-icons/react/dist/ssr";
+
+export const DataCourse = [
+  {
+    id: "1",
+    sectionId: "isa-surf-coach-1",
+    name: "ISA Surf Level 1 Instructor Certification",
+    description:
+      "The Level 1 course is the foundation for those teaching beginner and early intermediate surfers. This internationally recognized program equips instructors with essential skills, safety knowledge, and teaching techniques to deliver high-quality, engaging surf lessons.",
+    image: "/assets/program/isa-teams/isa-lv-1.png",
+    link: "",
+  },
+  {
+    id: "2",
+    sectionId: "isa-surf-coach-2",
+    name: "ISA Surf Level 2 Instructor Certification",
+    description:
+      " For experienced instructors, the Level 2 course focuses on training intermediate to advanced surfers. It prepares coaches to enhance athletes skills, optimize performance, and prepare them for competitions.",
+    image: "/assets/program/isa-teams/isa-lv-2.png",
+    link: "",
+  },
+  {
+    id: "3",
+    sectionId: "isa-surf-judging",
+    name: "ISA Judging Certification",
+    description:
+      "For those interested in surf competition offi ciating, the ISAJudging Course provides comprehensive training on scoringcriteria, heat analysis, and judging protocols. Delivered byexperienced ISA presenters, the course includes practice sessionsfor comparing waves and assigning scores.",
+    image: "/assets/program/isa-teams/ISA-judging.png",
+    link: "",
+  },
+  {
+    id: "4",
+    sectionId: "isa-surf-water-safety",
+    name: "ISA/ILS Water Safety Certification",
+    description:
+      "A vital component of surf coaching, this course ensures instructors are equipped with globally recognized water safety skills.",
+    image: "/assets/program/isa-teams/isa-water-safety.png",
+    link: "",
+  },
+];
 
 const ISAPage = () => {
   return (
@@ -30,7 +71,7 @@ const ISAPage = () => {
           className="h-full w-full object-cover"
         />
       </div>
-      <SliderContentISA />
+      <SliderContentISA data={DataCourse} />
       <div className="mt-8 h-[400px] w-full">
         <Image
           src={
@@ -58,20 +99,133 @@ const ISAPage = () => {
         </div>
         <div
           id="isa-surf-coach-1"
-          className="isa-surf-coach bored mt-6 min-h-screen w-full"
-        ></div>
+          className="isa-surf-coach relative mt-16 h-fit w-full md:px-0"
+        >
+          <Image
+            src={"/assets/program/isa-teams/isa-lv-1.png"}
+            alt="image-asset-program"
+            width={2400}
+            priority={false}
+            height={100}
+            quality={100}
+            className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
+          />
+          <div className="absolute-content w-[500px] p-4 drop-shadow-lg md:absolute md:right-[5%] md:top-1/2 md:z-10 md:-translate-y-1/2 md:bg-white md:p-6">
+            <h2 className="text-3xl font-light uppercase">
+              ISA Surf Level 1 Instructor Certification
+            </h2>
+            <p className="mt-2 text-start text-base font-light">
+              The Level 1 course is the foundation for those teaching beginner
+              and early intermediate surfers. This internationally recognized
+              program equips instructors with essential skills, safety
+              knowledge, and teaching techniques to deliver high-quality,
+              engaging surf lessons.
+            </p>
+            <Link
+              target="_blank"
+              href="/"
+              className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-white"
+            >
+              more information <ArrowCircleRight size={20} weight="light" />
+            </Link>
+          </div>
+        </div>
         <div
           id="isa-surf-coach-2"
-          className="isa-surf-coach min-h-screen w-full bg-green"
-        ></div>
+          className="isa-surf-coach relative mt-8 w-full md:flex md:items-center md:justify-end"
+        >
+          <Image
+            src={"/assets/program/isa-teams/isa-lv-2.png"}
+            alt="image-asset-program"
+            width={2400}
+            priority={false}
+            height={100}
+            quality={100}
+            className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
+          />
+          <div className="absolute-content w-[500px] p-4 drop-shadow-lg md:absolute md:left-[5%] md:top-1/2 md:z-10 md:-translate-y-1/2 md:bg-white md:p-6">
+            <h2 className="text-3xl font-light uppercase">
+              ISA Surf Level 2 Instructor Certification
+            </h2>
+            <p className="mt-2 text-start text-base font-light">
+              For experienced instructors, the Level 2 course focuses on
+              training intermediate to advanced surfers. It prepares coaches to
+              enhance athletes skills, optimize performance, and prepare them
+              for competitions.
+            </p>
+            <Link
+              target="_blank"
+              href="/"
+              className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-white"
+            >
+              more information <ArrowCircleRight size={20} weight="light" />
+            </Link>
+          </div>
+        </div>
         <div
           id="isa-surf-judging"
-          className="isa-surf-judging min-h-screen w-full bg-dodgerblue"
-        ></div>
+          className="isa-surf-judging relative mt-8 h-fit w-full"
+        >
+          <Image
+            src={"/assets/program/isa-teams/ISA-judging.png"}
+            alt="image-asset-program"
+            width={2400}
+            priority={false}
+            height={100}
+            quality={100}
+            className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
+          />
+          <div className="absolute-content w-[500px] p-4 drop-shadow-lg md:absolute md:right-[5%] md:top-1/2 md:z-10 md:-translate-y-1/2 md:bg-white md:p-6">
+            <h2 className="text-3xl font-light uppercase">
+              ISA Judging Certification
+            </h2>
+            <p className="mt-2 text-start text-base font-light">
+              For those interested in surf competition offi ciating, the ISA
+              Judging Course provides comprehensive training on scoring
+              criteria, heat analysis, and judging protocols. Delivered by
+              experienced ISA presenters, the course includes practice sessions
+              for comparing waves and assigning scores.
+            </p>
+            <Link
+              target="_blank"
+              href="/"
+              className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-white"
+            >
+              more information <ArrowCircleRight size={20} weight="light" />
+            </Link>
+          </div>
+        </div>
         <div
           id="isa-surf-water-safety"
-          className="isa-surf-water-safety min-h-screen w-full bg-black"
-        ></div>
+          className="isa-surf-coach relative mt-8 w-full md:flex md:items-center md:justify-end"
+        >
+          <Image
+            src={"/assets/program/isa-teams/isa-water-safety.png"}
+            alt="image-asset-program"
+            width={2400}
+            priority={false}
+            height={100}
+            quality={100}
+            className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
+          />
+          <div className="absolute-content w-[500px] p-4 drop-shadow-lg md:absolute md:left-[5%] md:top-1/2 md:z-10 md:-translate-y-1/2 md:bg-white md:p-6">
+            <h2 className="text-3xl font-light uppercase">
+              ISA/ILS Water Safety Certification
+            </h2>
+            <p className="mt-2 text-start text-base font-light">
+              A vital component of surf coaching, this course ensures
+              instructors are equipped with globally recognized water safety
+              skills.
+            </p>
+            <Link
+              target="_blank"
+              href="/"
+              className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-white"
+            >
+              more information <ArrowCircleRight size={20} weight="light" />
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
