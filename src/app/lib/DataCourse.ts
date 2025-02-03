@@ -14,7 +14,7 @@ export const DataCourse: DataCourseType[] = [
     name: "ISA Surf Level 1 Instructor Certification",
     description:
       "The Level 1 course is the foundation for those teaching beginner and early intermediate surfers. This internationally recognized program equips instructors with essential skills, safety knowledge, and teaching techniques to deliver high-quality, engaging surf lessons.",
-    image: "/assets/program/isa-teams/isa-lv-1.png",
+    image: "/assets/program/isa-teams/isa-lv-1.jpg",
     link: "https://isasurf.org/learning/isa-courses/#coaching",
   },
   {
@@ -23,7 +23,7 @@ export const DataCourse: DataCourseType[] = [
     name: "ISA Surf Level 2 Instructor Certification",
     description:
       " For experienced instructors, the Level 2 course focuses on training intermediate to advanced surfers. It prepares coaches to enhance athletes skills, optimize performance, and prepare them for competitions.",
-    image: "/assets/program/isa-teams/isa-lv-2.png",
+    image: "/assets/program/isa-teams/isa-lv-2.jpg",
     link: "https://isasurf.org/learning/isa-courses/#coaching",
   },
   {
@@ -32,7 +32,7 @@ export const DataCourse: DataCourseType[] = [
     name: "ISA Judging Certification",
     description:
       "For those interested in surf competition offi ciating, the ISAJudging Course provides comprehensive training on scoringcriteria, heat analysis, and judging protocols. Delivered byexperienced ISA presenters, the course includes practice sessionsfor comparing waves and assigning scores.",
-    image: "/assets/program/isa-teams/ISA-judging.png",
+    image: "/assets/program/isa-teams/ISA-judging.jpg",
     link: "https://isasurf.org/learning/isa-courses/#judging",
   },
   {
@@ -41,7 +41,7 @@ export const DataCourse: DataCourseType[] = [
     name: "ISA/ILS Water Safety Certification",
     description:
       "A vital component of surf coaching, this course ensures instructors are equipped with globally recognized water safety skills.",
-    image: "/assets/program/isa-teams/isa-water-safety.png",
+    image: "/assets/program/isa-teams/isa-water-safety.jpg",
     link: "https://isasurf.org/learning/isa-courses/#water-safety",
   },
 ];

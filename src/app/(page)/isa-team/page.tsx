@@ -6,6 +6,40 @@ import Link from "next/link";
 import { ArrowCircleRight } from "@phosphor-icons/react/dist/ssr";
 import { DataCourse } from "@/app/lib/DataCourse";
 
+export const metadata = {
+  title: "International Surfing Association | ISA surf",
+  description:
+    "ASPA is proud to collaborate with the ISA (International Surfing Association) to off er certified courses recognized worldwide as the gold standard for professional development in the surfing industry. These courses are designed for aspiring and established professionals, focusing on coaching, judging, and competition management.",
+  openGraph: {
+    title: "ASPA | ISA surf",
+    images: [
+      {
+        url: "/assets/surf-player.png",
+        width: 800,
+        height: 600,
+        alt: "Og images",
+      },
+    ],
+    type: "website",
+    locale: "id_ID",
+    siteName: "Asian Surf Performance Academy",
+  },
+  twitter: {
+    cardType: "summary_large_image",
+    title: "ISA surf",
+    description:
+      "ASPA is proud to collaborate with the ISA (International Surfing Association) to off er certified courses recognized worldwide as the gold standard for professional development in the surfing industry. These courses are designed for aspiring and established professionals, focusing on coaching, judging, and competition management.",
+    images: [
+      {
+        url: "/assets/surf-player.png",
+        width: 800,
+        height: 600,
+        alt: "Og images",
+      },
+    ],
+  },
+};
+
 const ISAPage = () => {
   return (
     <div className="container-content h-fit min-h-screen w-full overflow-x-hidden">

@@ -23,7 +23,7 @@ export interface PropsBlog {
 
 const SliderBlogContent = ({ data }: { data: PropsBlog[] }) => {
   return (
-    <div className="slider-content mt-8 h-full w-full">
+    <div className="slider-content mt-8 h-full w-full overflow-hidden">
       <Swiper
         modules={[Autoplay]}
         className="mySwiper"

@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import AboutUsSection from "./Components/home/About-us/AboutUsSection";
 import HighLightProgram from "./Components/home/Event/HighLightProgram";
 import HeroSection2 from "./Components/home/Hero/HeroSection2";
@@ -7,7 +8,7 @@ import { ISAJuniorSliderImg } from "./Components/home/Program/Program/isa-pro-ju
 import { ContentISAJunior } from "./Components/home/Program/Program/isa-pro-junior";
 import TestimonialPage from "./Components/home/testimonial/Testimonial";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Asian Surf Performance Academy (ASPA)",
   description:
     "ASPA is a professional surf academy in Bali, Indonesia that helps surfers reach their highest potential. We focus on supporting and empowering surfers to become their best, and provide a platform for them to excel in their surfing careers.",

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import ContainerContent from "../../Container";
 import ListTestimonials from "./ListTestimonials";
@@ -17,9 +19,9 @@ const TestimonialPage = () => {
           exit={{ translateX: "-100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className=""
+          className="w-full md:w-1/2"
         >
-          <span className="text-2xl font-light uppercase md:w-[400px] md:text-4xl">
+          <span className="text-2xl font-light uppercase md:text-4xl">
             Testimonials from Our Surfing
           </span>
         </motion.div>
@@ -29,8 +31,9 @@ const TestimonialPage = () => {
           exit={{ translateX: "100%", opacity: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
+          className="w-full md:w-1/2"
         >
-          <p className="w-full text-justify text-sm font-light md:w-1/2 md:text-base">
+          <p className="text-justify text-sm font-light md:text-base">
             Our testimonials reflect the exceptional impact of our surfing boot
             camp, showcasing how our comprehensive training programs have
             transformed athletes into top-performing surfers with unmatched
