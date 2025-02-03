@@ -24,11 +24,11 @@ const ISAPage = () => {
       </div>
       <div className="mt-8 h-[400px] w-full">
         <Image
-          src={"/assets/program/isa-teams/preview-isa.png"}
+          src={"/assets/program/isa-teams/preview-isa.jpg"}
           alt="image-asset-program"
           width={2400}
           priority={false}
-          height={100}
+          height={800}
           quality={100}
           className="h-full w-full object-cover"
         />
@@ -42,7 +42,7 @@ const ISAPage = () => {
           alt="image-asset-program"
           width={2400}
           priority={false}
-          height={100}
+          height={800}
           quality={100}
           className="h-full w-full object-cover"
         />
@@ -64,11 +64,11 @@ const ISAPage = () => {
           className="isa-surf-coach relative mt-16 h-fit w-full md:px-0"
         >
           <Image
-            src={"/assets/program/isa-teams/isa-lv-1.png"}
+            src={"/assets/program/isa-teams/isa-lv-1.jpg"}
             alt="image-asset-program"
             width={2400}
             priority={false}
-            height={100}
+            height={800}
             quality={100}
             className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
           />
@@ -86,9 +86,14 @@ const ISAPage = () => {
             <Link
               target="_blank"
               href="/"
-              className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-white"
+              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
             >
-              more information <ArrowCircleRight size={20} weight="light" />
+              more information{" "}
+              <ArrowCircleRight
+                size={20}
+                weight="light"
+                className="duration-300 group-hover:translate-x-2"
+              />
             </Link>
           </div>
         </div>
@@ -97,11 +102,11 @@ const ISAPage = () => {
           className="isa-surf-coach relative mt-8 w-full md:flex md:items-center md:justify-end"
         >
           <Image
-            src={"/assets/program/isa-teams/isa-lv-2.png"}
+            src={"/assets/program/isa-teams/isa-lv-2.jpg"}
             alt="image-asset-program"
             width={2400}
+            height={800}
             priority={false}
-            height={100}
             quality={100}
             className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
           />
@@ -118,9 +123,14 @@ const ISAPage = () => {
             <Link
               target="_blank"
               href="/"
-              className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-white"
+              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
             >
-              more information <ArrowCircleRight size={20} weight="light" />
+              more information{" "}
+              <ArrowCircleRight
+                size={20}
+                weight="light"
+                className="duration-300 group-hover:translate-x-2"
+              />
             </Link>
           </div>
         </div>
@@ -129,11 +139,11 @@ const ISAPage = () => {
           className="isa-surf-judging relative mt-8 h-fit w-full"
         >
           <Image
-            src={"/assets/program/isa-teams/ISA-judging.png"}
+            src={"/assets/program/isa-teams/ISA-judging.jpg"}
             alt="image-asset-program"
             width={2400}
+            height={800}
             priority={false}
-            height={100}
             quality={100}
             className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
           />
@@ -151,9 +161,14 @@ const ISAPage = () => {
             <Link
               target="_blank"
               href="/"
-              className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-white"
+              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
             >
-              more information <ArrowCircleRight size={20} weight="light" />
+              more information{" "}
+              <ArrowCircleRight
+                size={20}
+                weight="light"
+                className="duration-300 group-hover:translate-x-2"
+              />
             </Link>
           </div>
         </div>
@@ -162,11 +177,11 @@ const ISAPage = () => {
           className="isa-surf-coach relative mt-8 w-full md:flex md:items-center md:justify-end"
         >
           <Image
-            src={"/assets/program/isa-teams/isa-water-safety.png"}
+            src={"/assets/program/isa-teams/isa-water-safety.jpg"}
             alt="image-asset-program"
             width={2400}
+            height={800}
             priority={false}
-            height={100}
             quality={100}
             className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
           />
@@ -182,9 +197,14 @@ const ISAPage = () => {
             <Link
               target="_blank"
               href="/"
-              className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-white"
+              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
             >
-              more information <ArrowCircleRight size={20} weight="light" />
+              more information{" "}
+              <ArrowCircleRight
+                size={20}
+                weight="light"
+                className="duration-300 group-hover:translate-x-2"
+              />
             </Link>
           </div>
         </div>

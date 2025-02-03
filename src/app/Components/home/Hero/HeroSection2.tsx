@@ -1,25 +1,36 @@
+"use client";
+
 import React from "react";
-import ContainerContent from "../../Container";
-import SliderPackage from "../../SliderPackage";
-import { ContentData } from "@/app/lib/Content";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const HeroSection2 = () => {
-  const contentText = ContentData[0];
   return (
-    <ContainerContent url="hero">
-      <div className="hero-section-phase2 h-fit w-full space-y-6 px-4 py-8 text-center md:px-5 xl:px-0">
-        <div className="header-content mt-8 flex h-fit flex-col items-center justify-center gap-6">
-          <div className="flex h-fit w-full flex-col items-center justify-center gap-6">
-            <h1 className="text-center text-2xl font-black text-brand xl:text-4xl">
-              ASIAN SURF <br /> PERFORMANCE ACADEMY
-            </h1>
-            <p className="text-sm font-light xl:w-3/4 xl:text-base">
-              {contentText.description}
-            </p>
-          </div>
-        </div>
+    <div className="hero-section relative">
+      <Image
+        src={"/assets/hero-img-1.webp"}
+        alt="..."
+        width={2400}
+        height={800}
+        priority
+        style={{
+          width: "100%",
+          height: "500px",
+          objectFit: "cover",
+        }}
+        className="h-[500px] w-full object-cover object-center"
+      />
+      <div className="absolute bottom-0 left-0 h-fit w-full">
+        <Image
+          src={"/assets/acc/wave-bottom.svg"}
+          alt="..."
+          width={2400}
+          height={500}
+          priority
+          className="h-fit w-full object-contain"
+        />
       </div>
-    </ContainerContent>
+    </div>
   );
 };
 

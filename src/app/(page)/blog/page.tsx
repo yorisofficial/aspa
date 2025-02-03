@@ -5,7 +5,7 @@ import React, { Suspense } from "react";
 
 async function getData() {
   const url = process.env.ASC_PUBLIC_POST || "";
-  const res = await fetch(`${url}/?per_page=9`, {
+  const res = await fetch(`${url}/?per_page=33`, {
     cache: "force-cache",
     next: { revalidate: 1000 },
   });
@@ -29,7 +29,7 @@ const BlogPage = async () => {
       <BackButton url="/">Back to main</BackButton>
       <div className="w-full space-y-4">
         <h1 className="text-3xl font-black">Blog Page</h1>
-        <div className="grid grid-cols-1 gap-4 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {data.length > 0 &&
             data.map((post: any) => (
               <Suspense key={post.id}>

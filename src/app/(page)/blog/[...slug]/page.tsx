@@ -45,7 +45,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
         Back to main
       </BackButton>
       <div className="mb-8 rounded-xl border-2 p-4">
-        <div className="h-full w-full md:h-[300px] md:w-full">
+        <div className="h-[300px] w-full md:h-[500px] md:w-full">
           <Image
             src={data.jetpack_featured_media_url}
             height={1500}
@@ -63,7 +63,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
           ></h1>
         </div>
       </div>
-      <article className="prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-figcaption: prose max-w-none prose-headings:font-black prose-p:text-sm prose-p:text-black prose-figure:!w-full prose-figcaption:w-full prose-figcaption:text-balance prose-strong:font-bold prose-strong:text-primary prose-img:w-full prose-img:max-w-5xl prose-img:rounded-xl md:prose-img:w-full xl:prose-p:text-justify xl:prose-p:text-base">
+      <article className="prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-figcaption: prose max-w-none prose-headings:font-black prose-p:text-sm prose-p:text-black prose-figure:!w-full prose-figcaption:w-full prose-figcaption:text-balance prose-strong:font-bold prose-strong:text-primary prose-img:w-full prose-img:max-w-6xl prose-img:rounded-xl md:prose-img:w-full xl:prose-p:text-justify xl:prose-p:text-base">
         <div dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
       </article>
     </ContainerContent>

@@ -1,26 +1,26 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import GetDateComponent from "./GetDateComponent";
+import Moment from "react-moment";
 
 interface Props {
   id: number;
+  slug: string;
+  title: {
+    rendered: string;
+  };
   jetpack_featured_media_url: any;
   rendered: string;
   date: string;
   author: number;
-  title: {
-    rendered: string;
-  };
 }
 
 const ItemPost = ({ post }: { post: Props }) => {
-  const url = post.title.rendered.replaceAll(" ", "-").toLowerCase();
-
   return (
     <>
       <Link
-        href={`/blog/${post.id}/${url}`}
+        href={`/blog/${post.slug}`}
         className="card group flex h-full w-full flex-col items-start justify-between rounded-xl border-2 border-bordersolid bg-white p-4 duration-500 hover:scale-105 hover:rounded-xl hover:drop-shadow-xl"
       >
         <div className="h-fit w-full">
@@ -35,9 +35,9 @@ const ItemPost = ({ post }: { post: Props }) => {
             />
           </div>
           <div className="h-full py-4">
-            <GetDateComponent data={post.date} />
+            <Moment format="YYYY-MM-DD">{post.date}</Moment>
             <h1
-              className="font-black underline-offset-8 group-hover:underline"
+              className="line-clamp-3 text-xl font-light uppercase"
               dangerouslySetInnerHTML={{ __html: post.title.rendered }}
             ></h1>
           </div>

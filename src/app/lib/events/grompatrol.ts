@@ -3,6 +3,20 @@ export const GromPatrol = {
   desc: "ASPA has launched the inaugural program for Tipi Jabrik's Grom Patrol2024. The ASPA Rising Star Camp will provide a training camp before andduring the Grom Patrol competition. This program aims to promote, support,and mentor the best young surfers.",
   price: "AUD 1500",
   details: "ASPA Camp + Entry Grom Patrol",
+  Images: [
+    {
+      src: "/assets/academy/aspa-academy-1.webp",
+      alt: "image-asset-program",
+    },
+    {
+      src: "/assets/academy/aspa-academy-2.webp",
+      alt: "image-asset-program",
+    },
+    {
+      src: "/assets/academy/aspa-academy-3.webp",
+      alt: "image-asset-program",
+    },
+  ],
   url: [
     {
       id: 1,
