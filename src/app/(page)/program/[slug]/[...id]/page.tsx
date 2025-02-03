@@ -101,7 +101,7 @@ const BookingSession = ({
           </div>
           <form
             onSubmit={handleSubmit}
-            className="flex w-full flex-col md:flex-row md:gap-5"
+            className="flex w-full flex-col gap-4 md:flex-row md:gap-5"
           >
             <div className="details-booking flex w-full flex-col gap-2 rounded-xl border border-bordersolid p-6">
               <h1 className="text-2xl font-bold">Details booking</h1>

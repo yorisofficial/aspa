@@ -49,7 +49,7 @@ const BottomNavigation = ({ data }: { data?: string }) => {
               exit={{ scale: 1 }}
               className="flex w-full items-center justify-center rounded-lg bg-black py-3 text-white"
             >
-              Book now
+              Contact us
             </motion.button>
           </Link>
         )}
