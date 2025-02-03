@@ -119,7 +119,7 @@ const ISAPage = () => {
             </p>
             <Link
               target="_blank"
-              href="/"
+              href="https://isasurf.org/learning/isa-courses/#coaching"
               className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
             >
               more information{" "}
@@ -156,7 +156,7 @@ const ISAPage = () => {
             </p>
             <Link
               target="_blank"
-              href="/"
+              href="https://isasurf.org/learning/isa-courses/#coaching"
               className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
             >
               more information{" "}
@@ -194,7 +194,7 @@ const ISAPage = () => {
             </p>
             <Link
               target="_blank"
-              href="/"
+              href="https://isasurf.org/learning/isa-courses/#judging"
               className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
             >
               more information{" "}
@@ -230,7 +230,7 @@ const ISAPage = () => {
             </p>
             <Link
               target="_blank"
-              href="/"
+              href="https://isasurf.org/learning/isa-courses/#water-safety"
               className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
             >
               more information{" "}
