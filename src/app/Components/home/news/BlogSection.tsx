@@ -2,6 +2,7 @@ import React from "react";
 import ContainerContent from "../../Container";
 import SliderBlogContent from "../../SliderBlogContent";
 import Link from "next/link";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 
 export async function getDataBlog() {
   let limit = 8;
@@ -22,25 +23,31 @@ const BlogSection = async () => {
 
   return (
     <ContainerContent url="/blog" className="border-buttom h-full w-full py-8">
-      <div className="header-content w-full md:w-1/2">
-        <span className="text-2xl font-light uppercase md:w-[400px] md:text-4xl">
-          READ LATEST news
-        </span>
-        <p className="text-justify text-sm font-light md:mt-6 md:text-base">
-          Read our latest news for surfing community and find more information
-          about surf competition around the world
-        </p>
-        <div className="mt-6">
+      <div className="header-content flex w-full flex-col items-start justify-center gap-4 md:flex-row md:gap-5">
+        <div className="w-full">
+          <span className="w-full text-2xl font-light uppercase md:w-[400px] md:text-4xl">
+            READ news
+          </span>
+        </div>
+      </div>
+      <div className="relative mt-8 flex h-full w-full items-center justify-center">
+        <div className="absolute right-full top-1/2 -translate-y-1/2 translate-x-1/2">
+          <span className="-z-10 w-[20px] text-[100px] font-bold uppercase leading-tight opacity-5">
+            the news
+          </span>
+        </div>
+        <div className="relative z-10 flex h-full w-1/4 items-center justify-center">
           <Link
             href={"/blog"}
             aria-label="Read more news"
-            className="rounded-lg bg-primary px-5 py-2 text-sm font-light uppercase text-white md:text-base"
+            className="flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full border border-brand uppercase text-brand duration-300 hover:border-black hover:bg-black hover:text-white"
           >
-            Read more news
+            see all news
+            <ArrowRight size={32} />
           </Link>
         </div>
+        <SliderBlogContent data={data} />
       </div>
-      <SliderBlogContent data={data} />
     </ContainerContent>
   );
 };

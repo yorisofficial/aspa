@@ -22,7 +22,7 @@ const TestimonialPage = () => {
           className="w-full md:w-1/2"
         >
           <span className="text-2xl font-light uppercase md:text-4xl">
-            Testimonials from Our Surfing
+            Testimonials from Our surfers
           </span>
         </motion.div>
         <motion.div
