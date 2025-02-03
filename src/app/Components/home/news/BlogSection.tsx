@@ -23,13 +23,6 @@ const BlogSection = async () => {
 
   return (
     <ContainerContent url="/blog" className="border-buttom h-full w-full py-8">
-      <div className="header-content flex w-full flex-col items-start justify-center gap-4 md:flex-row md:gap-5">
-        <div className="w-full">
-          <span className="w-full text-2xl font-light uppercase md:w-[400px] md:text-4xl">
-            READ news
-          </span>
-        </div>
-      </div>
       <div className="relative mt-8 flex h-full w-full items-center justify-center">
         <div className="absolute right-full top-1/2 -translate-y-1/2 translate-x-1/2">
           <span className="-z-10 w-[20px] text-[100px] font-bold uppercase leading-tight opacity-5">

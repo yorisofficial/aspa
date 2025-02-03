@@ -56,17 +56,6 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
 
   return (
     <ContainerContent url="team" className="">
-      <div className="border-buttom w-full pb-8">
-        <Button
-          onClick={handleBack}
-          label="Back"
-          variant="iconPrimary"
-          className="group"
-        >
-          <ArrowLeft className="duration-300 group-hover:-translate-x-1" />
-          Back to before
-        </Button>
-      </div>
       <div className="details-team h-fit py-8">
         {filteredDetails &&
           filteredDetails.map((item) => (
@@ -144,7 +133,7 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
                         <p className="description">{item?.quotes}</p>
                       </div>
                     )}
-                    {item?.achievement[0].title !== "" ? (
+                    {item?.achievement.length > 0 ? (
                       <div className="item-promote space-y-4">
                         <div className="header">
                           <h1 className="text-base font-black">Achievement</h1>
@@ -157,7 +146,16 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
                           ))}
                         </ul>
                       </div>
-                    ) : null}
+                    ) : (
+                      <div className="item-promote space-y-4">
+                        <div className="header">
+                          <h1 className="text-base font-black">Achievement</h1>
+                        </div>
+                        <ul className="w-full list-inside list-disc text-xl font-normal">
+                          -
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
