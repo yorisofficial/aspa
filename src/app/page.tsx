@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="h-full w-full">
+    <main className="h-full w-full overflow-x-hidden">
       <HeroSection2 />
       <AboutUsSection />
       <HighLightProgram

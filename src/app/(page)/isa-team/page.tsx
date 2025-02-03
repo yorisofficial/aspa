@@ -5,8 +5,9 @@ import SliderContentISA from "./components/SliderContentISA";
 import Link from "next/link";
 import { ArrowCircleRight } from "@phosphor-icons/react/dist/ssr";
 import { DataCourse } from "@/app/lib/DataCourse";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "International Surfing Association | ISA surf",
   description:
     "ASPA is proud to collaborate with the ISA (International Surfing Association) to off er certified courses recognized worldwide as the gold standard for professional development in the surfing industry. These courses are designed for aspiring and established professionals, focusing on coaching, judging, and competition management.",
@@ -25,7 +26,6 @@ export const metadata = {
     siteName: "Asian Surf Performance Academy",
   },
   twitter: {
-    cardType: "summary_large_image",
     title: "ISA surf",
     description:
       "ASPA is proud to collaborate with the ISA (International Surfing Association) to off er certified courses recognized worldwide as the gold standard for professional development in the surfing industry. These courses are designed for aspiring and established professionals, focusing on coaching, judging, and competition management.",
