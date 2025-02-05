@@ -20,7 +20,7 @@ const SlideTeam = ({ className }: { className?: string }) => {
   const data = CoreTeam;
 
   return (
-    <div className={`list-coach bored mx-auto h-fit w-full ${className}`}>
+    <div className={`list-coach mx-auto h-fit w-full ${className}`}>
       <Swiper
         modules={[Autoplay]}
         loop={true}

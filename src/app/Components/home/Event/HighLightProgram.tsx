@@ -36,7 +36,7 @@ const HighLightProgram = ({
               <span className="text-sm font-light uppercase">
                 our previous program
               </span>
-              <h1 className="text-heading text-start !text-3xl">
+              <h1 className="text-start text-2xl font-light md:text-3xl">
                 {content.title}
               </h1>
               <SortingParagraph data={content.description} />

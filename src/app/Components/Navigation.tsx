@@ -370,7 +370,7 @@ export const ToggleSocialMedia = () => {
         <button
           type="button"
           onClick={() => setToggleSocial(!isToggleSocial)}
-          className="bg-brand px-4 py-2 text-white"
+          className="hidden bg-brand px-4 py-2 text-white xl:inline-block"
         >
           Our social media
         </button>

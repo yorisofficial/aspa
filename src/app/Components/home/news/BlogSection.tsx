@@ -18,31 +18,40 @@ export async function getDataBlog() {
   return res.json();
 }
 
-const BlogSection = async () => {
+async function BlogSection() {
   const data = await getDataBlog();
 
   return (
     <ContainerContent url="/blog" className="border-buttom h-full w-full py-8">
-      <div className="relative mt-8 flex h-full w-full items-center justify-center">
+      <div className="relative mt-8 flex h-full w-full items-center justify-center gap-4 md:gap-5">
         <div className="absolute right-full top-1/2 -translate-y-1/2 translate-x-1/2">
           <span className="-z-10 w-[20px] text-[100px] font-bold uppercase leading-tight opacity-5">
             the news
           </span>
         </div>
-        <div className="relative z-10 flex h-full w-1/4 items-center justify-center">
-          <Link
-            href={"/blog"}
-            aria-label="Read more news"
-            className="flex h-[200px] w-[200px] flex-col items-center justify-center rounded-full border border-brand uppercase text-brand duration-300 hover:border-black hover:bg-black hover:text-white"
-          >
-            see all news
-            <ArrowRight size={32} />
-          </Link>
-        </div>
+        <BtnSeeAllPost className={`hidden md:flex`} />
         <SliderBlogContent data={data} />
       </div>
+      <BtnSeeAllPost className={`mt-6 flex md:hidden`} />
     </ContainerContent>
   );
-};
+}
 
 export default BlogSection;
+
+export function BtnSeeAllPost({ className }: { className: string }) {
+  return (
+    <>
+      <div className={`relative z-20`}>
+        <Link
+          href={"/blog"}
+          aria-label="Read more news"
+          className={`${className} h-[100px] w-[100px] flex-col items-center justify-center whitespace-nowrap rounded-full border border-primary bg-white p-4 text-sm font-light uppercase text-primary transition-all hover:bg-primary hover:text-white md:h-[200px] md:w-[200px] md:text-xl`}
+        >
+          see all news
+          <ArrowRight size={24} className="h-6 w-6 md:h-8 md:w-8" />
+        </Link>
+      </div>
+    </>
+  );
+}
