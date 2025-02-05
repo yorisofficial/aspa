@@ -133,13 +133,14 @@ const DetailsTeam = ({ params }: { params: { slug: string[] } }) => {
                         <p className="description">{item?.quotes}</p>
                       </div>
                     )}
-                    {item?.achievement.length > 0 ? (
+                    {item?.achievement !== undefined &&
+                    item?.achievement?.length > 0 ? (
                       <div className="item-promote space-y-4">
                         <div className="header">
                           <h1 className="text-base font-black">Achievement</h1>
                         </div>
                         <ul className="w-full list-inside list-disc text-xl font-normal">
-                          {item?.achievement.map((item, index) => (
+                          {item?.achievement?.map((item, index) => (
                             <li key={index} className="text-base font-normal">
                               {item.title}
                             </li>
