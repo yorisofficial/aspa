@@ -20,7 +20,8 @@ const ItemPost = ({ post }: { post: Props }) => {
   return (
     <>
       <Link
-        href={`/blog/${post.slug}`}
+        href={`/blog/${post.id}/${post.slug}`}
+        target="_parent"
         className="card group flex h-full w-full flex-col items-start justify-between rounded-xl border-2 border-bordersolid bg-white p-4 duration-500 hover:scale-105 hover:rounded-xl hover:drop-shadow-xl"
       >
         <div className="h-fit w-full">
