@@ -9,10 +9,10 @@ const OurProfessional = () => {
   return (
     <ContainerContent
       url="/our-team"
-      className="section-our-professional-teams flex h-fit items-center justify-center overflow-hidden py-8"
+      className="section-our-professional-teams py-8"
     >
-      <div className="our-professional-teams flex w-full flex-col gap-4 md:gap-5 xl:flex-row">
-        <div className="our-team h-fit w-full md:w-1/2">
+      <div className="our-professional-teams grid grid-cols-1 gap-4 py-8 md:grid-cols-2 md:gap-5">
+        <div className="our-team h-fit w-full">
           <div className="flex w-full flex-col items-start justify-center space-y-2 text-center">
             <h1 className="text-start text-2xl font-light uppercase md:text-4xl">
               {Home[3].title}

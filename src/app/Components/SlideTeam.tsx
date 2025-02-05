@@ -16,11 +16,11 @@ export const calculateAge = (birthYear: number) => {
 import "swiper/css";
 import { ArrowUpRight } from "@phosphor-icons/react";
 
-const SlideTeam = () => {
+const SlideTeam = ({ className }: { className?: string }) => {
   const data = CoreTeam;
 
   return (
-    <div className="list-coach mx-auto h-fit w-full">
+    <div className={`list-coach bored mx-auto h-fit w-full ${className}`}>
       <Swiper
         modules={[Autoplay]}
         loop={true}
@@ -35,7 +35,7 @@ const SlideTeam = () => {
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 3.1,
+            slidesPerView: 2.1,
             spaceBetween: 20,
           },
         }}
