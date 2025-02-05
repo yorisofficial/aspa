@@ -6,6 +6,7 @@ import ButtonUp from "./Components/ButtonUp";
 import "./globals.css";
 import ScriptGoogle from "./Components/ScriptGoogle";
 import Head from "next/head";
+import NewFooter from "./Components/NewFooter";
 
 const satoshi = localFont({
   src: [
@@ -55,7 +56,7 @@ export default function RootLayout({
       >
         <Navigation />
         {children}
-        <FooterPage />
+        <NewFooter />
         <ButtonUp />
         <ScriptGoogle />
       </body>

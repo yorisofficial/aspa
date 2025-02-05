@@ -47,7 +47,7 @@ const BlogPage = async () => {
           </div>
           <div className="relative flex w-full flex-col items-center justify-center gap-4 text-center">
             <DateComponents data={latestNews.date} />
-            <span className="text-center text-4xl font-light uppercase">
+            <span className="text-center text-xl font-light uppercase md:text-4xl">
               {latestNews.title.rendered}
             </span>
             <Link

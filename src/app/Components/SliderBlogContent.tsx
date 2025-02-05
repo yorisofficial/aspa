@@ -33,7 +33,7 @@ const SliderBlogContent = ({ data }: { data: PropsBlog[] }) => {
             spaceBetween: 16,
           },
           768: {
-            slidesPerView: 2.2,
+            slidesPerView: 1.2,
             spaceBetween: 20,
           },
           1024: {

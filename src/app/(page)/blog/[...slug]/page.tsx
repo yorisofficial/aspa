@@ -4,6 +4,7 @@ import GetDateComponent from "@/app/Components/GetDateComponent";
 import { redirect } from "next/navigation";
 import Image from "next/image";
 import React from "react";
+import BlogSection from "@/app/Components/home/news/BlogSection";
 
 export async function generateStaticParams() {
   const url = process.env.ASC_PUBLIC_POST || "";
@@ -68,6 +69,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
       <article className="prose-a:text-blue-600 hover:prose-a:text-blue-500 prose-figcaption: prose max-w-none prose-headings:font-black prose-p:text-sm prose-p:text-black prose-figure:!w-full prose-figcaption:w-full prose-figcaption:text-balance prose-strong:font-bold prose-strong:text-primary prose-img:w-full prose-img:max-w-6xl prose-img:rounded-xl md:prose-img:w-full xl:prose-p:text-justify xl:prose-p:text-base">
         <div dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
       </article>
+      <BlogSection />
     </ContainerContent>
   );
 };
