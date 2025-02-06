@@ -22,6 +22,7 @@ import {
 } from "framer-motion";
 import { AspaProgram } from "../lib/program/academy/AspaAcademy";
 import { ArrowRight } from "lucide-react";
+import SocialComponents from "./SocialComponents";
 
 export const menuNav = [
   {
@@ -363,9 +364,21 @@ export default function Navigation() {
 }
 
 export const ToggleSocialMedia = () => {
+  const ref = React.createRef<HTMLDivElement>();
   const [isToggleSocial, setToggleSocial] = useState<Boolean>(false);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setToggleSocial(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
   return (
-    <div>
+    <div ref={ref}>
       <div className="social-media-btn relative">
         <button
           type="button"
@@ -379,15 +392,7 @@ export const ToggleSocialMedia = () => {
             <div className="">
               <span>Our social media</span>
             </div>
-            <div className="flex items-center justify-center gap-2 py-2">
-              <InstagramLogo size={24} /> Instagram
-            </div>
-            <div className="flex items-center justify-center gap-2 py-2">
-              <YoutubeLogo size={24} /> Youtube
-            </div>
-            <div className="flex items-center justify-center gap-2 py-2">
-              <FacebookLogo size={24} /> Facebook
-            </div>
+            <SocialComponents />
           </div>
         )}
       </div>
