@@ -42,8 +42,8 @@ export const menuNav = [
   },
   {
     title: "Programs",
-    base: "program",
-    link: "/program",
+    base: "programs",
+    link: "/programs",
   },
   {
     title: "Blog",
@@ -147,80 +147,13 @@ export default function Navigation() {
                   >
                     <Link
                       aria-label="ASPA menu navigation"
-                      href={item.base === "program" ? "#" : item.link}
+                      href={item.link}
                       className={`block duration-500 hover:scale-110 `}
                     >
-                      {item.base === "program" ? (
-                        <button
-                          type="button"
-                          onClick={() => setShowDropdown(!isShowDropdown)}
-                          className={`flex items-center gap-2  px-4 py-2 ${isShowDropdown && "bg-brand text-white"}`}
-                        >
-                          {item.title}{" "}
-                          {isShowDropdown ? (
-                            <CaretUp size={18} />
-                          ) : (
-                            <CaretDown size={18} />
-                          )}
-                        </button>
-                      ) : (
-                        <div className="flex items-center gap-2  px-4 py-2">
-                          <span>{item.title}</span>
-                        </div>
-                      )}
-                    </Link>
-                    {item.base === "program" && isShowDropdown && (
-                      <div className="dropdown absolute left-0 top-full w-[300px] -translate-x-6 translate-y-3 rounded-xl border border-bordersolid bg-white p-5 text-black drop-shadow-xl">
-                        <div className="flex items-center justify-start gap-3">
-                          <div className="h-[2px] w-4 bg-primary"></div>
-                          <h1 className="text-base font-bold">Our program</h1>
-                        </div>
-                        <ul className="flex w-full flex-col">
-                          {AspaProgram.map((item, index) => (
-                            <li
-                              key={index}
-                              className="item-program group w-full"
-                            >
-                              <Link
-                                onClick={() => setShowDropdown(false)}
-                                href={`/program/${item.id}`}
-                                aria-label="ASPA item list program"
-                                className="flex w-full items-center justify-start gap-3 py-2 capitalize"
-                              >
-                                <ArrowRight
-                                  size={16}
-                                  className="duration-500 group-hover:translate-x-1"
-                                />
-                                {item.title.replaceAll("program", "")}
-                              </Link>
-                            </li>
-                          ))}
-                          <li className="item-program mt-4 w-full">
-                            <div className="flex items-center justify-start gap-3">
-                              <div className="h-[2px] w-4 bg-primary"></div>
-                              <h1 className="text-base font-bold">
-                                Specialty program
-                              </h1>
-                            </div>
-                            {PreviousProgram.map((item, index) => (
-                              <Link
-                                key={item.id}
-                                onClick={() => setShowDropdown(false)}
-                                href={item.url}
-                                aria-label="ASPA item list program"
-                                className="start group flex w-full items-center gap-3 py-2 capitalize"
-                              >
-                                <ArrowRight
-                                  size={16}
-                                  className="duration-500 group-hover:translate-x-1"
-                                />
-                                {item.title}
-                              </Link>
-                            ))}
-                          </li>
-                        </ul>
+                      <div className="flex items-center gap-2  px-4 py-2">
+                        <span>{item.title}</span>
                       </div>
-                    )}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -233,7 +166,7 @@ export default function Navigation() {
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ ease: "easeInOut", duration: 0.1 }}
-                className="mobile-menu fixed left-0 top-20 z-40 flex h-fit w-full items-start justify-start xl:hidden"
+                className="mobile-menus fixed left-0 top-20 z-40 flex h-fit w-full items-start justify-start xl:hidden"
               >
                 <div className="h-fit min-h-screen w-full space-y-2 bg-white px-4 pt-12">
                   {menuNav.map((item, index) => (

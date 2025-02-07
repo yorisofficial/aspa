@@ -125,7 +125,10 @@ const NewFooter = () => {
                       className="group mt-2 flex list-inside items-center justify-start gap-2 text-base font-light duration-500"
                     >
                       <div className="h-[1px] w-0 bg-white transition-all duration-300 ease-linear group-hover:w-2"></div>
-                      <Link href={`/program/${item.id}`} className="capitalize">
+                      <Link
+                        href={`/programs/${item.id}`}
+                        className="capitalize"
+                      >
                         {item.title}
                       </Link>
                     </li>

@@ -71,7 +71,7 @@ export const AspaProgram = [
       {
         id: 3,
         title: "Physical Training Session",
-        duration: "",
+        duration: "-",
         status: false,
         description:
           "Become a more complete surfer with our physical training sessions, focusing on strength, mobility, and endurance.",
@@ -147,7 +147,7 @@ export const AspaProgram = [
       {
         id: 3,
         title: "Physical Training Session",
-        duration: "",
+        duration: "-",
         status: false,
         description:
           "Become a more complete surfer with our physical training sessions, focusing on strength, mobility, and endurance.",
