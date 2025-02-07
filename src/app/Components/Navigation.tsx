@@ -61,12 +61,12 @@ export const PreviousProgram = [
   {
     id: 1,
     title: "Rising Star",
-    url: "/program/rising-star",
+    url: "/programs/rising-star",
   },
   {
     id: 2,
     title: "Junior Team Indonesia",
-    url: "/program/isa-world-junior",
+    url: "/programs/isa-world-junior",
   },
 ];
 
