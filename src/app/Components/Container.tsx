@@ -15,9 +15,7 @@ const ContainerContent = ({
   const pathUse = `${pathName.includes(url) ? "pt-4 " : ""}`;
 
   return (
-    <div
-      className={`container mx-auto max-w-6xl px-4 md:px-10 xl:px-0 ${pathUse} ${className}`}
-    >
+    <div className={`container-content px-4 md:px-16 ${pathUse} ${className}`}>
       {children}
     </div>
   );

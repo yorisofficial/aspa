@@ -30,7 +30,6 @@ function HeroSection2() {
           </video>
         </div>
       </Suspense>
-
       <div className="absolute bottom-0 left-0 h-fit w-full">
         <Image
           src={"/assets/acc/wave-bottom.svg"}

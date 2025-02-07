@@ -1,11 +1,11 @@
 import React from "react";
-import ISAHeader from "./components/ISAHeader";
 import Image from "next/image";
 import SliderContentISA from "./components/SliderContentISA";
 import Link from "next/link";
 import { ArrowCircleRight } from "@phosphor-icons/react/dist/ssr";
 import { DataCourse } from "@/app/lib/DataCourse";
 import { Metadata } from "next";
+import HeaderEventContent from "@/app/Components/Events/HeaderEventContent";
 
 export const metadata: Metadata = {
   title: "International Surfing Association | ISA surf",
@@ -43,8 +43,15 @@ export const metadata: Metadata = {
 const ISAPage = () => {
   return (
     <div className="container-content h-fit min-h-screen w-full overflow-x-hidden">
-      <ISAHeader />
-      <div className="content-moto mx-auto mt-8 flex h-fit max-w-6xl flex-col justify-between gap-4 px-4 md:px-10 xl:flex-row xl:gap-5 xl:px-0">
+      <HeaderEventContent
+        logo="/brand/ASPA-white.svg"
+        logo2="/brand/ISA.png"
+        title="ASPA Surfing Development Courses"
+        images="/assets/surf-player.png"
+        theme="bg-gradient-to-r from-brand to-brand/0 xl:bg-brand"
+        color="bg-gradient-to-r from-brand to-brand/0"
+      />
+      <div className="content-moto mt-8 flex w-full items-center justify-between px-4 md:px-16">
         <h2 className="w-full max-w-[500px] text-3xl font-light uppercase xl:w-1/2">
           Nurture and Develop the Next Generation of Surfing Professionals
         </h2>
@@ -82,7 +89,7 @@ const ISAPage = () => {
         />
       </div>
       <div className="mt-8 min-h-screen w-full">
-        <div className="content-moto relative mx-auto mt-8 flex h-fit max-w-6xl flex-col items-start justify-between gap-4 px-4 md:px-10 xl:flex-row xl:items-center xl:gap-5 xl:px-0">
+        <div className="content-moto relative flex h-fit w-full items-center justify-between px-4 md:px-16">
           <h2 className="w-full max-w-[500px] text-3xl font-light uppercase xl:w-1/2">
             International Surfing Association
           </h2>
@@ -106,7 +113,7 @@ const ISAPage = () => {
             quality={100}
             className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
           />
-          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:right-[5%] md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
+          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:right-16 md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
             <h2 className="text-3xl font-light uppercase">
               ISA Surf Level 1 Instructor Certification
             </h2>
@@ -144,7 +151,7 @@ const ISAPage = () => {
             quality={100}
             className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
           />
-          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:left-[5%] md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
+          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:left-16 md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
             <h2 className="text-3xl font-light uppercase">
               ISA Surf Level 2 Instructor Certification
             </h2>
@@ -181,7 +188,7 @@ const ISAPage = () => {
             quality={100}
             className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
           />
-          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:right-[5%] md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
+          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:right-16 md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
             <h2 className="text-3xl font-light uppercase">
               ISA Judging Certification
             </h2>
@@ -219,7 +226,7 @@ const ISAPage = () => {
             quality={100}
             className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
           />
-          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:left-[5%] md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
+          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:left-16 md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
             <h2 className="text-3xl font-light uppercase">
               ISA/ILS Water Safety Certification
             </h2>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const AboutUsSection = () => {
   return (
-    <div className="container-content mx-auto mt-8 h-fit w-full max-w-6xl">
+    <div className="container-content mt-8 h-fit w-full px-4 md:px-16">
       <div className="header-overview flex flex-col items-start justify-center gap-4 px-4 md:flex-row md:gap-5 md:px-10 xl:px-0">
         <motion.div
           initial={{ translateX: "-100%", opacity: 0 }}

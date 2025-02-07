@@ -14,7 +14,7 @@ import { DataCourseType } from "@/app/lib/DataCourse";
 
 const SliderContentISA = ({ data }: { data: DataCourseType[] }) => {
   return (
-    <div className="mx-auto mt-8 h-fit w-full max-w-6xl px-4 md:px-10 xl:px-0">
+    <div className="mx-auto mt-8 h-fit w-full px-4 md:px-16">
       <div className="content-header">
         <h2 className="max-w-[300px] text-3xl font-light uppercase xl:w-1/2">
           Take your surf knowledge to the next level

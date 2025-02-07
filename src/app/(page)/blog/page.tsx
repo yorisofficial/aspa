@@ -28,7 +28,7 @@ const BlogPage = async () => {
   return (
     <ContainerContent
       url="blog"
-      className="container mx-auto min-h-screen w-full max-w-5xl space-y-8 py-32"
+      className="container min-h-screen w-full space-y-8 px-4 py-32 md:px-16"
     >
       <div className="w-full space-y-4">
         <div className="flex w-full flex-col items-center justify-center gap-4">

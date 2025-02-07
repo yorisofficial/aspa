@@ -25,7 +25,7 @@ const NewFooter = () => {
   });
 
   return (
-    <div className="flex h-fit w-full flex-col items-start justify-center gap-4 bg-black p-4 text-white">
+    <div className="flex h-fit w-full flex-col items-start justify-center gap-4 bg-black p-4 text-white md:px-16">
       <div className="main-content flex h-full w-full flex-col items-start justify-between md:flex-row md:gap-6">
         <div className="logo-brand h-full">
           <Image
