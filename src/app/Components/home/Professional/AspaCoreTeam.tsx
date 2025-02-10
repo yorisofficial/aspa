@@ -1,16 +1,17 @@
-import Loading from "@/app/loading"
-import React, {Suspense} from "react"
-import ListUsers from "./ListUsers"
+import Loading from "@/app/loading";
+import React, { Suspense } from "react";
+import ListUsers from "./ListUsers";
 interface Props {
-  id: number
-  full_name: string
-  nickname: string
-  title: string
-  age: number
-  experience: string
-  level: string
-  profile: string
-  achievement: any
+  id: number;
+  full_name: string;
+  nickname: string;
+  title: string;
+  age: number;
+  experience: string;
+  level: string;
+  profile: string;
+  achievement: any;
+  user_instagram: string;
 }
 
 const AspaCoreTeam = ({
@@ -18,11 +19,11 @@ const AspaCoreTeam = ({
   teamData,
   categories,
 }: {
-  title: string
-  teamData: Props[]
-  categories: string
+  title: string;
+  teamData: Props[];
+  categories: string;
 }) => {
-  const data = teamData
+  const data = teamData;
 
   return (
     <div className="simple-container border-buttom flex flex-col items-start justify-start gap-8 py-8">
@@ -31,7 +32,7 @@ const AspaCoreTeam = ({
         <ListUsers data={data} categories={categories} />
       </Suspense>
     </div>
-  )
-}
+  );
+};
 
-export default AspaCoreTeam
+export default AspaCoreTeam;

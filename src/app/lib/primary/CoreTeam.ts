@@ -82,7 +82,7 @@ export const CoreTeam = [
     nickname: "Dylan",
     title: "ASPA Head coach",
     level: "",
-    profile: "/assets/team/dylan.webp",
+    profile: "/assets/team/dyalan.jpg",
     location: "Bali",
     quotes: "",
     age: 1998,
