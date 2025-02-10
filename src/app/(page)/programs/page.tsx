@@ -53,9 +53,9 @@ export default function page() {
         <div className="content-body mt-8">
           <div
             id={basicPlusProgram.title.replace(" ", "-").toLowerCase()}
-            className="relative flex h-fit min-h-screen w-full flex-col items-center justify-start border-[2px] border-dashed border-black/5 md:flex-row"
+            className="relative flex h-fit w-full flex-col items-center justify-start border-[2px] border-dashed border-black/5 md:flex-row"
           >
-            <div className="h-[400px] w-full md:pl-[10%]">
+            <div className="h-[400px] w-full">
               <Image
                 src={basicPlusProgram.image[0].src}
                 alt={basicPlusProgram.title}
@@ -65,7 +65,7 @@ export default function page() {
                 className="h-[400px] w-full object-cover object-top"
               />
             </div>
-            <div className="h-fit w-full md:absolute md:left-8 md:top-1/2 md:w-[500px] md:-translate-y-1/2">
+            <div className="h-fit md:w-1/2 md:pr-16">
               <div className="content-body bg-white p-4 md:p-8 md:drop-shadow-lg">
                 <h2 className="text-2xl font-light uppercase md:text-4xl">
                   {basicPlusProgram.title}
@@ -123,19 +123,9 @@ export default function page() {
           </div>
           <div
             id={eliteProgram.title.replace(" ", "-").toLowerCase()}
-            className="relative flex h-fit min-h-screen w-full flex-col items-center justify-start border-[2px] border-dashed border-black/5 md:flex-row"
+            className="relative flex h-fit w-full flex-col items-center justify-start border-[2px] border-dashed border-black/5 md:flex-row"
           >
-            <div className="w-full md:h-[400px] md:pr-[10%]">
-              <Image
-                src={eliteProgram.image[0].src}
-                alt={eliteProgram.title}
-                width={1000}
-                height={1000}
-                priority
-                className="h-[400px] w-full object-cover"
-              />
-            </div>
-            <div className="h-fit md:absolute md:right-16 md:top-1/2 md:w-[500px] md:-translate-y-1/2">
+            <div className="h-fit md:w-1/2 md:pl-16">
               <div className="content-body bg-white p-4 md:p-8 md:drop-shadow-lg">
                 <h2 className="text-2xl font-light uppercase md:text-4xl">
                   {eliteProgram.title}
@@ -189,6 +179,16 @@ export default function page() {
                   </Link>
                 </div>
               </div>
+            </div>
+            <div className="order-first h-fit w-full md:order-last">
+              <Image
+                src={eliteProgram.image[0].src}
+                alt={eliteProgram.title}
+                width={1000}
+                height={1000}
+                priority
+                className="h-[400px] w-full object-cover"
+              />
             </div>
           </div>
           <div className="custome-program relative my-8 h-fit w-full">
