@@ -44,18 +44,7 @@ export const metadata = {
 const AcademyPage = () => {
   // get content about us
   const contentText = ContentData[0];
-  const motoBrand = [
-    {
-      title: "Vision",
-      description:
-        "To be a global leader in surf performance and education, inspiring individuals to achieve excellence, embrace the ocean responsibly, and contribute to the growth and sustainability of surfing worldwide.",
-    },
-    {
-      title: "Mision",
-      description:
-        "To empower surfers of all levels through high-quality coaching, surf education, and professional development, fostering a community that values performance, sustainability, and growth both in and out of the water.",
-    },
-  ];
+
   return (
     <>
       <div className="min-h-screen w-full overflow-hidden pt-8">
@@ -74,17 +63,6 @@ const AcademyPage = () => {
           />
         </div>
         <HistoricalContent />
-        <div className="moto-section tems-start mx-auto mt-4 flex h-fit w-full max-w-6xl flex-col justify-between px-4 md:mt-6 md:gap-5 md:px-10 xl:px-0">
-          <Suspense fallback={<Loading />}>
-            {motoBrand.map((item, index) => (
-              <AccordionAboutUs
-                key={index}
-                title={item.title}
-                description={item.description}
-              />
-            ))}
-          </Suspense>
-        </div>
         <TeamsPreviews />
         <div className="image-width mt-4 h-[200px] w-full md:mt-6 md:h-[400px] xl:mt-8">
           <Image
@@ -97,7 +75,7 @@ const AcademyPage = () => {
             className="h-full w-full object-cover md:h-[400px]"
           />
         </div>
-        <div className="mx-auto mt-4 flex h-fit w-full max-w-6xl flex-col justify-between px-4 md:mt-0 md:flex-row md:gap-5 md:px-10 xl:mt-8 xl:px-0">
+        <div className="mx-auto mt-4 flex h-fit w-full flex-col justify-between px-4 md:mt-0 md:flex-row md:gap-5 md:px-16 xl:mt-8">
           <div className="content-info md:w-[400px]">
             <span className="font-bold uppercase">Locate ASPA</span>
             <h2 className="big-heading text-2xl uppercase md:text-4xl">

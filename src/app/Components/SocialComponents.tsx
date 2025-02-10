@@ -6,6 +6,7 @@ import {
 } from "@phosphor-icons/react";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const SocialComponents = () => {
   const social = [
@@ -41,7 +42,13 @@ const SocialComponents = () => {
     <>
       <div className="mt-2 flex flex-col items-start gap-4">
         {social.map((item) => (
-          <div key={item.id}>
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3, delay: item.id * 0.1 }}
+            viewport={{ once: true }}
+            key={item.id}
+          >
             <Link
               target="_blank"
               href={item.url}
@@ -56,7 +63,7 @@ const SocialComponents = () => {
               </span>
               <h1 className="">{item.platform}</h1>
             </Link>
-          </div>
+          </motion.div>
         ))}
       </div>
     </>

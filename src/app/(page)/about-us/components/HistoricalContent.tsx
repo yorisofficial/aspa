@@ -1,11 +1,26 @@
 "use client";
 
-import React from "react";
+import React, { Suspense } from "react";
 import { motion } from "framer-motion";
+import AccordionAboutUs from "@/app/Components/AccordionAboutUs";
+import Loading from "@/app/loading";
 
 const HistoricalContent = () => {
+  const motoBrand = [
+    {
+      title: "Vision",
+      description:
+        "To be a global leader in surf performance and education, inspiring individuals to achieve excellence, embrace the ocean responsibly, and contribute to the growth and sustainability of surfing worldwide.",
+    },
+    {
+      title: "Mision",
+      description:
+        "To empower surfers of all levels through high-quality coaching, surf education, and professional development, fostering a community that values performance, sustainability, and growth both in and out of the water.",
+    },
+  ];
+
   return (
-    <div className="mx-auto mt-8 grid max-w-6xl grid-cols-1 items-start justify-center gap-4 md:grid-cols-2 md:gap-5">
+    <div className="mx-auto mt-8 grid grid-cols-1 items-start justify-center gap-4 px-4 md:grid-cols-2 md:gap-5 md:px-16">
       <div className="">
         <div className="historical-content mx-auto mt-4 flex h-fit w-full max-w-6xl flex-col items-start justify-between px-4 md:mt-6 md:gap-5 md:px-10 xl:mt-8 xl:px-0">
           <motion.div
@@ -35,6 +50,18 @@ const HistoricalContent = () => {
               and tailored programs, we help surfers reach their full potential.
             </p>
           </motion.div>
+        </div>
+        <div className="moto-section tems-start mx-auto mt-4 flex h-fit w-full max-w-6xl flex-col justify-between px-4 md:mt-6 md:gap-5 md:px-10 xl:px-0">
+          <Suspense fallback={<Loading />}>
+            {motoBrand.map((item, index) => (
+              <AccordionAboutUs
+                key={index}
+                title={item.title}
+                indexOf={index}
+                description={item.description}
+              />
+            ))}
+          </Suspense>
         </div>
       </div>
       <div className="video-section flex h-[400px] w-full items-center justify-center">

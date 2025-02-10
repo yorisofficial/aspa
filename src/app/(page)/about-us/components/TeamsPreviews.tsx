@@ -11,7 +11,7 @@ import React from "react";
 export default function TeamsPreviews() {
   return (
     <>
-      <div className="our-teams mx-auto mt-4 h-fit w-full max-w-6xl px-4 md:mt-6 md:px-10 md:text-center xl:mt-8 xl:px-0">
+      <div className="our-teams mx-auto mt-4 h-fit w-full px-4 md:mt-6 md:px-16 md:text-center xl:mt-8">
         <h2 className="big-heading text-2xl uppercase md:text-center md:text-4xl">
           meet all our team members
         </h2>

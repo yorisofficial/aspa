@@ -23,7 +23,12 @@ const ListTeam = ({
       <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-5">
         {data.map((item, index) => (
           <Suspense key={item.id}>
-            <ItemTeam index={index} data={item} categories={categories} />
+            <ItemTeam
+              index={index}
+              indexOf={index}
+              data={item}
+              categories={categories}
+            />
           </Suspense>
         ))}
       </div>

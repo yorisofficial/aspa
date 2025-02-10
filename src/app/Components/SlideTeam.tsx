@@ -44,20 +44,20 @@ const SlideTeam = ({ className }: { className?: string }) => {
         {data.map((item, index) => (
           <SwiperSlide key={index} className="item-coach group w-full">
             <Link
-              className="relative inline-block h-full w-full"
               href={`/team/ASPA/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
+              className="group relative inline-block h-full w-full"
             >
               <div className="absolute right-2 top-2 z-10 text-white">
                 <ArrowUpRight size={24} />
               </div>
               <div className="relative h-fit w-full rounded-xl bg-cover bg-center bg-no-repeat duration-500">
-                <div className="">
+                <div className="h-[180px] overflow-hidden md:h-[250px]">
                   <Image
                     src={item.profile}
                     height={500}
                     width={1200}
                     alt={item.nickname}
-                    className="h-[180px] object-cover md:h-[250px]"
+                    className="h-[180px] object-cover duration-300 group-hover:scale-110 md:h-[250px]"
                   />
                 </div>
                 <div className="py-4 text-center text-black">

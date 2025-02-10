@@ -141,7 +141,13 @@ export default function Navigation() {
             <div className="desktop-menu hidden xl:block">
               <ul className="flex items-center gap-4">
                 {menuNav.map((item, index) => (
-                  <li
+                  <motion.li
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileTap={{ scale: 0.8, opacity: 0.8 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.8, opacity: 0 }}
+                    transition={{ duration: 0.3, delay: 0.1 * index }}
+                    viewport={{ once: true }}
                     key={index}
                     className={`relative ${activePath.includes(item.base) ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
                   >
@@ -154,7 +160,7 @@ export default function Navigation() {
                         <span>{item.title}</span>
                       </div>
                     </Link>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
@@ -313,13 +319,18 @@ export const ToggleSocialMedia = () => {
   return (
     <div ref={ref}>
       <div className="social-media-btn relative">
-        <button
+        <motion.button
+          aria-label="Button toggle social media"
+          initial={{ scale: 1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.2 }}
+          exit={{ scale: 1 }}
           type="button"
           onClick={() => setToggleSocial(!isToggleSocial)}
           className="hidden bg-brand px-4 py-2 text-white xl:inline-block"
         >
           Our social media
-        </button>
+        </motion.button>
         {isToggleSocial && (
           <div className="absolute right-0 top-full flex h-fit w-[200px] translate-y-4 flex-col items-start gap-2 bg-white p-3 drop-shadow-lg">
             <div className="">

@@ -30,9 +30,16 @@ const ListUsers = ({
   return (
     <>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:gap-5">
-        {data.map((item) => (
+        {data.map((item, index) => (
           <Suspense key={item.id}>
-            <div className="item-core h-full w-full">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="item-core h-full w-full"
+            >
               <Link
                 href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
                 className="group h-full w-full"
@@ -65,7 +72,7 @@ const ListUsers = ({
                   </Link>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </Suspense>
         ))}
       </div>

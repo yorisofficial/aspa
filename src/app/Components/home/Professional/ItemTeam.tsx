@@ -2,29 +2,42 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import { InstagramLogo } from "@phosphor-icons/react";
+import { InstagramLogo, MagnifyingGlassPlus } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 
 const ItemTeam = ({
   data,
   categories,
   index,
+  indexOf,
 }: {
   data: any;
   categories: string;
   index: number;
+  indexOf: number;
 }) => {
   const item = data;
 
   return (
     <>
-      <div className="inline-block h-full w-full">
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        whileInView={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.8, opacity: 0 }}
+        transition={{ duration: 0.3, delay: indexOf * 0.1 }}
+        viewport={{ once: true }}
+        className="inline-block h-full w-full"
+      >
         <div className="item-core">
           <Link
             key={item.id}
             href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
             className="group"
           >
-            <div className="h-[200px] w-full overflow-hidden rounded-lg">
+            <div className="relative h-[200px] w-full overflow-hidden rounded-lg">
+              <div className="invisible absolute left-1/2 top-1/2 z-30 flex h-fit w-fit -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/20 p-1 text-white backdrop-blur-md group-hover:visible">
+                <MagnifyingGlassPlus size={24} className="h-6 w-6" />
+              </div>
               <Image
                 src={item.profile || ""}
                 alt="prifile-picture"
@@ -49,7 +62,7 @@ const ItemTeam = ({
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
