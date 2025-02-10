@@ -20,7 +20,7 @@ const ButtonSlideSwiper = ({ className }: { className?: string }) => {
       <button
         aria-label="Button next slide"
         onClick={() => swiper.slideNext()}
-        className="border-bordered rounded-full border bg-black p-3 text-white delay-100 focus:bg-black focus:text-white "
+        className="border-bordered rounded-full border bg-black p-3 text-white delay-100 focus:bg-black focus:text-white"
       >
         <CaretRight size={24} />
       </button>

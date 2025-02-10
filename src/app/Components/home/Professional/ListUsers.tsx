@@ -4,7 +4,11 @@ import Link from "next/link";
 import React, { Suspense } from "react";
 import IconArrowDetails from "../../IconArrowDetails";
 import { motion } from "framer-motion";
-import { InstagramLogo } from "@phosphor-icons/react";
+import {
+  InstagramLogo,
+  MagnifyingGlass,
+  MagnifyingGlassPlus,
+} from "@phosphor-icons/react";
 
 interface Props {
   id: number;
@@ -33,7 +37,10 @@ const ListUsers = ({
                 href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
                 className="group h-full w-full"
               >
-                <div className="h-[300px] w-full overflow-hidden rounded-lg">
+                <div className="relative h-[300px] w-full overflow-hidden rounded-lg">
+                  <div className="invisible absolute left-1/2 top-1/2 z-30 flex h-fit w-fit -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/20 p-1 text-white backdrop-blur-md group-hover:visible">
+                    <MagnifyingGlassPlus size={24} className="h-6 w-6" />
+                  </div>
                   <Image
                     src={item.profile}
                     alt="prifile-picture"
