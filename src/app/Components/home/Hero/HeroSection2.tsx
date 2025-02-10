@@ -4,7 +4,7 @@ import { Spinner } from "@phosphor-icons/react";
 import Image from "next/image";
 import React, { Suspense } from "react";
 
-function HeroSection2() {
+function HeroSection2({ video }: any) {
   return (
     <div className="hero-section relative h-fit w-full md:h-[500px]">
       <Suspense
@@ -16,16 +16,16 @@ function HeroSection2() {
       >
         <div className="h-[500px] w-full">
           <video
-            preload="none"
+            preload="auto"
             autoPlay
             loop
             muted
             className="h-[500px] w-full object-cover"
+            onLoadedData={() => {
+              document.querySelector(".hero-section")?.classList.add("loaded");
+            }}
           >
-            <source
-              src="/assets/video/Training Session with the Indonesian Junior Team - ASPA.mp4"
-              type="video/mp4"
-            />
+            <source src={video} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
