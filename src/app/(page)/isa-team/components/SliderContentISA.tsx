@@ -46,7 +46,11 @@ const SliderContentISA = ({ data }: { data: DataCourseType[] }) => {
               key={item.id}
               className="group relative h-full w-fit overflow-hidden rounded-xl "
             >
-              <Link target="_self" href={`#${item.sectionId}`} className={""}>
+              <Link
+                target="_self"
+                href={`#${item.name.toLowerCase().replaceAll(" ", "-")}`}
+                className={"inline-block"}
+              >
                 <Image
                   src={item.image}
                   alt="ISA Surf coach"

@@ -6,6 +6,7 @@ import { ArrowCircleRight } from "@phosphor-icons/react/dist/ssr";
 import { DataCourse } from "@/app/lib/DataCourse";
 import { Metadata } from "next";
 import HeaderEventContent from "@/app/Components/Events/HeaderEventContent";
+import { ItemEventOdd } from "./components/ItemEventOdd";
 
 export const metadata: Metadata = {
   title: "International Surfing Association | ISA surf",
@@ -41,6 +42,10 @@ export const metadata: Metadata = {
 };
 
 const ISAPage = () => {
+  const isaLevelOne = DataCourse[0];
+  const isaLevelTwo = DataCourse[1];
+  const isaJudging = DataCourse[2];
+  const isaWaterSafety = DataCourse[3];
   return (
     <div className="container-content h-fit min-h-screen w-full overflow-x-hidden">
       <HeaderEventContent
@@ -100,155 +105,38 @@ const ISAPage = () => {
             COURSEs
           </span>
         </div>
-        <div
-          id="isa-surf-coach-1"
-          className="isa-surf-coach relative mt-16 h-fit w-full md:px-0"
-        >
-          <Image
-            src={"/assets/program/isa-teams/isa-lv-1.jpg"}
-            alt="image-asset-program"
-            width={2400}
-            priority={false}
-            height={800}
-            quality={100}
-            className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
-          />
-          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:right-16 md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
-            <h2 className="text-3xl font-light uppercase">
-              ISA Surf Level 1 Instructor Certification
-            </h2>
-            <p className="mt-2 text-start text-base font-light">
-              The Level 1 course is the foundation for those teaching beginner
-              and early intermediate surfers. This internationally recognized
-              program equips instructors with essential skills, safety
-              knowledge, and teaching techniques to deliver high-quality,
-              engaging surf lessons.
-            </p>
-            <Link
-              target="_blank"
-              href="https://isasurf.org/learning/isa-courses/#coaching"
-              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
-            >
-              more information{" "}
-              <ArrowCircleRight
-                size={20}
-                weight="light"
-                className="duration-300 group-hover:translate-x-2"
-              />
-            </Link>
-          </div>
-        </div>
-        <div
-          id="isa-surf-coach-2"
-          className="isa-surf-coach relative mt-8 w-full md:flex md:items-center md:justify-end"
-        >
-          <Image
-            src={"/assets/program/isa-teams/isa-lv-2.jpg"}
-            alt="image-asset-program"
-            width={2400}
-            height={800}
-            priority={false}
-            quality={100}
-            className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
-          />
-          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:left-16 md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
-            <h2 className="text-3xl font-light uppercase">
-              ISA Surf Level 2 Instructor Certification
-            </h2>
-            <p className="mt-2 text-start text-base font-light">
-              For experienced instructors, the Level 2 course focuses on
-              training intermediate to advanced surfers. It prepares coaches to
-              enhance athletes skills, optimize performance, and prepare them
-              for competitions.
-            </p>
-            <Link
-              target="_blank"
-              href="https://isasurf.org/learning/isa-courses/#coaching"
-              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
-            >
-              more information{" "}
-              <ArrowCircleRight
-                size={20}
-                weight="light"
-                className="duration-300 group-hover:translate-x-2"
-              />
-            </Link>
-          </div>
-        </div>
-        <div
-          id="isa-surf-judging"
-          className="isa-surf-judging relative mt-8 h-fit w-full"
-        >
-          <Image
-            src={"/assets/program/isa-teams/ISA-judging.jpg"}
-            alt="image-asset-program"
-            width={2400}
-            height={800}
-            priority={false}
-            quality={100}
-            className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
-          />
-          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:right-16 md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
-            <h2 className="text-3xl font-light uppercase">
-              ISA Judging Certification
-            </h2>
-            <p className="mt-2 text-start text-base font-light">
-              For those interested in surf competition offi ciating, the ISA
-              Judging Course provides comprehensive training on scoring
-              criteria, heat analysis, and judging protocols. Delivered by
-              experienced ISA presenters, the course includes practice sessions
-              for comparing waves and assigning scores.
-            </p>
-            <Link
-              target="_blank"
-              href="https://isasurf.org/learning/isa-courses/#judging"
-              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
-            >
-              more information{" "}
-              <ArrowCircleRight
-                size={20}
-                weight="light"
-                className="duration-300 group-hover:translate-x-2"
-              />
-            </Link>
-          </div>
-        </div>
-        <div
-          id="isa-surf-water-safety"
-          className="isa-surf-coach relative mt-8 w-full md:flex md:items-center md:justify-end"
-        >
-          <Image
-            src={"/assets/program/isa-teams/isa-water-safety.jpg"}
-            alt="image-asset-program"
-            width={2400}
-            height={800}
-            priority={false}
-            quality={100}
-            className="h-[250px] w-full object-cover md:h-[400px] md:w-3/4"
-          />
-          <div className="absolute-content p-4 drop-shadow-lg md:absolute md:left-16 md:top-1/2 md:z-10 md:w-[500px] md:-translate-y-1/2 md:bg-white md:p-6">
-            <h2 className="text-3xl font-light uppercase">
-              ISA/ILS Water Safety Certification
-            </h2>
-            <p className="mt-2 text-start text-base font-light">
-              A vital component of surf coaching, this course ensures
-              instructors are equipped with globally recognized water safety
-              skills.
-            </p>
-            <Link
-              target="_blank"
-              href="https://isasurf.org/learning/isa-courses/#water-safety"
-              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
-            >
-              more information{" "}
-              <ArrowCircleRight
-                size={20}
-                weight="light"
-                className="duration-300 group-hover:translate-x-2"
-              />
-            </Link>
-          </div>
-        </div>
+        <ItemEventOdd
+          title={isaLevelOne.name}
+          description={isaLevelOne.description}
+          link={isaLevelOne.link}
+          image={isaLevelOne.image}
+          alt={isaLevelOne.name}
+          oddBy={true}
+        />
+        <ItemEventOdd
+          title={isaLevelTwo.name}
+          description={isaLevelTwo.description}
+          link={isaLevelTwo.link}
+          image={isaLevelTwo.image}
+          alt={isaLevelTwo.name}
+          oddBy={false}
+        />
+        <ItemEventOdd
+          title={isaJudging.name}
+          description={isaJudging.description}
+          link={isaJudging.link}
+          image={isaJudging.image}
+          alt={isaJudging.name}
+          oddBy={true}
+        />
+        <ItemEventOdd
+          title={isaWaterSafety.name}
+          description={isaWaterSafety.description}
+          link={isaWaterSafety.link}
+          image={isaWaterSafety.image}
+          alt={isaWaterSafety.name}
+          oddBy={false}
+        />
       </div>
     </div>
   );

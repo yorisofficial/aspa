@@ -49,29 +49,37 @@ export default function SliderContentProgram() {
                   {item.title}
                 </h1>
               </div>
-              <ul className="mt-4 list-inside">
-                {item.benefit.map((item, index) => (
-                  <li
-                    key={index}
-                    className="mt-2 flex w-full items-start gap-2 text-sm md:items-center md:gap-4"
-                  >
-                    {item.status ? (
-                      <CheckCircle
-                        size={24}
-                        weight="light"
-                        className="flex-shrink-0 text-green"
-                      />
-                    ) : (
-                      <XCircle
-                        size={24}
-                        weight="light"
-                        className="flex-shrink-0 text-red"
-                      />
-                    )}
-                    {item.title}
-                  </li>
-                ))}
-              </ul>
+              {item.id === "32" ? (
+                <div className="w-full">
+                  <p className="w-full text-sm font-light">
+                    {item.description}
+                  </p>
+                </div>
+              ) : (
+                <ul className="mt-4 list-inside">
+                  {item.benefit.map((item, index) => (
+                    <li
+                      key={index}
+                      className="mt-2 flex w-full items-start gap-2 text-sm md:items-center md:gap-4"
+                    >
+                      {item.status ? (
+                        <CheckCircle
+                          size={24}
+                          weight="light"
+                          className="flex-shrink-0 text-green"
+                        />
+                      ) : (
+                        <XCircle
+                          size={24}
+                          weight="light"
+                          className="flex-shrink-0 text-red"
+                        />
+                      )}
+                      {item.title}
+                    </li>
+                  ))}
+                </ul>
+              )}
               <div className="btn-group mt-4 flex w-full flex-col gap-4 md:flex-row">
                 <Link
                   href={`/programs/${item.id}/booking?user=${randomString}`}
