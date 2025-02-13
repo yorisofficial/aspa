@@ -7,7 +7,7 @@ const RisingStarProgram = () => {
   return (
     <ContainerContent
       url="/program"
-      className="min-h-screen w-full px-4 xl:px-0"
+      className="min-h-screen w-full px-4 md:px-16"
     >
       <ISAJunior />
       <SupportPage />

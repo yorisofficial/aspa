@@ -7,6 +7,8 @@ import { DataCourse } from "@/app/lib/DataCourse";
 import { Metadata } from "next";
 import HeaderEventContent from "@/app/Components/Events/HeaderEventContent";
 import { ItemEventOdd } from "./components/ItemEventOdd";
+import SosmedHighlight from "@/app/Components/SosmedHighlight";
+import { DataSocial } from "@/app/Components/SocialComponents";
 
 export const metadata: Metadata = {
   title: "International Surfing Association | ISA surf",
@@ -137,6 +139,7 @@ const ISAPage = () => {
           alt={isaWaterSafety.name}
           oddBy={false}
         />
+        <SosmedHighlight data={DataSocial} />
       </div>
     </div>
   );

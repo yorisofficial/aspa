@@ -27,7 +27,7 @@ import SocialComponents from "./SocialComponents";
 export const menuNav = [
   {
     title: "Home",
-    base: "",
+    base: "home",
     link: "/",
   },
   {
@@ -44,6 +44,11 @@ export const menuNav = [
     title: "Programs",
     base: "programs",
     link: "/programs",
+  },
+  {
+    title: "Projects",
+    base: "projects",
+    link: "/projects",
   },
   {
     title: "Blog",
@@ -75,6 +80,7 @@ export default function Navigation() {
   const [isShow, setShow] = useState(true);
   const [isMenus, setMenus] = useState(false);
   const [isShowDropdown, setShowDropdown] = useState(false);
+  const [isMenuActive, setMenuActive] = useState("home");
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -92,9 +98,6 @@ export default function Navigation() {
 
   // check pathName
   const pathName = usePathname();
-
-  // get active pathName
-  const activePath = pathName.split("/").slice(1, 2);
 
   const handleShow = () => {
     setMenus(!isMenus);
@@ -149,7 +152,8 @@ export default function Navigation() {
                     transition={{ duration: 0.3, delay: 0.1 * index }}
                     viewport={{ once: true }}
                     key={index}
-                    className={`relative ${activePath.includes(item.base) ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
+                    onClick={() => setMenuActive(item.base)}
+                    className={`relative ${isMenuActive === item.base ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
                   >
                     <Link
                       aria-label="ASPA menu navigation"
@@ -172,7 +176,7 @@ export default function Navigation() {
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ ease: "easeInOut", duration: 0.1 }}
-                className="mobile-menus fixed left-0 top-20 z-40 flex h-fit w-full items-start justify-start xl:hidden"
+                className={`mobile-menus fixed left-0 top-20 z-40 flex h-fit w-full items-start justify-start xl:hidden`}
               >
                 <div className="h-fit min-h-screen w-full space-y-2 bg-white px-4 pt-12">
                   {menuNav.map((item, index) => (
@@ -182,7 +186,7 @@ export default function Navigation() {
                       animate={{ x: 0 }}
                       exit={{ x: "-100%" }}
                       transition={{ duration: 0.2, delay: 0.1 * index }}
-                      className="relative flex w-full flex-col items-start justify-start"
+                      className={`relative flex w-full flex-col items-start justify-start ${isMenuActive === item.base ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
                     >
                       <Link
                         onClick={
@@ -191,7 +195,7 @@ export default function Navigation() {
                             : () => setMenus(false)
                         }
                         href={item.base === "program" ? "#" : item.link}
-                        className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${activePath.includes(item.base) ? "bg-primary text-white" : ""}`}
+                        className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${pathName.includes(item.base) ? "bg-primary text-white" : ""}`}
                       >
                         {item.base === "program" ? (
                           <button className="flex w-full items-center justify-between">

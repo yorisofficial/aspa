@@ -8,40 +8,41 @@ import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
-const SocialComponents = () => {
-  const social = [
-    {
-      id: 1,
-      platform: "Facebook",
-      title: "ASPA facebook",
-      username: "aspa_surfacademy",
-      url: "https://www.facebook.com/profile.php?id=61566494376055",
-      icon: <FacebookLogo size={28} />,
-      iconFill: <FacebookLogo weight="fill" size={28} />,
-    },
-    {
-      id: 2,
-      platform: "Instagram",
-      title: "ASPA instagram",
-      username: "aspa_surfacademy",
-      url: "https://instagram.com/aspa_surfacademy",
-      icon: <InstagramLogo size={28} />,
-      iconFill: <InstagramLogo weight="fill" size={28} />,
-    },
-    {
-      id: 2,
-      platform: "Youtube",
-      title: "ASPA Youtube",
-      username: "AsianSurfPerformanceAcademy",
-      url: "http://www.youtube.com/@AsianSurfPerformanceAcademy",
-      icon: <YoutubeLogo size={28} />,
-      iconFill: <YoutubeLogo weight="fill" size={28} />,
-    },
-  ];
+export const DataSocial = [
+  {
+    id: 1,
+    platform: "Facebook",
+    title: "ASPA facebook",
+    username: "aspa_surfacademy",
+    url: "https://www.facebook.com/profile.php?id=61566494376055",
+    icon: <FacebookLogo size={28} />,
+    iconFill: <FacebookLogo weight="fill" size={28} />,
+  },
+  {
+    id: 2,
+    platform: "Instagram",
+    title: "ASPA instagram",
+    username: "aspa_surfacademy",
+    url: "https://instagram.com/aspa_surfacademy",
+    icon: <InstagramLogo size={28} />,
+    iconFill: <InstagramLogo weight="fill" size={28} />,
+  },
+  {
+    id: 2,
+    platform: "Youtube",
+    title: "ASPA Youtube",
+    username: "AsianSurfPerformanceAcademy",
+    url: "http://www.youtube.com/@AsianSurfPerformanceAcademy",
+    icon: <YoutubeLogo size={28} />,
+    iconFill: <YoutubeLogo weight="fill" size={28} />,
+  },
+];
+
+const DataSocialComponents = () => {
   return (
     <>
       <div className="mt-2 flex flex-col items-start gap-4">
-        {social.map((item) => (
+        {DataSocial.map((item) => (
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -70,4 +71,4 @@ const SocialComponents = () => {
   );
 };
 
-export default SocialComponents;
+export default DataSocialComponents;
