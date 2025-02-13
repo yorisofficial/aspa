@@ -61,10 +61,10 @@ export default function ProjectsPage() {
           </h1>
         </div>
       </div>
-      <WideImages images={"/assets/projects/project_thumbnail.png"} />
+      <WideImages images={"/assets/projects/project_thumbnail.webp"} />
       <SliderProjects data={DataProjects} />
       <WideImages
-        images={"/assets/projects/project_thumbnail_2.png"}
+        images={"/assets/projects/project_thumbnail_2.webp"}
         className="mt-8"
       />
       <ItemEventOdd
