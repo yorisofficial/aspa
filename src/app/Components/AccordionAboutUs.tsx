@@ -34,7 +34,7 @@ const AccordionAboutUs = ({
           {show ? <CaretUp size={24} /> : <CaretDown size={24} />}
         </button>
         {show && (
-          <p className="mt-2 text-justify text-base md:w-3/4">{description}</p>
+          <p className="mt-2 text-justify text-base xl:w-3/4">{description}</p>
         )}
       </motion.div>
     </>

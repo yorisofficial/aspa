@@ -82,7 +82,7 @@ export default function page() {
                 <p className="text-sm font-light">
                   {customeProgram.description}
                 </p>
-                <div className="btn-group mt-4 flex w-full flex-col gap-4 md:flex-row">
+                <div className="btn-group mt-4 flex w-full flex-col  gap-4 md:flex-row">
                   <Link
                     href={`/programs/${customeProgram.id}/booking?user=${randomString}`}
                     aria-label="..."

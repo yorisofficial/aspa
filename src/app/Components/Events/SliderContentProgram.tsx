@@ -26,7 +26,11 @@ export default function SliderContentProgram() {
             slidesPerView: 1.4,
             spaceBetween: 16,
           },
-          768: {
+          700: {
+            slidesPerView: 1.4,
+            spaceBetween: 20,
+          },
+          1024: {
             slidesPerView: 2.4,
             spaceBetween: 20,
           },

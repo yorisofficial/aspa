@@ -55,8 +55,8 @@ export function ItemProgramPreviews({
         <div
           className={`h-fit md:w-1/2 ${oddBy ? "md:order-first md:pl-16" : " md:order-last md:pr-16"}`}
         >
-          <div className="content-body bg-white p-4 md:p-8 md:drop-shadow-lg">
-            <h2 className="text-2xl font-light uppercase md:text-4xl">
+          <div className="content-body w-full bg-white p-4 md:p-6 md:drop-shadow-lg xl:p-8">
+            <h2 className="text-2xl font-light uppercase md:text-3xl xl:text-4xl">
               {title}
             </h2>
             <p className="w-full text-sm font-light">{description}</p>
@@ -89,18 +89,18 @@ export function ItemProgramPreviews({
                 </li>
               ))}
             </ul>
-            <div className="btn-group mt-4 flex w-full flex-col gap-4 md:flex-row">
+            <div className="btn-group mt-4 flex w-full flex-col gap-4 xl:flex-row">
               <Link
                 href={`/programs/${idProgram}/booking?user=${randomString}`}
                 aria-label="..."
-                className="inline-block w-full bg-black px-4 py-2 text-center text-sm font-light uppercase text-white md:w-fit"
+                className="inline-block w-full bg-black px-4 py-2 text-center text-sm font-light uppercase text-white xl:w-fit"
               >
                 Contact us
               </Link>
               <Link
                 href={`/programs/${idProgram}`}
                 aria-label="..."
-                className="inline-block w-full border border-black px-4 py-2 text-center text-sm font-light uppercase text-black md:w-fit"
+                className="inline-block w-full border border-black px-4 py-2 text-center text-sm font-light uppercase text-black xl:w-fit"
               >
                 About the program
               </Link>

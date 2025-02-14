@@ -58,7 +58,7 @@ const ISAPage = () => {
         theme="bg-gradient-to-r from-brand to-brand/0 xl:bg-brand"
         color="bg-gradient-to-r from-brand to-brand/0"
       />
-      <div className="content-moto mt-8 flex w-full items-center justify-between px-4 md:px-16">
+      <div className="content-moto mt-8 flex w-full flex-col items-start justify-between px-4 md:flex-row md:items-center md:px-16">
         <h2 className="w-full max-w-[500px] text-3xl font-light uppercase xl:w-1/2">
           Nurture and Develop the Next Generation of Surfing Professionals
         </h2>
