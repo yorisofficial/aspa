@@ -1,11 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import BackButton from "@/app/Components/BackButton";
 import { redirect, usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
 import ContainerContent from "@/app/Components/Container";
+import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
+import emailjs from "emailjs-com";
 
 const BookingSession = ({
   params,
@@ -70,10 +71,29 @@ const BookingSession = ({
         agreement: form.agreement,
         created_at: form.created_at,
       });
-      alert("Your form was submit, let's finish the payment");
+
+      // send to email with mailjs
+      const response = await emailjs.send(
+        process.env.NEXT_PUBLIC_MAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_MAILJS_TEMPLATE_ID!,
+        {
+          uuid: form.id,
+          name: form.fullname,
+          phone: form.phone,
+          email: form.email,
+          selected_program: form.program_selected,
+          selected_session: form.session_selected,
+          agreement: form.agreement,
+          created_at: form.created_at,
+        },
+        process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY!,
+      );
+      toast.success("Email sent successfully!");
     } catch (error: Error | any) {
-      alert("Data Not Submitted:" + error.message);
+      toast.error("Failed to send email. Please try again later.");
     }
+
+    // clear form
     setForm({
       id: getUserId,
       fullname: "",
@@ -89,10 +109,9 @@ const BookingSession = ({
     router.push(`${dataSession?.url}`);
   };
 
-  console.log(params.slug);
-
   return (
     <ContainerContent url="">
+      <ToastContainer />
       <div className="content mx-auto mt-4 h-fit space-y-8 py-8">
         <div className="flex w-full flex-col gap-4 rounded-xl bg-white">
           <div className="mx-auto flex flex-col gap-2 text-center">
