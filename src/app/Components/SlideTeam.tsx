@@ -43,13 +43,13 @@ const SlideTeam = ({ className }: { className?: string }) => {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index} className="item-coach group w-full">
-            <Link
-              href={`/team/ASPA/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
+            <div
+              // href={`/team/ASPA/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
               className="group relative inline-block h-full w-full"
             >
-              <div className="absolute right-2 top-2 z-10 text-white">
+              {/* <div className="absolute right-2 top-2 z-10 text-white">
                 <ArrowUpRight size={24} />
-              </div>
+              </div> */}
               <div className="relative h-fit w-full rounded-xl bg-cover bg-center bg-no-repeat duration-500">
                 <div className="h-[180px] overflow-hidden md:h-[250px]">
                   <Image
@@ -65,7 +65,7 @@ const SlideTeam = ({ className }: { className?: string }) => {
                   <p>{item.title}</p>
                 </div>
               </div>
-            </Link>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>

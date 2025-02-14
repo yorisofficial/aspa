@@ -64,7 +64,7 @@ export default function ProjectsPage() {
       <WideImages images={"/assets/projects/project_thumbnail.webp"} />
       <SliderProjects data={DataProjects} />
       <WideImages
-        images={"/assets/projects/project_thumbnail_2.webp"}
+        images={"/assets/projects/project_thumbnail_2.jpg"}
         className="mt-8"
       />
       <ItemEventOdd

@@ -9,6 +9,7 @@ import HeaderEventContent from "@/app/Components/Events/HeaderEventContent";
 import { ItemEventOdd } from "./components/ItemEventOdd";
 import SosmedHighlight from "@/app/Components/SosmedHighlight";
 import { DataSocial } from "@/app/Components/SocialComponents";
+import WideImages from "@/app/Components/Events/WideImages";
 
 export const metadata: Metadata = {
   title: "International Surfing Association | ISA surf",
@@ -70,17 +71,10 @@ const ISAPage = () => {
           focusing on coaching, judging, and competition management.
         </p>
       </div>
-      <div className="mt-8 h-[400px] w-full">
-        <Image
-          src={"/assets/program/isa-teams/preview-isa.jpg"}
-          alt="image-asset-program"
-          width={2400}
-          priority={false}
-          height={800}
-          quality={100}
-          className="h-full w-full object-cover"
-        />
-      </div>
+      <WideImages
+        images="/assets/program/isa-teams/preview-isa.webp"
+        className="mt-8"
+      />
       <SliderContentISA data={DataCourse} />
       <div className="mt-8 h-[400px] w-full">
         <Image

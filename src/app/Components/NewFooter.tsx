@@ -36,8 +36,7 @@ const NewFooter = () => {
             className="h-fit w-32 object-contain"
           />
           <address className="mt-4 text-sm">
-            Jl Subak Sari Barat, Gg. Sri Kahyangan No.77, Tibubeneng, Kec. Kuta
-            Utara, Kabupaten Badung, Bali 80361
+            {address} {postCode}
           </address>
           <div className="cta-whatsapp mt-6 w-fit">
             <span className="text-base font-bold uppercase">Contact us</span>
@@ -195,11 +194,13 @@ const NewFooter = () => {
               </Link>
             </div>
             <div className="px-2">
-              <BtnDownloadFile
-                title={RegulationService[0].footer}
-                src={RegulationService[0].src}
-                docName={RegulationService[0].docName}
-              />
+              <Link
+                href={"/term-regulation/en"}
+                className="underline-offset-4 duration-500 hover:underline"
+                aria-label="cta button for"
+              >
+                Term and regulations
+              </Link>
             </div>
           </div>
           <div className="">

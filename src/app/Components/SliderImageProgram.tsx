@@ -30,6 +30,8 @@ export const SliderImageProgram = ({
               alt={"previews program images"}
               height={2400}
               width={1400}
+              priority
+              quality={100}
               className="w-full rounded-lg object-cover md:h-[400px]"
             />
           </SwiperSlide>

@@ -106,7 +106,7 @@ const BookingSession = ({
     });
     setDisableButton(false);
 
-    router.push(`${dataSession?.url}`);
+    // router.push(`${dataSession?.url}`);
   };
 
   return (
