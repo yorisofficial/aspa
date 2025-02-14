@@ -75,7 +75,7 @@ const AcademyPage = () => {
             className="h-full w-full object-cover md:h-[400px]"
           />
         </div>
-        <div className="mx-auto mt-4 flex h-fit w-full flex-col justify-between px-4 md:mt-0 md:flex-row md:gap-5 md:px-16 xl:mt-8">
+        <div className="mx-auto mt-4 flex h-fit w-full flex-col justify-between px-4 md:mt-8 md:flex-row md:gap-5 md:px-16">
           <div className="content-info md:w-[400px]">
             <span className="font-bold uppercase">Locate ASPA</span>
             <h2 className="big-heading text-2xl uppercase md:text-4xl">
