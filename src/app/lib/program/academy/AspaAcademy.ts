@@ -108,7 +108,7 @@ export const AspaProgram = [
     image: [
       {
         id: 1,
-        src: "/assets/program/class/basic+/basic-plus-1.webp",
+        src: "/assets/program/class/basic+/basic-plus-1.jpg",
       },
       {
         id: 2,

@@ -42,30 +42,31 @@ const SliderProjects = ({ data }: { data: PropsProjects[] }) => {
           className="mySwiper "
         >
           {data.map((item) => (
-            <SwiperSlide
-              key={item.id}
-              className="group relative h-full w-fit overflow-hidden rounded-xl "
-            >
+            <SwiperSlide key={item.id}>
               <Link
                 target="_self"
                 href={`#${item.title.toLowerCase().replaceAll(" ", "-")}`}
-                className={"inline-block"}
+                className={
+                  "group relative inline-block w-fit overflow-hidden md:h-[300px]"
+                }
               >
                 <Image
                   src={item.image}
                   alt="ISA Surf coach"
                   height={2400}
                   width={800}
-                  className="h-[200px] w-full object-cover md:h-[300px]"
+                  className="h-full w-full object-cover duration-500 group-hover:scale-110 md:h-[300px]"
                 />
-                <div className="absolute bottom-0 left-0 flex h-full w-full items-end justify-between text-wrap p-4 text-white transition-all duration-500 group-hover:bg-gradient-to-t group-hover:from-primary group-hover:to-primary/0">
-                  <h2 className="w-3/4 text-xl font-normal uppercase drop-shadow-lg transition-shadow duration-500 group-hover:drop-shadow-none">
-                    {item.title}
-                  </h2>
-                  <ArrowCircleRight
-                    size={32}
-                    className="duration-500 group-hover:scale-110"
-                  />
+                <div className="absolute bottom-4 left-1/2 w-full -translate-x-1/2 px-4">
+                  <div className="flex w-full items-end justify-between bg-primary p-3 text-white">
+                    <h2 className="w-3/4 text-xl font-normal uppercase drop-shadow-lg transition-shadow duration-500 group-hover:drop-shadow-none">
+                      {item.title}
+                    </h2>
+                    <ArrowCircleRight
+                      size={32}
+                      className="duration-500 group-hover:scale-110"
+                    />
+                  </div>
                 </div>
               </Link>
             </SwiperSlide>

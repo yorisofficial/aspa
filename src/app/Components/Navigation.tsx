@@ -3,17 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import {
-  CaretDown,
-  CaretRight,
-  CaretUp,
-  FacebookLogo,
-  InstagramLogo,
-  List,
-  MagnifyingGlass,
-  X,
-  YoutubeLogo,
-} from "@phosphor-icons/react";
+import { CaretDown, CaretUp, List, X } from "@phosphor-icons/react";
 import {
   AnimatePresence,
   motion,
@@ -56,8 +46,8 @@ export const menuNav = [
     link: "/blog",
   },
   {
-    title: "Team",
-    base: "team",
+    title: "Teams",
+    base: "teams",
     link: "/team",
   },
 ];
@@ -77,10 +67,10 @@ export const PreviousProgram = [
 
 export default function Navigation() {
   const { scrollY } = useScroll();
-  const [isShow, setShow] = useState(true);
-  const [isMenus, setMenus] = useState(false);
-  const [isShowDropdown, setShowDropdown] = useState(false);
-  const [isMenuActive, setMenuActive] = useState("home");
+  const [isShow, setShow] = useState<boolean>(true);
+  const [isMenus, setMenus] = useState<boolean>(false);
+  const [isShowDropdown, setShowDropdown] = useState<boolean>(false);
+  const [isMenuActive, setMenuActive] = useState<string>("");
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -153,7 +143,7 @@ export default function Navigation() {
                     viewport={{ once: true }}
                     key={index}
                     onClick={() => setMenuActive(item.base)}
-                    className={`relative ${isMenuActive === item.base ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
+                    className={`relative ${pathName === item.base || pathName.includes(item.base) ? "bg-brand text-white" : "border border-black hover:border-brand hover:text-brand"}`}
                   >
                     <Link
                       aria-label="ASPA menu navigation"
@@ -186,7 +176,7 @@ export default function Navigation() {
                       animate={{ x: 0 }}
                       exit={{ x: "-100%" }}
                       transition={{ duration: 0.2, delay: 0.1 * index }}
-                      className={`relative flex w-full flex-col items-start justify-start ${isMenuActive === item.base ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
+                      className={`relative flex w-full flex-col items-start justify-start overflow-hidden rounded-lg ${pathName === item.base || pathName.includes(item.base) ? "bg-brand text-white" : ""}`}
                     >
                       <Link
                         onClick={
