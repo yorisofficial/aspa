@@ -8,7 +8,7 @@ const ButtonUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className="fixed bottom-[15%] right-[5%] z-10 flex items-end justify-end md:right-[10%]">
+    <div className="fixed bottom-[15%] right-[5%] z-10 flex items-end justify-end">
       <motion.button
         whileTap={{ scale: 0.8 }}
         transition={{ duration: 0.2 }}

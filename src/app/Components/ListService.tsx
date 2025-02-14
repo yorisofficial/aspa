@@ -12,7 +12,7 @@ interface Props {
 
 const ListService = ({ data }: { data: Props[] }) => {
   return (
-    <div className="list-service grid w-full grid-cols-2 gap-4 xl:gap-8">
+    <div className="list-service mt-8 grid w-full grid-cols-2 gap-4 xl:gap-8">
       {data.map((item) => (
         <Suspense key={item.id} fallback={<Loading />}>
           <ItemService dataItem={item} />

@@ -13,14 +13,14 @@ const ButtonSlideSwiper = ({ className }: { className?: string }) => {
       <button
         aria-label="Button prev slide"
         onClick={() => swiper.slidePrev()}
-        className="border-bordered rounded-full border p-3 text-black delay-100 focus:bg-black focus:text-white"
+        className="border-bordered rounded-full border border-black p-3 text-black delay-100 focus:bg-black focus:text-white"
       >
         <CaretLeft size={24} />
       </button>
       <button
         aria-label="Button next slide"
         onClick={() => swiper.slideNext()}
-        className="border-bordered rounded-full border bg-black p-3 text-white delay-100 focus:bg-black focus:text-white "
+        className="border-bordered rounded-full border border-black bg-black p-3 text-white delay-100 focus:bg-black focus:text-white"
       >
         <CaretRight size={24} />
       </button>

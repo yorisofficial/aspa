@@ -6,6 +6,7 @@ import ButtonUp from "./Components/ButtonUp";
 import "./globals.css";
 import ScriptGoogle from "./Components/ScriptGoogle";
 import Head from "next/head";
+import NewFooter from "./Components/NewFooter";
 
 const satoshi = localFont({
   src: [
@@ -45,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <meta property="og:title" content={metadata.title?.toString()} />
         <meta property="og:description" content={metadata.title?.toString()} />
@@ -55,7 +56,7 @@ export default function RootLayout({
       >
         <Navigation />
         {children}
-        <FooterPage />
+        <NewFooter />
         <ButtonUp />
         <ScriptGoogle />
       </body>

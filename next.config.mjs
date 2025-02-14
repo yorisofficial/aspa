@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   images: {
     remotePatterns: [
       {
@@ -21,6 +22,12 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "s3-alpha-sig.figma.com",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "isasurf.org",
         port: "",
         pathname: "/**",
       },

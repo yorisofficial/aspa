@@ -3,7 +3,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { CaretDown, CaretRight, CaretUp, List, X } from "@phosphor-icons/react";
+import {
+  CaretDown,
+  CaretRight,
+  CaretUp,
+  FacebookLogo,
+  InstagramLogo,
+  List,
+  MagnifyingGlass,
+  X,
+  YoutubeLogo,
+} from "@phosphor-icons/react";
 import {
   AnimatePresence,
   motion,
@@ -12,11 +22,12 @@ import {
 } from "framer-motion";
 import { AspaProgram } from "../lib/program/academy/AspaAcademy";
 import { ArrowRight } from "lucide-react";
+import SocialComponents from "./SocialComponents";
 
 export const menuNav = [
   {
     title: "Home",
-    base: "",
+    base: "home",
     link: "/",
   },
   {
@@ -25,9 +36,19 @@ export const menuNav = [
     link: "/about-us",
   },
   {
+    title: "ISA",
+    base: "isa-team",
+    link: "/isa-team",
+  },
+  {
     title: "Programs",
-    base: "program",
-    link: "/program",
+    base: "programs",
+    link: "/programs",
+  },
+  {
+    title: "Projects",
+    base: "projects",
+    link: "/projects",
   },
   {
     title: "Blog",
@@ -45,20 +66,21 @@ export const PreviousProgram = [
   {
     id: 1,
     title: "Rising Star",
-    url: "/program/rising-star",
+    url: "/programs/rising-star",
   },
   {
     id: 2,
     title: "Junior Team Indonesia",
-    url: "/program/isa-world-junior",
+    url: "/programs/isa-world-junior",
   },
 ];
 
-const Navigation = () => {
+export default function Navigation() {
   const { scrollY } = useScroll();
   const [isShow, setShow] = useState(true);
   const [isMenus, setMenus] = useState(false);
   const [isShowDropdown, setShowDropdown] = useState(false);
+  const [isMenuActive, setMenuActive] = useState("home");
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -77,9 +99,6 @@ const Navigation = () => {
   // check pathName
   const pathName = usePathname();
 
-  // get active pathName
-  const activePath = pathName.split("/").slice(1, 2);
-
   const handleShow = () => {
     setMenus(!isMenus);
   };
@@ -97,9 +116,9 @@ const Navigation = () => {
     >
       <nav className={`flex w-full items-center justify-center`}>
         <div
-          className={`nav-container relative flex w-full max-w-5xl items-center justify-between px-4 py-4 xl:px-0`}
+          className={`nav-container relative flex w-full items-center justify-between px-4 py-4 xl:px-16`}
         >
-          <div className="brand-aspa flex w-full items-center justify-between xl:w-fit">
+          <div className="brand-aspa flex w-full items-center justify-between md:gap-6 xl:w-fit">
             <Link href={"/"}>
               <Image
                 src={"/brand/ASPA-dark.svg"}
@@ -122,6 +141,33 @@ const Navigation = () => {
             >
               {isMenus ? <X size={24} /> : <List size={24} />}
             </motion.button>
+            <div className="desktop-menu hidden xl:block">
+              <ul className="flex items-center gap-4">
+                {menuNav.map((item, index) => (
+                  <motion.li
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    whileTap={{ scale: 0.8, opacity: 0.8 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.8, opacity: 0 }}
+                    transition={{ duration: 0.3, delay: 0.1 * index }}
+                    viewport={{ once: true }}
+                    key={index}
+                    onClick={() => setMenuActive(item.base)}
+                    className={`relative ${isMenuActive === item.base ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
+                  >
+                    <Link
+                      aria-label="ASPA menu navigation"
+                      href={item.link}
+                      className={`block duration-500 hover:scale-110 `}
+                    >
+                      <div className="flex items-center gap-2  px-4 py-2">
+                        <span>{item.title}</span>
+                      </div>
+                    </Link>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
           </div>
           <AnimatePresence>
             {isMenus && (
@@ -130,7 +176,7 @@ const Navigation = () => {
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ ease: "easeInOut", duration: 0.1 }}
-                className="mobile-menu fixed left-0 top-20 z-40 flex h-fit w-full items-start justify-start xl:hidden"
+                className={`mobile-menus fixed left-0 top-20 z-40 flex h-fit w-full items-start justify-start xl:hidden`}
               >
                 <div className="h-fit min-h-screen w-full space-y-2 bg-white px-4 pt-12">
                   {menuNav.map((item, index) => (
@@ -140,7 +186,7 @@ const Navigation = () => {
                       animate={{ x: 0 }}
                       exit={{ x: "-100%" }}
                       transition={{ duration: 0.2, delay: 0.1 * index }}
-                      className="relative flex w-full flex-col items-start justify-start"
+                      className={`relative flex w-full flex-col items-start justify-start ${isMenuActive === item.base ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
                     >
                       <Link
                         onClick={
@@ -149,7 +195,7 @@ const Navigation = () => {
                             : () => setMenus(false)
                         }
                         href={item.base === "program" ? "#" : item.link}
-                        className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${activePath.includes(item.base) ? "bg-primary text-white" : ""}`}
+                        className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${pathName.includes(item.base) ? "bg-primary text-white" : ""}`}
                       >
                         {item.base === "program" ? (
                           <button className="flex w-full items-center justify-between">
@@ -251,94 +297,53 @@ const Navigation = () => {
               </motion.div>
             )}
           </AnimatePresence>
-          <div className="desktop-menu hidden xl:block">
-            <ul className="flex items-center gap-4">
-              {menuNav.map((item, index) => (
-                <li
-                  key={index}
-                  className={`relative ${activePath.includes(item.base) ? "bg-brand text-white" : "border-black/0hover:border-brand border hover:text-brand"}`}
-                >
-                  <Link
-                    aria-label="ASPA menu navigation"
-                    href={item.base === "program" ? "#" : item.link}
-                    className={`block duration-500 hover:scale-110 `}
-                  >
-                    {item.base === "program" ? (
-                      <button
-                        type="button"
-                        onClick={() => setShowDropdown(!isShowDropdown)}
-                        className={`flex items-center gap-2  px-4 py-2 ${isShowDropdown && "bg-brand text-white"}`}
-                      >
-                        {item.title}{" "}
-                        {isShowDropdown ? (
-                          <CaretUp size={18} />
-                        ) : (
-                          <CaretDown size={18} />
-                        )}
-                      </button>
-                    ) : (
-                      <div className="flex items-center gap-2  px-4 py-2">
-                        <span>{item.title}</span>
-                      </div>
-                    )}
-                  </Link>
-                  {item.base === "program" && isShowDropdown && (
-                    <div className="dropdown absolute left-0 top-full w-[300px] -translate-x-6 translate-y-3 rounded-xl border border-bordersolid bg-white p-5 text-black drop-shadow-xl">
-                      <div className="flex items-center justify-start gap-3">
-                        <div className="h-[2px] w-4 bg-primary"></div>
-                        <h1 className="text-base font-bold">Our program</h1>
-                      </div>
-                      <ul className="flex w-full flex-col">
-                        {AspaProgram.map((item, index) => (
-                          <li key={index} className="item-program group w-full">
-                            <Link
-                              onClick={() => setShowDropdown(false)}
-                              href={`/program/${item.id}`}
-                              aria-label="ASPA item list program"
-                              className="flex w-full items-center justify-start gap-3 py-2 capitalize"
-                            >
-                              <ArrowRight
-                                size={16}
-                                className="duration-500 group-hover:translate-x-1"
-                              />
-                              {item.title.replaceAll("program", "")}
-                            </Link>
-                          </li>
-                        ))}
-                        <li className="item-program mt-4 w-full">
-                          <div className="flex items-center justify-start gap-3">
-                            <div className="h-[2px] w-4 bg-primary"></div>
-                            <h1 className="text-base font-bold">
-                              Specialty program
-                            </h1>
-                          </div>
-                          {PreviousProgram.map((item, index) => (
-                            <Link
-                              key={item.id}
-                              onClick={() => setShowDropdown(false)}
-                              href={item.url}
-                              aria-label="ASPA item list program"
-                              className="start group flex w-full items-center gap-3 py-2 capitalize"
-                            >
-                              <ArrowRight
-                                size={16}
-                                className="duration-500 group-hover:translate-x-1"
-                              />
-                              {item.title}
-                            </Link>
-                          ))}
-                        </li>
-                      </ul>
-                    </div>
-                  )}
-                </li>
-              ))}
-            </ul>
+          <div className="other-cta hidden items-center justify-center gap-4 md:flex">
+            <ToggleSocialMedia />
           </div>
         </div>
       </nav>
     </motion.div>
   );
-};
+}
 
-export default Navigation;
+export const ToggleSocialMedia = () => {
+  const ref = React.createRef<HTMLDivElement>();
+  const [isToggleSocial, setToggleSocial] = useState<Boolean>(false);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setToggleSocial(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+  return (
+    <div ref={ref}>
+      <div className="social-media-btn relative">
+        <motion.button
+          aria-label="Button toggle social media"
+          initial={{ scale: 1 }}
+          whileTap={{ scale: 0.9 }}
+          transition={{ duration: 0.2 }}
+          exit={{ scale: 1 }}
+          type="button"
+          onClick={() => setToggleSocial(!isToggleSocial)}
+          className="hidden bg-brand px-4 py-2 text-white xl:inline-block"
+        >
+          Our social media
+        </motion.button>
+        {isToggleSocial && (
+          <div className="absolute right-0 top-full flex h-fit w-[200px] translate-y-4 flex-col items-start gap-2 bg-white p-3 drop-shadow-lg">
+            <div className="">
+              <span>Our social media</span>
+            </div>
+            <SocialComponents />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};

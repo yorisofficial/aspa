@@ -39,7 +39,7 @@ const ListTestimonials = ({ data }: { data: Props[] }) => {
             slidesPerView: 3,
           },
         }}
-        className="mySwiper py-8"
+        className="mySwiper px-4 py-8"
       >
         {dataTestimonial.map((item) => (
           <SwiperSlide key={item.id} className="pb-12">

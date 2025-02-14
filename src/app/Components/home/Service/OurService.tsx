@@ -32,15 +32,12 @@ export const Service = [
 
 const OurService = ({ title }: { title: string }) => {
   return (
-    <ContainerContent
-      url="our-service"
-      className="border-buttom h-fit w-full space-y-4 py-8"
-    >
+    <div className="py-8">
       <div className="w-full">
         <h1 className="text-xl font-black text-brand">{title}</h1>
       </div>
       <ListService data={Service} />
-    </ContainerContent>
+    </div>
   );
 };
 

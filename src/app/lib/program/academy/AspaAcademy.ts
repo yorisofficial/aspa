@@ -21,82 +21,6 @@ interface Props {
 
 export const AspaProgram = [
   {
-    id: "a8f60ba38c8df7800300947a90907e22",
-    promote: false,
-    title: "basic program",
-    url: "basic",
-    description:
-      "Our Basic Program is ideal for surfers looking to learn and improve their surfing, with clear guidance on how to progress. Join our coached surf sessions and start getting better.",
-    promoteBook:
-      "Join us for a half-day of transformative training, expert guidance, and thrilling wave action. Book your spot now!",
-    image: [
-      {
-        id: 1,
-        src: "/assets/program/class/basic/basic-2.webp",
-      },
-      {
-        id: 2,
-        src: "/assets/program/class/basic/basic-3.webp",
-      },
-      {
-        id: 3,
-        src: "/assets/program/class/basic/basic-1.webp",
-      },
-      {
-        id: 4,
-        src: "/assets/program/class/basic/basic-4.webp",
-      },
-      {
-        id: 5,
-        src: "/assets/program/class/basic/basic-5.webp",
-      },
-    ],
-    benefit: [
-      {
-        id: 1,
-        title: "One Surf Session",
-        duration: "90 Minutes",
-        status: true,
-        description:
-          "A surf session packed with personalized coaching and hands-on practice to sharpen your skills and boost your confidence on the waves.",
-      },
-      {
-        id: 2,
-        title: "Video Analysis Coaching",
-        duration: "30 - 60 Minutes",
-        status: false,
-        description:
-          "After the surf session, benefit from a video analysis. Our coach will review your performance and provide targeted feedback and actionable tips to keep improving.",
-      },
-      {
-        id: 3,
-        title: "Physical Training Session",
-        duration: "",
-        status: false,
-        description:
-          "Become a more complete surfer with our physical training sessions, focusing on strength, mobility, and endurance.",
-      },
-    ],
-    session: [
-      {
-        id: "a2c1ecbe5e4e6a70a1cc",
-        show: true,
-        title: "private",
-        pricing: "IDR 850.000",
-        url: "https://pay.doku.com/p-link/p/91z0eDo",
-        icon: "",
-      },
-      {
-        id: "2765ef48606ab577a3e8",
-        show: true,
-        title: "group",
-        pricing: "IDR 550.000",
-        url: "https://pay.doku.com/p-link/p/qXD2E7U",
-        icon: "",
-      },
-    ],
-  },
-  {
     id: "49b5e863b0c083b4d4f54d704e8fdf63",
     promote: false,
     title: "basic+ program",
@@ -147,7 +71,7 @@ export const AspaProgram = [
       {
         id: 3,
         title: "Physical Training Session",
-        duration: "",
+        duration: "60 Minutes",
         status: false,
         description:
           "Become a more complete surfer with our physical training sessions, focusing on strength, mobility, and endurance.",
@@ -283,7 +207,7 @@ export const AspaProgram = [
         id: 1,
         title: "One Surf Session",
         duration: "",
-        status: false,
+        status: true,
         description:
           "A surf session packed with personalized coaching and hands-on practice to sharpen your skills and boost your confidence on the waves.",
       },
@@ -291,7 +215,7 @@ export const AspaProgram = [
         id: 2,
         title: "Video Analysis Coaching",
         duration: "",
-        status: false,
+        status: true,
         description:
           "After each surf session, benefit from a detailed video analysis. Our expert coaches will review your performance, providing targeted feedback and actionable tips to refine your technique and accelerate your progress.",
       },
@@ -299,7 +223,7 @@ export const AspaProgram = [
         id: 3,
         title: "Physical Training Session",
         duration: "",
-        status: false,
+        status: true,
         description:
           "Become a more complete surfer with our physical training sessions, focusing on strength, mobility, and endurance.",
       },

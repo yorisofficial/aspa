@@ -12,10 +12,10 @@ const ContainerContent = ({
   url: string;
 }) => {
   const pathName = usePathname();
-  const pathUse = `${pathName.includes(url) ? "pt-4 px-4 md:px-10 xl:px-0" : ""}`;
+  const pathUse = `${pathName.includes(url) ? "pt-4 " : ""}`;
 
   return (
-    <div className={`container mx-auto max-w-5xl ${pathUse} ${className}`}>
+    <div className={`container-content px-4 md:px-16 ${pathUse} ${className}`}>
       {children}
     </div>
   );

@@ -1,16 +1,14 @@
 import React from "react";
 import ContainerContent from "../../Container";
-import Image from "next/image";
-import GetDateComponent from "../../GetDateComponent";
+import SliderBlogContent from "../../SliderBlogContent";
 import Link from "next/link";
-import Button from "../../Button";
-import ItemBlog from "./components/ItemBlog";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 
-async function getData() {
+export async function getDataBlog() {
+  let limit = 8;
   const url = process.env.ASC_PUBLIC_POST || "";
-  const res = await fetch(`${url}/?per_page=5`, {
-    cache: "force-cache",
-    // next: { revalidate: 3600 },
+  const res = await fetch(`${url}/?per_page=${limit}`, {
+    next: { revalidate: 3600 * 24 },
   });
 
   if (!res.ok) {
@@ -20,68 +18,40 @@ async function getData() {
   return res.json();
 }
 
-interface Props {
-  url: string;
-  id: number;
-  title: {
-    rendered: string;
-  };
-  jetpack_featured_media_url: string;
-  date: string;
-}
-
-const BlogSection = async () => {
-  const data = await getData();
-  const latestBlog = data[0];
-  const url = latestBlog.title.rendered.replaceAll(" ", "-").toLowerCase();
+async function BlogSection() {
+  const data = await getDataBlog();
 
   return (
     <ContainerContent url="/blog" className="border-buttom h-full w-full py-8">
-      <div className="blog-content grid grid-cols-1 items-start justify-start gap-4 xl:grid-cols-2 xl:gap-8">
-        <Link href={`/blog/${latestBlog.id}/${url}`} className="group">
-          <div className="latest-post flex w-full flex-col gap-3 py-8 xl:py-0">
-            <div className="h-full w-full overflow-hidden rounded-xl ">
-              <Image
-                src={latestBlog.jetpack_featured_media_url}
-                alt={latestBlog.title.rendered}
-                height={500}
-                width={500}
-                quality={100}
-                priority={false}
-                className="h-[250px] w-full object-cover duration-500 group-hover:scale-110"
-              />
-            </div>
-            <div className="header w-full">
-              <GetDateComponent data={latestBlog.date} />
-              <h1
-                className="text-start text-xl font-bold uppercase underline-offset-8 group-hover:underline"
-                dangerouslySetInnerHTML={{ __html: latestBlog.title.rendered }}
-              ></h1>
-            </div>
-          </div>
-        </Link>
-        <div className="list-post space-y-4">
-          <div className="border-buttom flex w-full items-center justify-between pb-4 xl:pb-8">
-            <h1 className="text-2xl font-black">Also read post</h1>
-            <Link href={"/blog"} className="">
-              <Button
-                variant="primary"
-                label="See all post"
-                className="hover:bg-primary/80"
-              >
-                See all post
-              </Button>
-            </Link>
-          </div>
-          <div className="">
-            {data.slice(1, 5).map((item: Props, index: number) => (
-              <ItemBlog index={index} data={item} key={item.id} />
-            ))}
-          </div>
+      <div className="relative mt-8 flex h-full w-full items-center justify-center gap-4 md:gap-5">
+        <div className="absolute right-full top-1/2 -translate-y-1/2 translate-x-1/2">
+          <span className="-z-10 w-[20px] text-[100px] font-bold uppercase leading-tight opacity-5">
+            the news
+          </span>
         </div>
+        <BtnSeeAllPost className={`hidden md:flex`} />
+        <SliderBlogContent data={data} />
       </div>
+      <BtnSeeAllPost className={`mt-6 flex md:hidden`} />
     </ContainerContent>
   );
-};
+}
 
 export default BlogSection;
+
+export function BtnSeeAllPost({ className }: { className: string }) {
+  return (
+    <>
+      <div className={`relative z-20`}>
+        <Link
+          href={"/blog"}
+          aria-label="Read more news"
+          className={`${className} h-[100px] w-[100px] flex-col items-center justify-center whitespace-nowrap rounded-full border border-primary bg-white p-4 text-sm font-light uppercase text-primary transition-all hover:bg-primary hover:text-white md:h-[200px] md:w-[200px] md:text-xl`}
+        >
+          see all news
+          <ArrowRight size={24} className="h-6 w-6 md:h-8 md:w-8" />
+        </Link>
+      </div>
+    </>
+  );
+}

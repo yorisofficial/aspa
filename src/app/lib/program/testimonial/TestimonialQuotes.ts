@@ -1,9 +1,9 @@
 export const OurTestimonial = [
   {
     id: 1,
-    full_name: "Raflin wau",
+    full_name: "Raflin Wau",
     quotes:
-      "What I think of the ASPA program is that it's very helpful for all the groms because it prepares you for your heat. You can absorb all the knowledge from Coach Dedi and apply it while surfing, which I did, and it helped me a lot in my heats. I think it will do the same for everyone else. The gym sessions with Gaby also really helped because they prepare your muscles for the next day, allowing you to perform your best while feeling good and happy. With all the support from everyone, you will probably feel great!",
+      "The ASPA program has been a game-changer for all the groms. It really helps you get ready for your heat by learning valuable techniques from Coach Dedi. I applied everything I learned, and it made a big difference in my performance. I believe it will do the same for others. The gym sessions with Gaby were also super beneficial, ensuring my body felt strong and ready for the next day. The overall support from the team keeps you motivated and in great spirits!",
     gp_user: "Rising star Grom Patrol",
     img_profile:
       "/assets/program/grompatrol/List star/batch-1/aspa_profile_RAFLIN.webp",
@@ -12,7 +12,7 @@ export const OurTestimonial = [
     id: 2,
     full_name: "Darma Wisesa",
     quotes:
-      "The ASPA program is outstanding and has helped Darma a lot during competitions. The coach always provides guidance on what to do in the water and helps to create strategies to win each heat. ASPA is the best!",
+      "ASPA is an incredible program that has greatly improved my competition skills. The coach provides solid guidance, helping with wave strategy and decision-making in the water. The training really prepared me to compete better and smarter. I highly recommend it!",
     gp_user: "Rising star Grom Patrol",
     img_profile:
       "/assets/program/grompatrol/List star/batch-1/aspa_profile_DARMA.webp",
@@ -21,7 +21,7 @@ export const OurTestimonial = [
     id: 3,
     full_name: "Putu Yuni",
     quotes:
-      "Yuni likes the program it's excellent and can help her improve in the future. During the Grom Patrol contest, the ASPA program was very helpful, allowing Yuni to score six points on one turn. I really like this program, and I want to thank you for supporting Yuni.",
+      "I really enjoy the ASPA program because it pushes me to improve. During the Grom Patrol contest, the training played a huge role in helping me score six points on a single turn. I'm so grateful for all the support, and I look forward to growing even more in the future.",
     gp_user: "Rising star Grom Patrol",
     img_profile:
       "/assets/program/grompatrol/List star/batch-1/aspa_profile_PUTU YUNIE.webp",
@@ -30,7 +30,7 @@ export const OurTestimonial = [
     id: 4,
     full_name: "Adit Somiya",
     quotes:
-      "The ASPA program is very helpful and useful for surfing. It's very detailed and easy to understand. It helped me in my heats because we trained at Mamaka, and I feel more prepared.",
+      "The ASPA program is extremely helpful for surfers. The training is well-structured and easy to follow, making it a great way to prepare for heats. Practicing at Mamaka gave me confidence and helped me feel more ready to compete.",
     gp_user: "Rising star Grom Patrol",
     img_profile:
       "/assets/program/grompatrol/List star/batch-1/aspa_profile_ADITYA SOMIYA.webp",
@@ -39,7 +39,7 @@ export const OurTestimonial = [
     id: 5,
     full_name: "Suri",
     quotes:
-      "The ASPA program is good! The coaches were really helpful. They helped me understand the conditions better and gave me valuable tips.",
+      "I think the ASPA program is great! The coaches were really supportive, helping me understand the surf conditions better and giving me important tips that made a real difference.",
     gp_user: "Rising star Grom Patrol",
     img_profile:
       "/assets/program/grompatrol/List star/batch-1/aspa_profile_SURI JABRIK.webp",
@@ -48,7 +48,7 @@ export const OurTestimonial = [
     id: 6,
     full_name: "Gusde",
     quotes:
-      "The ASPA program is very helpful. Gusde now knows the right way to train and has benefited a lot in the water. His legs are stronger in his stance. Hopefully, Gusde will get another chance next time.",
+      "The ASPA program has helped me a lot. I've learned how to train the right way, and it's improved my surfing. My stance feels stronger, and my legs are more powerful. I hope I get another chance to train with ASPA again!",
     gp_user: "Rising star Grom Patrol",
     img_profile:
       "/assets/program/grompatrol/List star/batch-1/aspa_profile_GUSDE.webp",
@@ -57,18 +57,9 @@ export const OurTestimonial = [
     id: 7,
     full_name: "Shia",
     quotes:
-      "What I think of the ASPA program is that it's very helpful for all the groms because it makes you ready for your heat because you can absorb all the knowledge women Dedi and do it while in the surf which I did and it helped me a lot in my heats and I think it will do the same with everybody else. The gym with Gaby also really helped because it makes you also really ready by making your muscles feel good for the next day so we can do our best by feeling good and being happy because you get all this help from everyone and you feel all this support, you will probably feel goodWhat I think of the ASPA program is that it's very helpful for all the groms because it prepares you for your heat. You can absorb all the knowledge from Coach Dedi and apply it while surfing, which I did, and it helped me a lot in my heats. I think it will do the same for everyone else. The gym sessions with Gaby also really helped because they get your muscles ready for the next day, allowing you to perform your best while feeling good and happy. With all the help and support from everyone, you'll probably feel great.",
+      "ASPA is an amazing program for young surfers because it prepares you mentally and physically for your heat. The coaching from Dedi was super valuable—I applied what I learned, and it made a huge impact in my performance. The gym training with Gaby also helped a lot, making sure my muscles were ready for the next day so I could surf at my best while feeling happy and strong. With all the support from the team, it's an incredible experience!",
     gp_user: "Rising star Grom Patrol",
     img_profile:
       "/assets/program/grompatrol/List star/batch-1/aspa_profile_SHIA.webp",
-  },
-  {
-    id: 8,
-    full_name: "Isabel Higgs",
-    quotes:
-      "The ASPA program was really good and I thought it was very helpful",
-    gp_user: "Rising star Grom Patrol",
-    img_profile:
-      "/assets/program/grompatrol/List star/batch-1/isabel-higgs.jpg",
   },
 ];

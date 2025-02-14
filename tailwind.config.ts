@@ -19,6 +19,7 @@ const config = {
       bordersolid: "#e5e7eb",
       red: "#FF0000",
       green: "#22C55E",
+      dodgerblue: "#1b75d6",
     },
     container: {},
     extend: {

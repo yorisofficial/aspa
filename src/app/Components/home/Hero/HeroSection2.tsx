@@ -1,26 +1,47 @@
-import React from "react";
-import ContainerContent from "../../Container";
-import SliderPackage from "../../SliderPackage";
-import { ContentData } from "@/app/lib/Content";
+"use client";
 
-const HeroSection2 = () => {
-  const contentText = ContentData[0];
+import { Spinner } from "@phosphor-icons/react";
+import Image from "next/image";
+import React, { Suspense } from "react";
+
+function HeroSection2({ video }: any) {
   return (
-    <ContainerContent url="hero">
-      <div className="hero-section-phase2 h-fit w-full space-y-6 px-4 py-8 text-center md:px-5 xl:px-0">
-        <div className="header-content mt-8 flex h-fit flex-col items-center justify-center gap-6">
-          <div className="flex h-fit w-full flex-col items-center justify-center gap-6">
-            <h1 className="text-center text-2xl font-black text-brand xl:text-4xl">
-              ASIAN SURF <br /> PERFORMANCE ACADEMY
-            </h1>
-            <p className="text-sm font-light xl:w-3/4 xl:text-base">
-              {contentText.description}
-            </p>
+    <div className="hero-section relative h-fit w-full md:h-[500px]">
+      <Suspense
+        fallback={
+          <div className="fixed left-0 top-0 z-30 flex h-[500px] w-full animate-pulse items-center justify-center bg-primary">
+            <Spinner size={32} className="animate-spin duration-300" />
           </div>
+        }
+      >
+        <div className="h-[500px] w-full">
+          <video
+            preload="auto"
+            autoPlay
+            loop
+            muted
+            className="h-[500px] w-full object-cover"
+            onLoadedData={() => {
+              document.querySelector(".hero-section")?.classList.add("loaded");
+            }}
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
+      </Suspense>
+      <div className="absolute bottom-0 left-0 h-fit w-full">
+        <Image
+          src={"/assets/acc/wave-bottom.svg"}
+          alt="..."
+          width={2400}
+          height={500}
+          priority
+          className="h-fit w-full object-contain"
+        />
       </div>
-    </ContainerContent>
+    </div>
   );
-};
+}
 
 export default HeroSection2;

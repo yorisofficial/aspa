@@ -15,8 +15,8 @@ const GaleryPreviewProgram = ({
   dataImage: Props[];
 }) => {
   return (
-    <div className="preview-image mt-8 grid h-fit grid-cols-1 gap-4 xl:gap-6">
-      <div className="primary-image">
+    <div className="preview-image mt-8 grid h-fit grid-cols-1 gap-4 md:grid-cols-12 xl:gap-6">
+      <div className="primary-image col-span-8">
         <Image
           src={firstImage}
           alt={"preview-image"}
@@ -27,8 +27,8 @@ const GaleryPreviewProgram = ({
           className="h-[200px] w-full rounded-xl object-cover md:h-[350px] md:object-top xl:h-[380px]"
         />
       </div>
-      <div className="group-image h-fit w-full">
-        <div className="grid w-full grid-cols-2 gap-6 md:grid-cols-4">
+      <div className="group-image col-span-4 h-fit w-full">
+        <div className="grid grid-rows-4">
           {dataImage.slice(1, 5).map((item, index) => (
             <div key={index} className="item-image">
               <Image
