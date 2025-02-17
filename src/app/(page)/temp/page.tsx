@@ -6,7 +6,7 @@ async function getData() {
 
   const res = await fetch(url, {
     cache: "force-cache",
-    next: { revalidate: 1000 },
+    next: { revalidate: 1 },
   });
 
   if (!res.ok) {
