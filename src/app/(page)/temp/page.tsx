@@ -1,19 +1,25 @@
 import Link from "next/link";
 import React from "react";
 
-async function getData() {
-  const url = "https://yorisofficial.github.io/asc-blog/data-service.json";
+export async function getData() {
+  const url =
+    process.env.PUBLIC_URL_GIT ||
+    "https://yorisofficial.github.io/asc-blog/data-service.json";
 
-  const res = await fetch(url, {
-    cache: "no-store",
-    next: { revalidate: 1000 },
-  });
+  const res = await fetch(url);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
 
-  return res.json();
+  const data = await res.json();
+
+  return {
+    props: {
+      data,
+    },
+    revalidate: 1, // Revalidate every second
+  };
 }
 
 interface Props {
@@ -26,7 +32,7 @@ interface Props {
 }
 
 export default async function page() {
-  const data: Props[] = await getData();
+  const data: Props[] = (await getData()).props.data;
 
   return (
     <div className="mx-auto min-h-screen w-full xl:px-16">
