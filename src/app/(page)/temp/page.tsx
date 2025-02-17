@@ -5,7 +5,6 @@ async function getData() {
   const url = "https://yorisofficial.github.io/asc-blog/data-service.json";
 
   const res = await fetch(url, {
-    cache: "force-cache",
     next: { revalidate: 1 },
   });
 
