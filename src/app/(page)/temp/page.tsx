@@ -5,6 +5,7 @@ async function getData() {
   const url = "https://yorisofficial.github.io/asc-blog/data-service.json";
 
   const res = await fetch(url, {
+    cache: "no-store",
     next: { revalidate: 1000 },
   });
 
@@ -29,7 +30,7 @@ export default async function page() {
 
   return (
     <div className="mx-auto min-h-screen w-full xl:px-16">
-      <ul className="flex w-full items-center gap-4">
+      <ul className="grid w-full grid-cols-4 items-center gap-4">
         {data.map((item, index) => (
           <li
             key={item.id}
