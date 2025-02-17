@@ -4,7 +4,9 @@ import React from "react";
 async function getData() {
   const url = "https://yorisofficial.github.io/asc-blog/data-service.json";
 
-  const res = await fetch(url);
+  const res = await fetch(url, {
+    next: { revalidate: 1000 },
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
