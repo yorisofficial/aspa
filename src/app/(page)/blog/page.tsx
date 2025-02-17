@@ -8,9 +8,8 @@ import Moment from "react-moment";
 
 async function getData() {
   const url = process.env.ASC_PUBLIC_POST || "";
-  const res = await fetch(`${url}/?per_page=33`, {
-    cache: "force-cache",
-    next: { revalidate: 1000 },
+  const res = await fetch(`${url}/?per_page=50`, {
+    next: { revalidate: 1 },
   });
 
   if (!res.ok) {
