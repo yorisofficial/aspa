@@ -7,6 +7,9 @@ import OurProfessional from "./Components/home/Professional/OurProfessional";
 import { ISAJuniorSliderImg } from "./Components/home/Program/Program/isa-pro-junior";
 import { ContentISAJunior } from "./Components/home/Program/Program/isa-pro-junior";
 import TestimonialPage from "./Components/home/testimonial/Testimonial";
+import SliderPackage from "./Components/SliderPackage";
+import SliderProgram from "./Components/home/Program/SliderProgram";
+import { DataCourse } from "./lib/DataCourse";
 
 export const metadata: Metadata = {
   title: "Asian Surf Performance Academy (ASPA)",

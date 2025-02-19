@@ -22,8 +22,8 @@ export default function SliderContentProgram() {
         loop={true}
         className="mySwiper"
         breakpoints={{
-          360: {
-            slidesPerView: 1.4,
+          300: {
+            slidesPerView: 1.2,
             spaceBetween: 16,
           },
           700: {
@@ -49,13 +49,13 @@ export default function SliderContentProgram() {
             </div>
             <div className="mt-2 flex flex-col">
               <div className="header-program flex items-center justify-between">
-                <h1 className="title-program text-2xl uppercase">
+                <h1 className="title-program text-lg uppercase md:text-2xl">
                   {item.title}
                 </h1>
               </div>
               {item.id === "32" ? (
                 <div className="w-full">
-                  <p className="w-full text-sm font-light">
+                  <p className="w-full text-xs font-light">
                     {item.description}
                   </p>
                 </div>
@@ -84,18 +84,18 @@ export default function SliderContentProgram() {
                   ))}
                 </ul>
               )}
-              <div className="btn-group mt-4 flex w-full flex-col gap-4 md:flex-row">
+              <div className="btn-group mt-2 flex w-full flex-col gap-4 md:mt-4 md:flex-row">
                 <Link
                   href={`/programs/${item.id}/booking?user=${randomString}`}
                   aria-label="..."
-                  className="inline-block w-full bg-black px-4 py-2 text-center text-sm font-light uppercase text-white md:w-fit"
+                  className="inline-block w-full bg-black px-4 py-2 text-center text-xs font-light uppercase text-white md:w-fit md:text-sm"
                 >
                   Contact us
                 </Link>
                 <Link
                   href={`#${item.title.replace(" ", "-").toLowerCase()}`}
                   aria-label="..."
-                  className="inline-block w-full border border-black px-4 py-2 text-center text-sm font-light uppercase text-black md:w-fit"
+                  className="inline-block w-full border border-black px-4 py-2 text-center text-xs font-light uppercase text-black md:w-fit md:text-sm"
                 >
                   About the program
                 </Link>

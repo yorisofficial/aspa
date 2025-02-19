@@ -7,7 +7,7 @@ import React, { useState } from "react";
 export default function PlayVideos() {
   const [isLoading, setLoading] = useState<Boolean>(true);
   return (
-    <div className="hero-section relative h-fit w-full md:h-[500px]">
+    <div className="hero-section relative h-[500px] w-full">
       {isLoading && (
         <div className="relative flex h-full w-full items-center justify-center">
           <Image

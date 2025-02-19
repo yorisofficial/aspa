@@ -76,19 +76,10 @@ const ISAPage = () => {
         className="mt-8"
       />
       <SliderContentISA data={DataCourse} />
-      <div className="mt-8 h-[400px] w-full">
-        <Image
-          src={
-            "https://isasurf.org/wp-content/uploads/2024/05/DSC07568-scaled.jpg"
-          }
-          alt="image-asset-program"
-          width={2400}
-          priority={false}
-          height={800}
-          quality={100}
-          className="h-full w-full object-cover"
-        />
-      </div>
+      <WideImages
+        images="https://isasurf.org/wp-content/uploads/2024/05/DSC07568-scaled.jpg"
+        className="mt-8"
+      />
       <div className="mt-8 min-h-screen w-full">
         <div className="content-moto relative flex h-fit w-full items-center justify-between px-4 md:px-16">
           <h2 className="w-full max-w-[500px] text-3xl font-light uppercase xl:w-1/2">

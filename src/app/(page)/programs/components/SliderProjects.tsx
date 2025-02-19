@@ -16,7 +16,7 @@ const SliderProjects = ({ data }: { data: PropsProjects[] }) => {
   return (
     <div className="mx-auto mt-8 h-fit w-full px-4 md:px-16">
       <div className="content-header">
-        <h2 className="max-w-[300px] text-3xl font-light uppercase xl:w-1/2">
+        <h2 className="max-w-[500px] text-3xl font-light uppercase xl:w-1/2">
           Take your surf knowledge to the next level
         </h2>
       </div>
@@ -47,7 +47,7 @@ const SliderProjects = ({ data }: { data: PropsProjects[] }) => {
                 target="_self"
                 href={`#${item.title.toLowerCase().replaceAll(" ", "-")}`}
                 className={
-                  "group relative inline-block w-fit overflow-hidden md:h-[300px]"
+                  "group relative inline-block h-[350px] w-fit overflow-hidden"
                 }
               >
                 <Image
@@ -55,7 +55,7 @@ const SliderProjects = ({ data }: { data: PropsProjects[] }) => {
                   alt="ISA Surf coach"
                   height={2400}
                   width={800}
-                  className="h-full w-full object-cover duration-500 group-hover:scale-110 md:h-[300px]"
+                  className="h-[350px] w-full object-cover duration-500 group-hover:scale-110"
                 />
                 <div className="absolute bottom-4 left-1/2 w-full -translate-x-1/2 px-4">
                   <div className="flex w-full items-end justify-between bg-primary p-3 text-white">
