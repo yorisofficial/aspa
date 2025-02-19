@@ -9,6 +9,7 @@ import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
 import Image from "next/image";
 import Link from "next/link";
 import { ItemProgramPreviews } from "./components/ItemProgramPreviews";
+import PlayVideos from "@/app/Components/PlayVideos";
 
 export default function page() {
   const basicPlusProgram = AspaProgram[0];
@@ -31,7 +32,7 @@ export default function page() {
           </h1>
         </div>
       </div>
-      <PlayYoutube />
+      <PlayVideos />
       <SliderContentProgram />
       <WideImages images={"/assets/main/run-kids-surfer.png"} />
       <div className="content-programs">
