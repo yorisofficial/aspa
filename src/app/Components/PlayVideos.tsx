@@ -2,10 +2,21 @@
 
 import { Spinner } from "@phosphor-icons/react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function PlayVideos() {
-  const [isLoading, setLoading] = useState<Boolean>(true);
+  const [videoUrl, setVideoUrl] = useState("");
+  const [isLoading, setLoading] = useState(true);
+  useEffect(() => {
+    fetch("/api/video")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.videoUrl) {
+          setVideoUrl(data.videoUrl);
+        }
+      })
+      .catch((err) => console.error("Fetch error:", err));
+  }, []);
   return (
     <div className="hero-section relative h-[500px] w-full">
       {isLoading && (
@@ -30,12 +41,13 @@ export default function PlayVideos() {
           loop
           muted
           controls
+          onLoadedData={() => setLoading(true)}
           onCanPlayThrough={() => setLoading(false)}
           className={`h-full w-full object-cover transition-opacity duration-500 ${
             isLoading ? "opacity-0" : "opacity-100"
           }`}
         >
-          <source src={"/api/video"} type="video/mp4" />
+          {videoUrl && <source src={videoUrl} type="video/mp4" />}
           Your browser does not support the video tag.
         </video>
       </div>
