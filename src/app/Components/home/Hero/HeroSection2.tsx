@@ -1,10 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function HeroSection2() {
-  const [isLoading, setLoading] = useState<Boolean>(true);
+  const [videoUrl, setVideoUrl] = useState("");
+  const [isLoading, setLoading] = useState(true);
+  useEffect(() => {
+    fetch("/api/video")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.videoUrl) {
+          setVideoUrl(data.videoUrl);
+        }
+      })
+      .catch((err) => console.error("Fetch error:", err));
+  }, []);
+
   return (
     <div className="hero-section relative h-[500px] w-full">
       {isLoading && (
@@ -15,7 +27,7 @@ function HeroSection2() {
             priority
             width={1000}
             height={500}
-            className="h-[500px] w-full object-cover"
+            className="aspect-[16/9] h-[500px] w-full object-cover"
           />
         </div>
       )}
@@ -30,7 +42,7 @@ function HeroSection2() {
             isLoading ? "opacity-0" : "opacity-100"
           }`}
         >
-          <source src={"/api/video"} type="video/mp4" />
+          {videoUrl && <source src={videoUrl} type="video/mp4" />}
           Your browser does not support the video tag.
         </video>
       </div>
