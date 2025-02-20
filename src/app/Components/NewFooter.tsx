@@ -54,7 +54,7 @@ const NewFooter = () => {
         <div className="menus mt-4 w-full">
           <span className="text-base font-bold uppercase">Our menus</span>
           <div className="menus-list flex flex-col gap-2 md:flex-row">
-            <div className="menu-collapse hosting-menus mt-4 h-fit w-full">
+            <div className="menu-collapse hosting-menus h-fit w-full md:mt-4">
               <div className="relative">
                 <button
                   type="button"
@@ -92,7 +92,7 @@ const NewFooter = () => {
                 </ul>
               </div>
             </div>
-            <div className="menu-collapse program-menus mt-4 h-fit w-full">
+            <div className="menu-collapse program-menus h-fit w-full md:mt-4">
               <div className="relative">
                 <button
                   type="button"
@@ -135,7 +135,7 @@ const NewFooter = () => {
                 </ul>
               </div>
             </div>
-            <div className="menu-collapse speciality-menus mt-4  h-fit w-full">
+            <div className="menu-collapse speciality-menus h-fit w-full md:mt-4">
               <div className="relative">
                 <button
                   type="button"

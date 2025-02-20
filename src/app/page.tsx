@@ -7,6 +7,9 @@ import OurProfessional from "./Components/home/Professional/OurProfessional";
 import { ISAJuniorSliderImg } from "./Components/home/Program/Program/isa-pro-junior";
 import { ContentISAJunior } from "./Components/home/Program/Program/isa-pro-junior";
 import TestimonialPage from "./Components/home/testimonial/Testimonial";
+import SliderPackage from "./Components/SliderPackage";
+import SliderProgram from "./Components/home/Program/SliderProgram";
+import { DataCourse } from "./lib/DataCourse";
 
 export const metadata: Metadata = {
   title: "Asian Surf Performance Academy (ASPA)",
@@ -27,29 +30,10 @@ export const metadata: Metadata = {
   },
 };
 
-interface PropsVideo {
-  source_url: string;
-}
-
-async function getData() {
-  const res = await fetch("https://asiansurf.co/wp-json/wp/v2/media/11728");
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
 export default async function Home() {
-  const dataVideo: PropsVideo = await getData();
-
   return (
     <main className="h-full w-full overflow-x-hidden">
-      <HeroSection2 video={dataVideo.source_url} />
+      <HeroSection2 />
       <AboutUsSection />
       <HighLightProgram
         content={ContentISAJunior}

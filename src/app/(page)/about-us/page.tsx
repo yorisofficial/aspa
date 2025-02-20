@@ -66,9 +66,7 @@ const AcademyPage = () => {
         <TeamsPreviews />
         <div className="image-width mt-4 h-[200px] w-full md:mt-6 md:h-[400px] xl:mt-8">
           <Image
-            src={
-              "https://s3-alpha-sig.figma.com/img/3e9c/a1b7/31529b4fa795af9d1c790df45fded1c2?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nlbwuwXz6OuJy8CYOgy6uSdsCiPMXfC7~uQN~-oOOl3hg6-0~PBAUJ7mQ-KC2R7jx9r~hl9eU7Rj1W2hDiUT4DedviUnM6pZkb1WPFAZPNX3OM5xjMVaVZ3uFcHIJ7I4u64B5HkmdOIhE7JdZHnCR5sSzM2vszVfgr0U~6FNQzIevYz~1VPB7e2bgR5f7fkwt0kj8ipHmwyBQ6uOIIj~VtKXLcb4rdD3I~yky-YbJqIGF5FSKnnRaLKSQh-m1XTiSJ2Q5E-KsHivGyPQ2iu4WiBcW9RDKlEB9sYk-5tgKq7Q0Eehx09w11SlW4XJ3mi-PpFlcisoz8pbthYFYS8S~Q__"
-            }
+            src={"/assets/projects/project_aspa-rising-star.webp"}
             alt="image"
             width={2400}
             height={800}

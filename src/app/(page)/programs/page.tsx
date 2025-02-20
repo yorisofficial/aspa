@@ -9,6 +9,7 @@ import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
 import Image from "next/image";
 import Link from "next/link";
 import { ItemProgramPreviews } from "./components/ItemProgramPreviews";
+import PlayVideos from "@/app/Components/PlayVideos";
 
 export default function page() {
   const basicPlusProgram = AspaProgram[0];
@@ -31,11 +32,11 @@ export default function page() {
           </h1>
         </div>
       </div>
-      <PlayYoutube />
+      <PlayVideos />
       <SliderContentProgram />
       <WideImages images={"/assets/main/run-kids-surfer.png"} />
       <div className="content-programs">
-        <div className="content-moto relative flex items-center justify-between px-4 py-8 md:px-16">
+        <div className="content-moto relative flex flex-col px-4 py-8 md:flex-row md:items-center md:justify-between md:px-16">
           <h2 className="w-full max-w-[500px] text-3xl font-light uppercase xl:w-1/2">
             asian surf performance academy
           </h2>
