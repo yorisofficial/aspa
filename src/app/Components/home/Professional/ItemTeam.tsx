@@ -29,15 +29,15 @@ const ItemTeam = ({
         className="inline-block h-full w-full"
       >
         <div className="item-core">
-          <div
+          <Link
             key={item.id}
-            // href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
+            href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
             className="group"
           >
             <div className="relative h-[200px] w-full overflow-hidden rounded-lg">
-              {/* <div className="invisible absolute left-1/2 top-1/2 z-30 flex h-fit w-fit -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/20 p-1 text-white backdrop-blur-md group-hover:visible">
+              <div className="invisible absolute left-1/2 top-1/2 z-30 flex h-fit w-fit -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/20 p-1 text-white backdrop-blur-md group-hover:visible">
                 <MagnifyingGlassPlus size={24} className="h-6 w-6" />
-              </div> */}
+              </div>
               <Image
                 src={item.profile || ""}
                 alt="prifile-picture"
@@ -46,7 +46,7 @@ const ItemTeam = ({
                 className="h-[200px] w-full rounded-lg object-cover duration-300 group-hover:scale-110"
               />
             </div>
-          </div>
+          </Link>
           <div className="flex w-full flex-col items-center justify-center pt-2">
             <h1 className="flex flex-col items-start justify-start text-base font-bold uppercase">
               {item.full_name}
