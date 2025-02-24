@@ -10,11 +10,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ItemProgramPreviews } from "./components/ItemProgramPreviews";
 import PlayVideos from "@/app/Components/PlayVideos";
+import { NewAcademy } from "@/app/lib/program/academy/NewAcademy";
+import ItemProgramSection from "./components/ItemProgramSection";
 
 export default function page() {
-  const basicPlusProgram = AspaProgram[0];
-  const eliteProgram = AspaProgram[1];
-  const customeProgram = AspaProgram[2];
+  const SurfProgram = NewAcademy[0];
+  const TrainingProgram = NewAcademy[1];
 
   return (
     <div className="container-content h-fit min-h-screen w-full overflow-x-hidden">
@@ -32,7 +33,7 @@ export default function page() {
           </h1>
         </div>
       </div>
-      <PlayVideos />
+      {/* <PlayVideos /> */}
       <SliderContentProgram />
       <WideImages images={"/assets/main/run-kids-surfer.png"} />
       <div className="content-programs">
@@ -47,61 +48,17 @@ export default function page() {
             programs
           </span>
         </div>
-        <div className="content-body mt-8">
-          <ItemProgramPreviews
-            idProgram={basicPlusProgram.id}
-            title={basicPlusProgram.title}
-            description={basicPlusProgram.description}
-            images={basicPlusProgram.image[0].src}
-            fromProgram={basicPlusProgram.benefit}
+        <div className="content-body">
+          <ItemProgramSection
+            id={SurfProgram.title.toLowerCase().replaceAll(" ", "-")}
             oddBy={false}
+            index={0}
           />
-          <ItemProgramPreviews
-            idProgram={eliteProgram.id}
-            title={eliteProgram.title}
-            description={eliteProgram.description}
-            images={eliteProgram.image[0].src}
-            fromProgram={eliteProgram.benefit}
+          <ItemProgramSection
+            id={TrainingProgram.title.toLowerCase().replaceAll(" ", "-")}
             oddBy={true}
+            index={1}
           />
-          <div className="custome-program relative my-8 h-fit w-full">
-            <div className="w-full">
-              <Image
-                src={"/assets/main/custome-program.png"}
-                alt={customeProgram.title}
-                width={1000}
-                height={1000}
-                priority
-                className="h-[500px] w-full object-cover"
-              />
-            </div>
-            <div className="information-card absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-4 md:w-fit">
-              <div className="bg-black p-4 text-white md:w-[500px]">
-                <h2 className="text-3xl font-light uppercase">
-                  {customeProgram.title}
-                </h2>
-                <p className="text-sm font-light">
-                  {customeProgram.description}
-                </p>
-                <div className="btn-group mt-4 flex w-full flex-col  gap-4 md:flex-row">
-                  <Link
-                    href={`/programs/${customeProgram.id}/booking?user=${randomString}`}
-                    aria-label="..."
-                    className="inline-block w-full bg-white px-4 py-2 text-center text-sm font-light uppercase text-black md:w-fit"
-                  >
-                    Contact us
-                  </Link>
-                  <Link
-                    href={`/programs/${customeProgram.id}`}
-                    aria-label="..."
-                    className="inline-block w-full border border-white px-4 py-2 text-center text-sm font-light uppercase text-white md:w-fit"
-                  >
-                    About the program
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

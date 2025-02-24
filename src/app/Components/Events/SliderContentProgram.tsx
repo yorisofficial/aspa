@@ -2,21 +2,20 @@
 
 import Image from "next/image";
 import React from "react";
-import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
 
 // Import Swiper styles
 import "swiper/css";
-import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ButtonSlideSwiper from "../ButtonSlideSwiper";
 import Link from "next/link";
-import { XCircle, CheckCircle } from "@phosphor-icons/react";
+import { ArrowCircleRight } from "@phosphor-icons/react";
+import { NewAcademy } from "@/app/lib/program/academy/NewAcademy";
 
 export const randomString = `users-${Math.random().toString(36).substring(2, 14)}`;
 
 export default function SliderContentProgram() {
   return (
-    <div className="h-fit w-full py-8 pl-4 md:pl-16">
+    <div className="h-fit w-full px-4 py-8">
       <Swiper
         freeMode
         loop={true}
@@ -36,70 +35,32 @@ export default function SliderContentProgram() {
           },
         }}
       >
-        {AspaProgram.slice(0, 3).map((item, index) => (
-          <SwiperSlide key={item.id} className="group h-full w-fit">
+        {NewAcademy.slice(0, 3).map((item, index) => (
+          <SwiperSlide key={item.id} className="group relative h-full w-fit">
+            <div className="absolute bottom-0 left-0 z-10 flex h-fit w-full items-end justify-between p-2">
+              <div className="flex w-full items-center justify-between bg-black p-2">
+                <h1 className="text-2xl font-normal uppercase text-white">
+                  {item.title}
+                </h1>
+                <Link
+                  href={`/programs#${item.title.toLowerCase().replaceAll(" ", "-")}`}
+                  className="group flex items-center justify-center gap-2 text-white"
+                >
+                  <span className="hidden text-sm font-light uppercase group-hover:inline-block">
+                    Learn more
+                  </span>
+                  <ArrowCircleRight size={24} className="text-white" />
+                </Link>
+              </div>
+            </div>
             <div className="h-[200px] w-full overflow-hidden md:h-[300px]">
               <Image
-                src={item.image[0].src}
+                src={item.image}
                 alt={"."}
                 height={1000}
                 width={1000}
                 className="h-[200px] w-full object-cover duration-300 group-hover:scale-110 md:h-[300px]"
               />
-            </div>
-            <div className="mt-2 flex flex-col">
-              <div className="header-program flex items-center justify-between">
-                <h1 className="title-program text-lg uppercase md:text-2xl">
-                  {item.title}
-                </h1>
-              </div>
-              {item.id === "32" ? (
-                <div className="w-full">
-                  <p className="w-full text-xs font-light">
-                    {item.description}
-                  </p>
-                </div>
-              ) : (
-                <ul className="mt-4 list-inside">
-                  {item.benefit.map((item, index) => (
-                    <li
-                      key={index}
-                      className="mt-2 flex w-full items-start gap-2 text-sm md:items-center md:gap-4"
-                    >
-                      {item.status ? (
-                        <CheckCircle
-                          size={24}
-                          weight="light"
-                          className="flex-shrink-0 text-green"
-                        />
-                      ) : (
-                        <XCircle
-                          size={24}
-                          weight="light"
-                          className="flex-shrink-0 text-red"
-                        />
-                      )}
-                      {item.title}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              <div className="btn-group mt-2 flex w-full flex-col gap-4 md:mt-4 md:flex-row">
-                <Link
-                  href={`/programs/${item.id}/booking?user=${randomString}`}
-                  aria-label="..."
-                  className="inline-block w-full bg-black px-4 py-2 text-center text-xs font-light uppercase text-white md:w-fit md:text-sm"
-                >
-                  Contact us
-                </Link>
-                <Link
-                  href={`#${item.title.replace(" ", "-").toLowerCase()}`}
-                  aria-label="..."
-                  className="inline-block w-full border border-black px-4 py-2 text-center text-xs font-light uppercase text-black md:w-fit md:text-sm"
-                >
-                  About the program
-                </Link>
-              </div>
             </div>
           </SwiperSlide>
         ))}

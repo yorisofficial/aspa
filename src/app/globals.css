@@ -7,7 +7,7 @@
 }
 
 .bored {
-  @apply border-2 border-red;
+  @apply border-2 border-dashed border-red;
 }
 
 p {
