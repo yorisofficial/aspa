@@ -3,15 +3,19 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import emailjs from "emailjs-com";
+import { DataBooking } from "../lib/program/academy/DataBooking";
+import { Info } from "@phosphor-icons/react";
 
 const CheckoutForm = ({
   userId,
   getProgramName,
   getProgramId,
+  getAllData,
 }: {
   userId: string;
   getProgramName: string;
   getProgramId: string;
+  getAllData: any;
 }) => {
   const dataUrl = "https://sheetdb.io/api/v1/0c37z0pcute1t";
   const [disableButton, setDisableButton] = useState(false);
@@ -22,13 +26,10 @@ const CheckoutForm = ({
     phone: "",
     program_selected: getProgramName,
     session_selected: getProgramId,
+    packages_selected: "",
     agreement: "",
     created_at: "",
   });
-
-  const handleSession = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setForm({ ...form, session_selected: e.target.value });
-  };
 
   //submit form
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -42,6 +43,7 @@ const CheckoutForm = ({
         email: form.email,
         selected_program: form.program_selected,
         selected_session: form.session_selected,
+        packages_selected: form.packages_selected,
         agreement: form.agreement,
         created_at: form.created_at,
       });
@@ -57,6 +59,7 @@ const CheckoutForm = ({
           email: form.email,
           selected_program: form.program_selected,
           selected_session: form.session_selected,
+          packages_selected: form.packages_selected,
           agreement: form.agreement,
           created_at: form.created_at,
         },
@@ -73,8 +76,9 @@ const CheckoutForm = ({
       fullname: "",
       email: "",
       phone: "",
-      program_selected: "",
-      session_selected: "",
+      program_selected: getProgramName,
+      session_selected: getProgramId,
+      packages_selected: "",
       agreement: "",
       created_at: "",
     });
@@ -82,8 +86,20 @@ const CheckoutForm = ({
 
     // router.push(`${dataSession?.url}`);
   };
+
   return (
-    <div className="w-full">
+    <div className="relative w-full">
+      <div className="absolute right-0 top-32 flex flex-col gap-2 bg-white p-4 drop-shadow-lg">
+        <span>id:{form.id}</span>
+        <span>fullname:{form.fullname}</span>
+        <span>email:{form.email}</span>
+        <span>phone:{form.phone}</span>
+        <span>created_at:{form.created_at}</span>
+        <span>agreement:{form.agreement}</span>
+        <span>program:{form.program_selected}</span>
+        <span>session:{form.session_selected}</span>
+        <span>packages:{form.packages_selected}</span>
+      </div>
       <div className="content mx-auto mt-4 h-fit space-y-8 py-8">
         <div className="flex w-full flex-col gap-4 rounded-xl bg-white">
           <div className="mx-auto flex flex-col gap-2 text-center">
@@ -97,18 +113,18 @@ const CheckoutForm = ({
             <div className="details-booking flex h-fit w-full flex-col gap-2 rounded-xl border border-bordersolid bg-foreground p-6">
               <h1 className="text-2xl font-bold">Details booking</h1>
               <label htmlFor="selected_program" className="">
-                <span className="text-required">Selected program</span>
+                <span className="">Selected program</span>
                 <input
                   type="text"
                   name="selected_program"
                   id="selected_program"
                   disabled
-                  value={form.program_selected || ""}
+                  value={form.program_selected}
                   className="mt-2 h-10 w-full rounded-lg border border-bordersolid bg-black/5 px-4 font-medium capitalize outline-none focus:outline-2 focus:outline-black"
                 />
               </label>
               <label htmlFor="selected_session" className="">
-                <span className="text-required">Selected session</span>
+                <span className="">Selected session</span>
                 <input
                   type="text"
                   name="selected_session"
@@ -118,6 +134,69 @@ const CheckoutForm = ({
                   className="mt-2 h-10 w-full rounded-lg border border-bordersolid bg-black/5 px-4 font-medium capitalize outline-none focus:outline-2 focus:outline-black"
                 />
               </label>
+              {form.program_selected === "c1" ? (
+                <div className="w-full">
+                  <label htmlFor="select_pricing">
+                    <span className="text-required">Details</span>
+                    <textarea
+                      name="select_pricing"
+                      id="select_pricing"
+                      required
+                      onChange={(e) => {
+                        setForm({
+                          ...form,
+                          packages_selected: e.target.value,
+                        });
+                      }}
+                      minLength={100}
+                      placeholder="Enter details"
+                      className="mt-2 h-32 w-full rounded-lg border border-bordersolid bg-black/5 p-4 text-sm font-medium outline-none outline-1 valid:outline-green invalid:outline-red focus:outline-2 valid:focus:outline-green invalid:focus:outline-red"
+                    />
+                    <span>
+                      <small>Min 100 characters</small>
+                    </span>
+                  </label>
+                </div>
+              ) : (
+                <label htmlFor="select_pricing">
+                  <span className="text-required">Select packages</span>
+                  <select
+                    name="select_pricing"
+                    id="sleect_pricing"
+                    required
+                    onChange={(e) => {
+                      setForm({
+                        ...form,
+                        packages_selected: e.target.value,
+                      });
+                    }}
+                    className="mt-2 h-10 w-full rounded-lg bg-black/5 px-4 py-2"
+                  >
+                    <option value="" selected>
+                      Select packages
+                    </option>
+                    {getAllData.price_list.map((item: any, index: number) => (
+                      <option
+                        key={index}
+                        value={`${item.title}-${item.pricing.toLocaleString("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 })}`}
+                      >
+                        {item.title} -{" "}
+                        {item.pricing.toLocaleString("id-ID", {
+                          style: "currency",
+                          currency: "IDR",
+                          minimumFractionDigits: 0,
+                        })}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
+              {getAllData.additional && (
+                <span className="mt-4 flex items-start gap-2 text-sm">
+                  <Info size={16} />
+                  {getAllData.additional}
+                </span>
+              )}
             </div>
             <div className="flex w-full flex-col gap-2 rounded-xl border border-bordersolid bg-foreground p-6">
               <div className="details-profile flex flex-col gap-2 border-b py-2">

@@ -34,7 +34,7 @@ const ItemTeam = ({
             href={`/team/${categories}/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
             className="group"
           >
-            <div className="relative h-[200px] w-full overflow-hidden rounded-lg">
+            <div className="relative h-[250px] w-full overflow-hidden rounded-lg">
               <div className="invisible absolute left-1/2 top-1/2 z-30 flex h-fit w-fit -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/20 p-1 text-white backdrop-blur-md group-hover:visible">
                 <MagnifyingGlassPlus size={24} className="h-6 w-6" />
               </div>
@@ -43,7 +43,7 @@ const ItemTeam = ({
                 alt="prifile-picture"
                 width={500}
                 height={500}
-                className="h-[200px] w-full rounded-lg object-cover duration-300 group-hover:scale-110"
+                className="h-[250px] w-full rounded-lg object-cover duration-300 group-hover:scale-110"
               />
             </div>
           </Link>

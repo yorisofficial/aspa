@@ -5,17 +5,16 @@ import SliderContentProgram, {
   randomString,
 } from "@/app/Components/Events/SliderContentProgram";
 import WideImages from "@/app/Components/Events/WideImages";
-import { AspaProgram } from "@/app/lib/program/academy/AspaAcademy";
 import Image from "next/image";
 import Link from "next/link";
-import { ItemProgramPreviews } from "./components/ItemProgramPreviews";
-import PlayVideos from "@/app/Components/PlayVideos";
 import { NewAcademy } from "@/app/lib/program/academy/NewAcademy";
 import ItemProgramSection from "./components/ItemProgramSection";
 
 export default function page() {
   const SurfProgram = NewAcademy[0];
   const TrainingProgram = NewAcademy[1];
+  const CustomeProgram = NewAcademy[2].listing_program[0];
+  const randomString = `users-${Math.random().toString(36).substring(2, 14)}`;
 
   return (
     <div className="container-content h-fit min-h-screen w-full overflow-x-hidden">
@@ -59,6 +58,35 @@ export default function page() {
             oddBy={true}
             index={1}
           />
+          <div className="relative my-5 flex h-[400px] w-full flex-col items-center justify-center gap-4 overflow-hidden bg-black text-center text-white">
+            <div className="absolute left-0 top-0 z-20 h-[400px] w-full bg-primary/50"></div>
+            <div className="h-full w-full">
+              <Image
+                src={"/assets/hero-img-1.webp"}
+                alt="..."
+                width={1400}
+                height={800}
+                className="h-full w-full bg-black object-cover"
+              />
+            </div>
+            <div className="absolute left-0 top-0 z-20 flex h-full w-full flex-col items-center justify-center">
+              <h1 className="text-2xl font-bold uppercase text-white">
+                {CustomeProgram.title}
+              </h1>
+              <p className="w-full text-center font-light md:w-1/2">
+                {CustomeProgram.description}
+              </p>
+              <div className="mt-6 flex w-full items-center justify-center">
+                <Link
+                  href={`/checkout/${CustomeProgram.id}/${randomString}`}
+                  aria-label="Book now the program"
+                  className="inline-block bg-black px-4 py-2 uppercase text-white duration-500 hover:bg-white hover:text-black"
+                >
+                  Book now
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

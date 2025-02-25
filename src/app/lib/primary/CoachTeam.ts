@@ -769,7 +769,6 @@ export const SurfTeam = [
       },
     ],
   },
-
   {
     id: 17,
     confirm: false,
@@ -803,6 +802,61 @@ export const SurfTeam = [
     achievement: [
       {
         title: "Pro Surfer",
+      },
+    ],
+  },
+  {
+    id: 18,
+    confirm: true,
+    full_name: "Nyoman Satria",
+    nickname: "Blacky",
+    quotes: "",
+    title: "surf coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 0,
+    level: "",
+    experience: "",
+    location: "Legian",
+    profile: "/assets/team/aspa-coach-18.jpg",
+    user_instagram: "https://www.instagram.com/black.dogggggggggggggg",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Nyoman Satria/Nyoman-Satria_2.jpg",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Nyoman Satria/Nyoman-Satria_3.jpg",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Nyoman Satria/Nyoman-Satria_4.jpg",
+      },
+    ],
+    achievement: [
+      {
+        title: "1st Bingin Open 2018",
+      },
+      {
+        title:
+          "2nd Airsea land southern international sport tourism festival Thailand",
+      },
+      {
+        title: "3rd Nusa Penida by LST",
+      },
+      {
+        title: "Surftime award hottest style 2016",
+      },
+      {
+        title: "2nd & 3rd Rusty Gromfast 2011's",
+      },
+      {
+        title: "4th Uluwatu challenge 2017",
+      },
+      {
+        title: "Wild card Oakley world pro junior 2012",
       },
     ],
   },

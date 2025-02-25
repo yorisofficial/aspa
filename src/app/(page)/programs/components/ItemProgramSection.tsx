@@ -26,6 +26,7 @@ const ItemProgramSection = ({
       setActive(id);
     }
   };
+
   return (
     <div
       id={id}
@@ -60,9 +61,9 @@ const ItemProgramSection = ({
                 type="button"
                 aria-label="program"
                 onClick={() => handleAccordion(item.id)}
-                className={`flex w-full items-center justify-between border-b py-2 text-base uppercase ${active === item.id ? "font-bold text-brand" : "font-normal text-black"}`}
+                className={`flex w-full items-start justify-between border-b py-2 text-start text-base uppercase ${active === item.id ? "font-bold text-brand" : "font-normal text-black"}`}
               >
-                {item.title}
+                <span className="w-3/4">{item.title}</span>
                 {active === item.id ? (
                   <CaretUp size={24} />
                 ) : (
@@ -80,10 +81,12 @@ const ItemProgramSection = ({
                       {item.price_list.map((price, index) => (
                         <li
                           key={index}
-                          className="flex items-center justify-between bg-black px-4 py-2 text-white"
+                          className="flex items-start justify-between bg-black px-4 py-2 text-white"
                         >
-                          <span>{price.title}</span>
-                          <span>
+                          <span className="w-full text-start md:w-3/4">
+                            {price.title}
+                          </span>
+                          <span className="w-full text-end md:w-1/2">
                             {price.pricing.toLocaleString("id-ID", {
                               style: "currency",
                               currency: "IDR",
@@ -94,8 +97,8 @@ const ItemProgramSection = ({
                       ))}
                     </ul>
                     {item.additional && (
-                      <p className="mt-4 text-sm">
-                        Additional: <br />*{item.additional}
+                      <p className="text-sm">
+                        <br />*{item.additional}
                       </p>
                     )}
                     <div className="my-4 flex h-fit w-full items-end justify-end">

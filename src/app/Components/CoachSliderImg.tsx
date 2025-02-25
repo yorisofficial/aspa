@@ -16,7 +16,7 @@ interface Props {
 
 const CoachSliderImg = ({ data }: { data: Props[] }) => {
   return (
-    <div className="list-image h-[250px] w-full md:h-[300px] xl:order-last xl:h-[400px]">
+    <div className="list-image h-[250px] w-full md:h-[400px] xl:order-last xl:h-[450px]">
       <Swiper
         modules={[Autoplay]}
         loop={true}
@@ -44,7 +44,7 @@ const CoachSliderImg = ({ data }: { data: Props[] }) => {
           >
             <Image
               src={item?.src || "/assets/example-banner-coach.png"}
-              height={1500}
+              height={2500}
               width={1500}
               priority={false}
               quality={100}

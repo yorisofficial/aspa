@@ -26,19 +26,20 @@ export const menuNav = [
     link: "/about-us",
   },
   {
-    title: "ISA",
-    base: "isa-team",
-    link: "/isa-team",
-  },
-  {
     title: "Programs",
     base: "programs",
     link: "/programs",
   },
+
   {
     title: "Projects",
     base: "projects",
     link: "/projects",
+  },
+  {
+    title: "ISA",
+    base: "isa",
+    link: "/isa-team",
   },
   {
     title: "Blog",
