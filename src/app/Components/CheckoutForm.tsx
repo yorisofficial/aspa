@@ -5,6 +5,8 @@ import axios from "axios";
 import emailjs from "emailjs-com";
 import { DataBooking } from "../lib/program/academy/DataBooking";
 import { Info } from "@phosphor-icons/react";
+import Moment from "react-moment";
+import moment from "moment";
 
 const CheckoutForm = ({
   userId,
@@ -28,7 +30,7 @@ const CheckoutForm = ({
     session_selected: getProgramId,
     packages_selected: "",
     agreement: "",
-    created_at: "",
+    created_at: moment().format("DD MMMM YYYY | hh:mm:ss A"),
   });
 
   //submit form

@@ -30,7 +30,7 @@ export default function SliderContentProgram() {
             spaceBetween: 20,
           },
           1024: {
-            slidesPerView: 2.4,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
         }}
@@ -39,27 +39,27 @@ export default function SliderContentProgram() {
           <SwiperSlide key={item.id} className="group relative h-full w-fit">
             <div className="absolute bottom-0 left-0 z-10 flex h-fit w-full items-end justify-between p-2">
               <div className="flex w-full items-center justify-between bg-black p-2">
-                <h1 className="text-2xl font-normal uppercase text-white">
+                <h2 className="text-lg font-normal uppercase text-white md:text-2xl">
                   {item.title}
-                </h1>
+                </h2>
                 <Link
                   href={`/programs#${item.title.toLowerCase().replaceAll(" ", "-")}`}
                   className="group flex items-center justify-center gap-2 text-white"
                 >
-                  <span className="hidden text-sm font-light uppercase group-hover:inline-block">
+                  <span className="hidden text-xs font-light uppercase group-hover:inline-block">
                     Learn more
                   </span>
                   <ArrowCircleRight size={24} className="text-white" />
                 </Link>
               </div>
             </div>
-            <div className="h-[200px] w-full overflow-hidden md:h-[300px]">
+            <div className="h-[300px] w-full overflow-hidden md:h-[350px]">
               <Image
                 src={item.image}
                 alt={"."}
                 height={1000}
                 width={1000}
-                className="h-[200px] w-full object-cover duration-300 group-hover:scale-110 md:h-[300px]"
+                className="h-[300px] w-full object-cover duration-300 group-hover:scale-110 md:h-[350px]"
               />
             </div>
           </SwiperSlide>

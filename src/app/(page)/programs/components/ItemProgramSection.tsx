@@ -39,7 +39,7 @@ const ItemProgramSection = ({
           width={2400}
           height={800}
           priority
-          className="h-screen w-full object-cover"
+          className="h-3/4 w-full object-cover md:h-screen"
         />
       </div>
       <div

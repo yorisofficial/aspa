@@ -9,6 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { NewAcademy } from "@/app/lib/program/academy/NewAcademy";
 import ItemProgramSection from "./components/ItemProgramSection";
+import PlayVideos from "@/app/Components/PlayVideos";
 
 export default function page() {
   const SurfProgram = NewAcademy[0];
@@ -32,7 +33,7 @@ export default function page() {
           </h1>
         </div>
       </div>
-      {/* <PlayVideos /> */}
+      <PlayVideos />
       <SliderContentProgram />
       <WideImages images={"/assets/main/run-kids-surfer.png"} />
       <div className="content-programs">

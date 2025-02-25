@@ -68,7 +68,7 @@ export const NewAcademy = [
             pricing: 450000,
           },
         ],
-        additional: "Minimum 3 pax, Price per person",
+        additional: "Minimum 3 pax & Price per person",
       },
       // {
       //   id: "a5",
