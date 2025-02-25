@@ -148,8 +148,8 @@ export const DataBooking = [
   {
     id: "c1",
     idProgram: "32",
-    resource: "Custome",
-    title: "Custome",
+    resource: "Custom",
+    title: "Custom",
     description:
       "Unlock the full potential of high-performance surf and athletic training with ASPA Custom Collaborations. We offer tailored programs designed for schools, brands, businesses, and international organizations, ensuring world-class coaching and training experiences that meet your specific needs.",
     price_list: [],

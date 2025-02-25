@@ -10,6 +10,8 @@ import Link from "next/link";
 import { NewAcademy } from "@/app/lib/program/academy/NewAcademy";
 import ItemProgramSection from "./components/ItemProgramSection";
 import PlayVideos from "@/app/Components/PlayVideos";
+import { DataSocial } from "@/app/Components/SocialComponents";
+import SocialList from "@/app/Components/SocialList";
 
 export default function page() {
   const SurfProgram = NewAcademy[0];
@@ -48,6 +50,7 @@ export default function page() {
             programs
           </span>
         </div>
+
         <div className="content-body">
           <ItemProgramSection
             id={SurfProgram.title.toLowerCase().replaceAll(" ", "-")}
@@ -59,32 +62,37 @@ export default function page() {
             oddBy={true}
             index={1}
           />
-          <div className="relative my-5 flex h-[400px] w-full flex-col items-center justify-center gap-4 overflow-hidden bg-black text-center text-white">
-            <div className="absolute left-0 top-0 z-20 h-[400px] w-full bg-primary/50"></div>
-            <div className="h-full w-full">
-              <Image
-                src={"/assets/hero-img-1.webp"}
-                alt="..."
-                width={1400}
-                height={800}
-                className="h-full w-full bg-black object-cover"
-              />
-            </div>
-            <div className="absolute left-0 top-0 z-20 flex h-full w-full flex-col items-center justify-center">
-              <h1 className="text-2xl font-bold uppercase text-white">
-                {CustomeProgram.title}
-              </h1>
-              <p className="w-full text-center font-light md:w-1/2">
-                {CustomeProgram.description}
-              </p>
-              <div className="mt-6 flex w-full items-center justify-center">
-                <Link
-                  href={`/checkout/${CustomeProgram.id}/${randomString}`}
-                  aria-label="Book now the program"
-                  className="inline-block bg-black px-4 py-2 uppercase text-white duration-500 hover:bg-white hover:text-black"
-                >
-                  Book now
-                </Link>
+          <div className="my-8 h-[400px] w-full">
+            <div className="relative grid grid-cols-1 md:grid-cols-2">
+              <div className="h-full w-full bg-brand"></div>
+              <div className="absolute left-0 top-0 z-20 flex h-full w-full flex-col items-center justify-center text-white">
+                <h1 className="text-2xl font-bold uppercase text-white">
+                  {CustomeProgram.title}
+                </h1>
+                <p className="w-full text-center font-light md:w-1/2">
+                  {CustomeProgram.description}
+                </p>
+                <div className="mt-6 flex w-full items-center justify-center">
+                  <Link
+                    href={`/checkout/${CustomeProgram.id}/${randomString}`}
+                    aria-label="Book now the program"
+                    className="inline-block bg-black px-4 py-2 uppercase text-white duration-500 hover:bg-white hover:text-black"
+                  >
+                    Book now
+                  </Link>
+                </div>
+              </div>
+              <div className="relative h-full w-full md:pl-72">
+                <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-brand via-brand to-brand/0"></div>
+                <Image
+                  src={"/assets/projects/project_social-media-background.webp"}
+                  alt="social media background images"
+                  width={2400}
+                  height={1400}
+                  priority
+                  quality={100}
+                  className="h-[400px] w-full object-cover object-center"
+                />
               </div>
             </div>
           </div>
