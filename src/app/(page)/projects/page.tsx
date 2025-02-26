@@ -3,7 +3,7 @@ import HeaderEventContent from "@/app/Components/Events/HeaderEventContent";
 import WideImages from "@/app/Components/Events/WideImages";
 import React from "react";
 import SliderProjects from "../programs/components/SliderProjects";
-import { ItemEventOdd } from "../isa-team/components/ItemEventOdd";
+import { ItemEventOdd } from "../isa/components/ItemEventOdd";
 import SosmedHighlight from "@/app/Components/SosmedHighlight";
 import { DataSocial } from "@/app/Components/SocialComponents";
 import { DataProjects } from "@/app/lib/DataProjects";

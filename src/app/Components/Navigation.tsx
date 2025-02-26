@@ -39,7 +39,7 @@ export const menuNav = [
   {
     title: "ISA",
     base: "isa",
-    link: "/isa-team",
+    link: "/isa",
   },
   {
     title: "Blog",
