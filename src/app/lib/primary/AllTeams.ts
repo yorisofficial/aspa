@@ -1,9 +1,38 @@
-export const AllTeams = [
+export interface TeamProps {
+  id: string;
+  confirm: boolean;
+  full_name: string;
+  nickname: string;
+  certificated: string;
+  isa: boolean;
+  job_title: string;
+  category: string;
+  level: string;
+  location: string;
+  profile: string;
+  quotes: string;
+  age: number;
+  user_instagram: string;
+  user_soorfinc: string;
+  experience: string;
+  achievement: PropsAchievement[];
+  preview_img?: { title: string; src: string }[];
+}
+
+type PropsAchievement = {
+  title: string;
+};
+
+export const AllTeams: TeamProps[] = [
   {
-    id: "aa23918",
+    id: "aspa-1",
+    confirm: true,
     full_name: "Tipi Jabrik",
     nickname: "Tipi",
-    title: "ASPA Director",
+    certificated: "ISA",
+    isa: true,
+    job_title: "ASPA Director",
+    category: "core",
     level: "ISA Lv1",
     location: "Bali",
     profile: "/assets/team/tipi-jabrik.webp",
@@ -13,44 +42,139 @@ export const AllTeams = [
     user_instagram: "https://www.instagram.com/tipijabrik",
     user_soorfinc: "Tipi Jabrik",
     experience: "+15 years coach",
-    achievement: [],
+    preview_img: [],
+    achievement: [
+      {
+        title:
+          "2024 Junior National Coach, ISA World Championship Junior El Salvador",
+      },
+      {
+        title: "2021 National Coach, Olympic Tokyo",
+      },
+      {
+        title:
+          "2021 National Coach, Olympic Qualification ISA World Championship ElSalvador",
+      },
+      {
+        title: "2017 National Coach, Sea Games Manila",
+      },
+      {
+        title:
+          "2010 Junior National Coach, ISA World Junior Championship New Zealand",
+      },
+      {
+        title: "2018 Quiksilver Uluwatu Challenge Champion",
+      },
+      {
+        title: "2010 Quiksilver Phuket Champion",
+      },
+      {
+        title: "2001 CHP Challenge Japan Champion",
+      },
+    ],
   },
   {
-    id: "aa23919",
+    id: "aspa-2",
+    confirm: true,
     full_name: "Juan Gorostidi",
     nickname: "Juan",
+    certificated: "ISA",
+    isa: true,
     age: 1999,
     level: "",
     profile: "/assets/team/juan.webp",
     location: "Bali",
     quotes:
       "Surfing has always been a significant part of my life. I started surfing as a child when my father taught me how to ride the waves. Since then, I have been traveling and surfing all over the world. In 2015, I began competing and training in the Basque Country, Spain, and across Europe. After several years of competition, I decided to focus on my studies and pursue a professional career while working as a surf instructor. Upon completing my studies, I decided to travel to Indonesia and Australia to surf, work, and gain experience. I am now part of the Asian Surf Cooperative and serve as the Manager of ASPA, a surf performance academy that provides support and guidance to international athletes in the surfing world, helping them improve and achieve their goals.",
-    title: "ASPA Manager",
+    job_title: "ASPA Manager",
+    category: "core",
     user_instagram: "https://www.instagram.com/juan_gorostidi",
     user_soorfinc: "Juan",
     experience: "+5 years coach",
-    achievement: [],
+    preview_img: [],
+    achievement: [
+      {
+        title: "2022 Master's Degree in Digital Marketing",
+      },
+      {
+        title:
+          "2021 Deusto University Bachelor Degree in Business Administration & Management + Digital Business Skills",
+      },
+      {
+        title: "2018 Surf Instructor",
+      },
+      {
+        title: "2017 Junior Professional Surfer",
+      },
+      {
+        title: "Ranked 29th in Europe & 2nd in Spain",
+      },
+    ],
   },
   {
-    id: "aa23920",
+    id: "aspa-3",
+    confirm: true,
     full_name: "Dylan Amar",
     nickname: "Dylan",
-    title: "ASPA Head coach",
+    certificated: "ISA",
+    isa: true,
+    job_title: "ASPA Head coach",
+    category: "core",
     level: "",
-    profile: "/assets/team/dylan.webp",
+    profile: "/assets/team/dyalan.jpg",
     location: "Bali",
     quotes: "",
     age: 1998,
     user_instagram: "https://www.instagram.com/dylan_amartha",
     user_soorfinc: "",
     experience: "+5 years coach",
-    achievement: [],
+    preview_img: [],
+    achievement: [
+      {
+        title: "2024 National Coach, Olympic Paris  ",
+      },
+      {
+        title: "2024 National Coach, Olympic Qualification ISA Puerto Rico",
+      },
+      {
+        title:
+          "2023 National Coach, Olympic Qualification ISA Huntington Beach",
+      },
+      {
+        title: "2021 National Coach, Olympic Qualification ISA El Salvador",
+      },
+      {
+        title: "2019 National Coach, Sea Games Manila",
+      },
+      {
+        title: "2018 National Coach, Olympic Qualification Miyazaki, Japan",
+      },
+      {
+        title: "2017 National Coach, Olympic Qualification Tahara, Japan",
+      },
+      {
+        title: "Rip Curl Team Manager (2012-2018)",
+      },
+      {
+        title: "Reef Team Rider (2008-2010)",
+      },
+      {
+        title: "Quiksilver Team Rider (2000-2008)",
+      },
+      {
+        title: "Champion Rip Curl GS Keramas 2004",
+      },
+    ],
   },
   {
-    id: 3,
+    id: "aspa-4",
+    confirm: true,
     full_name: "Arya Subyakto",
     nickname: "Om Arya",
-    title: "ASPA Technical Head Coach",
+    certificated: "ISA",
+    isa: true,
+    job_title: "ASPA Technical Head Coach",
+    category: "core",
     level: "",
     profile: "/assets/team/om-arya.png",
     location: "Bali",
@@ -59,16 +183,18 @@ export const AllTeams = [
     user_instagram: "https://www.instagram.com/aryasubyakto/",
     user_soorfinc: "",
     experience: "+20 years coach",
+    preview_img: [],
     achievement: [],
   },
   {
-    id: "aa2390",
+    id: "aspa-5",
     confirm: true,
     full_name: "Dedi Santosa",
-    nickname: "",
+    nickname: "Dedi",
     quotes:
       "Surfing is a journey, not a destination, take every wave as an opportunity to learn and grow.",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "No ISA",
     isa: false,
     age: 1984,
@@ -78,24 +204,7 @@ export const AllTeams = [
     profile: "/assets/team/aspa-coach-11.webp",
     user_instagram: "https://www.instagram.com/dedisantosa_",
     user_soorfinc: "",
-    preview_img: [
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-1.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-2.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-3.webp",
-      },
-      {
-        title: "coach-preview",
-        src: "/assets/team/coach/Dedi Santosa/item-image-4.webp",
-      },
-    ],
+    preview_img: [],
     achievement: [
       {
         title: "Pro Surfer",
@@ -103,12 +212,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa2391",
+    id: "aspa-6",
     confirm: true,
     full_name: "Mickey Sudena",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "No ISA",
     isa: false,
     age: 1983,
@@ -132,15 +242,64 @@ export const AllTeams = [
         src: "/assets/team/coach/Mickey Sudena/item-image-3.webp",
       },
     ],
-    achievement: [],
+    achievement: [
+      {
+        title: "3rd at Gamang Surfing 1998",
+      },
+      {
+        title: "1st at Junior Surfing Culture Exchange Championships 2000",
+      },
+      {
+        title: "2nd in master division national rank 2021-2022",
+      },
+      {
+        title: "2nd in master division national rank 2022-2023",
+      },
+      {
+        title: "2nd at Halfway Master Challenge 2023",
+      },
+      {
+        title: "4th at Uluwatu Master Challenge 2023",
+      },
+      {
+        title: "2nd in Master division national rank 2023-2024",
+      },
+      {
+        title: "National Surfing Qualification Jakarta Team 2023",
+      },
+      {
+        title: "Shortboard Man 2nd  (Athlete Varun Tanjung)",
+      },
+      {
+        title: "Shortboard women 2nd  (Athlete Jasmine Studer)",
+      },
+      {
+        title: "Longboard man 2nd (Athlete Dimas Shabil)",
+      },
+      {
+        title: "Longboard women 2nd (Athlete Flora Christin)",
+      },
+      {
+        title:
+          "2023 WSL Manokwari pro junior Man Qs1000 1st  Champion (Athlete Westen Hirst)",
+      },
+      {
+        title: "Junior women 3rd (Athlete Jasmine Studer)",
+      },
+      {
+        title:
+          "2024 WSL Krui pro Pro junior Man Qs1000 3rd  (Athlete Westen Hirst)",
+      },
+    ],
   },
   {
-    id: "aa2392",
+    id: "aspa-7",
     confirm: true,
     full_name: "Made Joi",
     nickname: "Joi",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "No ISA",
     isa: false,
     age: 0,
@@ -171,12 +330,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa2393",
+    id: "aspa-8",
     confirm: true,
     full_name: "Kadek Murtika",
     nickname: "Celupuk",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "No ISA",
     isa: false,
     age: 1998,
@@ -207,13 +367,14 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa2394",
+    id: "aspa-9",
     confirm: true,
     full_name: "Danyel Amar",
     nickname: "Danyel",
     quotes:
       "Living 2 minutes away by Legian Beach made surfings part of my whole life, since the very young age I have learned surfing and compete. At the age of 23 I began to focusing on my career as a surf instructor and surf coaching.",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "",
     isa: false,
     age: 0,
@@ -255,12 +416,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa2395",
+    id: "aspa-10",
     confirm: true,
     full_name: "Muz Jeksen",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "ISA",
     isa: true,
     age: 1998,
@@ -347,12 +509,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa2396",
+    id: "aspa-11",
     confirm: false,
     full_name: "Muklis Anwar",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "ISA",
     isa: true,
     age: 1998,
@@ -391,12 +554,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa2397",
+    id: "aspa-12",
     confirm: true,
     full_name: "Oney Anwar",
     nickname: "Oney",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "no ISA",
     isa: false,
     age: 1993,
@@ -440,12 +604,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa2398",
+    id: "aspa-13",
     confirm: true,
     full_name: "Putra Pulu",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "no ISA",
     isa: false,
     age: 1992,
@@ -477,12 +642,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa2399",
+    id: "aspa-14",
     confirm: true,
     full_name: "Gogo Sujaya",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "no ISA",
     isa: false,
     age: 1998,
@@ -513,12 +679,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23910",
+    id: "aspa-15",
     confirm: true,
     full_name: "Mega Artana",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "No ISA",
     isa: false,
     age: 1983,
@@ -553,12 +720,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23911",
+    id: "aspa-16",
     confirm: false,
     full_name: "I Made Agus Setyawan",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "ISA",
     isa: true,
     age: 1998,
@@ -596,12 +764,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23912",
+    id: "aspa-17",
     confirm: false,
     full_name: "Raditya Rondi",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "no ISA",
     isa: false,
     age: 1998,
@@ -639,12 +808,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23913",
+    id: "aspa-18",
     confirm: false,
     full_name: "Dharma Putra Tonjo",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "no ISA",
     isa: false,
     age: 1998,
@@ -675,12 +845,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23914",
+    id: "aspa-19",
     confirm: false,
     full_name: "Dede Suryana",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "no ISA",
     isa: false,
     age: 1998,
@@ -712,12 +883,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23915",
+    id: "aspa-20",
     confirm: false,
     full_name: "Dharma Yasa",
     nickname: "Blerong",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "no ISA",
     isa: false,
     age: 1998,
@@ -748,12 +920,13 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23916",
+    id: "aspa-21",
     confirm: false,
     full_name: "Danyel Amar",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "No ISA",
     isa: false,
     age: 1998,
@@ -783,14 +956,14 @@ export const AllTeams = [
       },
     ],
   },
-
   {
-    id: "aa23917",
+    id: "aspa-22",
     confirm: false,
     full_name: "Garut Widiarta",
     nickname: "",
     quotes: "",
-    title: "surf coach",
+    job_title: "surf coach",
+    category: "coach",
     certificated: "No ISA",
     isa: false,
     age: 1998,
@@ -821,10 +994,71 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23921",
+    id: "aspa-23",
+    confirm: true,
+    full_name: "Nyoman Satria",
+    nickname: "Blacky",
+    quotes: "",
+    job_title: "surf coach",
+    category: "coach",
+    certificated: "No ISA",
+    isa: false,
+    age: 0,
+    level: "",
+    experience: "",
+    location: "Legian",
+    profile: "/assets/team/aspa-coach-18.jpg",
+    user_instagram: "https://www.instagram.com/black.dogggggggggggggg",
+    user_soorfinc: "",
+    preview_img: [
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Nyoman Satria/Nyoman-Satria_2.jpg",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Nyoman Satria/Nyoman-Satria_3.jpg",
+      },
+      {
+        title: "coach-preview",
+        src: "/assets/team/coach/Nyoman Satria/Nyoman-Satria_4.jpg",
+      },
+    ],
+    achievement: [
+      {
+        title: "1st Bingin Open 2018",
+      },
+      {
+        title:
+          "2nd Airsea land southern international sport tourism festival Thailand",
+      },
+      {
+        title: "3rd Nusa Penida by LST",
+      },
+      {
+        title: "Surftime award hottest style 2016",
+      },
+      {
+        title: "2nd & 3rd Rusty Gromfast 2011's",
+      },
+      {
+        title: "4th Uluwatu challenge 2017",
+      },
+      {
+        title: "Wild card Oakley world pro junior 2012",
+      },
+    ],
+  },
+  {
+    id: "aspa-24",
+    confirm: true,
     full_name: "Gabriela Mackanicova",
     nickname: "",
-    title: "Strength & Conditioning Specialist",
+    certificated: "",
+    isa: false,
+    location: "",
+    job_title: "Strength & Conditioning Specialist",
+    category: "expert",
     level: "",
     age: 1988,
     profile: "/assets/team/aspa-expert-1.webp",
@@ -847,10 +1081,14 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23922",
+    id: "aspa-25",
+    confirm: true,
     full_name: "Juni Setiawan",
     nickname: "Juni",
-    title: "surf videographer",
+    certificated: "",
+    isa: false,
+    job_title: "surf videographer",
+    category: "videographer",
     level: "Profesional",
     location: "All arround",
     quotes: "",
@@ -871,10 +1109,14 @@ export const AllTeams = [
     ],
   },
   {
-    id: "aa23923",
+    id: "aspa-26",
+    confirm: true,
     full_name: "Adhi Wisnu Sanjaya",
     nickname: "Adhi",
-    title: "surf videographer",
+    certificated: "",
+    isa: false,
+    job_title: "surf videographer",
+    category: "videographer",
     level: "Profesional",
     location: "All arround",
     quotes: "",
