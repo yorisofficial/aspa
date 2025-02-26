@@ -25,7 +25,7 @@ const PopUpTeam = ({ id }: { id: string }) => {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [ref]);
+  }, [ref, router]);
 
   return (
     <>

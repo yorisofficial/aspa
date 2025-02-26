@@ -41,7 +41,7 @@ export default function TeamsPreviews() {
                       {item.full_name}
                     </h1>
                     <span className="text-center text-sm font-light">
-                      {item.title}
+                      {item.job_title}
                     </span>
                     <Link
                       target="_blank"
