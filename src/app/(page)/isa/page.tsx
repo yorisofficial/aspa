@@ -54,8 +54,8 @@ const ISAPage = () => {
       <HeaderEventContent
         logo="/brand/ASPA-white.svg"
         logo2="/brand/ISA.png"
-        title="ASPA Surfing Development Courses"
-        images="/assets/surf-player.png"
+        title="aspa Surfing Development Courses"
+        images="/Dump/NorthNias24-0510.jpg"
         theme="bg-gradient-to-r from-brand to-brand/0 xl:bg-brand"
         color="bg-gradient-to-r from-brand to-brand/0"
       />

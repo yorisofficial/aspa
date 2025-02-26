@@ -23,9 +23,10 @@ export default function HeaderEventContent({
   const bgTheme = theme;
   return (
     <>
-      <div className="relative flex h-[500px] w-full flex-row">
+      <div className="relative flex h-[500px] w-full flex-row overflow-hidden">
+        <div className="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-r from-brand via-brand/80 to-brand/20"></div>
         <div
-          className={`${bgTheme} relative z-10 flex h-full w-1/2 flex-col items-start justify-center pl-4 md:pl-16`}
+          className={`relative z-10 flex h-full w-1/2 flex-col items-start justify-center pl-4 md:pl-16`}
         >
           <div className="relative z-10 flex items-center gap-2 md:gap-4">
             <Image
@@ -34,7 +35,7 @@ export default function HeaderEventContent({
               width={500}
               height={500}
               priority
-              className="h-fit w-10 object-contain md:w-32"
+              className="h-fit w-10 object-contain md:w-[300px]"
             />
             {logo2 && (
               <Image
@@ -47,11 +48,11 @@ export default function HeaderEventContent({
               />
             )}
           </div>
-          <h1 className="mt-4 w-full text-4xl font-light uppercase text-white md:w-[500px] xl:text-5xl">
+          <h1 className="mt-4 w-full text-3xl font-light uppercase text-white md:w-[500px] xl:text-5xl">
             {title}
           </h1>
         </div>
-        <div className="absolute left-0 top-0 z-0 h-[500px] w-full xl:left-auto xl:right-0 xl:w-1/2">
+        <div className="absolute left-0 top-0 z-0 h-[500px] w-full xl:left-auto xl:right-0">
           <div className={`absolute z-10 h-full w-full ${color}`}></div>
           <Image
             src={images}

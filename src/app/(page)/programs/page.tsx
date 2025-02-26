@@ -10,8 +10,6 @@ import Link from "next/link";
 import { NewAcademy } from "@/app/lib/program/academy/NewAcademy";
 import ItemProgramSection from "./components/ItemProgramSection";
 import PlayVideos from "@/app/Components/PlayVideos";
-import { DataSocial } from "@/app/Components/SocialComponents";
-import SocialList from "@/app/Components/SocialList";
 
 export default function page() {
   const SurfProgram = NewAcademy[0];
@@ -25,7 +23,7 @@ export default function page() {
         <HeaderEventContent
           logo="/brand/ASPA-white.svg"
           title="asian surf performance academy"
-          images="/assets/main/programs-background.png"
+          images="/Dump/NorthNias24-0510.jpg"
           theme="bg-gradient-to-r from-brand to-brand/0 xl:bg-brand"
           color="bg-gradient-to-r from-brand to-brand/0"
         />
@@ -50,7 +48,6 @@ export default function page() {
             programs
           </span>
         </div>
-
         <div className="content-body">
           <ItemProgramSection
             id={SurfProgram.title.toLowerCase().replaceAll(" ", "-")}
@@ -62,9 +59,21 @@ export default function page() {
             oddBy={true}
             index={1}
           />
-          <div className="my-8 h-[400px] w-full">
-            <div className="relative grid grid-cols-1 md:grid-cols-2">
-              <div className="h-full w-full bg-brand"></div>
+          <div className="my-8 w-full md:h-[400px]">
+            <div className="relative flex w-full flex-col md:flex-row">
+              <div className="h-[250px] w-full bg-brand md:h-[400px] md:w-[25%]"></div>
+              <div className="relative h-full md:w-3/4">
+                <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-b from-brand to-brand/0 md:top-0 md:bg-gradient-to-r"></div>
+                <Image
+                  src={"/assets/projects/project_thumbnail_2.jpg"}
+                  alt="social media background images"
+                  width={2400}
+                  height={1400}
+                  priority
+                  quality={100}
+                  className="h-[400px] w-full object-cover object-top md:object-center"
+                />
+              </div>
               <div className="absolute left-0 top-0 z-20 flex h-full w-full flex-col items-center justify-center text-white">
                 <h1 className="text-2xl font-bold uppercase text-white">
                   {CustomeProgram.title}
@@ -81,18 +90,6 @@ export default function page() {
                     Book now
                   </Link>
                 </div>
-              </div>
-              <div className="relative h-full w-full md:pl-72">
-                <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-brand via-brand to-brand/0"></div>
-                <Image
-                  src={"/assets/projects/project_social-media-background.webp"}
-                  alt="social media background images"
-                  width={2400}
-                  height={1400}
-                  priority
-                  quality={100}
-                  className="h-[400px] w-full object-cover object-center"
-                />
               </div>
             </div>
           </div>

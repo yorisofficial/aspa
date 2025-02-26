@@ -7,7 +7,8 @@ import { ToastContainer } from "react-toastify";
 export default function CheckoutPage({ params }: { params: { slug: string } }) {
   const getTitle =
     DataBooking.find((item) => item.id == params.slug[0])?.resource || "";
-  const getId = params.slug[1];
+  const getId =
+    DataBooking.find((item) => item.id == params.slug[0])?.title || "";
 
   const getAllData = DataBooking.find((item) => item.id == params.slug[0]);
 

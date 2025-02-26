@@ -43,7 +43,7 @@ const ItemProgramSection = ({
         />
       </div>
       <div
-        className={`relative md:absolute ${oddBy ? "md:left-4" : "md:right-4"} h-fit overflow-hidden border border-bordersolid bg-white p-5 drop-shadow-lg md:top-1/2 md:w-1/3 md:-translate-y-1/2`}
+        className={`relative md:absolute ${oddBy ? "md:left-4" : "md:right-4"}  h-fit overflow-hidden bg-brand p-5 text-white drop-shadow-md md:top-1/2 md:w-[45%] md:-translate-y-1/2`}
       >
         <h1 className="text-2xl font-bold uppercase">{SurfProgram.title}</h1>
         <div className="listing_program mt-4">
@@ -61,9 +61,11 @@ const ItemProgramSection = ({
                 type="button"
                 aria-label="program"
                 onClick={() => handleAccordion(item.id)}
-                className={`flex w-full items-start justify-between border-b py-2 text-start text-base uppercase ${active === item.id ? "font-bold text-brand" : "font-normal text-black"}`}
+                className={`flex w-full items-start justify-between border-b py-2 text-start text-base uppercase ${active === item.id ? "font-bold text-white" : "font-normal text-white"}`}
               >
-                <span className="w-3/4">{item.title}</span>
+                <span className="w-[90%] whitespace-normal text-sm sm:whitespace-nowrap md:whitespace-normal md:text-base ">
+                  {item.title}
+                </span>
                 {active === item.id ? (
                   <CaretUp size={24} />
                 ) : (

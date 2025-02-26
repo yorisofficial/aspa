@@ -51,7 +51,7 @@ export default function ProjectsPage() {
         <HeaderEventContent
           logo="/brand/ASPA-white.svg"
           title="asian surf performance academy"
-          images="/assets/projects/main-background.webp"
+          images="/Dump/NorthNias24-0510.jpg"
           theme="bg-gradient-to-r from-brand to-brand/0 xl:bg-brand"
           color="bg-gradient-to-r from-brand to-brand/0"
         />

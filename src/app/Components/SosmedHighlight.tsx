@@ -22,11 +22,12 @@ export default function SosmedHighlight({
 }) {
   return (
     <div className="my-8 h-[400px] w-full">
-      <div className="relative grid grid-cols-1 md:grid-cols-2">
-        <div className="relative h-full w-full">
-          <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-l from-brand to-brand/0"></div>
+      <div className="relative flex h-full w-full">
+        <div className="h-[250px] w-full bg-brand md:h-[400px] md:w-[25%]"></div>
+        <div className="relative h-full w-full md:w-3/4">
+          <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-r from-brand to-brand/0"></div>
           <Image
-            src={"/assets/projects/project_social-media-background.webp"}
+            src={"/assets/projects/project_thumbnail_2.jpg"}
             alt="social media background images"
             width={2400}
             height={1400}
@@ -35,7 +36,6 @@ export default function SosmedHighlight({
             className="h-[400px] w-full object-cover object-center"
           />
         </div>
-        <div className="h-full w-full bg-brand"></div>
         <div className="social-media absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center text-white">
           <h1 className="whitespace-nowrap text-xl font-bold uppercase md:text-2xl">
             follow our social media

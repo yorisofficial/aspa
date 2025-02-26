@@ -64,7 +64,7 @@ export default function SliderContentProgram() {
             </div>
           </SwiperSlide>
         ))}
-        <ButtonSlideSwiper className="mt-6" />
+        <ButtonSlideSwiper className="mt-6 flex md:hidden" />
       </Swiper>
     </div>
   );

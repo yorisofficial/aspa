@@ -99,7 +99,7 @@ export const DataBooking = [
     id: "b2",
     idProgram: "2",
     resource: "Training",
-    title: "Custom Coaching Session 1:1",
+    title: "Custom Physical Training Session 1:1",
     description:
       "Unlock your full potential with high-performance training led by a strength and conditioning coach. Designed for athletes, this session focuses on building strength, endurance, mobility, and injury prevention to create a bulletproof body ready for peak performance.",
     price_list: [
@@ -118,7 +118,7 @@ export const DataBooking = [
     id: "b3",
     idProgram: "2",
     resource: "Training",
-    title: "Elite Surf Coaching Pack 1:1",
+    title: "Elite Physical Training Pack 1:1",
     description:
       "We also offer an exclusive 10-session coaching package with an Elite Coach, available now for IDR 12,000,000. For example, Gabriela Mackanicova, who has extensive experience working with professional athletes in the WSL and National Teams, brings world-class expertise to help elevate your performance to the next level",
     price_list: [

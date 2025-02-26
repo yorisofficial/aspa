@@ -20,6 +20,8 @@ const config = {
       red: "#FF0000",
       green: "#22C55E",
       dodgerblue: "#1b75d6",
+      deepblue: "#1961AA",
+      lighblue: "#5D9EE4",
     },
     container: {},
     extend: {
