@@ -16,14 +16,14 @@ export const metadata = {
     title: "ASPA | About us",
     images: [
       {
-        url: "https://s3-alpha-sig.figma.com/img/c966/d565/cff55a4f8e18028e615d7c27b7b5da52?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gJkR-Dm8N5p19nuRkVuJj8aPdDeLLqTScNnXCsrKaTsozcP0WsYsjOeyzRyxNCSukzjk4IY10PzXlu~oLl6fnDll-pqdAezjIfmpHaKweMwTaUhzs94Kz0XRyaLQtuqhrGJ77b6VVHhku-IYNOZDRF9eFxvy6PJFz7E4jqiFGqsx7gHMDCFwt8W4Tlldn3SsnocVzgZbz6LQ9eNsfR3zUar856PwF9Z09Mm9HRXgM~UF37EXipp14fFIrPAsqlZi1ZZf6~VUECQI7GQRwrp9RDDhL0N11gcJETP3cTCADwdoQql15OcrsDjf5d0v~rYNtMY9pFfBhPLteMcVoiqBog__",
+        url: "/assets/projects/project_aspa-rising-star.webp",
         width: 800,
         height: 600,
         alt: "Og images",
       },
     ],
     type: "website",
-    locale: "id_ID",
+    locale: "en_US",
     siteName: "Asian Surf Performance Academy",
   },
   twitter: {
@@ -32,7 +32,7 @@ export const metadata = {
     description: ContentData[0].description,
     images: [
       {
-        url: "https://s3-alpha-sig.figma.com/img/c966/d565/cff55a4f8e18028e615d7c27b7b5da52?Expires=1739145600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gJkR-Dm8N5p19nuRkVuJj8aPdDeLLqTScNnXCsrKaTsozcP0WsYsjOeyzRyxNCSukzjk4IY10PzXlu~oLl6fnDll-pqdAezjIfmpHaKweMwTaUhzs94Kz0XRyaLQtuqhrGJ77b6VVHhku-IYNOZDRF9eFxvy6PJFz7E4jqiFGqsx7gHMDCFwt8W4Tlldn3SsnocVzgZbz6LQ9eNsfR3zUar856PwF9Z09Mm9HRXgM~UF37EXipp14fFIrPAsqlZi1ZZf6~VUECQI7GQRwrp9RDDhL0N11gcJETP3cTCADwdoQql15OcrsDjf5d0v~rYNtMY9pFfBhPLteMcVoiqBog__",
+        url: "/assets/projects/project_aspa-rising-star.webp",
         width: 800,
         height: 600,
         alt: "Og images",
