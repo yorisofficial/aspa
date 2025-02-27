@@ -15,12 +15,12 @@ export const NewAcademy = [
           },
           {
             title:
-              "Price of High-Performance Surf Assessment + PhysicalAssessment",
+              "Price of High-Performance Surf Assessment + Physical Assessment",
             pricing: 2500000,
           },
         ],
         additional:
-          "Get a Rp 500.000 discount on the High-Performance Physical Assessment",
+          "Get a Rp 500.000 discount on the High-Performance al PhysicAssessment",
       },
       {
         id: "a2",
