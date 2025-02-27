@@ -103,7 +103,7 @@ export default function Navigation() {
       animate={!isShow ? "hidden" : "visible"}
       exit="visible"
       transition={{ duration: 0.35, ease: "easeInOut" }}
-      className={`sticky left-0 top-0 z-40 w-full bg-white`}
+      className={`sticky left-0 top-0 z-40 w-full bg-white ${pathName.includes("checkout") ? "hidden" : ""}`}
     >
       <nav className={`flex w-full items-center justify-center`}>
         <div

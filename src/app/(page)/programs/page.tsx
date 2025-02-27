@@ -1,9 +1,6 @@
 import React from "react";
 import HeaderEventContent from "@/app/Components/Events/HeaderEventContent";
-import PlayYoutube from "@/app/Components/home/VideoPreview/PlayYoutube";
-import SliderContentProgram, {
-  randomString,
-} from "@/app/Components/Events/SliderContentProgram";
+import SliderContentProgram from "@/app/Components/Events/SliderContentProgram";
 import WideImages from "@/app/Components/Events/WideImages";
 import Image from "next/image";
 import Link from "next/link";
@@ -59,7 +56,10 @@ export default function page() {
             oddBy={true}
             index={1}
           />
-          <div className="my-8 w-full md:h-[400px]">
+          <div
+            id={CustomeProgram.title.toLowerCase().replaceAll(" ", "-")}
+            className="my-8 w-full md:h-[400px]"
+          >
             <div className="relative flex w-full flex-col md:flex-row">
               <div className="h-[250px] w-full bg-brand md:h-[400px] md:w-[25%]"></div>
               <div className="relative h-full md:w-3/4">

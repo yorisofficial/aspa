@@ -4,6 +4,14 @@ import Loading from "@/app/loading";
 import { Metadata } from "next";
 import React, { Suspense } from "react";
 
+export const generateStaticParams = async () => {
+  const data = DataRegulation;
+
+  return data.map((tnc: any) => ({
+    slug: tnc.language.toString(),
+  }));
+};
+
 export const metadata: Metadata = {
   title: "Regulation | Asian Surf Performance Academy",
   description:

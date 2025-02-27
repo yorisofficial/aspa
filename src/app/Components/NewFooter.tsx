@@ -11,12 +11,14 @@ import { Support } from "../lib/Support";
 import Link from "next/link";
 import SocialComponents from "./SocialComponents";
 import BtnDownloadFile from "./BtnDownloadFile";
+import { usePathname } from "next/navigation";
 
 const NewFooter = () => {
   const phone = Support[0].url;
   const postCode = Support[1].title;
   const address = Support[2].title;
   const copyright = Support[3].title;
+  const pathName = usePathname();
 
   const [isShow, setShow] = useState({
     hosting: true,
@@ -25,7 +27,9 @@ const NewFooter = () => {
   });
 
   return (
-    <div className="flex h-fit w-full flex-col items-start justify-center gap-4 bg-black p-4 text-white md:px-16">
+    <div
+      className={`flex h-fit w-full flex-col items-start justify-center gap-4 bg-black p-4 text-white md:px-16 ${pathName.includes("checkout") ? "hidden" : ""}`}
+    >
       <div className="main-content flex h-full w-full flex-col items-start justify-between md:flex-row md:gap-6">
         <div className="logo-brand h-full">
           <Image

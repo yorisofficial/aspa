@@ -1,20 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from "axios";
 import emailjs from "emailjs-com";
-import { DataBooking } from "../lib/program/academy/DataBooking";
 import { Info } from "@phosphor-icons/react";
-import Moment from "react-moment";
 import moment from "moment";
 
 const CheckoutForm = ({
   userId,
+  getCategories,
   getProgramName,
   getProgramId,
   getAllData,
 }: {
   userId: string;
+  getCategories: string;
   getProgramName: string;
   getProgramId: string;
   getAllData: any;
@@ -26,12 +26,20 @@ const CheckoutForm = ({
     fullname: "",
     email: "",
     phone: "",
-    program_selected: getProgramName,
-    session_selected: getProgramId,
+    program_selected: getCategories,
+    session_selected: getProgramName,
     packages_selected: "",
     agreement: "",
-    created_at: moment().format("DD MMMM YYYY | hh:mm:ss A"),
+    created_at: "",
   });
+
+  // handle created_at
+  useEffect(() => {
+    setForm((prevForm) => ({
+      ...prevForm,
+      created_at: moment().format("DD MMMM YYYY | hh:mm:ss A"),
+    }));
+  }, [form]);
 
   //submit form
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -91,17 +99,41 @@ const CheckoutForm = ({
 
   return (
     <div className="relative w-full">
-      <div className="absolute right-0 top-32 flex flex-col gap-2 bg-white p-4 drop-shadow-lg">
-        <span>id:{form.id}</span>
-        <span>fullname:{form.fullname}</span>
-        <span>email:{form.email}</span>
-        <span>phone:{form.phone}</span>
-        <span>created_at:{form.created_at}</span>
-        <span>agreement:{form.agreement}</span>
-        <span>program:{form.program_selected}</span>
-        <span>session:{form.session_selected}</span>
-        <span>packages:{form.packages_selected}</span>
-      </div>
+      {/* <div className="absolute right-0 top-32 flex w-[400px] flex-col gap-2 bg-white p-4 drop-shadow-lg">
+        <h1 className="exmple_input text-xl font-light uppercase">
+          Its not error
+        </h1>
+        <hr />
+        <div className="flex flex-col space-y-2 divide-y">
+          <p className="w-full text-wrap">
+            <strong>id:</strong> {form.id}
+          </p>
+          <p className="w-full text-wrap">
+            <strong>fullname:</strong> {form.fullname}
+          </p>
+          <p className="w-full text-wrap">
+            <strong>email</strong>: {form.email}
+          </p>
+          <p className="w-full text-wrap">
+            <strong>phone:</strong> {form.phone}
+          </p>
+          <p className="w-full text-wrap">
+            <strong>created_at:</strong> {form.created_at}
+          </p>
+          <p className="w-full text-wrap">
+            <strong>agreement:</strong> {form.agreement}
+          </p>
+          <p className="w-full text-wrap">
+            <strong>program:</strong> {form.program_selected}
+          </p>
+          <p className="w-full text-wrap">
+            <strong>session</strong>: {form.session_selected}
+          </p>
+          <p className="w-full text-wrap">
+            <strong>packages / details:</strong> {form.packages_selected}
+          </p>
+        </div>
+      </div> */}
       <div className="content mx-auto mt-4 h-fit space-y-8 py-8">
         <div className="flex w-full flex-col gap-4 rounded-xl bg-white">
           <div className="mx-auto flex flex-col gap-2 text-center">
@@ -136,29 +168,27 @@ const CheckoutForm = ({
                   className="mt-2 h-10 w-full rounded-lg border border-bordersolid bg-black/5 px-4 font-medium capitalize outline-none focus:outline-2 focus:outline-black"
                 />
               </label>
-              {form.program_selected === "c1" ? (
-                <div className="w-full">
-                  <label htmlFor="select_pricing">
-                    <span className="text-required">Details</span>
-                    <textarea
-                      name="select_pricing"
-                      id="select_pricing"
-                      required
-                      onChange={(e) => {
-                        setForm({
-                          ...form,
-                          packages_selected: e.target.value,
-                        });
-                      }}
-                      minLength={100}
-                      placeholder="Enter details"
-                      className="mt-2 h-32 w-full rounded-lg border border-bordersolid bg-black/5 p-4 text-sm font-medium outline-none outline-1 valid:outline-green invalid:outline-red focus:outline-2 valid:focus:outline-green invalid:focus:outline-red"
-                    />
-                    <span>
-                      <small>Min 100 characters</small>
-                    </span>
-                  </label>
-                </div>
+              {getProgramId === "c1" ? (
+                <label htmlFor="select_pricing">
+                  <span className="text-required">Details</span>
+                  <textarea
+                    name="select_pricing"
+                    id="select_pricing"
+                    required
+                    onChange={(e) => {
+                      setForm({
+                        ...form,
+                        packages_selected: e.target.value,
+                      });
+                    }}
+                    minLength={100}
+                    placeholder="Enter details"
+                    className="mt-2 h-32 w-full rounded-lg border border-bordersolid bg-black/5 p-4 text-sm font-medium outline-none outline-1 valid:outline-green invalid:outline-red focus:outline-2 valid:focus:outline-green invalid:focus:outline-red"
+                  />
+                  <span>
+                    <small>Min 100 characters</small>
+                  </span>
+                </label>
               ) : (
                 <label htmlFor="select_pricing">
                   <span className="text-required">Select packages</span>
