@@ -5,9 +5,9 @@ export const NewAcademy = [
     listing_program: [
       {
         id: "a1",
-        title: "High-Performance Surf Assessment 1:1",
+        title: "High-Performance Surf Assessment 1 on 1",
         description:
-          "Take your surfing to the next level with an High-Performance Surf Assessment 1:1, combining an in-water surf session, video analysis, and expert consultation. Get real-time feedback on your technique, board choice, endurance, and strength, with a clear action plan to elevate your performance.",
+          "Take your surfing to the next level with an High-Performance Surf Assessment 1 on 1, combining an in-water surf session, video analysis, and expert consultation. Get real-time feedback on your technique, board choice, endurance, and strength, with a clear action plan to elevate your performance.",
         price_list: [
           {
             title: "Price",
@@ -24,7 +24,7 @@ export const NewAcademy = [
       },
       {
         id: "a2",
-        title: "Custom Surf Coaching Session 1:1",
+        title: "Custom Surf Coaching Session 1 on 1",
         description:
           "Experience elite-level coaching with a certified ASPA surf coach. This private session includes an expert-led surf session, video analysis, and technique refinement to sharpen your skills and elevate your performance.",
         price_list: [
@@ -45,7 +45,7 @@ export const NewAcademy = [
       },
       {
         id: "a3",
-        title: "Elite Surf Coaching Pack 1:1",
+        title: "Elite Surf Coaching Pack 1 on 1",
         description:
           "We also offer an exclusive 10-session coaching package with an Elite Coach, available now for IDR 12,000,000. For instance, Surf Coach Dylan Amar, an elite coach for the Indonesian National Team. He brings world-class expertise and experience to elevate your performance ",
         price_list: [
@@ -87,7 +87,7 @@ export const NewAcademy = [
     listing_program: [
       {
         id: "b1",
-        title: "High-Performance Physical Assessment 1:1",
+        title: "High-Performance Physical Assessment 1 on 1",
         description:
           "Unlock your peak performance with expert analysis. This high-performance session, led by a strength and conditioning specialist, provides a detailed assessment of your body, movement patterns, and athletic capabilities. Included:Comprehensive physical evaluation, Performance data collection & analysis, Customized recommendations to enhance strength, endurance, mobility, and injury prevention",
         price_list: [
@@ -106,7 +106,7 @@ export const NewAcademy = [
       },
       {
         id: "b2",
-        title: "Custom Physical Training Session 1:1",
+        title: "Custom Physical Training Session 1 on 1",
         description:
           "Unlock your full potential with high-performance training led by a strength and conditioning coach. Designed for athletes, this session focuses on building strength, endurance, mobility, and injury prevention to create a bulletproof body ready for peak performance.",
         price_list: [
@@ -123,7 +123,7 @@ export const NewAcademy = [
       },
       {
         id: "b3",
-        title: "Elite Physical Training Pack 1:1",
+        title: "Elite Physical Training Pack 1 on 1",
         description:
           "We also offer an exclusive 10-session coaching package with an Elite Coach, available now for IDR 12,000,000. For example, Gabriela Mackanicova, who has extensive experience working with professional athletes in the WSL and National Teams, brings world-class expertise to help elevate your performance to the next level",
         price_list: [
