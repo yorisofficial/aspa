@@ -47,7 +47,7 @@ export const menuNav = [
     link: "/blog",
   },
   {
-    title: "Teams",
+    title: "Team",
     base: "team",
     link: "/team",
   },
