@@ -21,10 +21,11 @@ const OurProfessional = () => {
               {Home[3].description}
             </p>
           </div>
-          <Link href={"/team"} className="mt-6 flex">
-            <Button label="see more" variant="primary">
-              {Home[3].url}
-            </Button>
+          <Link
+            href={"/team"}
+            className="mt-6 flex w-fit bg-black px-5 py-2 text-white duration-500 hover:scale-110 hover:bg-primary/90"
+          >
+            All Team
           </Link>
         </div>
         <SlideTeam />

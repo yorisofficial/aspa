@@ -15,9 +15,10 @@ export const calculateAge = (birthYear: number) => {
 // Import Swiper styles
 import "swiper/css";
 import { ArrowUpRight } from "@phosphor-icons/react";
+import { AllTeams } from "../lib/primary/AllTeams";
 
 const SlideTeam = ({ className }: { className?: string }) => {
-  const data = CoreTeam;
+  const data = AllTeams.slice(0, 4);
 
   return (
     <div className={`list-coach mx-auto h-fit w-full ${className}`}>
@@ -44,7 +45,7 @@ const SlideTeam = ({ className }: { className?: string }) => {
         {data.map((item, index) => (
           <SwiperSlide key={index} className="item-coach group w-full">
             <Link
-              href={`/team/ASPA/${item.full_name.toLowerCase().replaceAll(" ", "-")}`}
+              href={`/team/${item.slug}`}
               className="group relative inline-block h-full w-full"
             >
               <div className="absolute right-2 top-2 z-10 text-white">
@@ -62,7 +63,7 @@ const SlideTeam = ({ className }: { className?: string }) => {
                 </div>
                 <div className="py-4 text-center text-black">
                   <h1 className="text-xl font-black">{item.full_name}</h1>
-                  <p>{item.title}</p>
+                  <p>{item.job_title}</p>
                 </div>
               </div>
             </Link>

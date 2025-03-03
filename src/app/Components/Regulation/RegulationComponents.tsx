@@ -12,7 +12,6 @@ export default function RegulationComponents({
   setLang: string;
 }) {
   const selectedLanguage = data.find((item) => item.language == setLang)?.data;
-  console.log(selectedLanguage);
 
   return (
     <div className="h-fit w-full py-6">
