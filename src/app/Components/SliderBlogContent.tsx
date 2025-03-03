@@ -48,13 +48,13 @@ const SliderBlogContent = ({ data }: { data: PropsBlog[] }) => {
               href={`/blog/${item.id}/${item.slug}`}
               className="block h-full w-full"
             >
-              <div className="h-[200px] w-full overflow-hidden md:h-[350px]">
+              <div className="h-[200px] w-full overflow-hidden xl:h-[350px]">
                 <Image
                   src={item.jetpack_featured_media_url}
                   alt={item.title.rendered}
                   height={1400}
                   width={1000}
-                  className="max-w-1/2 h-[200px] object-cover duration-300 ease-linear group-hover:scale-110 md:h-[350px]"
+                  className="max-w-1/2 h-[180px] object-cover duration-300 ease-linear group-hover:scale-110 xl:h-[350px]"
                 />
               </div>
               <div className="content-info mt-4 flex h-full flex-col items-start justify-between gap-2">

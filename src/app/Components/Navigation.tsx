@@ -16,38 +16,45 @@ import SocialComponents from "./SocialComponents";
 
 export const menuNav = [
   {
+    id: 1,
     title: "Home",
     base: "home",
     link: "/",
   },
   {
-    title: "About us",
-    base: "about-us",
-    link: "/about-us",
+    id: 2,
+    title: "about",
+    base: "about",
+    link: "/about",
   },
   {
-    title: "Programs",
+    id: 3,
+    title: "programs",
     base: "programs",
     link: "/programs",
   },
 
   {
-    title: "Projects",
+    id: 4,
+    title: "projects",
     base: "projects",
     link: "/projects",
   },
   {
-    title: "ISA",
+    id: 5,
+    title: "isa",
     base: "isa",
     link: "/isa",
   },
   {
-    title: "Blog",
+    id: 6,
+    title: "blog",
     base: "blog",
     link: "/blog",
   },
   {
-    title: "Team",
+    id: 7,
+    title: "team",
     base: "team",
     link: "/team",
   },
@@ -55,7 +62,7 @@ export const menuNav = [
 
 export const PreviousProgram = [
   {
-    id: 1,
+    id: 8,
     title: "Rising Star",
     url: "/programs/rising-star",
   },
@@ -71,7 +78,7 @@ export default function Navigation() {
   const [isShow, setShow] = useState<boolean>(true);
   const [isMenus, setMenus] = useState<boolean>(false);
   const [isShowDropdown, setShowDropdown] = useState<boolean>(false);
-  const [isMenuActive, setMenuActive] = useState<string>("");
+  const [isMenuActive, setMenuActive] = useState<string>();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious();
@@ -143,15 +150,14 @@ export default function Navigation() {
                     transition={{ duration: 0.3, delay: 0.1 * index }}
                     viewport={{ once: true }}
                     key={index}
-                    onClick={() => setMenuActive(item.base)}
-                    className={`relative ${pathName === item.base || pathName.includes(item.base) ? "bg-brand text-white" : "border border-black hover:border-brand hover:text-brand"}`}
+                    className={`relative ${pathName.split("/")[1].includes(item.title.replace("/", "")) ? "bg-brand text-white" : "border border-black hover:border-brand hover:text-brand"}`}
                   >
                     <Link
                       aria-label="ASPA menu navigation"
                       href={item.link}
                       className={`block duration-500 hover:scale-110 `}
                     >
-                      <div className="flex items-center gap-2  px-4 py-2">
+                      <div className="flex items-center gap-2 px-4 py-2 uppercase">
                         <span>{item.title}</span>
                       </div>
                     </Link>

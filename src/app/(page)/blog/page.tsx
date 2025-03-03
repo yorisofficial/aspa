@@ -33,24 +33,24 @@ const BlogPage = async () => {
           <h1 className="text-center text-4xl font-light uppercase">
             Latest news
           </h1>
-          <div className="image-previews w-full">
+          <div className="image-previews mx-auto h-fit w-full max-w-4xl">
             <Image
               src={latestNews.jetpack_featured_media_url}
-              alt={latestNews.title.rendered}
+              alt={`content-${latestNews.title.rendered}`}
               width={2400}
-              height={800}
+              height={1600}
               priority
-              className="h-[400px] w-full object-cover md:h-[500px]"
+              className={`content-${latestNews.title.rendered} w-full object-cover object-center md:h-[400px]`}
             />
           </div>
-          <div className="relative flex w-full flex-col items-center justify-center gap-4 text-center">
+          <div className="relative flex w-full max-w-5xl flex-col items-center justify-center gap-4 text-center">
             <DateComponents data={latestNews.date} />
-            <span className="text-center text-xl font-light uppercase md:text-4xl">
+            <span className="z-10 text-center text-xl font-light uppercase md:text-4xl">
               {latestNews.title.rendered}
             </span>
             <Link
               href={`/blog/${latestNews.id}/${latestNews.slug}`}
-              className="relative z-10 flex h-[200px] w-[200px] -translate-y-8 flex-col items-center justify-center rounded-full border uppercase duration-300 hover:border-brand hover:text-brand"
+              className="relative z-0 flex h-[200px] w-[200px] -translate-y-8 flex-col items-center justify-center rounded-full border bg-white/0 uppercase duration-300 hover:border-brand hover:bg-brand hover:text-white"
             >
               <span className="uppercase">Read the news</span>
             </Link>
