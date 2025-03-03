@@ -36,7 +36,7 @@ const CategoryTeamSection = ({
                   <button
                     type="button"
                     onClick={() =>
-                      router.push(`/team/${item.id}`, { scroll: false })
+                      router.push(`/team/${item.slug}`, { scroll: false })
                     }
                     className="profile_images flex h-[200px] w-full overflow-hidden md:h-[300px]"
                   >

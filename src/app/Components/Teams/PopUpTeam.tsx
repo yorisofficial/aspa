@@ -6,13 +6,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const PopUpTeam = ({ id }: { id: string }) => {
   const ref = React.createRef<HTMLDivElement>();
   const [isShow, setShow] = useState(id);
   const router = useRouter();
 
-  const getData = AllTeams.find((team) => team.id === id);
+  const getData = AllTeams.find((team) => team.slug === id);
   const item = getData;
 
   useEffect(() => {
@@ -76,13 +77,16 @@ const PopUpTeam = ({ id }: { id: string }) => {
                   <h2 className="text-base font-bold uppercase">Achievement</h2>
                   <div className="list_achievement mt-4">
                     {item.achievement.map((item, index) => (
-                      <div
+                      <motion.div
                         key={index}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.1 * index }}
                         className="flex items-start gap-2 md:items-center"
                       >
                         <Trophy size={24} className="flex-shrink-0" />
                         {item.title}
-                      </div>
+                      </motion.div>
                     ))}
                   </div>
                 </div>

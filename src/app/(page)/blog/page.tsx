@@ -1,10 +1,9 @@
+import React, { Suspense } from "react";
 import ContainerContent from "@/app/Components/Container";
 import DateComponents from "@/app/Components/DateComponents";
 import ItemPost from "@/app/Components/ItemPost";
 import Image from "next/image";
 import Link from "next/link";
-import React, { Suspense } from "react";
-import Moment from "react-moment";
 
 async function getData() {
   const url = process.env.ASC_PUBLIC_POST || "";

@@ -184,7 +184,7 @@ const NewFooter = () => {
         </div>
         <SocialMedia className={`mt-4 hidden md:inline-block`} />
       </div>
-      <hr className="text-white opacity-80" />
+      <div className="h-[1px] w-full bg-white"></div>
       <div className="regulation-content h-fit w-full">
         <div className="copyright-section flex flex-col items-center justify-center">
           <div className="flex items-center gap-0">

@@ -3,7 +3,7 @@
 import { ArrowCircleRight } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -23,8 +23,6 @@ export function ItemEventOdd({
   alt,
   oddBy,
 }: Props) {
-  const [isWrap, setIsWrap] = useState(description.length > 50 ? true : false);
-
   return (
     <>
       <div
@@ -62,22 +60,10 @@ export function ItemEventOdd({
             whileInView={{ x: 0 }}
             transition={{ duration: 0.3, delay: 0.3 }}
             viewport={{ once: true }}
-            className={`mt-2 text-start text-base font-light ${isWrap ? "line-clamp-5" : ""}`}
+            className={`mt-2 text-start text-base font-light`}
           >
             {description}
           </motion.p>
-          <motion.button
-            initial={{ x: -50 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 0.3, delay: 0.5 }}
-            viewport={{ once: true }}
-            type="button"
-            aria-label="wrap-text"
-            onClick={() => setIsWrap(!isWrap)}
-            className={`font-normal underline underline-offset-4`}
-          >
-            {!isWrap ? "Read less" : "Read more"}
-          </motion.button>
           <motion.div
             initial={{ x: -50 }}
             whileInView={{ x: 0 }}
@@ -87,7 +73,7 @@ export function ItemEventOdd({
             <Link
               target="_blank"
               href={link}
-              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
+              className="group mt-4 flex w-full items-center justify-between gap-2 rounded-lg bg-primary px-4 py-2 uppercase text-white"
             >
               more information{" "}
               <ArrowCircleRight

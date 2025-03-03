@@ -47,7 +47,7 @@ const SliderContentISA = ({ data }: { data: DataCourseType[] }) => {
                 target="_self"
                 href={`#${item.name.toLowerCase().replaceAll(" ", "-")}`}
                 className={
-                  "group relative inline-block w-fit overflow-hidden md:h-[300px]"
+                  "group relative inline-block h-[300px] w-fit overflow-hidden"
                 }
               >
                 <Image
@@ -55,7 +55,7 @@ const SliderContentISA = ({ data }: { data: DataCourseType[] }) => {
                   alt="ISA Surf coach"
                   height={2400}
                   width={800}
-                  className="h-full w-full object-cover duration-500 group-hover:scale-110 md:h-[300px]"
+                  className="h-[300px] w-full object-cover duration-500 group-hover:scale-110"
                 />
                 <div className="absolute bottom-4 left-1/2 w-full -translate-x-1/2 px-4">
                   <div className="flex w-full items-end justify-between bg-primary p-3 text-white">
