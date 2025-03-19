@@ -7,7 +7,7 @@ export const NewAcademy = [
         id: "a1",
         title: "High-Performance Surf Assessment 1 on 1",
         description:
-          "Take your surfing to the next level with an High-Performance Surf Assessment 1 on 1, combining an in-water surf session, video analysis, and expert consultation. Get real-time feedback on your technique, board choice, endurance, and strength, with a clear action plan to elevate your performance.",
+          "Take your surfing to the next level with a High-Performance Surf Assessment 1 on 1, combining an in-water surf session, video analysis, and expert consultation. Get real-time feedback on your technique, board choice, endurance, and strength, with a clear action plan to elevate your performance.",
         price_list: [
           {
             title: "Price",

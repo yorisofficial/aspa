@@ -192,10 +192,10 @@ export default function Navigation() {
                             : () => setMenus(false)
                         }
                         href={item.base === "program" ? "#" : item.link}
-                        className={`w-full rounded-md border-2 border-bordersolid p-4 hover:bg-primary hover:text-white ${pathName.includes(item.base) ? "bg-primary text-white" : ""}`}
+                        className={`w-full rounded-md border-2 border-bordersolid p-4 uppercase hover:bg-primary hover:text-white ${pathName.includes(item.base) ? "bg-primary text-white" : ""}`}
                       >
                         {item.base === "program" ? (
-                          <button className="flex w-full items-center justify-between">
+                          <button className="flex w-full items-center justify-between uppercase">
                             {item.title}{" "}
                             {isShowDropdown ? (
                               <CaretUp size={24} />
