@@ -32,8 +32,8 @@ const SlideTeam = ({ className }: { className?: string }) => {
             spaceBetween: 16,
           },
           768: {
-            slidesPerView: 2.1,
-            spaceBetween: 20,
+            slidesPerView: 2.2,
+            spaceBetween: 16,
           },
           1024: {
             slidesPerView: 2.1,

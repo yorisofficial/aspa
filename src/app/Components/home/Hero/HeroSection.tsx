@@ -71,7 +71,6 @@ const HeroSection = () => {
             </motion.div>
           </div>
         </div>
-        {/* <PlayYoutube /> */}
       </ContainerContent>
     </div>
   );

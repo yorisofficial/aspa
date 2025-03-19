@@ -43,7 +43,7 @@ const ItemProgramSection = ({
         />
       </div>
       <div
-        className={`relative md:absolute ${oddBy ? "md:left-4" : "md:right-4"}  h-fit overflow-hidden bg-brand p-5 text-white drop-shadow-md md:top-1/2 md:w-[45%] md:-translate-y-1/2`}
+        className={`relative md:absolute ${oddBy ? "md:left-4" : "md:right-4"} h-fit max-h-screen overflow-hidden bg-brand p-5 text-white drop-shadow-md md:top-1/2 md:w-[45%] md:-translate-y-1/2`}
       >
         <h1 className="text-2xl font-bold uppercase">{SurfProgram.title}</h1>
         <div className="listing_program mt-4">
