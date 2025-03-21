@@ -1,4 +1,19 @@
-export const DataBooking = [
+export interface PropsDataBooking {
+  id: string;
+  idProgram: string;
+  resource: string;
+  title: string;
+  description: string;
+  price_list: {
+    id: string;
+    title: string;
+    pricing: number;
+    paymentUrl: string;
+  }[];
+  additional: string;
+}
+
+export const DataBooking: PropsDataBooking[] = [
   {
     id: "a1",
     idProgram: "1",
@@ -8,13 +23,18 @@ export const DataBooking = [
       "Take your surfing to the next level with an High-Performance Surf Assessment 1:1, combining an in-water surf session, video analysis, and expert consultation. Get real-time feedback on your technique, board choice, endurance, and strength, with a clear action plan to elevate your performance.",
     price_list: [
       {
-        title: "Price",
+        id: "a1-1",
+        title: "Basic Price",
         pricing: 1500000,
+        paymentUrl: "/checkout/a1/a1-1",
       },
+
       {
+        id: "a1-2",
         title:
           "Price of High-Performance Physical Assessment + Surf Assessment",
         pricing: 2500000,
+        paymentUrl: "/checkout/a1/a1-2",
       },
     ],
     additional:
@@ -29,16 +49,22 @@ export const DataBooking = [
       "Experience elite-level coaching with a certified ASPA surf coach. This private session includes an expert-led surf session, video analysis, and technique refinement to sharpen your skills and elevate your performance.",
     price_list: [
       {
+        id: "a2-1",
         title: "1 Session",
         pricing: 1200000,
+        paymentUrl: "/checkout/a2/a2-1",
       },
       {
+        id: "a2-2",
         title: "5 Session",
         pricing: 5000000,
+        paymentUrl: "/checkout/a2/a2-2",
       },
       {
+        id: "a2-3",
         title: "10 Session",
         pricing: 8500000,
+        paymentUrl: "/checkout/a2/a2-3",
       },
     ],
     additional: "",
@@ -52,8 +78,10 @@ export const DataBooking = [
       "We also offer an exclusive 10-session coaching package with an Elite Coach, available now for IDR 12,000,000. For instance, Surf Coach Dylan Amar, an elite coach for the Indonesian National Team. He brings world-class expertise and experience to elevate your performance ",
     price_list: [
       {
+        id: "a3-1",
         title: "10 Sessions",
         pricing: 12000000,
+        paymentUrl: "/checkout/a3/a3-1",
       },
     ],
     additional:
@@ -68,8 +96,10 @@ export const DataBooking = [
       "Train smarter with high-performance coaching for groups of 3 or more. Get expert instruction, video analysis, and technique refinement to accelerate progress together while pushing each other to the next level.",
     price_list: [
       {
+        id: "a4-1",
         title: "1 Session starts from",
         pricing: 450000,
+        paymentUrl: "/checkout/a4/a4-1",
       },
     ],
     additional: "Minimum 3 pax, Price per person",
@@ -83,13 +113,17 @@ export const DataBooking = [
       "Unlock your peak performance with expert analysis. This high-performance session, led by a strength and conditioning specialist, provides a detailed assessment of your body, movement patterns, and athletic capabilities. Included:Comprehensive physical evaluation, Performance data collection & analysis, Customized recommendations to enhance strength, endurance, mobility, and injury prevention",
     price_list: [
       {
+        id: "b1-1",
         title: "Price",
         pricing: 1500000,
+        paymentUrl: "/checkout/b1/b1-1",
       },
       {
+        id: "b1-2",
         title:
           "Price of High-Performance Physical Assessment + Surf Assessment",
         pricing: 2500000,
+        paymentUrl: "/checkout/b1/b1-2",
       },
     ],
     additional:
@@ -104,12 +138,16 @@ export const DataBooking = [
       "Unlock your full potential with high-performance training led by a strength and conditioning coach. Designed for athletes, this session focuses on building strength, endurance, mobility, and injury prevention to create a bulletproof body ready for peak performance.",
     price_list: [
       {
+        id: "b2-1",
         title: "1 Session",
         pricing: 1200000,
+        paymentUrl: "/checkout/b2/b2-1",
       },
       {
+        id: "b2-2",
         title: "10 Session",
         pricing: 10500000,
+        paymentUrl: "/checkout/b2/b2-2",
       },
     ],
     additional: "",
@@ -123,8 +161,10 @@ export const DataBooking = [
       "We also offer an exclusive 10-session coaching package with an Elite Coach, available now for IDR 12,000,000. For example, Gabriela Mackanicova, who has extensive experience working with professional athletes in the WSL and National Teams, brings world-class expertise to help elevate your performance to the next level",
     price_list: [
       {
+        id: "b3-1",
         title: "10 Sessions",
         pricing: 12000000,
+        paymentUrl: "/checkout/b3/b3-1",
       },
     ],
     additional:
@@ -139,8 +179,10 @@ export const DataBooking = [
       "Train with a strength and conditioning specialist in a high-performance group session designed to build strength, endurance, mobility, and injury resilience. Perfect for surfers and athletes looking to push their limits together.",
     price_list: [
       {
+        id: "b4-1",
         title: "1 Session starts from",
         pricing: 350000,
+        paymentUrl: "/checkout/b4/b4-1",
       },
     ],
     additional: "Minimum 3 pax & Price per person",
