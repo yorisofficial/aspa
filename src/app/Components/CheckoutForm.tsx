@@ -5,6 +5,9 @@ import axios from "axios";
 import emailjs from "emailjs-com";
 import { Info } from "@phosphor-icons/react";
 import moment from "moment";
+import { useRouter } from "next/navigation";
+import { DataBooking } from "../lib/program/academy/DataBooking";
+import { NewAcademyDataPrice } from "../lib/program/academy/NewDataPrograms";
 
 const CheckoutForm = ({
   userId,
@@ -19,6 +22,7 @@ const CheckoutForm = ({
   getProgramId: string;
   getAllData: any;
 }) => {
+  const router = useRouter();
   const dataUrl = "https://sheetdb.io/api/v1/0c37z0pcute1t";
   const [disableButton, setDisableButton] = useState(false);
   const [form, setForm] = useState({
@@ -29,6 +33,7 @@ const CheckoutForm = ({
     program_selected: getCategories,
     session_selected: getProgramName,
     packages_selected: "",
+    packages_id: "",
     agreement: "",
     created_at: "",
   });
@@ -39,7 +44,13 @@ const CheckoutForm = ({
       ...prevForm,
       created_at: moment().format("DD MMMM YYYY | hh:mm:ss A"),
     }));
-  }, [form]);
+  }, [userId]);
+
+  // funtion check the data is exist
+  const checkDataSession = (id: string) => {
+    const data = NewAcademyDataPrice.find((item) => item.id === id);
+    return data;
+  };
 
   //submit form
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -53,7 +64,9 @@ const CheckoutForm = ({
         email: form.email,
         selected_program: form.program_selected,
         selected_session: form.session_selected,
-        packages_selected: form.packages_selected,
+        packages_selected: NewAcademyDataPrice.find(
+          (item) => item.id === form?.packages_id,
+        )?.title,
         agreement: form.agreement,
         created_at: form.created_at,
       });
@@ -69,13 +82,18 @@ const CheckoutForm = ({
           email: form.email,
           selected_program: form.program_selected,
           selected_session: form.session_selected,
-          packages_selected: form.packages_selected,
+          packages_selected: NewAcademyDataPrice.find(
+            (item) => item.id === form?.packages_id,
+          )?.title,
           agreement: form.agreement,
           created_at: form.created_at,
         },
         process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY!,
       );
       toast.success("Email sent successfully!");
+
+      // Redirect to payment URL
+      router.push(`/payment/${checkDataSession(form.packages_id)?.slug}`);
     } catch (error: Error | any) {
       toast.error("Failed to send email. Please try again later.");
     }
@@ -89,51 +107,15 @@ const CheckoutForm = ({
       program_selected: getProgramName,
       session_selected: getProgramId,
       packages_selected: "",
+      packages_id: "",
       agreement: "",
       created_at: "",
     });
     setDisableButton(false);
-
-    // router.push(`${dataSession?.url}`);
   };
 
   return (
     <div className="relative w-full">
-      {/* <div className="absolute right-0 top-32 flex w-[400px] flex-col gap-2 bg-white p-4 drop-shadow-lg">
-        <h1 className="exmple_input text-xl font-light uppercase">
-          Its not error
-        </h1>
-        <hr />
-        <div className="flex flex-col space-y-2 divide-y">
-          <p className="w-full text-wrap">
-            <strong>id:</strong> {form.id}
-          </p>
-          <p className="w-full text-wrap">
-            <strong>fullname:</strong> {form.fullname}
-          </p>
-          <p className="w-full text-wrap">
-            <strong>email</strong>: {form.email}
-          </p>
-          <p className="w-full text-wrap">
-            <strong>phone:</strong> {form.phone}
-          </p>
-          <p className="w-full text-wrap">
-            <strong>created_at:</strong> {form.created_at}
-          </p>
-          <p className="w-full text-wrap">
-            <strong>agreement:</strong> {form.agreement}
-          </p>
-          <p className="w-full text-wrap">
-            <strong>program:</strong> {form.program_selected}
-          </p>
-          <p className="w-full text-wrap">
-            <strong>session</strong>: {form.session_selected}
-          </p>
-          <p className="w-full text-wrap">
-            <strong>packages / details:</strong> {form.packages_selected}
-          </p>
-        </div>
-      </div> */}
       <div className="content mx-auto mt-4 h-fit space-y-8 py-8">
         <div className="flex w-full flex-col gap-4 rounded-xl bg-white">
           <div className="mx-auto flex flex-col gap-2 text-center">
@@ -199,7 +181,7 @@ const CheckoutForm = ({
                     onChange={(e) => {
                       setForm({
                         ...form,
-                        packages_selected: e.target.value,
+                        packages_id: e.target.value,
                       });
                     }}
                     className="mt-2 h-10 w-full rounded-lg bg-black/5 px-4 py-2"
@@ -208,10 +190,7 @@ const CheckoutForm = ({
                       Select packages
                     </option>
                     {getAllData.price_list.map((item: any, index: number) => (
-                      <option
-                        key={index}
-                        value={`${item.title}-${item.pricing.toLocaleString("id-ID", { style: "currency", currency: "IDR", minimumFractionDigits: 0 })}`}
-                      >
+                      <option key={index} value={`${item.id}`}>
                         {item.title} -{" "}
                         {item.pricing.toLocaleString("id-ID", {
                           style: "currency",

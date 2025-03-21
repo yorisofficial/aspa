@@ -5,12 +5,11 @@ import React, { Suspense } from "react";
 import { ToastContainer } from "react-toastify";
 
 export default function CheckoutPage({ params }: { params: { slug: string } }) {
+  const getId = DataBooking.find((item) => item.id == params.slug[0])?.id || "";
   const getCategories =
     DataBooking.find((item) => item.id == params.slug[0])?.resource || "";
   const getName =
     DataBooking.find((item) => item.id == params.slug[0])?.title || "";
-  const getId = DataBooking.find((item) => item.id == params.slug[0])?.id || "";
-
   const getAllData = DataBooking.find((item) => item.id == params.slug[0]);
 
   return (

@@ -1,3 +1,4 @@
+// relasi dengan /lib/program/academy/DataBooking.ts
 export const NewAcademy = [
   {
     id: "1",
@@ -10,7 +11,7 @@ export const NewAcademy = [
           "Take your surfing to the next level with a High-Performance Surf Assessment 1 on 1, combining an in-water surf session, video analysis, and expert consultation. Get real-time feedback on your technique, board choice, endurance, and strength, with a clear action plan to elevate your performance.",
         price_list: [
           {
-            title: "Price",
+            title: "Basic Price",
             pricing: 1500000,
           },
           {

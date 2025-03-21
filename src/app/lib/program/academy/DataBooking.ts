@@ -1,3 +1,4 @@
+// sumber dengan /lib/program/academy/NewAcademy.ts
 export interface PropsDataBooking {
   id: string;
   idProgram: string;
@@ -7,6 +8,7 @@ export interface PropsDataBooking {
   price_list: {
     id: string;
     title: string;
+    slug: string;
     pricing: number;
     paymentUrl: string;
   }[];
@@ -26,15 +28,16 @@ export const DataBooking: PropsDataBooking[] = [
         id: "a1-1",
         title: "Basic Price",
         pricing: 1500000,
-        paymentUrl: "/checkout/a1/a1-1",
+        slug: "high-performance-surf-assessment-a1-1",
+        paymentUrl: "https://asiansurfacademy.com",
       },
-
       {
         id: "a1-2",
         title:
           "Price of High-Performance Physical Assessment + Surf Assessment",
         pricing: 2500000,
-        paymentUrl: "/checkout/a1/a1-2",
+        slug: "high-performance-surf-assessment-a1-2",
+        paymentUrl: "https://asiansurfacademy.com",
       },
     ],
     additional:
@@ -52,19 +55,22 @@ export const DataBooking: PropsDataBooking[] = [
         id: "a2-1",
         title: "1 Session",
         pricing: 1200000,
-        paymentUrl: "/checkout/a2/a2-1",
+        slug: "custom-surf-coaching-session-a2-1",
+        paymentUrl: "https://asiansurfacademy.com",
       },
       {
         id: "a2-2",
         title: "5 Session",
         pricing: 5000000,
-        paymentUrl: "/checkout/a2/a2-2",
+        slug: "custom-surf-coaching-session-a2-2",
+        paymentUrl: "https://asiansurfacademy.com",
       },
       {
         id: "a2-3",
         title: "10 Session",
         pricing: 8500000,
-        paymentUrl: "/checkout/a2/a2-3",
+        slug: "custom-surf-coaching-session-a2-3",
+        paymentUrl: "https://asiansurfacademy.com",
       },
     ],
     additional: "",
@@ -81,7 +87,8 @@ export const DataBooking: PropsDataBooking[] = [
         id: "a3-1",
         title: "10 Sessions",
         pricing: 12000000,
-        paymentUrl: "/checkout/a3/a3-1",
+        slug: "elite-surf-coaching-pack-a3-1",
+        paymentUrl: "https://asiansurfacademy.com",
       },
     ],
     additional:
@@ -99,7 +106,8 @@ export const DataBooking: PropsDataBooking[] = [
         id: "a4-1",
         title: "1 Session starts from",
         pricing: 450000,
-        paymentUrl: "/checkout/a4/a4-1",
+        slug: "group-surf-coaching-session-a4-1",
+        paymentUrl: "https://asiansurfacademy.com",
       },
     ],
     additional: "Minimum 3 pax, Price per person",
@@ -116,14 +124,16 @@ export const DataBooking: PropsDataBooking[] = [
         id: "b1-1",
         title: "Price",
         pricing: 1500000,
-        paymentUrl: "/checkout/b1/b1-1",
+        slug: "high-performance-physical-assessment-b1-1",
+        paymentUrl: "https://asiansurfacademy.com",
       },
       {
         id: "b1-2",
         title:
           "Price of High-Performance Physical Assessment + Surf Assessment",
         pricing: 2500000,
-        paymentUrl: "/checkout/b1/b1-2",
+        slug: "high-performance-physical-assessment-b1-2",
+        paymentUrl: "https://asiansurfacademy.com",
       },
     ],
     additional:
@@ -141,13 +151,15 @@ export const DataBooking: PropsDataBooking[] = [
         id: "b2-1",
         title: "1 Session",
         pricing: 1200000,
-        paymentUrl: "/checkout/b2/b2-1",
+        slug: "custom-physical-training-session-b2-1",
+        paymentUrl: "https://asiansurfacademy.com",
       },
       {
         id: "b2-2",
         title: "10 Session",
         pricing: 10500000,
-        paymentUrl: "/checkout/b2/b2-2",
+        slug: "custom-physical-training-session-b2-2",
+        paymentUrl: "https://asiansurfacademy.com",
       },
     ],
     additional: "",
@@ -164,7 +176,8 @@ export const DataBooking: PropsDataBooking[] = [
         id: "b3-1",
         title: "10 Sessions",
         pricing: 12000000,
-        paymentUrl: "/checkout/b3/b3-1",
+        slug: "elite-physical-training-pack-b3-1",
+        paymentUrl: "https://asiansurfacademy.com",
       },
     ],
     additional:
@@ -182,7 +195,8 @@ export const DataBooking: PropsDataBooking[] = [
         id: "b4-1",
         title: "1 Session starts from",
         pricing: 350000,
-        paymentUrl: "/checkout/b4/b4-1",
+        slug: "group-physical-training-session-b4-1",
+        paymentUrl: "https://asiansurfacademy.com",
       },
     ],
     additional: "Minimum 3 pax & Price per person",
