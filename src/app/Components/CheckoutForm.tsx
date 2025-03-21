@@ -23,7 +23,8 @@ const CheckoutForm = ({
   getAllData: any;
 }) => {
   const router = useRouter();
-  const dataUrl = "https://sheetdb.io/api/v1/0c37z0pcute1t";
+  const dataUrl =
+    process.env.SHEETDB_API_URL || "https://sheetdb.io/api/v1/vgbqqdq4434cd";
   const [disableButton, setDisableButton] = useState(false);
   const [form, setForm] = useState({
     id: userId,
@@ -72,30 +73,29 @@ const CheckoutForm = ({
       });
 
       // send to email with mailjs
-      const response = await emailjs.send(
-        process.env.NEXT_PUBLIC_MAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_MAILJS_TEMPLATE_ID!,
-        {
-          uuid: form.id,
-          name: form.fullname,
-          phone: form.phone,
-          email: form.email,
-          selected_program: form.program_selected,
-          selected_session: form.session_selected,
-          packages_selected: NewAcademyDataPrice.find(
-            (item) => item.id === form?.packages_id,
-          )?.title,
-          agreement: form.agreement,
-          created_at: form.created_at,
-        },
-        process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY!,
-      );
+      // const response = await emailjs.send(
+      //   process.env.NEXT_PUBLIC_MAILJS_SERVICE_ID!,
+      //   process.env.NEXT_PUBLIC_MAILJS_TEMPLATE_ID!,
+      //   {
+      //     uuid: form.id,
+      //     name: form.fullname,
+      //     phone: form.phone,
+      //     email: form.email,
+      //     selected_program: form.program_selected,
+      //     selected_session: form.session_selected,
+      //     packages_selected: NewAcademyDataPrice.find(
+      //       (item) => item.id === form?.packages_id,
+      //     )?.title,
+      //     agreement: form.agreement,
+      //     created_at: form.created_at,
+      //   },
+      //   process.env.NEXT_PUBLIC_MAILJS_PUBLIC_KEY!,
+      // );
       toast.success("Email sent successfully!");
-
       // Redirect to payment URL
       router.push(`/payment/${checkDataSession(form.packages_id)?.slug}`);
     } catch (error: Error | any) {
-      toast.error("Failed to send email. Please try again later.");
+      toast.error("Failed to send form. Please try again later.");
     }
 
     // clear form
